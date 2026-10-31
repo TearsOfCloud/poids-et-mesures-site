@@ -10,10 +10,8 @@
 @font-face{font-family:"JetBrains Mono";font-weight:700;font-display:swap;src:url(fonts/jetbrains-mono-latin-700-normal.woff2) format("woff2")}
 @font-face{font-family:"Source Serif 4";font-style:italic;font-weight:600;font-display:swap;src:url(fonts/source-serif-4-latin-600-italic.woff2) format("woff2")}
 :root{--encre:#101114;--papier:#F4F0E6;--jaune:#FFD60A;--corail:#FF5A36;--bleu:#2747FF;--vert:#0A9A63;--gris:#8B8A84;--bg:var(--papier);--fg:var(--encre);--card:#fff9ec;--t-bleu:#1F37C9;--t-corail:#B8331A;--t-vert:#07774C;--muted:#55544F}
-@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#17181c;--fg:#F4F0E6;--card:#202228;--t-bleu:#8C9BFF;--t-corail:#FF8A6E;--t-vert:#3FD39A;--muted:#B5B3AC}}
-:root[data-theme=dark]{--bg:#17181c;--fg:#F4F0E6;--card:#202228;--t-bleu:#8C9BFF;--t-corail:#FF8A6E;--t-vert:#3FD39A;--muted:#B5B3AC}
 *{box-sizing:border-box;margin:0}
-html{background:var(--bg)}body{position:relative;isolation:isolate;color:var(--fg);font:500 17px/1.5 Inter,system-ui,sans-serif;padding-bottom:110px}
+html,body{background:#F4F0E6 !important;color:#101114}body{color-scheme:light;position:relative;isolation:isolate;color:var(--fg);font:500 17px/1.5 Inter,system-ui,sans-serif;padding-bottom:110px}
 body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.10;z-index:-1;background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence baseFrequency='.9' numOctaves='2'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .9 0'/></filter><rect width='200' height='200' filter='url(%23n)'/></svg>")}
 .mono{font:700 12px/1.3 "JetBrains Mono",monospace;letter-spacing:.06em;text-transform:uppercase}
 h1,h2,h3{font-weight:900;letter-spacing:-.04em;line-height:.98}
@@ -25,7 +23,11 @@ a{color:inherit;text-decoration:none}
 .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
 /* header */
 header{background:var(--encre);color:var(--papier);position:sticky;top:0;z-index:20}
-header .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:12px}
+header .wrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:64px;gap:12px}
+.brand img{height:34px;display:block}
+.hlisten{justify-self:end;all:unset;justify-self:end;cursor:pointer;background:var(--jaune);color:var(--encre);padding:0 14px;min-height:40px;display:flex;align-items:center;gap:8px;font:700 12px "JetBrains Mono",monospace;letter-spacing:.06em;text-transform:uppercase}
+.masthead{text-align:center;padding:30px 0 6px}.masthead img{width:min(560px,86%);height:auto}
+@media(max-width:760px){header .wrap{grid-template-columns:auto 1fr;height:auto;padding-top:10px;padding-bottom:4px}.brand img{height:26px}.hlisten{padding:0 10px}header nav{grid-column:1/-1;justify-content:center}}
 .brand{font-weight:900;letter-spacing:-.04em;font-size:22px}
 .brand b{color:var(--jaune)}
 nav{display:flex;gap:4px;overflow-x:auto}
@@ -85,6 +87,7 @@ h2.sec{font-size:34px;margin:34px 0 14px;display:flex;align-items:center;gap:12p
 @media(max-width:760px){.vol,.next{display:none}}
 footer{border-top:3px solid var(--fg);margin-top:40px;padding:22px 0;font-size:15px;color:var(--muted)}
 footer a{text-decoration:underline}
+header nav{justify-content:center}@media(max-width:760px){header nav{order:3}}
 .short{display:none}@media(max-width:760px){.long{display:none}.short{display:inline}}
 .player .grid{font:700 12px "JetBrains Mono",monospace;letter-spacing:.06em;text-transform:uppercase}
 .view{display:none}.view.on{display:block}
@@ -95,12 +98,13 @@ footer a{text-decoration:underline}
 <body>
 <header>
  <div class="wrap">
-  <a class="brand" href="#" data-go="home">Poids <b>&amp;</b> Mesures</a>
+  <a class="brand" href="#" data-go="home"><img src="logo-papier.svg" alt="Poids &amp; Mesures"></a>
   <nav class="mono">
    <button data-go="home" aria-current="true"><span class="long">L'actu pesée</span><span class="short">Actu</span></button>
    <button data-go="article">Articles</button>
    <button data-go="radio">Radio</button>
   </nav>
+  <button class="hlisten" onclick="document.getElementById('pp').click()">▶ Écouter</button>
  </div>
  <div class="ruler"></div>
 </header>
@@ -108,7 +112,8 @@ footer a{text-decoration:underline}
 <main class="wrap">
 <!-- ACCUEIL -->
 <section class="view on" id="home">
- <div class="dateline mono"><span>Samedi 31 octobre 2026</span><span>On pèse ce que l'IA fait vraiment</span></div>
+ <div class="masthead"><img src="logo-encre.svg" alt="Poids &amp; Mesures"></div>
+ <div class="dateline mono"><span>Samedi 31 octobre 2026</span><span>On pèse ce que l'IA fait vraiment</span><span>Édition de 10 h</span></div>
  <div class="hero">
   <a class="une" href="#" data-go="article">
    <div>
