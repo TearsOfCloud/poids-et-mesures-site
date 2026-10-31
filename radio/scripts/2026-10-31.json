@@ -1,0 +1,35 @@
+{
+ "date": "2026-10-31",
+ "segments": [
+  {
+   "id": "journal-2026-10-31",
+   "format": "journal",
+   "titre": "Le journal du 31 octobre",
+   "sources": [
+    {"type": "breve", "slug": "2026-10-31-cursor-extension-claude-code-piegee"},
+    {"type": "breve", "slug": "2026-10-31-gemini-4-carbon"},
+    {"type": "breve", "slug": "2026-10-31-mistral-large-4-poids-ouverts"},
+    {"type": "breve", "slug": "2026-10-31-opt-out-entrainement-ia-robots-txt"}
+   ],
+   "texte": "Bonjour, c'est le journal de Poids et Mesures, samedi trente et un octobre. Quatre sujets. Et pour chacun, on sépare ce qui est annoncé de ce qui est vraiment prouvé.\n\nPremier sujet. Une fausse version de l'extension Claude Code a circulé sur Cursor. Cursor, c'est un éditeur de code assisté par IA. Jeudi vingt-neuf octobre, pendant environ onze heures, son magasin d'extensions a proposé deux versions piégées de l'extension d'Anthropic. Le code ajouté tente d'installer une porte dérobée, c'est-à-dire un accès caché à l'ordinateur. Il envoie des informations sur la machine, et il ajoute une clé SSH qui appartient à l'attaquant. Une clé SSH, c'est ce qui permet de se connecter à distance à une machine sans mot de passe. D'après Cursor, l'étape qui active l'accès à distance échoue sur la plupart des machines, mais la clé, elle, a bien été installée. Cursor a retiré les versions piégées. Ce qu'on ne sait pas : comment les attaquants ont pu publier sous le nom d'Anthropic. Et ces faits viennent de l'avis de Cursor, pas d'une vérification indépendante. Ton réflexe : si tu as installé ou mis à jour cette extension dans Cursor ce jour-là, va lire la brève sur le site. La vérification à faire y est écrite. Et retiens que désinstaller l'extension ne suffit pas.\n\nDeuxième sujet. Google DeepMind a annoncé, le vingt-huit octobre, Gemini quatre Carbon. Google le décrit comme son modèle le plus puissant, surtout pour trouver et corriger des failles de sécurité dans des logiciels. Mais tu ne peux pas l'essayer : l'accès est réservé à un petit groupe de professionnels de la cybersécurité, puis à des partenaires de confiance. Pas de date pour le grand public. Et les scores annoncés, par exemple quatre-vingt-huit virgule deux pour cent sur un test de détection de failles, viennent de Google lui-même. Aucun organisme indépendant ne les a encore reproduits. Alors on les lit comme des annonces, pas comme des mesures.\n\nTroisième sujet. Mistral, l'entreprise française, publie Mistral Large quatre sur la plateforme Hugging Face. Ses fichiers sont téléchargeables : on parle de modèle à poids ouverts. Il est énorme, environ mille milliards de paramètres au total, dont quarante-neuf milliards servent pour chaque morceau de texte. Mais attention à la licence. Elle dérive de la licence MIT, et elle limite la revente du modèle sous forme de service. Si tu veux l'intégrer à un produit, lis-la d'abord. Ouvert ne veut pas dire sans conditions.\n\nDernier sujet. Refuser que son site serve à entraîner des IA. Jusqu'ici, il fallait le dire séparément à chaque entreprise. Le trente octobre, Google a annoncé qu'il prévoit de reconnaître un signal commun, placé dans le fichier robots point t x t. C'est le fichier où un site indique aux robots ce qu'ils ont le droit de visiter. Google vise deux mille vingt-sept. Microsoft appliquera ses nouvelles préférences à partir du premier février deux mille vingt-sept. Attention : ce sont des engagements de calendrier. Le nom exact du réglage est encore dans un brouillon, et rien ne prouve que les robots le respecteront. Si tu as un site, rien à faire aujourd'hui : les réglages propres à chaque entreprise, comme Google-Extended pour Google, continuent de fonctionner.\n\nC'était le journal. Les sources sont sur le site, avec chaque brève en entier. À très vite."
+  },
+  {
+   "id": "mot-pese-poids-ouverts",
+   "format": "bases",
+   "titre": "Le mot pesé : poids ouverts",
+   "sources": [
+    {"type": "breve", "slug": "2026-10-31-mistral-large-4-poids-ouverts"}
+   ],
+   "texte": "Le mot pesé. Poids ouverts.\n\nTu entends cette expression chaque fois qu'un modèle d'IA est publié en téléchargement. Elle veut dire une chose précise : l'entreprise met en ligne les fichiers du modèle, et tout le monde peut les télécharger. Mistral vient de le faire avec Mistral Large quatre.\n\nMais ça ne veut pas dire que tu fais ce que tu veux. Ce que tu as le droit de faire avec ces fichiers dépend de la licence. Celle de Mistral Large quatre dérive de la licence MIT, mais elle limite la revente du modèle sous forme de service.\n\nTon réflexe : avant d'utiliser un modèle ouvert dans un produit ou pour des clients, cherche sa licence et lis les conditions. Ouvert ne veut pas dire sans conditions."
+  },
+  {
+   "id": "anecdote-air-canada",
+   "format": "anecdote",
+   "titre": "Anecdote : le chatbot d'Air Canada",
+   "sources": [
+    {"type": "article", "slug": "air-canada-chatbot"}
+   ],
+   "texte": "Novembre deux mille vingt-deux. Un passager doit prendre l'avion après un décès dans sa famille. Il demande au chatbot du site d'Air Canada comment obtenir le tarif deuil, un tarif réduit prévu pour ce genre de situation.\n\nLe chatbot répond : achète ton billet au prix normal, puis demande le remboursement dans les quatre-vingt-dix jours. Problème : la vraie règle, celle de la page officielle de la compagnie, dit le contraire. Pas de remboursement après coup.\n\nPourquoi le robot s'est trompé ? Il a produit ce qu'on appelle une hallucination : une réponse plausible, bien tournée, mais fausse. Les modèles de langage, ce sont les programmes derrière ChatGPT, Claude ou un chatbot de service client. Ils sont entraînés à prédire la suite la plus probable d'un texte. Ils ne vérifient pas forcément la règle officielle avant de répondre.\n\nDevant le tribunal, Air Canada a soutenu que son chatbot était une entité juridique distincte, responsable de ses propres actes. Le tribunal a jugé l'argument remarquable, et il l'a rejeté : le chatbot fait partie du site de la compagnie. La décision date du quatorze février deux mille vingt-quatre. Au total, Air Canada a dû verser huit cent douze dollars canadiens et deux centimes. Une petite somme, mais une règle simple : ce que dit le robot engage l'entreprise.\n\nTon réflexe, trois gestes. Fais une capture d'écran de la promesse, avec la date visible. Vérifie sur la page officielle de la règle, c'est elle qui compte. Et demande à un humain du service client de confirmer par écrit."
+  }
+ ]
+}
