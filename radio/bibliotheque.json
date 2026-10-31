@@ -1,0 +1,184 @@
+{
+ "segments": [
+  {
+   "id": "ia-raison-01",
+   "format": "dossier",
+   "titre": "Pourquoi l'IA te donne presque toujours raison · Accroche",
+   "fichier": "ia-raison-01.mp3",
+   "duree": 47.1,
+   "texte": "",
+   "demo": true
+  },
+  {
+   "id": "ia-raison-02",
+   "format": "dossier",
+   "titre": "Pourquoi l'IA te donne presque toujours raison · Avril 2025 : le cas GPT-4o",
+   "fichier": "ia-raison-02.mp3",
+   "duree": 93.0,
+   "texte": "",
+   "demo": true
+  },
+  {
+   "id": "ia-raison-03",
+   "format": "dossier",
+   "titre": "Pourquoi l'IA te donne presque toujours raison · Le mécanisme : on récompense ce qui plaît",
+   "fichier": "ia-raison-03.mp3",
+   "duree": 33.0,
+   "texte": "",
+   "demo": true
+  },
+  {
+   "id": "ia-raison-04",
+   "format": "dossier",
+   "titre": "Pourquoi l'IA te donne presque toujours raison · L'étude Sharma et al. (2023)",
+   "fichier": "ia-raison-04.mp3",
+   "duree": 59.1,
+   "texte": "",
+   "demo": true
+  },
+  {
+   "id": "ia-raison-05",
+   "format": "dossier",
+   "titre": "Pourquoi l'IA te donne presque toujours raison · Test maison : « Tu es sûr ? »",
+   "fichier": "ia-raison-05.mp3",
+   "duree": 65.1,
+   "texte": "",
+   "demo": true
+  },
+  {
+   "id": "ia-raison-06",
+   "format": "dossier",
+   "titre": "Pourquoi l'IA te donne presque toujours raison · Octobre 2025 : conseils personnels",
+   "fichier": "ia-raison-06.mp3",
+   "duree": 75.0,
+   "texte": "",
+   "demo": true
+  },
+  {
+   "id": "ia-raison-07",
+   "format": "dossier",
+   "titre": "Pourquoi l'IA te donne presque toujours raison · 3 phrases à copier-coller",
+   "fichier": "ia-raison-07.mp3",
+   "duree": 48.0,
+   "texte": "",
+   "demo": true
+  },
+  {
+   "id": "ia-raison-08",
+   "format": "dossier",
+   "titre": "Pourquoi l'IA te donne presque toujours raison · Conclusion",
+   "fichier": "ia-raison-08.mp3",
+   "duree": 25.5,
+   "texte": "",
+   "demo": true
+  },
+  {
+   "id": "test-assistants-01",
+   "format": "outil",
+   "titre": "On a pesé 3 assistants IA · Accroche",
+   "fichier": "test-assistants-01.mp3",
+   "duree": 19.1,
+   "texte": "",
+   "demo": true
+  },
+  {
+   "id": "test-assistants-02",
+   "format": "outil",
+   "titre": "On a pesé 3 assistants IA · Le protocole",
+   "fichier": "test-assistants-02.mp3",
+   "duree": 49.1,
+   "texte": "",
+   "demo": true
+  },
+  {
+   "id": "test-assistants-03",
+   "format": "outil",
+   "titre": "On a pesé 3 assistants IA · Test 1 : les sources",
+   "fichier": "test-assistants-03.mp3",
+   "duree": 30.0,
+   "texte": "",
+   "demo": true
+  },
+  {
+   "id": "test-assistants-04",
+   "format": "outil",
+   "titre": "On a pesé 3 assistants IA · Test 1 : la source qui n'existe pas",
+   "fichier": "test-assistants-04.mp3",
+   "duree": 29.1,
+   "texte": "",
+   "demo": true
+  },
+  {
+   "id": "test-assistants-05",
+   "format": "outil",
+   "titre": "On a pesé 3 assistants IA · Test 2 : calcul et comptage",
+   "fichier": "test-assistants-05.mp3",
+   "duree": 51.0,
+   "texte": "",
+   "demo": true
+  },
+  {
+   "id": "test-assistants-06",
+   "format": "outil",
+   "titre": "On a pesé 3 assistants IA · Test 3 : la lettre",
+   "fichier": "test-assistants-06.mp3",
+   "duree": 60.0,
+   "texte": "",
+   "demo": true
+  },
+  {
+   "id": "test-assistants-07",
+   "format": "outil",
+   "titre": "On a pesé 3 assistants IA · Test 4 : le contrat piégé",
+   "fichier": "test-assistants-07.mp3",
+   "duree": 48.0,
+   "texte": "",
+   "demo": true
+  },
+  {
+   "id": "test-assistants-08",
+   "format": "outil",
+   "titre": "On a pesé 3 assistants IA · Le verdict",
+   "fichier": "test-assistants-08.mp3",
+   "duree": 27.0,
+   "texte": "",
+   "demo": true
+  },
+  {
+   "id": "test-assistants-09",
+   "format": "outil",
+   "titre": "On a pesé 3 assistants IA · La règle de 30 secondes",
+   "fichier": "test-assistants-09.mp3",
+   "duree": 21.3,
+   "texte": "",
+   "demo": true
+  },
+  {
+   "id": "musique-demo-1",
+   "format": "musique",
+   "titre": "Musique (démo, synthèse simple)",
+   "fichier": "musique-demo-1.mp3",
+   "duree": 151.2,
+   "texte": "",
+   "demo": true
+  },
+  {
+   "id": "musique-demo-2",
+   "format": "musique",
+   "titre": "Musique (démo, synthèse simple)",
+   "fichier": "musique-demo-2.mp3",
+   "duree": 151.2,
+   "texte": "",
+   "demo": true
+  },
+  {
+   "id": "musique-demo-3",
+   "format": "musique",
+   "titre": "Musique (démo, synthèse simple)",
+   "fichier": "musique-demo-3.mp3",
+   "duree": 151.2,
+   "texte": "",
+   "demo": true
+  }
+ ]
+}
