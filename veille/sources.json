@@ -1,0 +1,21 @@
+{
+  "fenetre_heures": 72,
+  "sources": [
+    {"nom": "OpenAI", "url": "https://openai.com/news/rss.xml", "type": "primaire", "filtre_ia": false},
+    {"nom": "Google (blog IA)", "url": "https://blog.google/technology/ai/rss/", "type": "primaire", "filtre_ia": false},
+    {"nom": "Google DeepMind", "url": "https://deepmind.google/blog/rss.xml", "type": "primaire", "filtre_ia": false},
+    {"nom": "Hugging Face", "url": "https://huggingface.co/blog/feed.xml", "type": "primaire", "filtre_ia": false},
+    {"nom": "GitHub (blog IA)", "url": "https://github.blog/ai-and-ml/feed/", "type": "primaire", "filtre_ia": false},
+    {"nom": "NVIDIA (blog)", "url": "https://blogs.nvidia.com/feed/", "type": "primaire", "filtre_ia": true},
+    {"nom": "AWS (machine learning)", "url": "https://aws.amazon.com/blogs/machine-learning/feed/", "type": "primaire", "filtre_ia": false},
+    {"nom": "CNIL", "url": "https://www.cnil.fr/fr/rss.xml", "type": "primaire", "filtre_ia": true},
+    {"nom": "Commission européenne (numérique)", "url": "https://digital-strategy.ec.europa.eu/en/rss.xml", "type": "primaire", "filtre_ia": true},
+    {"nom": "Commission européenne (communiqués)", "url": "https://ec.europa.eu/commission/presscorner/api/rss", "type": "primaire", "filtre_ia": true},
+    {"nom": "The Verge (IA)", "url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml", "type": "presse", "filtre_ia": false},
+    {"nom": "TechCrunch (IA)", "url": "https://techcrunch.com/category/artificial-intelligence/feed/", "type": "presse", "filtre_ia": false},
+    {"nom": "Ars Technica (IA)", "url": "https://arstechnica.com/ai/feed/", "type": "presse", "filtre_ia": false},
+    {"nom": "MIT Technology Review (IA)", "url": "https://www.technologyreview.com/topic/artificial-intelligence/feed", "type": "presse", "filtre_ia": false},
+    {"nom": "Numerama", "url": "https://www.numerama.com/feed/", "type": "presse", "filtre_ia": true},
+    {"nom": "Le Monde (Pixels)", "url": "https://www.lemonde.fr/pixels/rss_full.xml", "type": "presse", "filtre_ia": true}
+  ]
+}

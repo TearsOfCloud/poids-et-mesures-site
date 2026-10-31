@@ -1,0 +1,19 @@
+<div class="top" id="top">
+ <div class="bar">
+  <div class="wrap">
+   <a class="logo" href="{{root}}" aria-label="Accueil"><img src="{{root}}assets/logo-papier.svg" alt="Poids &amp; Mesures"></a>
+   <nav class="main mono" aria-label="Navigation principale">
+    <a href="{{root}}" data-route="home">L'actu pesée</a>
+    <a href="{{root}}articles/" data-route="articles">Articles</a>
+    <a href="{{root}}radio/" data-route="radio">Radio</a>
+   </nav>
+   <button class="onair mono" data-play aria-label="La radio démarre bientôt"><span class="dot"></span><span class="lbl">Radio</span> <b>Bientôt</b></button>
+  </div>
+ </div>
+ <div class="ruler" aria-hidden="true"><div class="ticks"></div><div class="pos"></div></div>
+</div>
+
+<div class="fil" aria-label="Dernières brèves">
+ <span class="lab mono">Le fil</span>
+ <div class="track" id="track">{{fil_html}}</div>
+</div>

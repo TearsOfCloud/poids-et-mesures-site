@@ -1,0 +1,60 @@
+
+ <div class="wrap">
+  <div class="mast"><img src="{{root}}assets/logo-encre.svg" alt="Poids &amp; Mesures"></div>
+  <div class="dateline mono"><span id="today">samedi 31 octobre 2026</span><span>On pèse ce que l'IA fait vraiment</span><span>Édition du matin</span></div>
+
+  <div class="une">
+   <a class="une-main torn pose" href="{{une_url}}" style="--r:-2deg">
+    <span class="mono" style="color:var(--jaune)">À la une · Anecdote · Chatbot</span>
+    <h1 style="margin-top:14px">Son chatbot s'est <mark>trompé</mark>. La compagnie a dû <em>payer</em>.</h1>
+    <p class="lede">Un tribunal canadien a jugé qu'une entreprise répond de ce que dit son robot. Ce que ça change pour toi, et le réflexe à avoir.</p>
+    <div class="scene" aria-hidden="true">
+     <div class="bg"></div>
+     <img class="avion sticker" src="{{root}}assets/img/avion.png" alt="">
+     <img class="laptop sticker" src="{{root}}assets/img/laptop.png" alt="">
+     <span class="stamp">Faux</span>
+     <div class="note"><span class="mono">Le chatbot</span>« Achète ton billet, puis demande le remboursement sous 90 jours. »</div>
+    </div>
+   </a>
+   <div class="une-side">{{side_cards}}</div>
+  </div>
+
+  <div class="sec-h"><h2>Les <em>brèves</em></h2>
+   <div class="chips" role="group" aria-label="Filtrer les brèves">
+    <button class="chip" aria-pressed="true" data-f="tout">Tout</button>
+    <button class="chip" aria-pressed="false" data-f="outils">Outils</button>
+    <button class="chip" aria-pressed="false" data-f="entreprises">Entreprises</button>
+    <button class="chip" aria-pressed="false" data-f="regles">Règles</button>
+   </div>
+  </div>
+  <div class="breves">
+   <div id="breves">{{breves_html}}</div>
+   <aside class="mot pose" style="--r:1.5deg" aria-label="Le mot pesé">
+    <span class="mono" style="color:var(--jaune)">Le mot pesé · un terme par jour</span>
+    <h3><em>Hallucination</em></h3>
+    <p>Quand une IA écrit une information fausse avec le même aplomb qu'une vraie. Elle ne « ment » pas : elle prédit la suite la plus probable d'un texte, pas la vérité.</p>
+    <p class="ex"><b>Exemple réel :</b> le chatbot d'Air Canada a inventé une règle de remboursement qui n'existait pas.</p>
+    <a class="btn y" href="{{une_url}}" style="margin-top:16px">Voir l'exemple en entier →</a>
+   </aside>
+  </div>
+
+  <section class="antenne pose" style="--r:0deg" aria-label="La radio">
+   <div class="ruler" aria-hidden="true"><div class="ticks"></div></div>
+   <div class="in">
+    <button class="dial" data-play aria-label="La radio démarre bientôt"><span class="ring"></span><span class="ring2"></span><span class="core">▶</span></button>
+    <div>
+     <span class="mono" style="color:#FF8A6E"><span class="eq"><i></i><i></i><i></i></span>Programme prévu · <span class="clockTxt">—</span></span>
+     <h2 class="nowTitle">Le journal</h2>
+     <p style="color:#CFC9B8">La radio de Poids &amp; Mesures démarre bientôt : voix de synthèse (Kore), uniquement des contenus déjà publiés et sourcés sur le site. Voici le programme prévu.</p>
+     <div class="prog"><i class="nowProg"></i></div>
+    </div>
+    <div>
+     <span class="mono" style="color:var(--jaune)">À suivre</span>
+     <ul class="suivre" id="suivreHome"></ul>
+     <a class="btn y" href="{{root}}radio/" style="margin-top:16px">Voir la grille →</a>
+    </div>
+   </div>
+  </section>
+
+{{dossiers_section}}
+ </div>

@@ -1,0 +1,13 @@
+
+ <div class="wrap">
+  <div class="list-head">
+   <div><span class="mono c-gris">Tout ce qu'on a pesé</span><h1>Les <em>articles</em></h1></div>
+   <label class="search"><span aria-hidden="true">⌕</span><span class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Rechercher un article</span><input id="q" type="search" placeholder="Chercher : chatbot, hallucination…"></label>
+  </div>
+  <div class="list-tools">
+   <div class="chips" role="group" aria-label="Filtrer par rubrique" id="aChips"></div>
+   <label class="chip" style="display:inline-flex;align-items:center;gap:8px"><input type="checkbox" id="onlyVid" style="accent-color:var(--encre)"> Avec vidéo</label>
+  </div>
+  <div class="grid-art" id="gridArt">{{grid_html}}</div>
+  <p class="empty" id="empty" hidden>Rien trouvé. Essaie un autre mot, ou propose-nous le sujet sur Instagram.</p>
+ </div>
