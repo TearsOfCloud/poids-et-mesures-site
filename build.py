@@ -196,7 +196,7 @@ def page(path, title, desc, view_id, view_html, ctx, nav="", extra=""):
         fil_html=fil, social_html=social_html(root), editeur=esc(SITE["editeur"]),
     )
     body = body.replace("{{root}}", root)
-    out = head(title, desc, root, path, extra) + f'<body data-page="{nav}">\n' + body + f'\n<script src="{root}assets/site.js"></script>\n</body>\n</html>\n'
+    out = head(title, desc, root, path, extra) + f'<body data-page="{nav}">\n' + body + f'\n<script src="{root}assets/site.js"></script>\n<script src="{root}assets/radio.js"></script>\n</body>\n</html>\n'
     dest = DIST / path / "index.html" if path else DIST / "index.html"
     dest.parent.mkdir(parents=True, exist_ok=True)
     dest.write_text(out, encoding="utf8")
@@ -223,6 +223,13 @@ def build():
     DIST.mkdir()
     shutil.copytree(SRC / "assets", DIST / "assets")
     (DIST / ".nojekyll").write_text("")
+    # radio : chaque segment de la grille doit avoir son fichier audio
+    gj = SRC / "assets/radio/grille.json"
+    if gj.exists():
+        g = json.loads(gj.read_text(encoding="utf8"))
+        manque = [x["fichier"] for x in g["segments"].values() if g["base"].startswith("http") is False and not (SRC / "assets/radio" / g["base"] / x["fichier"]).exists()]
+        if manque:
+            print("RADIO : fichiers audio manquants :", *manque, sep="\n - "); sys.exit(1)
 
     last = breves[:8]
     fil_items = "".join(f'<a href="{{{{root}}}}breves/{b["slug"]}/">{esc(b["titre"])}</a>' for b in last) or '<a href="{{root}}methode/">Les premières brèves arrivent bientôt</a>'
@@ -318,7 +325,7 @@ def build():
         page(f"breves/{b['slug']}/", b["titre"] + " · Poids & Mesures", b["resume"], "v-breve", view, ctx, "home", ld)
 
     # radio, méthode, correctifs, mentions
-    page("radio/", "La radio · Poids & Mesures", "La webradio de Poids & Mesures démarre bientôt : journal, bases, anecdotes, outils testés.", "v-radio", tpl("radio.html"), ctx, "radio")
+    page("radio/", "La radio · Poids & Mesures", "La webradio de Poids & Mesures, en test : journal, bases, anecdotes, outils testés, à écouter en continu.", "v-radio", tpl("radio.html"), ctx, "radio")
     page("methode/", "Comment on travaille · Poids & Mesures", "De la veille à ton oreille : sources, vérification, correctifs.", "v-methode", tpl("methode.html"), ctx, "")
     corr = "".join(
         f'<div class="piece corr torn" style="margin-top:20px"><span class="mono c-gris">{fr_date(c["date"])} · <a href="{esc(c["url"])}" style="text-decoration:underline">{esc(c["titre"])}</a></span>'

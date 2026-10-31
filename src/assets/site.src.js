@@ -121,7 +121,7 @@ function tick(){
  const title=s[2]==='journal'?`Le journal de ${h} h`:s[3];
  $$('.nowTitle').forEach(e=>e.textContent=title);
  $$('.nowProg').forEach(e=>e.style.setProperty('--p',Math.min(100,el/dur*100)+'%'));
- $$('.clockTxt').forEach(e=>e.textContent=`${pad(h)}:${pad(m)}`);
+ $$('.clockTxt').forEach(e=>e.textContent=`${pad(h)}:${pad(m)}`);if(window.__radio)return;
  const pill=$('.nowPill');pill.className='pill nowPill '+f.p;pill.textContent=f.n;
  const rest=Math.max(0,dur-el);$('.nowRest').textContent=`Encore ${Math.floor(rest/60)} min ${pad(rest%60)}`;
  const li=[1,2,3].map(k=>{const n=H[(i+k)%H.length],hh=(i+k>=H.length)?(h+1)%24:h;return `<li><span class="mono">${pad(hh)}:${pad(n[0])}</span><span class="pill ${F[n[2]].p}">${F[n[2]].n}</span><span>${n[2]==='journal'?'Le journal de '+hh+' h':n[3]}</span></li>`}).join('');
