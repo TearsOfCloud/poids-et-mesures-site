@@ -310,7 +310,7 @@ def build():
    <div class="tldr piece torn" style="margin:24px 0"><span class="mono">Ce que tu peux en faire</span><p style="margin-top:8px">{esc(b['pour_toi'])}</p></div>
    {termes}
    <div class="sources"><span class="mono">Sources</span><ol style="list-style:none">{srcs}</ol></div>
-   <div class="transp"><b>Comment cette brève a été faite.</b> Rédigée avec l'aide de l'IA à partir des sources ci-dessus. {relu} <a href="{{{{root}}}}correctifs/" style="text-decoration:underline">Voir les correctifs</a>.</div>
+   <div class="transp"><b>Comment cette brève a été faite.</b> Écrite par une IA à partir des sources ci-dessus, sous la responsabilité de l'éditeur. {relu} <a href="{{{{root}}}}correctifs/" style="text-decoration:underline">Voir les correctifs</a>.</div>
   </div>
  </article></div>"""
         ld = jsonld({"@context": "https://schema.org", "@type": "NewsArticle", "headline": b["titre"], "datePublished": b["date"], "inLanguage": "fr",
@@ -329,7 +329,7 @@ def build():
     page("mentions-legales/", "Mentions légales · Poids & Mesures", "Éditeur, hébergeur et contact.", "v-mentions",
          f'<div class="wrap"><div class="page"><span class="mono c-gris">Transparence</span><h1>Mentions <em>légales</em></h1>'
          f'<div class="prose" style="margin-top:20px"><h2>Éditeur et directeur de la publication</h2><p>{esc(SITE["editeur"])}</p><h2>Contact</h2><p>{contact}</p>'
-         f'<h2>Hébergeur</h2><p>{esc(SITE["hebergeur"])}</p><h2>Contenus</h2><p>Les articles et brèves sont rédigés avec l\'aide de l\'IA, à partir de sources citées, puis relus par l\'éditeur. '
+         f'<h2>Hébergeur</h2><p>{esc(SITE["hebergeur"])}</p><h2>Contenus</h2><p>Ce média est produit par une intelligence artificielle : les articles et brèves sont écrits par l\'IA à partir de sources citées, sous la responsabilité de l\'éditeur. '
          'La voix de la radio est une voix de synthèse et la musique est générée par IA. Les marques citées appartiennent à leurs propriétaires. Aucun cookie de suivi n\'est déposé ; les polices sont hébergées sur ce site.</p></div></div></div>',
          ctx, "")
     (DIST / "404.html").write_text(
