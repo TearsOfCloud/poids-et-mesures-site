@@ -4,20 +4,24 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Poids et Mesures Site</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;800;900&family=JetBrains+Mono:wght@700&family=Source+Serif+4:ital,wght@1,600&display=swap" rel="stylesheet">
 <style>
-:root{--encre:#101114;--papier:#F4F0E6;--jaune:#FFD60A;--corail:#FF5A36;--bleu:#2747FF;--vert:#0A9A63;--gris:#8B8A84;--bg:var(--papier);--fg:var(--encre);--card:#fff9ec}
-@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#17181c;--fg:#F4F0E6;--card:#202228}}
-:root[data-theme=dark]{--bg:#17181c;--fg:#F4F0E6;--card:#202228}
+@font-face{font-family:Inter;font-weight:500;font-display:swap;src:url(fonts/inter-latin-500-normal.woff2) format("woff2")}
+@font-face{font-family:Inter;font-weight:900;font-display:swap;src:url(fonts/inter-latin-900-normal.woff2) format("woff2")}
+@font-face{font-family:"JetBrains Mono";font-weight:700;font-display:swap;src:url(fonts/jetbrains-mono-latin-700-normal.woff2) format("woff2")}
+@font-face{font-family:"Source Serif 4";font-style:italic;font-weight:600;font-display:swap;src:url(fonts/source-serif-4-latin-600-italic.woff2) format("woff2")}
+:root{--encre:#101114;--papier:#F4F0E6;--jaune:#FFD60A;--corail:#FF5A36;--bleu:#2747FF;--vert:#0A9A63;--gris:#8B8A84;--bg:var(--papier);--fg:var(--encre);--card:#fff9ec;--t-bleu:#1F37C9;--t-corail:#B8331A;--t-vert:#07774C;--muted:#55544F}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#17181c;--fg:#F4F0E6;--card:#202228;--t-bleu:#8C9BFF;--t-corail:#FF8A6E;--t-vert:#3FD39A;--muted:#B5B3AC}}
+:root[data-theme=dark]{--bg:#17181c;--fg:#F4F0E6;--card:#202228;--t-bleu:#8C9BFF;--t-corail:#FF8A6E;--t-vert:#3FD39A;--muted:#B5B3AC}
 *{box-sizing:border-box;margin:0}
-body{background:var(--bg);color:var(--fg);font:500 17px/1.5 Inter,system-ui,sans-serif;padding-bottom:110px}
-body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.14;z-index:50;background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence baseFrequency='.9' numOctaves='2'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .9 0'/></filter><rect width='200' height='200' filter='url(%23n)'/></svg>")}
+html{background:var(--bg)}body{position:relative;isolation:isolate;color:var(--fg);font:500 17px/1.5 Inter,system-ui,sans-serif;padding-bottom:110px}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.10;z-index:-1;background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence baseFrequency='.9' numOctaves='2'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .9 0'/></filter><rect width='200' height='200' filter='url(%23n)'/></svg>")}
 .mono{font:700 12px/1.3 "JetBrains Mono",monospace;letter-spacing:.06em;text-transform:uppercase}
 h1,h2,h3{font-weight:900;letter-spacing:-.04em;line-height:.98}
 em{font:italic 600 1.1em "Source Serif 4",Georgia,serif;letter-spacing:-.01em}
 mark{background:var(--jaune);color:var(--encre);padding:0 .12em}
 a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid var(--corail);outline-offset:3px}
+.breve a.src{text-decoration:underline;text-underline-offset:3px}
 .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
 /* header */
 header{background:var(--encre);color:var(--papier);position:sticky;top:0;z-index:20}
@@ -25,7 +29,7 @@ header .wrap{display:flex;align-items:center;justify-content:space-between;heigh
 .brand{font-weight:900;letter-spacing:-.04em;font-size:22px}
 .brand b{color:var(--jaune)}
 nav{display:flex;gap:4px;overflow-x:auto}
-nav button{all:unset;cursor:pointer;padding:8px 12px;color:var(--papier);white-space:nowrap}
+nav button{all:unset;cursor:pointer;padding:0 14px;min-height:44px;display:flex;align-items:center;color:var(--papier);white-space:nowrap;font-size:13px}
 nav button[aria-current=true]{background:var(--jaune);color:var(--encre)}
 .ruler{height:22px;background:repeating-linear-gradient(90deg,var(--jaune) 0 2px,transparent 2px 12px) bottom/100% 12px no-repeat,repeating-linear-gradient(90deg,var(--jaune) 0 2px,transparent 2px 60px) bottom/100% 22px no-repeat;background-color:var(--encre)}
 .dateline{display:flex;justify-content:space-between;padding:18px 0 10px;border-bottom:3px solid var(--fg);color:var(--fg)}
@@ -41,10 +45,10 @@ nav button[aria-current=true]{background:var(--jaune);color:var(--encre)}
 .badge.ok{background:var(--jaune);border:0;color:var(--encre)}
 .stamp{display:inline-block;background:#fffdf5;color:var(--encre);border:5px solid var(--encre);padding:4px 10px;transform:rotate(-5deg)}
 .side{display:flex;flex-direction:column;gap:16px}
-.card{background:var(--card);padding:18px;border-top:6px solid var(--bleu);box-shadow:6px 7px 0 rgba(16,17,20,.18)}
+.card{display:block;background:var(--card);padding:18px;border-top:6px solid var(--bleu);box-shadow:6px 7px 0 rgba(16,17,20,.18)}
 .card.c{border-color:var(--corail)}.card.v{border-color:var(--vert)}
 .card h3{font-size:26px;margin:8px 0}
-.tag{color:var(--bleu)}.c .tag{color:var(--corail)}.v .tag{color:var(--vert)}
+.tag{color:var(--t-bleu)}.c .tag{color:var(--t-corail)}.v .tag{color:var(--t-vert)}
 /* breves */
 h2.sec{font-size:34px;margin:34px 0 14px;display:flex;align-items:center;gap:12px}
 .breves{border-top:3px solid var(--fg)}
@@ -58,13 +62,13 @@ h2.sec{font-size:34px;margin:34px 0 14px;display:flex;align-items:center;gap:12p
 .article h1{font-size:clamp(38px,6vw,64px);margin:12px 0 18px}
 .article p{margin:0 0 18px;font-size:19px}
 .article h2{font-size:30px;margin:30px 0 10px}
-.byline{color:var(--gris);margin-bottom:24px}
+.byline{color:var(--muted);margin-bottom:24px}
 .source{font:700 13px "JetBrains Mono",monospace;border-top:3px solid var(--fg);padding-top:12px;margin-top:30px}
 .listen{display:flex;gap:12px;align-items:center;background:var(--encre);color:var(--papier);padding:12px 16px;margin:18px 0}
 /* radio */
 .now{background:var(--encre);color:var(--papier);padding:28px;margin:22px 0;position:relative}
 .now h2{font-size:clamp(34px,5vw,54px);margin:10px 0}
-.now .live{color:var(--corail)}
+.now .live{color:#FF8A6E}
 .grille{border-top:3px solid var(--fg)}
 .slot{display:grid;grid-template-columns:70px 1fr auto;gap:14px;padding:12px 0;border-bottom:1px solid var(--gris)}
 .slot.on{background:var(--jaune);color:var(--encre);padding-left:10px;padding-right:10px}
@@ -72,14 +76,20 @@ h2.sec{font-size:34px;margin:34px 0 14px;display:flex;align-items:center;gap:12p
 .player{position:fixed;left:0;right:0;bottom:0;background:var(--encre);color:var(--papier);z-index:40}
 .player .wrap{display:flex;align-items:center;gap:14px;height:64px}
 .play{all:unset;cursor:pointer;width:42px;height:42px;background:var(--jaune);color:var(--encre);display:grid;place-items:center;font-size:18px;flex:none}
-.player .t{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.player .t{line-height:1.25;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .player .ruler{height:16px;background-size:100% 9px,100% 16px,auto}
-.player .pos{position:absolute;left:38%;bottom:0;width:14%;height:16px;background:repeating-linear-gradient(90deg,var(--papier) 0 6px,transparent 6px 12px)}
-footer{border-top:3px solid var(--fg);margin-top:40px;padding:22px 0;font-size:14px;color:var(--gris)}
+.player .pos{position:absolute;left:38%;top:0;width:14%;height:16px;background:repeating-linear-gradient(90deg,var(--papier) 0 6px,transparent 6px 12px)}
+.next{color:#B5B3AC;font-size:14px}
+.vol{display:flex;align-items:center;gap:6px;color:var(--jaune)}.vol input{accent-color:var(--jaune);width:90px}
+.player .grid{all:unset;cursor:pointer;border:2px solid var(--jaune);color:var(--jaune);padding:0 12px;min-height:40px;display:flex;align-items:center}
+@media(max-width:760px){.vol,.next{display:none}}
+footer{border-top:3px solid var(--fg);margin-top:40px;padding:22px 0;font-size:15px;color:var(--muted)}
 footer a{text-decoration:underline}
+.short{display:none}@media(max-width:760px){.long{display:none}.short{display:inline}}
+.player .grid{font:700 12px "JetBrains Mono",monospace;letter-spacing:.06em;text-transform:uppercase}
 .view{display:none}.view.on{display:block}
 .fall{background:var(--jaune);color:var(--encre);padding:18px 22px;margin-top:22px}
-@media(max-width:760px){.brand{font-size:17px;white-space:nowrap}.une .obj{display:none}.une p{max-width:none}.badge{white-space:normal}nav button{padding:8px 8px;font-size:11px}.dateline{flex-direction:column;gap:4px}.breve{grid-template-columns:52px 1fr}.breve .tag{display:none}}
+@media(max-width:760px){.brand{font-size:17px;white-space:nowrap}.une .obj{display:none}.une p{max-width:none}.badge{white-space:normal}nav button{padding:0 9px;font-size:12px}.dateline{flex-direction:column;gap:4px}.breve{grid-template-columns:52px 1fr}.breve .tag{display:none}}
 </style>
 </head>
 <body>
@@ -87,7 +97,7 @@ footer a{text-decoration:underline}
  <div class="wrap">
   <a class="brand" href="#" data-go="home">Poids <b>&amp;</b> Mesures</a>
   <nav class="mono">
-   <button data-go="home" aria-current="true">L'actu pesée</button>
+   <button data-go="home" aria-current="true"><span class="long">L'actu pesée</span><span class="short">Actu</span></button>
    <button data-go="article">Articles</button>
    <button data-go="radio">Radio</button>
   </nav>
@@ -111,25 +121,25 @@ footer a{text-decoration:underline}
    <span class="stamp mono" style="align-self:flex-start">Texte d'exemple</span>
   </a>
   <div class="side">
-   <div class="card"><span class="mono tag">Les bases</span><h3>C'est quoi, <em>vraiment</em>, un « agent » ?</h3><p>Le mot est partout. Voici ce qu'il cache, en trois étapes.</p></div>
-   <div class="card c"><span class="mono tag">À tester</span><h3>Le test maison : <mark>4 outils</mark> pour Claude</h3><p>Ce qu'on a essayé, ce qui marche, la commande à copier.</p></div>
-   <div class="card v"><span class="mono tag">Benchmark</span><h3>Qui <em>pèse</em> le plus lourd ?</h3><p>Comparaison mesurée, mêmes questions pour tous.</p></div>
+   <a class="card" href="#article" data-go="article"><span class="mono tag">Les bases</span><h3>C'est quoi, <em>vraiment</em>, un « agent » ?</h3><p>Le mot est partout. Voici ce qu'il cache, en trois étapes.</p></a>
+   <a class="card c" href="#article" data-go="article"><span class="mono tag">À tester</span><h3>Le test maison : <mark>4 outils</mark> pour Claude</h3><p>Ce qu'on a essayé, ce qui marche, la commande à copier.</p></a>
+   <a class="card v" href="#article" data-go="article"><span class="mono tag">Benchmark</span><h3>Qui <em>pèse</em> le plus lourd ?</h3><p>Comparaison mesurée, mêmes questions pour tous.</p></a>
   </div>
  </div>
 
  <h2 class="sec">Les brèves du jour <span class="mono" style="font-weight:700;letter-spacing:.06em">· mises à jour 1 à 3 fois par jour</span></h2>
  <div class="breves">
-  <div class="breve" data-go="article"><span class="mono">09:40</span><h3>Titre de brève d'exemple : un fait, une source, une phrase pour comprendre</h3><span class="mono tag">Source ↗</span></div>
-  <div class="breve" data-go="article"><span class="mono">08:15</span><h3>Autre brève d'exemple : ce que ça change concrètement pour toi</h3><span class="mono tag">Source ↗</span></div>
-  <div class="breve" data-go="article"><span class="mono">Hier</span><h3>Brève d'exemple : le chiffre annoncé, et pourquoi il faut le prendre avec prudence</h3><span class="mono tag">Source ↗</span></div>
-  <div class="breve" data-go="article"><span class="mono">Hier</span><h3>Brève d'exemple : un outil gratuit à essayer ce week-end</h3><span class="mono tag">Source ↗</span></div>
+  <article class="breve"><span class="mono">09:40</span><h3><a href="#article" data-go="article">Titre de brève d'exemple : un fait, une source, une phrase pour comprendre</a></h3><a class="mono tag src" href="#" aria-label="Source de la brève (ouvre le site d'origine)">Source ↗</a></article>
+  <article class="breve"><span class="mono">08:15</span><h3><a href="#article" data-go="article">Autre brève d'exemple : ce que ça change concrètement pour toi</a></h3><a class="mono tag src" href="#" aria-label="Source de la brève (ouvre le site d'origine)">Source ↗</a></article>
+  <article class="breve"><span class="mono">Hier</span><h3><a href="#article" data-go="article">Brève d'exemple : le chiffre annoncé, et pourquoi il faut le prendre avec prudence</a></h3><a class="mono tag src" href="#" aria-label="Source de la brève (ouvre le site d'origine)">Source ↗</a></article>
+  <article class="breve"><span class="mono">Hier</span><h3><a href="#article" data-go="article">Brève d'exemple : un outil gratuit à essayer ce week-end</a></h3><a class="mono tag src" href="#" aria-label="Source de la brève (ouvre le site d'origine)">Source ↗</a></article>
  </div>
 
  <h2 class="sec">Les <em>dossiers</em></h2>
  <div class="grid3">
-  <div class="card"><span class="mono tag">Les bases</span><h3>Comment une IA « lit » un texte</h3><p>Le mécanisme caché derrière l'outil que tu connais déjà.</p></div>
-  <div class="card c"><span class="mono tag">Anecdote</span><h3>Quand le chatbot a promis un remboursement</h3><p>Une histoire vraie, ce qu'elle apprend.</p></div>
-  <div class="card v"><span class="mono tag">Benchmark</span><h3>Trois assistants, les mêmes questions</h3><p>Même ordre à chaque fois : ChatGPT, Claude, Gemini, Le Chat.</p></div>
+  <a class="card" href="#article" data-go="article"><span class="mono tag">Les bases</span><h3>Comment une IA « lit » un texte</h3><p>Le mécanisme caché derrière l'outil que tu connais déjà.</p></a>
+  <a class="card c" href="#article" data-go="article"><span class="mono tag">Anecdote</span><h3>Quand le chatbot a promis un remboursement</h3><p>Une histoire vraie, ce qu'elle apprend.</p></a>
+  <a class="card v" href="#article" data-go="article"><span class="mono tag">Benchmark</span><h3>Trois assistants, les mêmes questions</h3><p>Même ordre à chaque fois : ChatGPT, Claude, Gemini, Le Chat.</p></a>
  </div>
 
  <div class="disclaimer mono" style="text-transform:none;letter-spacing:0;font-weight:500">Maquette : tous les titres et textes ci-dessus sont des exemples pour juger la mise en page. Aucune information réelle n'est publiée ici.</div>
@@ -158,7 +168,7 @@ footer a{text-decoration:underline}
 <!-- RADIO -->
 <section class="view" id="radio">
  <div class="now">
-  <span class="mono live">● En cours · 10:20</span>
+  <span class="mono live">● À l'antenne · 10:20</span>
   <h2>Le journal de <em>10 h</em></h2>
   <p>Les brèves du jour, lues par Kore. Voix de synthèse, contenus déjà publiés sur le site.</p>
   <div class="ruler" style="margin:22px -28px -28px"></div>
@@ -184,15 +194,17 @@ footer a{text-decoration:underline}
 <div class="player" role="region" aria-label="Radio">
  <div class="ruler"></div><div class="pos"></div>
  <div class="wrap">
-  <button class="play" id="pp" aria-label="Lecture">▶</button>
-  <div class="t"><span class="mono" style="color:var(--corail)">● Radio P&amp;M</span> &nbsp; <strong>Le journal de 10 h</strong></div>
-  <span class="mono" style="color:var(--jaune)">Maquette</span>
+  <button class="play" id="pp" aria-label="Écouter la radio">▶</button>
+  <div class="t"><span class="mono" style="color:#FF8A6E">● Antenne · 10:20</span><br><strong>Le journal de 10 h</strong> <span class="next">· À suivre : le dossier (10:25)</span></div>
+  <label class="vol mono"><span>Vol.</span><input type="range" min="0" max="100" value="80" aria-label="Volume"></label>
+  <button class="mono grid" data-go="radio">Grille</button>
  </div>
 </div>
 
 <script>
 const views=document.querySelectorAll('.view'),btns=document.querySelectorAll('nav button');
 function go(id){views.forEach(v=>v.classList.toggle('on',v.id===id));btns.forEach(b=>b.setAttribute('aria-current',b.dataset.go===id));scrollTo(0,0)}
+document.getElementById('pp').onclick=e=>{const b=e.currentTarget,on=b.textContent==='▶';b.textContent=on?'❚❚':'▶';b.setAttribute('aria-label',on?'Mettre en pause':'Écouter la radio')};
 document.addEventListener('click',e=>{const t=e.target.closest('[data-go]');if(t){e.preventDefault();go(t.dataset.go)}});
 </script>
 </body>
