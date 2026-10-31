@@ -5,6 +5,15 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Poids et Mesures Site</title>
 <meta name="description" content="On pèse ce que l'IA fait vraiment : l'actu, les bases, la radio.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Poids &amp; Mesures">
+<meta property="og:title" content="Poids &amp; Mesures · On pèse ce que l'IA fait vraiment">
+<meta property="og:description" content="L'actu de l'IA expliquée pour tout le monde, sources à l'appui. Et une radio 24 h sur 24.">
+<meta property="og:image" content="og.png">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" type="application/rss+xml" title="Poids &amp; Mesures" href="rss.xml">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <style>
 @font-face{font-family:Inter;font-weight:500;font-display:swap;src:url(fonts/inter-latin-500-normal.woff2) format("woff2")}
 @font-face{font-family:Inter;font-weight:900;font-display:swap;src:url(fonts/inter-latin-900-normal.woff2) format("woff2")}
@@ -274,6 +283,37 @@ nav.main a:hover:after,nav.main a[aria-current=page]:after{transform:scaleX(1)}
 .mini-player .t strong{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:230px}
 .mini-player .x{background:none;border:0;color:var(--gris);cursor:pointer;font-size:22px;padding:4px 8px}
 
+/* PAGE ARTICLES */
+.list-head{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:end;padding:40px 0 18px;border-bottom:3px solid var(--encre)}
+@media(max-width:820px){.list-head{grid-template-columns:1fr}}
+.list-head h1{font-size:clamp(44px,6vw,84px)}
+.search{display:flex;align-items:center;gap:10px;border:2px solid var(--encre);background:var(--creme);padding:0 12px;min-height:46px;width:min(360px,100%)}
+.search input{border:0;background:none;font:500 17px Inter;flex:1;min-width:0;outline:none}
+.list-tools{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center;margin:18px 0 26px}
+.grid-art{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+@media(max-width:900px){.grid-art{grid-template-columns:1fr 1fr}}@media(max-width:600px){.grid-art{grid-template-columns:1fr}}
+.grid-art .card[hidden]{display:none}
+.vbadge{position:absolute;right:12px;top:12px;background:var(--encre);color:var(--jaune);font:700 11px "JetBrains Mono";letter-spacing:.07em;text-transform:uppercase;padding:5px 8px;z-index:2}
+.empty{padding:40px;text-align:center;border:2px dashed var(--gris);color:var(--muted)}
+/* bloc vidéo */
+.video{display:grid;grid-template-columns:120px 1fr;gap:16px;align-items:center}
+.phone{position:relative;aspect-ratio:9/16;background:var(--bleu);border:6px solid var(--encre);border-radius:16px;overflow:hidden;display:block}
+.phone img{position:absolute;width:86%;left:7%;top:24%;transform:rotate(-5deg)}
+.phone .t{position:absolute;left:8px;right:8px;top:10px;font:900 13px/1.05 Inter;letter-spacing:-.03em;color:var(--papier)}
+.phone .pl{position:absolute;left:50%;top:62%;transform:translate(-50%,-50%);width:38px;height:38px;border-radius:50%;background:var(--jaune);display:grid;place-items:center;font-size:14px}
+.phone .ru{position:absolute;left:0;right:0;bottom:0;height:14px;background:var(--encre) repeating-linear-gradient(90deg,var(--jaune) 0 1px,transparent 1px 6px) 0 0/100% 7px no-repeat}
+.video:hover .phone .pl{transform:translate(-50%,-50%) scale(1.12)}
+/* pages Correctifs et Méthode */
+.page{max-width:760px;margin:0 auto;padding:40px 0 0}
+.page h1{font-size:clamp(44px,6vw,80px);margin:12px 0 18px}
+.page .chapo{max-width:none}
+.etapes{list-style:none;counter-reset:e;margin-top:30px}
+.etapes li{counter-increment:e;display:grid;grid-template-columns:70px 1fr;gap:16px;padding:20px 0;border-top:1px solid rgba(18,19,22,.25)}
+.etapes li:before{content:counter(e);font:900 56px/1 Inter;letter-spacing:-.04em;color:var(--bleu)}
+.etapes h3{font-size:24px;margin-bottom:6px}
+.corr{padding:18px;margin:14px 0}
+.corr .avant{text-decoration:line-through;text-decoration-color:var(--corail);text-decoration-thickness:3px;color:var(--muted)}
+
 /* PIED DE PAGE */
 footer{margin-top:90px;background:var(--encre);color:var(--papier)}
 footer .in{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:30px;padding:40px 20px 30px;max-width:1180px;margin:0 auto}
@@ -292,7 +332,7 @@ footer .legal{border-top:1px solid rgba(241,235,218,.18);padding:16px 20px 26px;
    <a class="logo" href="#/" aria-label="Accueil"><img src="logo-papier.svg" alt="Poids &amp; Mesures"></a>
    <nav class="main mono" aria-label="Navigation principale">
     <a href="#/" data-route="home">L'actu pesée</a>
-    <a href="#/article" data-route="article">Articles</a>
+    <a href="#/articles" data-route="articles">Articles</a>
     <a href="#/radio" data-route="radio">Radio</a>
    </nav>
    <button class="onair mono" data-play aria-label="Écouter la radio en direct"><span class="dot"></span><span class="lbl">À l'antenne</span> <b>▶ Écouter</b></button>
@@ -381,7 +421,7 @@ footer .legal{border-top:1px solid rgba(241,235,218,.18);padding:16px 20px 26px;
    </div>
   </section>
 
-  <div class="sec-h"><h2>Les <em>dossiers</em></h2><a class="mono" href="#/article" style="text-decoration:underline">Tous les articles →</a></div>
+  <div class="sec-h"><h2>Les <em>dossiers</em></h2><a class="mono" href="#/articles" style="text-decoration:underline">Tous les articles →</a></div>
   <div class="dossiers">
    <a class="card piece dossier pose" href="#/article" style="--r:-2deg">
     <div class="vis v-bleu"><img class="sticker" src="img/telephone.png" alt=""></div>
@@ -492,10 +532,14 @@ footer .legal{border-top:1px solid rgba(241,235,218,.18);padding:16px 20px 26px;
       <li>1. Moffatt c. Air Canada, 2024 BCCRT 149, Civil Resolution Tribunal (Colombie-Britannique), décision du 14/02/2024, lue en entier. decisions.civilresolutionbc.ca. Consultée le 29/10/2026.</li>
      </ol>
     </div>
-    <div class="transp"><b>Comment cet article a été fait.</b> Rédigé avec l'aide de l'IA à partir de la décision du tribunal, relu et vérifié par l'éditeur. Version audio en voix de synthèse. Une erreur ? <a href="#" style="text-decoration:underline">Signale-la</a>, elle sera corrigée dans la rubrique « Correctifs ».</div>
+    <div class="transp"><b>Comment cet article a été fait.</b> Rédigé avec l'aide de l'IA à partir de la décision du tribunal, relu et vérifié par l'éditeur. Version audio en voix de synthèse. Une erreur ? <a href="#/correctifs" style="text-decoration:underline">Signale-la</a>, elle sera corrigée dans la rubrique « Correctifs ».</div>
    </article>
 
    <aside class="aside-r">
+    <a class="piece video" href="#" aria-label="Voir la vidéo sur Instagram" style="padding:16px;display:grid;margin-bottom:24px">
+     <span class="phone"><span class="t">Son chatbot s'est trompé.</span><img src="img/laptop.png" alt=""><span class="pl">▶</span><span class="ru"></span></span>
+     <span><span class="mono c-corail">Voir en vidéo</span><b style="display:block;font-size:19px;letter-spacing:-.02em;line-height:1.15;margin:6px 0">L'histoire en 80 secondes</b><span class="mono c-gris">Reel · @poidsetmesures</span></span>
+    </a>
     <div class="piece torn"><span class="tape"></span>
      <span class="mono">Le chiffre</span>
      <div style="font:900 54px/1 Inter;letter-spacing:-.04em;margin:8px 0">812,02 $</div>
@@ -509,6 +553,56 @@ footer .legal{border-top:1px solid rgba(241,235,218,.18);padding:16px 20px 26px;
    </aside>
   </div>
  </div>
+</section>
+
+<!-- LISTE DES ARTICLES -->
+<section class="view" id="v-articles">
+ <div class="wrap">
+  <div class="list-head">
+   <div><span class="mono c-gris">Tout ce qu'on a pesé</span><h1>Les <em>articles</em></h1></div>
+   <label class="search"><span aria-hidden="true">⌕</span><span class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Rechercher un article</span><input id="q" type="search" placeholder="Chercher : chatbot, hallucination…"></label>
+  </div>
+  <div class="list-tools">
+   <div class="chips" role="group" aria-label="Filtrer par rubrique" id="aChips"></div>
+   <label class="chip" style="display:inline-flex;align-items:center;gap:8px"><input type="checkbox" id="onlyVid" style="accent-color:var(--encre)"> Avec vidéo</label>
+  </div>
+  <div class="grid-art" id="gridArt"></div>
+  <p class="empty" id="empty" hidden>Rien trouvé. Essaie un autre mot, ou propose-nous le sujet sur Instagram.</p>
+  <p class="note-maq">Maquette : seul l'article Air Canada est réel. Les autres sont des exemples pour montrer la liste, les filtres et la recherche.</p>
+ </div>
+</section>
+
+<!-- CORRECTIFS -->
+<section class="view" id="v-correctifs">
+ <div class="wrap"><div class="page">
+  <span class="mono c-corail">Transparence</span>
+  <h1>Les <em>correctifs</em></h1>
+  <p class="chapo">Quand on se trompe, on le corrige ici, en clair : ce qui était écrit, ce qui est juste, et quand. L'article concerné porte aussi la mention.</p>
+  <div class="piece corr torn" style="margin-top:30px">
+   <span class="mono c-gris">Exemple de présentation · 00/00/2026</span>
+   <p style="margin-top:8px" class="avant">« Le modèle a été entraîné sur 10 milliards de pages. »</p>
+   <p style="margin-top:6px"><b>Corrigé :</b> le chiffre n'était pas confirmé par une source primaire. Il a été retiré de l'article.</p>
+  </div>
+  <p style="margin-top:26px">Aucun correctif publié pour l'instant. Tu as repéré une erreur ? Écris-nous en message privé sur Instagram <b>@poidsetmesures</b>, avec le lien de l'article.</p>
+ </div></div>
+</section>
+
+<!-- MÉTHODE -->
+<section class="view" id="v-methode">
+ <div class="wrap"><div class="page">
+  <span class="mono c-bleu">Comment on travaille</span>
+  <h1>On <mark>pèse</mark>, on ne <em>devine</em> pas.</h1>
+  <p class="chapo">Poids &amp; Mesures utilise l'IA pour aller plus vite, pas pour inventer. Voici le chemin que suit chaque article, de la source à ton oreille.</p>
+  <ol class="etapes">
+   <li><div><h3>La veille</h3><p>Chaque jour, on lit une liste de sources fiables : annonces officielles, publications de recherche, décisions de justice, médias reconnus.</p></div></li>
+   <li><div><h3>La rédaction</h3><p>L'IA aide à écrire le premier jet, en français simple, avec chaque terme technique expliqué.</p></div></li>
+   <li><div><h3>La vérification</h3><p>Aucun chiffre ni citation sans lien vers sa source. Si ce n'est pas vérifiable, ce n'est pas publié. Les sujets sensibles (santé, justice, personnes nommées) sont toujours relus par un humain.</p></div></li>
+   <li><div><h3>Les badges</h3><p><span class="badge ok" style="margin:6px 0">✓ Mesuré par un tiers</span> veut dire qu'un organisme indépendant a vérifié. <span class="badge" style="border:2px dashed var(--encre);margin:6px 0">Annoncé · pas vérifié</span> veut dire que c'est l'entreprise qui le dit.</p></div></li>
+   <li><div><h3>La radio</h3><p>La radio ne lit que des contenus déjà publiés ici. Voix de synthèse (Kore), musique générée par IA.</p></div></li>
+   <li><div><h3>Les correctifs</h3><p>Une erreur est corrigée et signalée publiquement dans la page <a href="#/correctifs" style="text-decoration:underline">Correctifs</a>.</p></div></li>
+  </ol>
+  <p class="transp" style="margin-top:20px">Éditeur et responsable de la publication : Tears (nom et contact à compléter dans les mentions légales).</p>
+ </div></div>
 </section>
 
 <!-- RADIO -->
@@ -563,11 +657,11 @@ footer .legal{border-top:1px solid rgba(241,235,218,.18);padding:16px 20px 26px;
    <img src="logo-papier.svg" alt="Poids &amp; Mesures" style="height:34px;width:auto">
    <p style="margin-top:16px;color:#CFC9B8;max-width:34ch">On pèse ce que l'IA fait vraiment. Les bases, l'actu et les outils testés, expliqués pour tout le monde.</p>
   </div>
-  <div><h4>Rubriques</h4><ul><li><a href="#/">L'actu pesée</a></li><li><a href="#/article">Les bases</a></li><li><a href="#/article">Anecdotes</a></li><li><a href="#/article">Benchmarks</a></li></ul></div>
-  <div><h4>Radio</h4><ul><li><a href="#/radio">Écouter le direct</a></li><li><a href="#/radio">La grille</a></li><li><a href="#/radio">Les formats</a></li></ul></div>
+  <div><h4>Rubriques</h4><ul><li><a href="#/">L'actu pesée</a></li><li><a href="#/articles">Tous les articles</a></li><li><a href="#/articles?r=bases">Les bases</a></li><li><a href="#/articles?r=anecdote">Anecdotes</a></li><li><a href="#/articles?r=benchmark">Benchmarks</a></li></ul></div>
+  <div><h4>Radio</h4><ul><li><a href="#/radio">Écouter le direct</a></li><li><a href="#/radio">La grille</a></li></ul><h4 style="margin-top:20px">Transparence</h4><ul><li><a href="#/methode">Comment on travaille</a></li><li><a href="#/correctifs">Correctifs</a></li><li><a href="rss.xml">Flux RSS</a></li></ul></div>
   <div><h4>Nous suivre</h4><ul><li><a href="#">Instagram</a></li><li><a href="#">TikTok</a></li><li><a href="#">YouTube</a></li><li><a href="#">X</a></li></ul></div>
  </div>
- <div class="legal"><span>Contenus rédigés avec l'aide de l'IA et relus · voix de synthèse (Kore) · musique générée par IA</span><span><a href="#">Mentions légales</a> · Éditeur : Tears (à compléter) · <a href="#">Correctifs</a> · @poidsetmesures</span></div>
+ <div class="legal"><span>Contenus rédigés avec l'aide de l'IA et relus · voix de synthèse (Kore) · musique générée par IA</span><span><a href="#">Mentions légales</a> · Éditeur : Tears (à compléter) · <a href="#/correctifs">Correctifs</a> · @poidsetmesures</span></div>
 </footer>
 
 <div class="mini-player" id="mini" role="region" aria-label="Lecteur radio">
@@ -597,9 +691,11 @@ const observe=()=>$$('.view.on .pose:not(.on),.view.on mark:not(.on),.view.on #g
 /* navigation entre les pages */
 function route(){
  const h=(location.hash.match(/^#\/(\w+)/)||[])[1]||'home';
- const id=['home','article','radio'].includes(h)?h:'home';
+ const id=['home','articles','article','radio','correctifs','methode'].includes(h)?h:'home';
  $$('.view').forEach(v=>v.classList.toggle('on',v.id==='v-'+id));
- $$('nav.main a').forEach(a=>a.dataset.route===id?a.setAttribute('aria-current','page'):a.removeAttribute('aria-current'));
+ const nid=id==='article'?'articles':id;
+ $$('nav.main a').forEach(a=>a.dataset.route===nid?a.setAttribute('aria-current','page'):a.removeAttribute('aria-current'));
+ if(id==='articles'){const r=(location.hash.match(/r=(\w+)/)||[])[1];if(r)setRub(r)}
  scrollTo(0,0);observe();onScroll();
 }
 addEventListener('hashchange',()=>{if(!location.hash||location.hash.startsWith('#/'))route()});
@@ -616,6 +712,7 @@ function onScroll(){
  if(y>lastY+6&&y>180)top.classList.add('hide');else if(y<lastY-6||y<180)top.classList.remove('hide');
  lastY=y;ticking=false;
  const secs=['s1','s2','s3','s4','s5','s6'].map(i=>document.getElementById(i));
+ if(!$('#v-article').classList.contains('on'))return;
  let cur=secs[0];secs.forEach(s=>{if(s.getBoundingClientRect().top<220)cur=s});
  $$('#toc a').forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+cur.id));
 }
@@ -637,6 +734,28 @@ $$('[data-f]').forEach(c=>c.onclick=()=>{
  $$('[data-f]').forEach(x=>x.setAttribute('aria-pressed',x===c));
  $$('.breve').forEach(b=>b.hidden=!(c.dataset.f==='tout'||b.dataset.cat===c.dataset.f));
 });
+
+/* liste des articles (seul Air Canada est réel) */
+const R={bases:['Les bases','c-bleu','v-bleu'],anecdote:['Anecdote','c-corail','v-corail'],benchmark:['Benchmark','c-vert','v-vert'],actu:["L'actu pesée",'c-gris','v-bleu']};
+const A=[
+ ['anecdote',"Son chatbot s'est trompé. La compagnie a dû payer.",'L\'affaire Air Canada, de la question au verdict. Source primaire lue en entier.','marteau',5,1,'29/10',0,'chatbot hallucination justice consommation air canada'],
+ ['bases',"C'est quoi, vraiment, une hallucination ?",'Quand une IA invente une info plausible, et pourquoi.','robot',4,1,'28/10',1,'hallucination modele langage'],
+ ['benchmark','On a pesé 4 assistants sur la même question','ChatGPT, Claude, Gemini, Le Chat : qui cite ses sources ?','balance',6,0,'27/10',1,'chatgpt claude gemini le chat comparaison sources'],
+ ['bases','Comment une IA « lit » ton message','Le mécanisme caché derrière l\'outil que tu utilises déjà.','telephone',5,1,'26/10',1,'token lecture modele'],
+ ['actu','Exemple : une règle européenne entre en vigueur','Ce que tu dois savoir, en une phrase et une source.','laptop',3,0,'25/10',1,'europe loi regle ai act'],
+ ['anecdote',"Exemple : le jour où un robot a réservé le mauvais vol",'Une histoire vraie de la tech, et ce qu\'elle apprend.','avion',4,1,'24/10',1,'avion agent reservation'],
+];
+$('#gridArt').innerHTML=A.map(a=>`<a class="card piece dossier" href="#/article" data-r="${a[0]}" data-v="${a[5]}" data-q="${(a[1]+' '+a[2]+' '+a[8]).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'')}">${a[5]?'<span class="vbadge">▶ Vidéo</span>':''}<div class="vis ${R[a[0]][2]}"><img class="sticker" src="img/${a[3]}.png" alt=""></div><span class="mono tag ${R[a[0]][1]}">${R[a[0]][0]}</span><h3>${a[1]}</h3><p>${a[2]}</p><div class="meta mono">${a[6]} · ${a[4]} min${a[7]?' · Exemple':' · Source primaire'}</div></a>`).join('');
+$('#aChips').innerHTML=`<button class="chip" aria-pressed="true" data-r="tout">Tout</button>`+Object.entries(R).map(([k,v])=>`<button class="chip" aria-pressed="false" data-r="${k}">${v[0]}</button>`).join('');
+let rub='tout';
+function filt(){
+ const q=$('#q').value.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').trim(),v=$('#onlyVid').checked;let n=0;
+ $$('#gridArt .card').forEach(c=>{const ok=(rub==='tout'||c.dataset.r===rub)&&(!v||c.dataset.v==='1')&&(!q||q.split(/\s+/).every(w=>c.dataset.q.includes(w)));c.hidden=!ok;n+=ok});
+ $('#empty').hidden=n>0;
+}
+function setRub(r){rub=r;$$('#aChips .chip').forEach(x=>x.setAttribute('aria-pressed',x.dataset.r===r));filt()}
+$$('#aChips .chip').forEach(c=>c.onclick=()=>setRub(c.dataset.r));
+$('#q').oninput=filt;$('#onlyVid').onchange=filt;
 
 /* radio : formats, heure type, grille */
 const F={

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+ <channel>
+  <title>Poids &amp; Mesures</title>
+  <link>https://poidsetmesures.fr/</link>
+  <description>On pèse ce que l'IA fait vraiment. L'actu de l'IA expliquée pour tout le monde, sources à l'appui.</description>
+  <language>fr-fr</language>
+  <item>
+   <title>Son chatbot s'est trompé. La compagnie a dû payer.</title>
+   <link>https://poidsetmesures.fr/articles/air-canada-chatbot</link>
+   <guid>https://poidsetmesures.fr/articles/air-canada-chatbot</guid>
+   <pubDate>Thu, 29 Oct 2026 08:00:00 +0100</pubDate>
+   <description>En 2024, un tribunal canadien a jugé qu'Air Canada était responsable de ce que son chatbot avait promis à un client. Source : Moffatt c. Air Canada, 2024 BCCRT 149.</description>
+  </item>
+ </channel>
+</rss>
