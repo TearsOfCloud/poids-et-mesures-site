@@ -1,0 +1,41 @@
+
+ <div class="wrap">
+  <div class="r-hero pose" style="--r:0deg">
+   <div class="ruler" aria-hidden="true"><div class="ticks"></div></div>
+   <div class="in">
+    <div>
+     <span class="mono" style="color:var(--jaune)">Webradio · démarre bientôt</span>
+     <h1>L'actu de l'IA, <mark class="inv">pesée</mark> à <em>voix haute</em>.</h1>
+     <p style="color:#CFC9B8;max-width:46ch">Un journal toutes les heures, les titres à :20 et :40, et entre les deux les bases, les anecdotes, l'outil testé et de la musique générée par IA. Tout ce qui passe à l'antenne est déjà publié et sourcé sur le site.</p>
+     <div style="display:flex;gap:12px;margin-top:22px;flex-wrap:wrap"><button class="btn y" data-play>Écouter · bientôt</button><a class="btn o l" href="#grille" data-anchor>La grille du jour</a></div>
+    </div>
+    <div class="r-now">
+     <div class="head"><span class="mono" style="color:#FF8A6E"><span class="eq"><i></i><i></i><i></i></span>Programme prévu</span><span class="clock" id="clock">--:--:--</span></div>
+     <div style="display:flex;gap:18px;align-items:center;margin-top:16px">
+      <button class="dial" data-play style="--s:104px" aria-label="Écouter"><span class="ring"></span><span class="ring2"></span><span class="core">▶</span></button>
+      <div style="min-width:0"><span class="pill nowPill p-journal">Journal</span><h2 class="nowTitle">Le journal</h2><span class="mono nowRest" style="color:#CFC9B8"></span></div>
+     </div>
+     <div class="prog"><i class="nowProg"></i></div>
+     <span class="mono" style="color:var(--jaune);display:block;margin-top:14px">À suivre</span>
+     <ul class="suivre" id="suivreRadio"></ul>
+    </div>
+   </div>
+  </div>
+
+  <div class="heure piece pose" style="--r:-.6deg">
+   <span class="mono">Une heure de radio</span>
+   <h2 style="font-size:32px;margin-top:6px">Comment tourne l'<em>antenne</em></h2>
+   <div class="heure-bar" id="heureBar" aria-label="Déroulé d'une heure"></div>
+   <div class="heure-axe mono"><span>:00</span><span>:20</span><span>:40</span><span>:59</span></div>
+   <div class="legend" id="legend"></div>
+  </div>
+
+  <div class="sec-h"><h2>Les <em>formats</em></h2><span class="mono c-gris">Un thème, une couleur</span></div>
+  <div class="formats" id="formats"></div>
+
+  <div class="sec-h" id="grille" style="scroll-margin-top:40px"><h2>La grille du <em>jour</em></h2>
+   <div class="chips" role="group" aria-label="Filtrer par thème" id="gChips"></div>
+  </div>
+  <div id="grilleJour"></div>
+  <p class="note-maq">Aperçu : la diffusion n'a pas encore commencé. Cette grille est le programme prévu à l'ouverture ; le segment « en cours » est calculé avec l'heure de ton appareil. Les premiers sons seront annoncés sur Instagram et ici.</p>
+ </div>

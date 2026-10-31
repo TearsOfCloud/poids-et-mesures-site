@@ -1,0 +1,94 @@
+
+ <div class="wrap">
+  <header class="art-head">
+   <div>
+    <div class="crumb"><a class="mono" href="{{root}}">Accueil</a><span class="mono">/</span><span class="mono tag c-corail">Anecdote</span><span class="mono c-gris">· Chatbot · Consommation</span></div>
+    <h1>Son chatbot s'est <mark>trompé</mark>. La compagnie a dû <em>payer</em>.</h1>
+    <p class="chapo">En 2024, un tribunal canadien a jugé qu'Air Canada était responsable de ce que son chatbot avait promis à un client. Une petite somme, mais une règle simple : ce que dit le robot engage l'entreprise.</p>
+   </div>
+   <div class="art-vis" aria-hidden="true">
+    <div class="bg"></div>
+    <span class="big">812,02 $ CA</span>
+    <img class="o1 sticker" src="{{root}}assets/img/marteau.png" alt="">
+    <img class="o2 sticker" src="{{root}}assets/img/robot.png" alt="">
+   </div>
+  </header>
+
+  <div class="meta-bar">
+   <span class="mono">Publié le 29/10/2026</span>
+   <span class="mono">5 min de lecture</span>
+   <span class="badge ok" style="margin:0">✓ Source primaire lue en entier</span>
+   <span style="flex:1"></span>
+   <button class="btn o" id="copy">Copier le lien</button>
+  </div>
+
+  <div class="art-body">
+   <nav class="toc mono" aria-label="Sommaire" id="toc">
+    <a href="#s1">En 30 secondes</a>
+    <a href="#s2">Ce qui s'est passé</a>
+    <a href="#s3">Pourquoi il s'est trompé</a>
+    <a href="#s4">Le verdict</a>
+    <a href="#s5">Ton réflexe</a>
+    <a href="#s6">Sources</a>
+   </nav>
+
+   <article class="prose">
+    <div class="tldr piece torn" id="s1">
+     <span class="mono">En 30 secondes</span>
+     <ol>
+      <li>Le chatbot d'Air Canada a donné une règle de remboursement qui n'existait pas.</li>
+      <li>La compagnie a plaidé que son chatbot était « une entité distincte ». Argument rejeté.</li>
+      <li>Ton réflexe : capture d'écran datée, vérification sur la page officielle, confirmation écrite par un humain.</li>
+     </ol>
+    </div>
+
+    <h2 id="s2">Ce qui s'est passé</h2>
+    <p class="drop">Novembre 2022. Jake Moffatt doit prendre l'avion après un décès dans sa famille. Il demande au chatbot du site d'Air Canada comment obtenir un tarif « deuil », un tarif réduit prévu pour ce genre de situation.</p>
+    <div class="duel">
+     <div class="piece a"><span class="mono">Ce que dit le chatbot</span><p style="margin:8px 0 0;font-size:17px"><b>Achète ton billet au prix normal, puis demande le remboursement dans les 90 jours.</b></p></div>
+     <span class="vs" aria-label="différent de">≠</span>
+     <div class="piece b"><span class="mono">La vraie règle</span><p style="margin:8px 0 0;font-size:17px"><b>Pas de remboursement après coup.</b> La page officielle de la compagnie dit le contraire du chatbot.</p></div>
+    </div>
+
+    <h2 id="s3">Pourquoi le robot s'est trompé</h2>
+    <p>Le chatbot a produit ce qu'on appelle une <button class="terme" aria-describedby="b1">hallucination<span class="bulle" role="tooltip" id="b1"><b>Le mot expliqué</b>Une info fausse, écrite avec le même aplomb qu'une vraie. L'IA prédit la suite la plus probable d'un texte, elle ne vérifie pas.</span></button> : une réponse plausible, bien tournée, mais fausse. Les <button class="terme" aria-describedby="b2">modèles de langage<span class="bulle" role="tooltip" id="b2"><b>Le mot expliqué</b>Le moteur derrière ChatGPT, Claude ou un chatbot de service client : un programme entraîné à prédire le mot suivant.</span></button> qui écrivent ces réponses ne consultent pas forcément la règle officielle avant de répondre.</p>
+
+    <h2 id="s4">Le verdict</h2>
+    <p>Devant le tribunal, Air Canada a soutenu que son chatbot était « une entité juridique distincte, responsable de ses propres actes ». Le tribunal a jugé l'argument « remarquable » et l'a rejeté : le chatbot fait partie du site de la compagnie.</p>
+    <span class="badge ok">✓ Source primaire · Décision 2024 BCCRT 149 · 14/02/2024</span>
+
+    <div class="pesee">
+     <span class="mono" style="color:var(--jaune)">La pesée</span>
+     <h3>Ce que ça change, vraiment</h3>
+     <div class="gauge" id="gauge" style="--v:28"><div class="scale"></div><div class="cur"></div></div>
+     <div class="gauge-l mono"><span>Anecdotique</span><span>Ça change tout</span></div>
+     <p style="margin-top:16px;font-size:17px;color:#E4DECD">Un cas simple, une petite somme : 650,88 $ de dommages, 36,14 $ d'intérêts et 125 $ de frais. Ça ne règle pas tout, mais le principe est clair : tu peux demander des comptes à l'entreprise, pas au robot.</p>
+    </div>
+
+    <h2 id="s5">Ton réflexe</h2>
+    <ul class="reflexe">
+     <li><label><input type="checkbox"><span><b>Fais une capture d'écran</b> de la promesse, avec la date visible. Garde-la.</span></label></li>
+     <li><label><input type="checkbox"><span><b>Vérifie sur la page officielle</b> de la règle : c'est elle qui compte.</span></label></li>
+     <li><label><input type="checkbox"><span><b>Écris à un humain</b> du service client pour faire confirmer par écrit.</span></label></li>
+    </ul>
+
+    <div class="sources" id="s6">
+     <span class="mono">Sources</span>
+     <ol>
+      <li>1. Moffatt c. Air Canada, 2024 BCCRT 149, Civil Resolution Tribunal (Colombie-Britannique), décision du 14/02/2024, lue en entier. decisions.civilresolutionbc.ca. Consultée le 29/10/2026.</li>
+     </ol>
+    </div>
+    <div class="transp"><b>Comment cet article a été fait.</b> Rédigé avec l'aide de l'IA à partir de la décision du tribunal, relu et vérifié par l'éditeur. Version audio en voix de synthèse. Une erreur ? <a href="{{root}}correctifs/" style="text-decoration:underline">Signale-la</a>, elle sera corrigée dans la rubrique « Correctifs ».</div>
+   </article>
+
+   <aside class="aside-r">
+    {{video_html}}
+    <div class="piece torn"><span class="tape"></span>
+     <span class="mono">Le chiffre</span>
+     <div style="font:900 54px/1 Inter;letter-spacing:-.04em;margin:8px 0">812,02 $</div>
+     <p style="font-size:15px;color:var(--muted)">Total versé par Air Canada, en dollars canadiens.</p>
+    </div>
+    {{next_html}}
+   </aside>
+  </div>
+ </div>

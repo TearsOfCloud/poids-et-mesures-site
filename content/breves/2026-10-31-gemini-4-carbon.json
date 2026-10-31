@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-31",
+  "heure": "03:00",
+  "rubrique": "entreprises",
+  "titre": "Google annonce Gemini 4 Carbon, mais pas encore pour le grand public",
+  "resume": "Google DeepMind présente son nouveau modèle, très orienté cybersécurité. Pour l'instant, seuls quelques défenseurs informatiques y ont accès.",
+  "en_clair": [
+    "Le 28 octobre 2026, Google DeepMind a annoncé Gemini 4 Carbon, qu'il décrit comme son modèle le plus puissant. Il est présenté comme particulièrement fort pour trouver, tester et corriger des failles de sécurité dans des logiciels.",
+    "Il n'est pas disponible pour tout le monde : Google le réserve d'abord à un petit groupe de professionnels de la cybersécurité, puis à des partenaires de confiance. Il promet un accès aux développeurs, aux entreprises et au grand public « dès que possible », sans donner de date.",
+    "Les chiffres cités (par exemple 88,2 % sur un test de détection de failles appelé SEC-bench Pro) viennent de Google lui-même. Aucun organisme indépendant ne les a encore reproduits dans cette annonce."
+  ],
+  "pour_toi": "Rien à faire aujourd'hui : tu ne peux pas encore l'essayer. Si tu es développeur, retiens le tarif annoncé (2 $ par million de mots d'entrée, 10 $ par million de mots de sortie) pour comparer quand il sera ouvert. Et lis les scores comme des annonces, pas comme des mesures indépendantes.",
+  "termes": [
+    {"mot": "Modèle", "def": "Le programme d'IA qui produit les réponses, comme celui qui fait fonctionner un assistant."},
+    {"mot": "Test de référence (benchmark)", "def": "Une série d'exercices identiques donnés à plusieurs IA pour comparer leurs scores."},
+    {"mot": "Faille de sécurité", "def": "Une erreur dans un logiciel que quelqu'un peut exploiter pour y entrer ou le détourner."}
+  ],
+  "sources": [
+    {"nom": "Google DeepMind — Gemini 4 Carbon: our next frontier model", "url": "https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model/", "date": "2026-10-28", "consulte": "2026-10-31", "type": "primaire"}
+  ],
+  "revue": "humaine"
+}

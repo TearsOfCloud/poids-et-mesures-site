@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-31",
+  "heure": "03:10",
+  "rubrique": "outils",
+  "titre": "Mistral Large 4 : un très gros modèle à télécharger, avec une licence à lire",
+  "resume": "Mistral publie un modèle dont les fichiers sont librement téléchargeables. « Ouvert » ne veut pas dire « sans conditions ».",
+  "en_clair": [
+    "Mistral Large 4, du français Mistral, est disponible sur la plateforme Hugging Face. Il lit du texte et des images, répond en plusieurs langues et peut garder en tête environ un million de « tokens » (des morceaux de mots) dans une conversation.",
+    "Ses fichiers sont téléchargeables : on parle de modèle à « poids ouverts ». Sa taille est énorme : environ mille milliards de paramètres au total, dont 49 milliards sont utilisés pour chaque morceau de texte. Il existe aussi des versions allégées, préparées par la communauté, pour être lancées avec des outils locaux comme llama.cpp.",
+    "Attention à la licence : elle dérive de la licence MIT, mais elle limite la revente du modèle sous forme de service. Hugging Face relaie aussi des scores de sécurité informatique fournis par Mistral. Ce sont les chiffres de l'éditeur."
+  ],
+  "pour_toi": "Pour l'utiliser sans rien installer, passe par un service qui l'héberge. Si tu comptes le télécharger ou l'intégrer à un produit, lis d'abord la « Mistral Ecosystem Open-Weight License » : c'est elle qui dit ce que tu as le droit de faire, surtout si tu veux le proposer à des clients.",
+  "termes": [
+    {"mot": "Poids ouverts", "def": "Les fichiers du modèle sont publics et téléchargeables. Ce n'est pas forcément « open source » : la licence peut poser des limites."},
+    {"mot": "Paramètre", "def": "Un réglage interne appris pendant l'entraînement. Plus il y en a, plus le modèle est gros et lourd à faire tourner."},
+    {"mot": "Token", "def": "Un morceau de mot, l'unité avec laquelle une IA lit et écrit le texte."}
+  ],
+  "sources": [
+    {"nom": "Hugging Face — Welcome Le Chonk: Mistral Large 4 on Hugging Face", "url": "https://huggingface.co/blog/mistral-large4", "date": "2026-10-29", "consulte": "2026-10-31", "type": "primaire"}
+  ],
+  "revue": "humaine"
+}
