@@ -4,213 +4,707 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Poids et Mesures Site</title>
+<meta name="description" content="On pèse ce que l'IA fait vraiment : l'actu, les bases, la radio.">
 <style>
 @font-face{font-family:Inter;font-weight:500;font-display:swap;src:url(fonts/inter-latin-500-normal.woff2) format("woff2")}
 @font-face{font-family:Inter;font-weight:900;font-display:swap;src:url(fonts/inter-latin-900-normal.woff2) format("woff2")}
 @font-face{font-family:"JetBrains Mono";font-weight:700;font-display:swap;src:url(fonts/jetbrains-mono-latin-700-normal.woff2) format("woff2")}
 @font-face{font-family:"Source Serif 4";font-style:italic;font-weight:600;font-display:swap;src:url(fonts/source-serif-4-latin-600-italic.woff2) format("woff2")}
-:root{--encre:#101114;--papier:#F4F0E6;--jaune:#FFD60A;--corail:#FF5A36;--bleu:#2747FF;--vert:#0A9A63;--gris:#8B8A84;--bg:var(--papier);--fg:var(--encre);--card:#fff9ec;--t-bleu:#1F37C9;--t-corail:#B8331A;--t-vert:#07774C;--muted:#55544F}
-*{box-sizing:border-box;margin:0}
-html,body{background:#F4F0E6 !important;color:#101114}body{color-scheme:light;position:relative;isolation:isolate;color:var(--fg);font:500 17px/1.5 Inter,system-ui,sans-serif;padding-bottom:110px}
-body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.10;z-index:-1;background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence baseFrequency='.9' numOctaves='2'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .9 0'/></filter><rect width='200' height='200' filter='url(%23n)'/></svg>")}
-.mono{font:700 12px/1.3 "JetBrains Mono",monospace;letter-spacing:.06em;text-transform:uppercase}
-h1,h2,h3{font-weight:900;letter-spacing:-.04em;line-height:.98}
-em{font:italic 600 1.1em "Source Serif 4",Georgia,serif;letter-spacing:-.01em}
-mark{background:var(--jaune);color:var(--encre);padding:0 .12em}
+:root{
+ --encre:#121316;--papier:#F1EBDA;--creme:#F7F2E4;--jaune:#FFD60A;--bleu:#2D5A7E;--corail:#E8502D;--vert:#0A8A5A;--gris:#8B8A84;
+ --t-bleu:#24496A;--t-corail:#B23A1E;--t-vert:#07704A;--muted:#4F4E49;
+ --ombre:6px 8px 0 rgba(18,19,22,.22);
+ color-scheme:light;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#F1EBDA !important;color:#121316}
+body{font:500 17px/1.55 Inter,system-ui,sans-serif;position:relative;isolation:isolate;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.09;z-index:-1;background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence baseFrequency='.85' numOctaves='2' seed='4'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0'/></filter><rect width='220' height='220' filter='url(%23n)'/></svg>")}
+img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit}
 :focus-visible{outline:3px solid var(--corail);outline-offset:3px}
-.breve a.src{text-decoration:underline;text-underline-offset:3px}
-.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
-/* header */
-header{background:var(--encre);color:var(--papier);position:sticky;top:0;z-index:20}
-header .wrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:64px;gap:12px}
-.brand img{height:34px;display:block}
-.hlisten{justify-self:end;all:unset;justify-self:end;cursor:pointer;background:var(--jaune);color:var(--encre);padding:0 14px;min-height:40px;display:flex;align-items:center;gap:8px;font:700 12px "JetBrains Mono",monospace;letter-spacing:.06em;text-transform:uppercase}
-.masthead{text-align:center;padding:30px 0 6px}.masthead img{width:min(560px,86%);height:auto}
-@media(max-width:760px){header .wrap{grid-template-columns:auto 1fr;height:auto;padding-top:10px;padding-bottom:4px}.brand img{height:26px}.hlisten{padding:0 10px}header nav{grid-column:1/-1;justify-content:center}}
-.brand{font-weight:900;letter-spacing:-.04em;font-size:22px}
-.brand b{color:var(--jaune)}
-nav{display:flex;gap:4px;overflow-x:auto}
-nav button{all:unset;cursor:pointer;padding:0 14px;min-height:44px;display:flex;align-items:center;color:var(--papier);white-space:nowrap;font-size:13px}
-nav button[aria-current=true]{background:var(--jaune);color:var(--encre)}
-.ruler{height:22px;background:repeating-linear-gradient(90deg,var(--jaune) 0 2px,transparent 2px 12px) bottom/100% 12px no-repeat,repeating-linear-gradient(90deg,var(--jaune) 0 2px,transparent 2px 60px) bottom/100% 22px no-repeat;background-color:var(--encre)}
-.dateline{display:flex;justify-content:space-between;padding:18px 0 10px;border-bottom:3px solid var(--fg);color:var(--fg)}
-/* hero */
-.hero{display:grid;grid-template-columns:1.5fr 1fr;gap:20px;margin:22px 0}
-@media(max-width:760px){.hero{grid-template-columns:1fr}}
-.une{background:var(--jaune);color:var(--encre);padding:28px;position:relative;min-height:420px;display:flex;flex-direction:column;justify-content:space-between;clip-path:polygon(0 1%,3% 0,40% .8%,70% 0,100% 1.2%,99.4% 40%,100% 75%,99% 100%,60% 99%,30% 100%,0 99%,.6% 50%);filter:drop-shadow(8px 10px 0 rgba(16,17,20,.3))}
-.une h1{font-size:clamp(40px,6vw,68px)}
-.une mark{background:var(--encre);color:var(--jaune)}
-.une .obj{position:absolute;right:18px;bottom:60px;width:150px;transform:rotate(7deg)}
-.une p{max-width:60%}
-.badge{display:inline-block;border:2px dashed currentColor;padding:4px 8px;margin-top:10px}
-.badge.ok{background:var(--jaune);border:0;color:var(--encre)}
-.stamp{display:inline-block;background:#fffdf5;color:var(--encre);border:5px solid var(--encre);padding:4px 10px;transform:rotate(-5deg)}
-.side{display:flex;flex-direction:column;gap:16px}
-.card{display:block;background:var(--card);padding:18px;border-top:6px solid var(--bleu);box-shadow:6px 7px 0 rgba(16,17,20,.18)}
-.card.c{border-color:var(--corail)}.card.v{border-color:var(--vert)}
-.card h3{font-size:26px;margin:8px 0}
-.tag{color:var(--t-bleu)}.c .tag{color:var(--t-corail)}.v .tag{color:var(--t-vert)}
-/* breves */
-h2.sec{font-size:34px;margin:34px 0 14px;display:flex;align-items:center;gap:12px}
-.breves{border-top:3px solid var(--fg)}
-.breve{display:grid;grid-template-columns:70px 1fr auto;gap:14px;padding:14px 0;border-bottom:1px solid var(--gris);align-items:baseline;cursor:pointer}
-.breve h3{font-size:21px;letter-spacing:-.02em;line-height:1.15}
-.breve:hover h3{background:linear-gradient(var(--jaune),var(--jaune)) 0 100%/100% 45% no-repeat;color:var(--fg)}
-.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
-.disclaimer{margin:30px 0;padding:14px;border:2px dashed var(--gris);font-size:14px}
-/* article */
-.article{max-width:720px;margin:30px auto}
-.article h1{font-size:clamp(38px,6vw,64px);margin:12px 0 18px}
-.article p{margin:0 0 18px;font-size:19px}
-.article h2{font-size:30px;margin:30px 0 10px}
-.byline{color:var(--muted);margin-bottom:24px}
-.source{font:700 13px "JetBrains Mono",monospace;border-top:3px solid var(--fg);padding-top:12px;margin-top:30px}
-.listen{display:flex;gap:12px;align-items:center;background:var(--encre);color:var(--papier);padding:12px 16px;margin:18px 0}
-/* radio */
-.now{background:var(--encre);color:var(--papier);padding:28px;margin:22px 0;position:relative}
-.now h2{font-size:clamp(34px,5vw,54px);margin:10px 0}
-.now .live{color:#FF8A6E}
-.grille{border-top:3px solid var(--fg)}
-.slot{display:grid;grid-template-columns:70px 1fr auto;gap:14px;padding:12px 0;border-bottom:1px solid var(--gris)}
-.slot.on{background:var(--jaune);color:var(--encre);padding-left:10px;padding-right:10px}
-/* player */
-.player{position:fixed;left:0;right:0;bottom:0;background:var(--encre);color:var(--papier);z-index:40}
-.player .wrap{display:flex;align-items:center;gap:14px;height:64px}
-.play{all:unset;cursor:pointer;width:42px;height:42px;background:var(--jaune);color:var(--encre);display:grid;place-items:center;font-size:18px;flex:none}
-.player .t{line-height:1.25;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.player .ruler{height:16px;background-size:100% 9px,100% 16px,auto}
-.player .pos{position:absolute;left:38%;top:0;width:14%;height:16px;background:repeating-linear-gradient(90deg,var(--papier) 0 6px,transparent 6px 12px)}
-.next{color:#B5B3AC;font-size:14px}
-.vol{display:flex;align-items:center;gap:6px;color:var(--jaune)}.vol input{accent-color:var(--jaune);width:90px}
-.player .grid{all:unset;cursor:pointer;border:2px solid var(--jaune);color:var(--jaune);padding:0 12px;min-height:40px;display:flex;align-items:center}
-@media(max-width:760px){.vol,.next{display:none}}
-footer{border-top:3px solid var(--fg);margin-top:40px;padding:22px 0;font-size:15px;color:var(--muted)}
-footer a{text-decoration:underline}
-header nav{justify-content:center}@media(max-width:760px){header nav{order:3}}
-.short{display:none}@media(max-width:760px){.long{display:none}.short{display:inline}}
-.player .grid{font:700 12px "JetBrains Mono",monospace;letter-spacing:.06em;text-transform:uppercase}
+.mono{font:700 12px/1.35 "JetBrains Mono",monospace;letter-spacing:.07em;text-transform:uppercase}
+h1,h2,h3{font-weight:900;letter-spacing:-.04em;line-height:.98}
+em{font:italic 600 1.08em "Source Serif 4",Georgia,serif;letter-spacing:-.01em}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+
+/* surligneur animé : la bande jaune se pose quand le mot entre dans l'écran */
+mark{background:linear-gradient(transparent 8%,var(--jaune) 8%,var(--jaune) 92%,transparent 92%) no-repeat 0 0/0% 100%;color:var(--encre);padding:0 .1em;margin:0 -.03em;box-decoration-break:clone;-webkit-box-decoration-break:clone;transition:background-size .7s cubic-bezier(.2,.7,.2,1) .15s}
+mark.on{background-size:100% 100%}
+mark.inv{background-image:linear-gradient(transparent 8%,var(--jaune) 8%,var(--jaune) 92%,transparent 92%);color:var(--encre)}
+
+/* la règle graduée : identique en haut, dans les blocs et en bas */
+.ruler{position:relative;height:26px;background-color:var(--encre);overflow:hidden}
+.ruler .ticks{position:absolute;inset:0 -120px 0 0;background:
+  repeating-linear-gradient(90deg,var(--jaune) 0 3px,transparent 3px 60px) 0 0/100% 24px no-repeat,
+  repeating-linear-gradient(90deg,var(--jaune) 0 2px,transparent 2px 12px) 0 0/100% 12px no-repeat;
+  transform:translateX(calc(var(--shift,0) * -1px))}
+.ruler .pos{position:absolute;top:0;height:26px;width:12%;left:calc(var(--prog,0) * 88%);background:repeating-linear-gradient(90deg,var(--papier) 0 6px,transparent 6px 12px)}
+
+/* en-tête : disparaît quand on descend, revient quand on remonte (la règle reste) */
+.top{position:sticky;top:0;z-index:30;transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+.top.hide{transform:translateY(calc(-100% + 26px))}
+.bar{background:var(--encre);color:var(--papier)}
+.bar .wrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;min-height:64px;gap:12px}
+.logo img{height:32px;width:auto}
+nav.main{display:flex;gap:2px}
+nav.main a{padding:0 16px;min-height:44px;display:flex;align-items:center;position:relative}
+nav.main a:after{content:"";position:absolute;left:12px;right:12px;bottom:6px;height:4px;background:var(--jaune);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+nav.main a:hover:after,nav.main a[aria-current=page]:after{transform:scaleX(1)}
+.onair{justify-self:end;display:flex;align-items:center;gap:10px;background:none;border:2px solid var(--jaune);color:var(--papier);padding:0 14px 0 10px;min-height:42px;cursor:pointer}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--corail);animation:pulse 1.8s infinite}
+.onair b{color:var(--jaune)}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(232,80,45,.7)}70%,100%{box-shadow:0 0 0 9px rgba(232,80,45,0)}}
+@media(max-width:820px){
+ .bar .wrap{grid-template-columns:auto 1fr;padding-top:10px}
+ .logo img{height:24px}
+ nav.main{grid-column:1/-1;order:3;justify-content:center}
+ nav.main a{padding:0 12px}
+ .onair .lbl{display:none}
+}
+
+/* bandeau défilant des brèves */
+.fil{background:var(--jaune);color:var(--encre);border-bottom:3px solid var(--encre);overflow:hidden;white-space:nowrap;display:flex}
+.fil .lab{background:var(--encre);color:var(--jaune);padding:9px 14px;flex:none;z-index:1}
+.fil .track{display:inline-flex;gap:46px;padding:9px 0 9px 30px;animation:defile 70s linear infinite}
+.fil:hover .track{animation-play-state:paused}
+.fil .track a{font-weight:900;letter-spacing:-.01em;font-size:15px}
+.fil .track a:before{content:"▲";font-size:9px;margin-right:10px;vertical-align:2px}
+@keyframes defile{to{transform:translateX(-50%)}}
+
+/* collage : pièces déchirées */
+.piece{position:relative;background:var(--creme);box-shadow:var(--ombre)}
+.torn{clip-path:var(--clip)}
+.tape{position:absolute;width:110px;height:30px;background:rgba(255,214,10,.85);top:-12px;left:50%;transform:translateX(-50%) rotate(-4deg);z-index:3;clip-path:polygon(0 10%,5% 0,10% 12%,100% 0,96% 50%,100% 90%,4% 100%,0 60%)}
+.sticker{filter:drop-shadow(8px 10px 0 rgba(18,19,22,.28))}
+.tag{display:inline-flex;align-items:center;gap:6px}
+.tag:before{content:"";width:10px;height:10px;background:currentColor}
+.c-bleu{color:var(--t-bleu)}.c-corail{color:var(--t-corail)}.c-vert{color:var(--t-vert)}.c-gris{color:var(--muted)}
+
+/* apparition « posée » comme un morceau de papier */
+.pose{opacity:0;transform:translateY(24px) rotate(var(--r,-1.2deg)) scale(1.02);transition:opacity .6s ease,transform .7s cubic-bezier(.2,.8,.2,1)}
+.pose.on{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.pose{opacity:1;transform:none}mark{background-size:100% 100%}}
+
 .view{display:none}.view.on{display:block}
-.fall{background:var(--jaune);color:var(--encre);padding:18px 22px;margin-top:22px}
-@media(max-width:760px){.brand{font-size:17px;white-space:nowrap}.une .obj{display:none}.une p{max-width:none}.badge{white-space:normal}nav button{padding:0 9px;font-size:12px}.dateline{flex-direction:column;gap:4px}.breve{grid-template-columns:52px 1fr}.breve .tag{display:none}}
+
+/* ACCUEIL */
+.mast{text-align:center;padding:34px 0 14px}
+.mast img{width:min(600px,88%);height:auto;margin:0 auto}
+.dateline{display:flex;justify-content:space-between;gap:10px;padding:10px 0;border-top:3px solid var(--encre);border-bottom:1px solid var(--encre)}
+@media(max-width:820px){.dateline{flex-direction:column;align-items:center;text-align:center;gap:2px}}
+
+.une{display:grid;grid-template-columns:1.55fr 1fr;gap:28px;margin:30px 0 10px}
+@media(max-width:900px){.une{grid-template-columns:1fr}}
+.une-main{background:var(--bleu);color:var(--papier);padding:30px 30px 0;overflow:hidden;min-height:560px;display:flex;flex-direction:column;box-shadow:var(--ombre)}
+.une-main h1{font-size:clamp(40px,5.4vw,72px);max-width:13ch}
+.une-main .lede{max-width:42ch;margin:16px 0 0;font-size:18px;color:#E4DECD}
+.une-main .scene{position:relative;margin:26px -30px 0;min-height:260px;flex:1}
+.une-main .scene .bg{position:absolute;inset:0;background:url(img/aeroport.png) center 60%/cover;clip-path:polygon(0 8%,6% 4%,12% 9%,20% 3%,29% 8%,37% 2%,46% 7%,55% 3%,63% 9%,72% 4%,81% 8%,90% 2%,100% 7%,100% 100%,0 100%)}
+.une-main .scene .laptop{position:absolute;width:44%;left:5%;bottom:14px;transform:rotate(-4deg)}
+.une-main .scene .avion{position:absolute;width:34%;right:5%;top:-30px;transform:rotate(-8deg)}
+.une-main .note{position:absolute;right:5%;bottom:28px;width:min(270px,46%);background:var(--jaune);color:var(--encre);padding:16px;transform:rotate(3deg);box-shadow:var(--ombre);font-weight:900;line-height:1.2}
+.une-main .note .mono{display:block;margin-bottom:6px;opacity:.7}
+.stamp{display:inline-block;border:5px solid var(--corail);color:var(--corail);background:var(--creme);padding:6px 14px;transform:rotate(-7deg);font:700 16px "JetBrains Mono",monospace;letter-spacing:.08em}
+.une-main .stamp{position:absolute;left:44%;bottom:150px;z-index:4}
+@media(max-width:600px){.une-main{min-height:0}.une-main .scene{min-height:300px}.une-main .note{width:50%;right:3%;bottom:auto;top:70px;font-size:14px;padding:12px}.une-main .scene .laptop{width:58%;left:2%;bottom:10px}.une-main .scene .avion{width:40%;top:-24px}.une-main .stamp{left:auto;right:6%;bottom:22px;font-size:13px}}
+.une-side{display:flex;flex-direction:column;gap:22px}
+.card{display:block;padding:20px 20px 22px;transition:transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .25s}
+.card:hover{transform:translate(-3px,-4px) rotate(-.6deg);box-shadow:10px 13px 0 rgba(18,19,22,.24)}
+.card h3{font-size:27px;margin:10px 0 8px}
+.card p{color:var(--muted)}
+.card .obj{float:right;width:96px;margin:-4px -4px 6px 10px;transform:rotate(6deg)}
+.card .meta{margin-top:12px;color:var(--muted)}
+
+.sec-h{display:flex;align-items:end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin:60px 0 18px;border-bottom:3px solid var(--encre);padding-bottom:10px}
+.sec-h h2{font-size:clamp(34px,4.5vw,52px)}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{border:2px solid var(--encre);background:transparent;padding:0 12px;min-height:36px;cursor:pointer;font:700 12px "JetBrains Mono",monospace;letter-spacing:.06em;text-transform:uppercase}
+.chip[aria-pressed=true]{background:var(--encre);color:var(--papier)}
+
+.breves{display:grid;grid-template-columns:1fr 340px;gap:34px}
+@media(max-width:900px){.breves{grid-template-columns:1fr}}
+.breve{display:grid;grid-template-columns:64px 1fr;gap:8px 16px;padding:16px 0;border-bottom:1px solid rgba(18,19,22,.25)}
+.breve time{padding-top:4px}
+.breve h3{font-size:22px;letter-spacing:-.025em;line-height:1.15}
+.breve h3 a{background:linear-gradient(var(--jaune),var(--jaune)) 0 92%/0 40% no-repeat;transition:background-size .35s}
+.breve h3 a:hover{background-size:100% 40%}
+.breve .row{grid-column:2;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.breve .src{text-decoration:underline;text-underline-offset:3px;color:var(--muted)}
+.breve[hidden]{display:none}
+.mot{background:var(--encre);color:var(--papier);padding:24px;align-self:start}
+.mot h3{font-size:42px;margin:10px 0}
+.mot .ex{margin-top:14px;padding-top:14px;border-top:1px dashed var(--gris);color:#CFC9B8}
+
+.antenne{background:var(--encre);color:var(--papier);margin-top:60px;overflow:hidden;box-shadow:var(--ombre)}
+.antenne .in{display:grid;grid-template-columns:auto 1fr 1fr;gap:34px;align-items:center;padding:34px 28px}
+@media(max-width:900px){.antenne .in{grid-template-columns:1fr;justify-items:start}}
+.antenne h2{font-size:clamp(30px,4vw,46px);margin:8px 0 10px}
+.suivre li{list-style:none;display:grid;grid-template-columns:52px auto 1fr;gap:10px;align-items:center;padding:8px 0;border-bottom:1px solid rgba(241,235,218,.15);font-size:15px}
+.pill{font:700 10.5px "JetBrains Mono",monospace;letter-spacing:.07em;text-transform:uppercase;padding:3px 7px;white-space:nowrap;color:var(--encre);display:inline-block}
+.p-journal{background:var(--jaune)}.p-titres{background:#FFE878}.p-bases{background:#9FC0DA}.p-anecdote{background:#F7A48F}.p-outil{background:#8FD9B6}.p-dossier{background:var(--creme);box-shadow:inset 0 0 0 2px var(--encre)}.p-musique{background:#C9C6BD}
+
+/* bouton lecture : cadran gradué qui tourne pendant l'écoute */
+.dial{--s:132px;width:var(--s);height:var(--s);border-radius:50%;position:relative;border:0;background:none;cursor:pointer;flex:none}
+.dial .ring,.dial .ring2{position:absolute;inset:0;border-radius:50%}
+.dial .ring{background:repeating-conic-gradient(var(--jaune) 0 1.2deg,transparent 1.2deg 7.5deg);-webkit-mask:radial-gradient(circle,transparent 58%,#000 59%,#000 70%,transparent 71%);mask:radial-gradient(circle,transparent 58%,#000 59%,#000 70%,transparent 71%)}
+.dial .ring2{background:repeating-conic-gradient(var(--papier) 0 2.4deg,transparent 2.4deg 36deg);-webkit-mask:radial-gradient(circle,transparent 58%,#000 59%,#000 78%,transparent 79%);mask:radial-gradient(circle,transparent 58%,#000 59%,#000 78%,transparent 79%)}
+.dial .core{position:absolute;inset:23%;border-radius:50%;background:var(--jaune);color:var(--encre);display:grid;place-items:center;font-size:24px;transition:transform .2s}
+.dial:hover .core{transform:scale(1.07)}
+.playing .dial .ring{animation:tourne 14s linear infinite}
+.playing .dial .ring2{animation:tourne 34s linear infinite reverse}
+@keyframes tourne{to{transform:rotate(360deg)}}
+.prog{height:6px;background:rgba(241,235,218,.2);margin:14px 0 6px;position:relative}
+.prog i{position:absolute;inset:0 auto 0 0;background:var(--jaune);width:var(--p,30%);transition:width 1s linear}
+.eq{display:inline-flex;gap:3px;height:13px;align-items:end;margin-right:8px;vertical-align:-1px}
+.eq i{width:3px;background:var(--corail);height:4px}
+.playing .eq i{animation:eq .9s ease-in-out infinite alternate}
+.playing .eq i:nth-child(2){animation-delay:.2s}.playing .eq i:nth-child(3){animation-delay:.45s}
+@keyframes eq{to{height:13px}}
+
+.dossiers{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+@media(max-width:900px){.dossiers{grid-template-columns:1fr}}
+.dossier .vis{height:190px;margin:-20px -20px 16px;position:relative;overflow:hidden}
+.dossier .vis img{position:absolute;height:82%;width:auto;left:50%;bottom:7%;transform:translateX(-50%) rotate(-5deg);transition:transform .4s cubic-bezier(.2,.8,.2,1)}
+.dossier:hover .vis img{transform:translateX(-50%) rotate(2deg) scale(1.06)}
+.v-bleu{background:var(--bleu)}.v-corail{background:var(--corail)}.v-vert{background:var(--vert)}
+
+.note-maq{margin:44px 0 0;padding:14px 16px;border:2px dashed var(--gris);font-size:14px;color:var(--muted)}
+
+/* ARTICLE */
+.art-head{display:grid;grid-template-columns:1.1fr 1fr;gap:34px;align-items:end;padding:38px 0 0}
+@media(max-width:900px){.art-head{grid-template-columns:1fr}}
+.crumb{display:flex;gap:10px;align-items:center;margin-bottom:16px;flex-wrap:wrap}
+.art-head h1{font-size:clamp(42px,5.8vw,80px)}
+.chapo{font-size:21px;line-height:1.45;margin-top:20px;max-width:40ch}
+.art-vis{position:relative;height:440px;background:var(--bleu);box-shadow:var(--ombre)}
+.art-vis .bg{position:absolute;inset:0;background:url(img/tribunal.png) center/cover;clip-path:polygon(0 0,100% 0,100% 84%,92% 89%,83% 83%,74% 90%,64% 84%,55% 91%,45% 85%,35% 90%,25% 84%,15% 91%,6% 85%,0 90%)}
+.art-vis .o1{position:absolute;width:50%;left:-4%;bottom:-20px;transform:rotate(-6deg);z-index:2}
+.art-vis .o2{position:absolute;width:28%;right:4%;bottom:5%;transform:rotate(5deg);z-index:2}
+.art-vis .big{position:absolute;left:28%;top:8%;z-index:3;background:var(--corail);color:var(--creme);font-weight:900;font-size:clamp(34px,4.4vw,58px);letter-spacing:-.04em;padding:6px 16px;transform:rotate(-3deg);box-shadow:var(--ombre)}
+@media(max-width:600px){.art-vis{height:320px}}
+.meta-bar{display:flex;flex-wrap:wrap;gap:12px 22px;align-items:center;padding:14px 0;margin-top:34px;border-top:3px solid var(--encre);border-bottom:1px solid var(--encre)}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--encre);color:var(--papier);border:0;padding:0 16px;min-height:44px;cursor:pointer;font:700 12px "JetBrains Mono",monospace;letter-spacing:.07em;text-transform:uppercase}
+.btn.y{background:var(--jaune);color:var(--encre)}
+.btn.o{background:transparent;color:var(--encre);border:2px solid var(--encre)}
+.btn.o.l{color:var(--papier);border-color:var(--papier)}
+.badge{display:inline-block;padding:6px 10px;font:700 11.5px "JetBrains Mono",monospace;letter-spacing:.06em;text-transform:uppercase;margin:0 0 20px}
+.badge.ok{background:var(--jaune)}
+.art-body{display:grid;grid-template-columns:220px minmax(0,680px) 1fr;gap:40px;margin-top:38px}
+@media(max-width:1050px){.art-body{grid-template-columns:1fr}.toc{display:none}}
+.toc{position:sticky;top:60px;align-self:start}
+.toc a{display:block;padding:8px 0 8px 14px;border-left:3px solid rgba(18,19,22,.18);transition:.2s}
+.toc a.on{border-color:var(--encre);background:linear-gradient(90deg,var(--jaune),transparent)}
+.prose p{font-size:19px;line-height:1.65;margin:0 0 20px}
+.prose h2{font-size:34px;margin:46px 0 14px;scroll-margin-top:60px}
+.prose .drop:first-letter{float:left;font:900 84px/.8 Inter;margin:6px 10px 0 0;background:var(--jaune);padding:6px 8px 4px}
+.tldr{padding:24px 24px 16px;margin-bottom:30px;scroll-margin-top:60px}
+.tldr ol{margin-top:12px;list-style:none;counter-reset:t}
+.tldr li{counter-increment:t;display:grid;grid-template-columns:36px 1fr;padding:9px 0;border-top:1px dashed rgba(18,19,22,.3);font-size:17px}
+.tldr li:before{content:counter(t);font-weight:900;font-size:22px;line-height:1.1}
+.terme{border:0;border-bottom:2px dotted var(--bleu);cursor:help;position:relative;background:none;font:inherit;padding:0;color:var(--t-bleu);font-weight:900}
+.terme .bulle{position:absolute;left:0;bottom:calc(100% + 10px);width:min(290px,80vw);background:var(--encre);color:var(--papier);padding:14px;font:500 15px/1.45 Inter;text-align:left;opacity:0;pointer-events:none;transform:translateY(6px);transition:.2s;z-index:10;box-shadow:var(--ombre)}
+.terme .bulle b{color:var(--jaune);display:block;font:700 11px "JetBrains Mono";letter-spacing:.07em;text-transform:uppercase;margin-bottom:4px}
+.terme:hover .bulle,.terme:focus .bulle,.terme.open .bulle{opacity:1;transform:none}
+.duel{display:grid;grid-template-columns:1fr auto 1fr;gap:14px;align-items:center;margin:28px 0}
+.duel .piece{padding:18px}
+.duel .vs{width:42px;height:42px;border-radius:50%;background:var(--corail);color:var(--creme);display:grid;place-items:center;font-weight:900;font-size:22px}
+.duel .a{background:var(--jaune);transform:rotate(-1.5deg)}.duel .b{transform:rotate(1.5deg)}
+@media(max-width:600px){.duel{grid-template-columns:1fr}.duel .vs{justify-self:center}}
+.pesee{background:var(--encre);color:var(--papier);padding:26px;margin:30px 0}
+.pesee h3{font-size:30px;margin:8px 0 18px}
+.gauge{position:relative;height:60px;margin:10px 0 8px}
+.gauge .scale{position:absolute;left:0;right:0;bottom:0;height:30px;background:repeating-linear-gradient(90deg,var(--jaune) 0 3px,transparent 3px 10%) 0 0/100% 100% no-repeat,repeating-linear-gradient(90deg,rgba(255,214,10,.6) 0 1px,transparent 1px 2%) 0 0/100% 50% no-repeat}
+.gauge .cur{position:absolute;bottom:0;width:8px;height:60px;background:var(--papier);left:0;transition:left 1.4s cubic-bezier(.2,.8,.2,1) .2s}
+.gauge.on .cur{left:calc(var(--v) * 1% - 4px)}
+.gauge-l{display:flex;justify-content:space-between;color:#CFC9B8}
+.reflexe{list-style:none}
+.reflexe li{margin:0 0 12px}
+.reflexe label{display:grid;grid-template-columns:32px 1fr;gap:10px;align-items:start;background:var(--creme);padding:14px;cursor:pointer;box-shadow:4px 5px 0 rgba(18,19,22,.15);font-size:17px}
+.reflexe input{width:22px;height:22px;accent-color:var(--encre);margin-top:2px}
+.reflexe input:checked+span{text-decoration:line-through;text-decoration-thickness:3px;text-decoration-color:var(--jaune)}
+.sources{border-top:3px solid var(--encre);margin-top:40px;padding-top:16px;scroll-margin-top:60px}
+.sources ol{list-style:none}
+.sources li{padding:10px 0;border-bottom:1px solid rgba(18,19,22,.2);font-size:15px}
+.transp{background:var(--creme);padding:18px;margin-top:24px;font-size:15px;color:var(--muted)}
+.aside-r{align-self:start;position:sticky;top:60px}
+.aside-r .piece{padding:18px;margin-bottom:24px}
+@media(max-width:1050px){.aside-r{position:static}}
+
+/* RADIO */
+.r-hero{background:var(--encre);color:var(--papier);margin-top:26px;box-shadow:var(--ombre)}
+.r-hero .in{display:grid;grid-template-columns:1.2fr 1fr;gap:36px;padding:38px 30px}
+@media(max-width:900px){.r-hero .in{grid-template-columns:1fr;padding:30px 20px}}
+.r-hero h1{font-size:clamp(42px,6vw,76px);margin:12px 0 14px}
+.r-now{background:#1D1F23;padding:22px;border:2px solid rgba(241,235,218,.12)}
+.r-now .head{display:flex;justify-content:space-between;align-items:center}
+.r-now h2{font-size:28px;margin:10px 0 4px}
+.clock{font:700 22px "JetBrains Mono",monospace;color:var(--jaune)}
+.heure{margin-top:34px;padding:22px}
+.heure-bar{display:flex;height:50px;margin:14px 0 6px;gap:2px}
+.heure-bar span{display:block;height:100%;transition:transform .2s;cursor:default}
+.heure-bar span:hover{transform:translateY(-4px)}
+.heure-bar span.now{box-shadow:inset 0 0 0 3px var(--encre);transform:translateY(-6px)}
+.heure-axe{display:flex;justify-content:space-between}
+.legend{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.formats{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+@media(max-width:900px){.formats{grid-template-columns:1fr}}
+.fmt{padding:20px;border-top:12px solid var(--k)}
+.fmt h3{font-size:24px;margin:10px 0 6px}
+.fmt .when{margin-top:12px;color:var(--muted)}
+.periodes{display:flex;gap:0;margin:0 0 10px;border:2px solid var(--encre);width:max-content;max-width:100%;overflow-x:auto}
+.periodes button{border:0;background:none;padding:0 16px;min-height:42px;cursor:pointer;font:700 12px "JetBrains Mono",monospace;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
+.periodes button[aria-selected=true]{background:var(--encre);color:var(--jaune)}
+.bloc[hidden]{display:none}
+.slot{display:grid;grid-template-columns:62px 118px 1fr auto;gap:14px;align-items:center;padding:12px 10px;border-bottom:1px solid rgba(18,19,22,.2);border-left:6px solid var(--k)}
+.slot.now{background:var(--jaune)}
+.slot .mini{width:38px;height:38px;border-radius:50%;border:2px solid var(--encre);background:transparent;cursor:pointer}
+.slot[hidden]{display:none}
+.slot .script{font-size:15px;color:var(--muted);display:none;padding-top:6px}
+.slot.open .script{display:block}
+.slot .lire{background:none;border:0;text-decoration:underline;cursor:pointer;color:var(--muted);font-size:14px;margin-left:6px}
+@media(max-width:600px){.slot{grid-template-columns:52px 1fr auto}.slot .pill{display:none}}
+
+/* mini-lecteur : n'apparaît que quand on écoute */
+.mini-player{position:fixed;right:16px;bottom:16px;z-index:40;background:var(--encre);color:var(--papier);display:flex;align-items:center;gap:12px;padding:10px 8px 10px 10px;box-shadow:8px 10px 0 rgba(18,19,22,.3);transform:translateY(160%);transition:transform .45s cubic-bezier(.2,.8,.2,1);max-width:calc(100vw - 32px)}
+.mini-player.show{transform:none}
+.mini-player .pp{width:44px;height:44px;background:var(--jaune);color:var(--encre);border:0;cursor:pointer;font-size:16px;flex:none}
+.mini-player .t{min-width:0;line-height:1.3}
+.mini-player .t strong{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:230px}
+.mini-player .x{background:none;border:0;color:var(--gris);cursor:pointer;font-size:22px;padding:4px 8px}
+
+/* PIED DE PAGE */
+footer{margin-top:90px;background:var(--encre);color:var(--papier)}
+footer .in{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:30px;padding:40px 20px 30px;max-width:1180px;margin:0 auto}
+@media(max-width:900px){footer .in{grid-template-columns:1fr 1fr}}
+footer h4{font:700 12px "JetBrains Mono";letter-spacing:.07em;text-transform:uppercase;color:var(--jaune);margin-bottom:12px}
+footer li{list-style:none;margin:0 0 8px}
+footer a:hover{text-decoration:underline}
+footer .legal{border-top:1px solid rgba(241,235,218,.18);padding:16px 20px 26px;color:#B9B3A2;font-size:14px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;max-width:1180px;margin:0 auto}
 </style>
 </head>
 <body>
-<header>
- <div class="wrap">
-  <a class="brand" href="#" data-go="home"><img src="logo-papier.svg" alt="Poids &amp; Mesures"></a>
-  <nav class="mono">
-   <button data-go="home" aria-current="true"><span class="long">L'actu pesée</span><span class="short">Actu</span></button>
-   <button data-go="article">Articles</button>
-   <button data-go="radio">Radio</button>
-  </nav>
-  <button class="hlisten" onclick="document.getElementById('pp').click()">▶ Écouter</button>
- </div>
- <div class="ruler"></div>
-</header>
 
-<main class="wrap">
-<!-- ACCUEIL -->
-<section class="view on" id="home">
- <div class="masthead"><img src="logo-encre.svg" alt="Poids &amp; Mesures"></div>
- <div class="dateline mono"><span>Samedi 31 octobre 2026</span><span>On pèse ce que l'IA fait vraiment</span><span>Édition de 10 h</span></div>
- <div class="hero">
-  <a class="une" href="#" data-go="article">
-   <div>
-    <span class="mono">À la une · L'actu pesée</span>
-    <h1 style="margin-top:14px">Une IA qui joue des milliers de <em>faux humains</em> pour prédire les <mark>vrais</mark>.</h1>
-    <p style="margin-top:16px">Ça marche ? On regarde les chiffres annoncés, et ceux qui ont été mesurés par un tiers.</p>
-    <span class="badge mono">Annoncé par l'éditeur · pas vérifié</span>
-   </div>
-   <svg class="obj" viewBox="0 0 120 100" aria-hidden="true"><g fill="none" stroke="#101114" stroke-width="6" stroke-linecap="round"><path d="M60 8v78M20 86h80M14 28h92"/><path d="M14 28 0 58h28zM106 28 92 58h28z" fill="#101114" opacity=".85"/></g></svg>
-   <span class="stamp mono" style="align-self:flex-start">Texte d'exemple</span>
-  </a>
-  <div class="side">
-   <a class="card" href="#article" data-go="article"><span class="mono tag">Les bases</span><h3>C'est quoi, <em>vraiment</em>, un « agent » ?</h3><p>Le mot est partout. Voici ce qu'il cache, en trois étapes.</p></a>
-   <a class="card c" href="#article" data-go="article"><span class="mono tag">À tester</span><h3>Le test maison : <mark>4 outils</mark> pour Claude</h3><p>Ce qu'on a essayé, ce qui marche, la commande à copier.</p></a>
-   <a class="card v" href="#article" data-go="article"><span class="mono tag">Benchmark</span><h3>Qui <em>pèse</em> le plus lourd ?</h3><p>Comparaison mesurée, mêmes questions pour tous.</p></a>
+<div class="top" id="top">
+ <div class="bar">
+  <div class="wrap">
+   <a class="logo" href="#/" aria-label="Accueil"><img src="logo-papier.svg" alt="Poids &amp; Mesures"></a>
+   <nav class="main mono" aria-label="Navigation principale">
+    <a href="#/" data-route="home">L'actu pesée</a>
+    <a href="#/article" data-route="article">Articles</a>
+    <a href="#/radio" data-route="radio">Radio</a>
+   </nav>
+   <button class="onair mono" data-play aria-label="Écouter la radio en direct"><span class="dot"></span><span class="lbl">À l'antenne</span> <b>▶ Écouter</b></button>
   </div>
  </div>
+ <div class="ruler" aria-hidden="true"><div class="ticks"></div><div class="pos"></div></div>
+</div>
 
- <h2 class="sec">Les brèves du jour <span class="mono" style="font-weight:700;letter-spacing:.06em">· mises à jour 1 à 3 fois par jour</span></h2>
- <div class="breves">
-  <article class="breve"><span class="mono">09:40</span><h3><a href="#article" data-go="article">Titre de brève d'exemple : un fait, une source, une phrase pour comprendre</a></h3><a class="mono tag src" href="#" aria-label="Source de la brève (ouvre le site d'origine)">Source ↗</a></article>
-  <article class="breve"><span class="mono">08:15</span><h3><a href="#article" data-go="article">Autre brève d'exemple : ce que ça change concrètement pour toi</a></h3><a class="mono tag src" href="#" aria-label="Source de la brève (ouvre le site d'origine)">Source ↗</a></article>
-  <article class="breve"><span class="mono">Hier</span><h3><a href="#article" data-go="article">Brève d'exemple : le chiffre annoncé, et pourquoi il faut le prendre avec prudence</a></h3><a class="mono tag src" href="#" aria-label="Source de la brève (ouvre le site d'origine)">Source ↗</a></article>
-  <article class="breve"><span class="mono">Hier</span><h3><a href="#article" data-go="article">Brève d'exemple : un outil gratuit à essayer ce week-end</a></h3><a class="mono tag src" href="#" aria-label="Source de la brève (ouvre le site d'origine)">Source ↗</a></article>
+<div class="fil" aria-label="Dernières brèves">
+ <span class="lab mono">Le fil</span>
+ <div class="track" id="track"></div>
+</div>
+
+<main>
+<!-- ACCUEIL -->
+<section class="view" id="v-home">
+ <div class="wrap">
+  <div class="mast"><img src="logo-encre.svg" alt="Poids &amp; Mesures"></div>
+  <div class="dateline mono"><span id="today">samedi 31 octobre 2026</span><span>On pèse ce que l'IA fait vraiment</span><span>Édition du matin</span></div>
+
+  <div class="une">
+   <a class="une-main torn pose" href="#/article" style="--r:-2deg">
+    <span class="mono" style="color:var(--jaune)">À la une · Anecdote · Chatbot</span>
+    <h1 style="margin-top:14px">Son chatbot s'est <mark>trompé</mark>. La compagnie a dû <em>payer</em>.</h1>
+    <p class="lede">Un tribunal canadien a jugé qu'une entreprise répond de ce que dit son robot. Ce que ça change pour toi, et le réflexe à avoir.</p>
+    <div class="scene" aria-hidden="true">
+     <div class="bg"></div>
+     <img class="avion sticker" src="img/avion.png" alt="">
+     <img class="laptop sticker" src="img/laptop.png" alt="">
+     <span class="stamp">Faux</span>
+     <div class="note"><span class="mono">Le chatbot</span>« Achète ton billet, puis demande le remboursement sous 90 jours. »</div>
+    </div>
+   </a>
+   <div class="une-side">
+    <a class="card piece torn pose" href="#/article" style="--r:2deg">
+     <img class="obj sticker" src="img/robot.png" alt="">
+     <span class="mono tag c-bleu">Les bases</span>
+     <h3>C'est quoi, <em>vraiment</em>, une hallucination ?</h3>
+     <p>Quand une IA invente une info plausible. Pourquoi ça arrive, en 3 étapes.</p>
+     <div class="meta mono">4 min · Exemple</div>
+    </a>
+    <a class="card piece torn pose" href="#/article" style="--r:-1.5deg">
+     <img class="obj sticker" src="img/balance.png" alt="">
+     <span class="mono tag c-vert">Le test maison</span>
+     <h3>On a <mark>pesé</mark> 4 assistants sur la même question</h3>
+     <p>ChatGPT, Claude, Gemini, Le Chat : qui cite ses sources ?</p>
+     <div class="meta mono">6 min · Exemple</div>
+    </a>
+   </div>
+  </div>
+
+  <div class="sec-h"><h2>Les <em>brèves</em></h2>
+   <div class="chips" role="group" aria-label="Filtrer les brèves">
+    <button class="chip" aria-pressed="true" data-f="tout">Tout</button>
+    <button class="chip" aria-pressed="false" data-f="outils">Outils</button>
+    <button class="chip" aria-pressed="false" data-f="entreprises">Entreprises</button>
+    <button class="chip" aria-pressed="false" data-f="regles">Règles</button>
+   </div>
+  </div>
+  <div class="breves">
+   <div id="breves"></div>
+   <aside class="mot pose" style="--r:1.5deg" aria-label="Le mot pesé">
+    <span class="mono" style="color:var(--jaune)">Le mot pesé · un terme par jour</span>
+    <h3><em>Hallucination</em></h3>
+    <p>Quand une IA écrit une information fausse avec le même aplomb qu'une vraie. Elle ne « ment » pas : elle prédit la suite la plus probable d'un texte, pas la vérité.</p>
+    <p class="ex"><b>Exemple réel :</b> le chatbot d'Air Canada a inventé une règle de remboursement qui n'existait pas.</p>
+    <button class="btn y" data-play style="margin-top:16px">▶ Écouter en 40 s</button>
+   </aside>
+  </div>
+
+  <section class="antenne pose" style="--r:0deg" aria-label="La radio">
+   <div class="ruler" aria-hidden="true"><div class="ticks"></div></div>
+   <div class="in">
+    <button class="dial" data-play aria-label="Écouter la radio"><span class="ring"></span><span class="ring2"></span><span class="core">▶</span></button>
+    <div>
+     <span class="mono" style="color:#FF8A6E"><span class="eq"><i></i><i></i><i></i></span>À l'antenne · <span class="clockTxt">—</span></span>
+     <h2 class="nowTitle">Le journal</h2>
+     <p style="color:#CFC9B8">La radio de Poids &amp; Mesures, en continu. Voix de synthèse (Kore), contenus déjà publiés et vérifiés sur le site.</p>
+     <div class="prog"><i class="nowProg"></i></div>
+    </div>
+    <div>
+     <span class="mono" style="color:var(--jaune)">À suivre</span>
+     <ul class="suivre" id="suivreHome"></ul>
+     <a class="btn y" href="#/radio" style="margin-top:16px">Voir la grille →</a>
+    </div>
+   </div>
+  </section>
+
+  <div class="sec-h"><h2>Les <em>dossiers</em></h2><a class="mono" href="#/article" style="text-decoration:underline">Tous les articles →</a></div>
+  <div class="dossiers">
+   <a class="card piece dossier pose" href="#/article" style="--r:-2deg">
+    <div class="vis v-bleu"><img class="sticker" src="img/telephone.png" alt=""></div>
+    <span class="mono tag c-bleu">Les bases</span>
+    <h3>Comment une IA « lit » ton message</h3>
+    <p>Le mécanisme caché derrière l'outil que tu utilises déjà.</p>
+    <div class="meta mono">Exemple</div>
+   </a>
+   <a class="card piece dossier pose" href="#/article" style="--r:1.5deg">
+    <div class="vis v-corail"><img class="sticker" src="img/marteau.png" alt=""></div>
+    <span class="mono tag c-corail">Anecdote</span>
+    <h3>Quand le robot engage l'entreprise</h3>
+    <p>L'affaire Air Canada, de la question au verdict.</p>
+    <div class="meta mono">Source primaire lue</div>
+   </a>
+   <a class="card piece dossier pose" href="#/article" style="--r:-1deg">
+    <div class="vis v-vert"><img class="sticker" src="img/balance.png" alt=""></div>
+    <span class="mono tag c-vert">Benchmark</span>
+    <h3>Trois assistants, les <em>mêmes</em> questions</h3>
+    <p>Toujours dans le même ordre : ChatGPT, Claude, Gemini, Le Chat.</p>
+    <div class="meta mono">Exemple</div>
+   </a>
+  </div>
+
+  <p class="note-maq">Maquette : la une et l'article reprennent l'anecdote Air Canada déjà vérifiée (décision 2024 BCCRT 149), avec ses photos ChatGPT tramées. Les autres titres, brèves et horaires sont des exemples.</p>
  </div>
-
- <h2 class="sec">Les <em>dossiers</em></h2>
- <div class="grid3">
-  <a class="card" href="#article" data-go="article"><span class="mono tag">Les bases</span><h3>Comment une IA « lit » un texte</h3><p>Le mécanisme caché derrière l'outil que tu connais déjà.</p></a>
-  <a class="card c" href="#article" data-go="article"><span class="mono tag">Anecdote</span><h3>Quand le chatbot a promis un remboursement</h3><p>Une histoire vraie, ce qu'elle apprend.</p></a>
-  <a class="card v" href="#article" data-go="article"><span class="mono tag">Benchmark</span><h3>Trois assistants, les mêmes questions</h3><p>Même ordre à chaque fois : ChatGPT, Claude, Gemini, Le Chat.</p></a>
- </div>
-
- <div class="disclaimer mono" style="text-transform:none;letter-spacing:0;font-weight:500">Maquette : tous les titres et textes ci-dessus sont des exemples pour juger la mise en page. Aucune information réelle n'est publiée ici.</div>
 </section>
 
 <!-- ARTICLE -->
-<section class="view" id="article">
- <article class="article">
-  <span class="mono" style="color:var(--bleu)">L'actu pesée</span>
-  <h1>Une IA qui joue des milliers de <em>faux humains</em> pour prédire les <mark>vrais</mark></h1>
-  <div class="byline mono">31 octobre 2026 · 4 min de lecture · Rédigé avec l'IA, relu par l'éditeur</div>
-  <div class="listen"><button class="play" style="width:36px;height:36px" aria-label="Écouter l'article">▶</button><span class="mono">Écouter cet article · voix de synthèse</span></div>
-  <p><strong>En une phrase :</strong> texte d'exemple. Le chapeau résume l'info et dit ce qu'on peut en faire tout de suite.</p>
-  <h2>Ce qui est annoncé</h2>
-  <p>Texte d'exemple. Chaque terme technique est expliqué dès sa première apparition, pour que tout le monde suive.</p>
-  <span class="badge mono">Annoncé par l'éditeur · pas vérifié</span>
-  <h2>Ce qui est mesuré</h2>
-  <p>Texte d'exemple. Les chiffres vérifiés par un tiers arrivent ici, avec le badge de provenance.</p>
-  <span class="badge ok mono">✓ Mesuré par un tiers · Nom</span>
-  <h2>À retenir, et à faire</h2>
-  <p>Texte d'exemple : une action à appliquer dans ton quotidien, avec le lien ou la commande.</p>
-  <div class="source">SOURCES · Lien 1 · Lien 2 · consulté le 31/10/2026<br>Une erreur ? <a href="#" style="text-decoration:underline">Signale-la</a>. Rubrique « Correctifs ».</div>
- </article>
+<section class="view" id="v-article">
+ <div class="wrap">
+  <header class="art-head">
+   <div>
+    <div class="crumb"><a class="mono" href="#/">Accueil</a><span class="mono">/</span><span class="mono tag c-corail">Anecdote</span><span class="mono c-gris">· Chatbot · Consommation</span></div>
+    <h1>Son chatbot s'est <mark>trompé</mark>. La compagnie a dû <em>payer</em>.</h1>
+    <p class="chapo">En 2024, un tribunal canadien a jugé qu'Air Canada était responsable de ce que son chatbot avait promis à un client. Une petite somme, mais une règle simple : ce que dit le robot engage l'entreprise.</p>
+   </div>
+   <div class="art-vis" aria-hidden="true">
+    <div class="bg"></div>
+    <span class="big">812,02 $ CA</span>
+    <img class="o1 sticker" src="img/marteau.png" alt="">
+    <img class="o2 sticker" src="img/robot.png" alt="">
+   </div>
+  </header>
+
+  <div class="meta-bar">
+   <span class="mono">Publié le 29/10/2026</span>
+   <span class="mono">5 min de lecture</span>
+   <span class="badge ok" style="margin:0">✓ Source primaire lue en entier</span>
+   <span style="flex:1"></span>
+   <button class="btn" data-play>▶ Écouter · 4 min</button>
+   <button class="btn o" id="copy">Copier le lien</button>
+  </div>
+
+  <div class="art-body">
+   <nav class="toc mono" aria-label="Sommaire" id="toc">
+    <a href="#s1">En 30 secondes</a>
+    <a href="#s2">Ce qui s'est passé</a>
+    <a href="#s3">Pourquoi il s'est trompé</a>
+    <a href="#s4">Le verdict</a>
+    <a href="#s5">Ton réflexe</a>
+    <a href="#s6">Sources</a>
+   </nav>
+
+   <article class="prose">
+    <div class="tldr piece torn" id="s1">
+     <span class="mono">En 30 secondes</span>
+     <ol>
+      <li>Le chatbot d'Air Canada a donné une règle de remboursement qui n'existait pas.</li>
+      <li>La compagnie a plaidé que son chatbot était « une entité distincte ». Argument rejeté.</li>
+      <li>Ton réflexe : capture d'écran datée, vérification sur la page officielle, confirmation écrite par un humain.</li>
+     </ol>
+    </div>
+
+    <h2 id="s2">Ce qui s'est passé</h2>
+    <p class="drop">Novembre 2022. Jake Moffatt doit prendre l'avion après un décès dans sa famille. Il demande au chatbot du site d'Air Canada comment obtenir un tarif « deuil », un tarif réduit prévu pour ce genre de situation.</p>
+    <div class="duel">
+     <div class="piece a"><span class="mono">Ce que dit le chatbot</span><p style="margin:8px 0 0;font-size:17px"><b>Achète ton billet au prix normal, puis demande le remboursement dans les 90 jours.</b></p></div>
+     <span class="vs" aria-label="différent de">≠</span>
+     <div class="piece b"><span class="mono">La vraie règle</span><p style="margin:8px 0 0;font-size:17px"><b>Pas de remboursement après coup.</b> La page officielle de la compagnie dit le contraire du chatbot.</p></div>
+    </div>
+
+    <h2 id="s3">Pourquoi le robot s'est trompé</h2>
+    <p>Le chatbot a produit ce qu'on appelle une <button class="terme" aria-describedby="b1">hallucination<span class="bulle" role="tooltip" id="b1"><b>Le mot expliqué</b>Une info fausse, écrite avec le même aplomb qu'une vraie. L'IA prédit la suite la plus probable d'un texte, elle ne vérifie pas.</span></button> : une réponse plausible, bien tournée, mais fausse. Les <button class="terme" aria-describedby="b2">modèles de langage<span class="bulle" role="tooltip" id="b2"><b>Le mot expliqué</b>Le moteur derrière ChatGPT, Claude ou un chatbot de service client : un programme entraîné à prédire le mot suivant.</span></button> qui écrivent ces réponses ne consultent pas forcément la règle officielle avant de répondre.</p>
+
+    <h2 id="s4">Le verdict</h2>
+    <p>Devant le tribunal, Air Canada a soutenu que son chatbot était « une entité juridique distincte, responsable de ses propres actes ». Le tribunal a jugé l'argument « remarquable » et l'a rejeté : le chatbot fait partie du site de la compagnie.</p>
+    <span class="badge ok">✓ Source primaire · Décision 2024 BCCRT 149 · 14/02/2024</span>
+
+    <div class="pesee">
+     <span class="mono" style="color:var(--jaune)">La pesée</span>
+     <h3>Ce que ça change, vraiment</h3>
+     <div class="gauge" id="gauge" style="--v:28"><div class="scale"></div><div class="cur"></div></div>
+     <div class="gauge-l mono"><span>Anecdotique</span><span>Ça change tout</span></div>
+     <p style="margin-top:16px;font-size:17px;color:#E4DECD">Un cas simple, une petite somme : 650,88 $ de dommages, 36,14 $ d'intérêts et 125 $ de frais. Ça ne règle pas tout, mais le principe est clair : tu peux demander des comptes à l'entreprise, pas au robot.</p>
+    </div>
+
+    <h2 id="s5">Ton réflexe</h2>
+    <ul class="reflexe">
+     <li><label><input type="checkbox"><span><b>Fais une capture d'écran</b> de la promesse, avec la date visible. Garde-la.</span></label></li>
+     <li><label><input type="checkbox"><span><b>Vérifie sur la page officielle</b> de la règle : c'est elle qui compte.</span></label></li>
+     <li><label><input type="checkbox"><span><b>Écris à un humain</b> du service client pour faire confirmer par écrit.</span></label></li>
+    </ul>
+
+    <div class="sources" id="s6">
+     <span class="mono">Sources</span>
+     <ol>
+      <li>1. Moffatt c. Air Canada, 2024 BCCRT 149, Civil Resolution Tribunal (Colombie-Britannique), décision du 14/02/2024, lue en entier. decisions.civilresolutionbc.ca. Consultée le 29/10/2026.</li>
+     </ol>
+    </div>
+    <div class="transp"><b>Comment cet article a été fait.</b> Rédigé avec l'aide de l'IA à partir de la décision du tribunal, relu et vérifié par l'éditeur. Version audio en voix de synthèse. Une erreur ? <a href="#" style="text-decoration:underline">Signale-la</a>, elle sera corrigée dans la rubrique « Correctifs ».</div>
+   </article>
+
+   <aside class="aside-r">
+    <div class="piece torn"><span class="tape"></span>
+     <span class="mono">Le chiffre</span>
+     <div style="font:900 54px/1 Inter;letter-spacing:-.04em;margin:8px 0">812,02 $</div>
+     <p style="font-size:15px;color:var(--muted)">Total versé par Air Canada, en dollars canadiens.</p>
+    </div>
+    <div class="piece">
+     <span class="mono">À lire ensuite</span>
+     <a href="#/article" style="display:block;margin-top:10px;font-weight:900;font-size:19px;letter-spacing:-.02em;line-height:1.2">C'est quoi, vraiment, une hallucination ?</a>
+     <a href="#/article" style="display:block;margin-top:12px;font-weight:900;font-size:19px;letter-spacing:-.02em;line-height:1.2">On a pesé 4 assistants sur la même question</a>
+    </div>
+   </aside>
+  </div>
+ </div>
 </section>
 
 <!-- RADIO -->
-<section class="view" id="radio">
- <div class="now">
-  <span class="mono live">● À l'antenne · 10:20</span>
-  <h2>Le journal de <em>10 h</em></h2>
-  <p>Les brèves du jour, lues par Kore. Voix de synthèse, contenus déjà publiés sur le site.</p>
-  <div class="ruler" style="margin:22px -28px -28px"></div>
+<section class="view" id="v-radio">
+ <div class="wrap">
+  <div class="r-hero pose" style="--r:0deg">
+   <div class="ruler" aria-hidden="true"><div class="ticks"></div></div>
+   <div class="in">
+    <div>
+     <span class="mono" style="color:var(--jaune)">Webradio · 24 h sur 24</span>
+     <h1>L'actu de l'IA, <mark class="inv">pesée</mark> à <em>voix haute</em>.</h1>
+     <p style="color:#CFC9B8;max-width:46ch">Un journal toutes les heures, les titres à :20 et :40, et entre les deux les bases, les anecdotes, l'outil testé et de la musique générée par IA. Tout ce qui passe à l'antenne est déjà publié et sourcé sur le site.</p>
+     <div style="display:flex;gap:12px;margin-top:22px;flex-wrap:wrap"><button class="btn y" data-play>▶ Écouter le direct</button><a class="btn o l" href="#grille" data-anchor>La grille du jour</a></div>
+    </div>
+    <div class="r-now">
+     <div class="head"><span class="mono" style="color:#FF8A6E"><span class="eq"><i></i><i></i><i></i></span>En direct</span><span class="clock" id="clock">--:--:--</span></div>
+     <div style="display:flex;gap:18px;align-items:center;margin-top:16px">
+      <button class="dial" data-play style="--s:104px" aria-label="Écouter"><span class="ring"></span><span class="ring2"></span><span class="core">▶</span></button>
+      <div style="min-width:0"><span class="pill nowPill p-journal">Journal</span><h2 class="nowTitle">Le journal</h2><span class="mono nowRest" style="color:#CFC9B8"></span></div>
+     </div>
+     <div class="prog"><i class="nowProg"></i></div>
+     <span class="mono" style="color:var(--jaune);display:block;margin-top:14px">À suivre</span>
+     <ul class="suivre" id="suivreRadio"></ul>
+    </div>
+   </div>
+  </div>
+
+  <div class="heure piece pose" style="--r:-.6deg">
+   <span class="mono">Une heure de radio</span>
+   <h2 style="font-size:32px;margin-top:6px">Comment tourne l'<em>antenne</em></h2>
+   <div class="heure-bar" id="heureBar" aria-label="Déroulé d'une heure"></div>
+   <div class="heure-axe mono"><span>:00</span><span>:20</span><span>:40</span><span>:59</span></div>
+   <div class="legend" id="legend"></div>
+  </div>
+
+  <div class="sec-h"><h2>Les <em>formats</em></h2><span class="mono c-gris">Un thème, une couleur</span></div>
+  <div class="formats" id="formats"></div>
+
+  <div class="sec-h" id="grille" style="scroll-margin-top:40px"><h2>La grille du <em>jour</em></h2>
+   <div class="chips" role="group" aria-label="Filtrer par thème" id="gChips"></div>
+  </div>
+  <div id="grilleJour"></div>
+  <p class="note-maq">Maquette : horaires et titres d'exemple, pas encore de son. L'heure en cours est calculée sur ton horloge, pour montrer le rendu du « direct ».</p>
  </div>
- <h2 class="sec">La grille <span class="mono">· proposition, à valider</span></h2>
- <div class="grille">
-  <div class="slot"><span class="mono">07:00</span><div><strong>Le journal du matin</strong><br>3 à 5 min, les brèves de la nuit</div><span class="mono">Journal</span></div>
-  <div class="slot"><span class="mono">07:05</span><div><strong>Musique</strong><br>Générée par IA</div><span class="mono">Musique</span></div>
-  <div class="slot on"><span class="mono">10:20</span><div><strong>Le journal de 10 h</strong><br>En cours</div><span class="mono">Journal</span></div>
-  <div class="slot"><span class="mono">10:25</span><div><strong>Le dossier</strong><br>Un article de fond, raconté</div><span class="mono">Dossier</span></div>
-  <div class="slot"><span class="mono">12:00</span><div><strong>Le journal de midi</strong></div><span class="mono">Journal</span></div>
-  <div class="slot"><span class="mono">18:00</span><div><strong>Le journal du soir</strong></div><span class="mono">Journal</span></div>
- </div>
- <div class="fall"><span class="mono">Bon à savoir</span><br>La radio rejoue des segments préparés : le journal se renouvelle plusieurs fois par jour, pas à la seconde. Elle ne lit que ce qui est publié sur le site.</div>
 </section>
 </main>
 
-<footer><div class="wrap">
- <p><strong>Poids &amp; Mesures</strong> · @poidsetmesures · Contenus rédigés avec l'aide de l'IA, voix de synthèse (Kore), musique générée par IA.</p>
- <p><a href="#">Mentions légales</a> · Éditeur : Tears (nom et contact à compléter) · <a href="#">Correctifs</a> · <a href="#">À propos</a></p>
-</div></footer>
-
-<div class="player" role="region" aria-label="Radio">
- <div class="ruler"></div><div class="pos"></div>
- <div class="wrap">
-  <button class="play" id="pp" aria-label="Écouter la radio">▶</button>
-  <div class="t"><span class="mono" style="color:#FF8A6E">● Antenne · 10:20</span><br><strong>Le journal de 10 h</strong> <span class="next">· À suivre : le dossier (10:25)</span></div>
-  <label class="vol mono"><span>Vol.</span><input type="range" min="0" max="100" value="80" aria-label="Volume"></label>
-  <button class="mono grid" data-go="radio">Grille</button>
+<footer>
+ <div class="ruler" aria-hidden="true"><div class="ticks"></div></div>
+ <div class="in">
+  <div>
+   <img src="logo-papier.svg" alt="Poids &amp; Mesures" style="height:34px;width:auto">
+   <p style="margin-top:16px;color:#CFC9B8;max-width:34ch">On pèse ce que l'IA fait vraiment. Les bases, l'actu et les outils testés, expliqués pour tout le monde.</p>
+  </div>
+  <div><h4>Rubriques</h4><ul><li><a href="#/">L'actu pesée</a></li><li><a href="#/article">Les bases</a></li><li><a href="#/article">Anecdotes</a></li><li><a href="#/article">Benchmarks</a></li></ul></div>
+  <div><h4>Radio</h4><ul><li><a href="#/radio">Écouter le direct</a></li><li><a href="#/radio">La grille</a></li><li><a href="#/radio">Les formats</a></li></ul></div>
+  <div><h4>Nous suivre</h4><ul><li><a href="#">Instagram</a></li><li><a href="#">TikTok</a></li><li><a href="#">YouTube</a></li><li><a href="#">X</a></li></ul></div>
  </div>
+ <div class="legal"><span>Contenus rédigés avec l'aide de l'IA et relus · voix de synthèse (Kore) · musique générée par IA</span><span><a href="#">Mentions légales</a> · Éditeur : Tears (à compléter) · <a href="#">Correctifs</a> · @poidsetmesures</span></div>
+</footer>
+
+<div class="mini-player" id="mini" role="region" aria-label="Lecteur radio">
+ <button class="pp" id="mpp" aria-label="Lecture">▶</button>
+ <div class="t"><span class="mono" style="color:#FF8A6E"><span class="eq"><i></i><i></i><i></i></span>Radio P&amp;M</span><strong class="nowTitle">Le journal</strong></div>
+ <button class="x" id="mx" aria-label="Fermer le lecteur">×</button>
 </div>
 
 <script>
-const views=document.querySelectorAll('.view'),btns=document.querySelectorAll('nav button');
-function go(id){views.forEach(v=>v.classList.toggle('on',v.id===id));btns.forEach(b=>b.setAttribute('aria-current',b.dataset.go===id));scrollTo(0,0)}
-document.getElementById('pp').onclick=e=>{const b=e.currentTarget,on=b.textContent==='▶';b.textContent=on?'❚❚':'▶';b.setAttribute('aria-label',on?'Mettre en pause':'Écouter la radio')};
-document.addEventListener('click',e=>{const t=e.target.closest('[data-go]');if(t){e.preventDefault();go(t.dataset.go)}});
+(()=>{
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const pad=n=>String(n).padStart(2,'0');
+
+/* pièces déchirées : bords irréguliers générés une fois */
+function rnd(seed){return()=>{seed=(seed*16807)%2147483647;return seed/2147483647}}
+$$('.torn').forEach((el,k)=>{
+ const r=rnd(k*97+13),n=18,a=1.8,pts=[];
+ for(let i=0;i<=n;i++)pts.push(`${(i*100/n).toFixed(1)}% ${(r()*a).toFixed(2)}%`);
+ for(let i=n;i>=0;i--)pts.push(`${(i*100/n).toFixed(1)}% ${(100-r()*a).toFixed(2)}%`);
+ el.style.setProperty('--clip',`polygon(${pts.join(',')})`);
+});
+
+/* apparitions + surligneur + jauge */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.15});
+const observe=()=>$$('.view.on .pose:not(.on),.view.on mark:not(.on),.view.on #gauge:not(.on)').forEach(el=>io.observe(el));
+
+/* navigation entre les pages */
+function route(){
+ const h=(location.hash.match(/^#\/(\w+)/)||[])[1]||'home';
+ const id=['home','article','radio'].includes(h)?h:'home';
+ $$('.view').forEach(v=>v.classList.toggle('on',v.id==='v-'+id));
+ $$('nav.main a').forEach(a=>a.dataset.route===id?a.setAttribute('aria-current','page'):a.removeAttribute('aria-current'));
+ scrollTo(0,0);observe();onScroll();
+}
+addEventListener('hashchange',()=>{if(!location.hash||location.hash.startsWith('#/'))route()});
+// ancres internes (sommaire, grille) sans casser la navigation
+document.addEventListener('click',e=>{const a=e.target.closest('a[href^="#"]:not([href^="#/"])');if(a&&a.getAttribute('href').length>1){const t=document.getElementById(a.getAttribute('href').slice(1));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'})}}});
+
+/* la règle défile avec la page, l'indicateur suit la lecture, l'en-tête se range */
+let lastY=0,ticking=false;
+function onScroll(){
+ const y=scrollY,max=document.documentElement.scrollHeight-innerHeight,root=document.documentElement.style;
+ root.setProperty('--shift',((y*.4)%60).toFixed(1));
+ root.setProperty('--prog',max>0?Math.min(1,y/max).toFixed(3):0);
+ const top=$('#top');
+ if(y>lastY+6&&y>180)top.classList.add('hide');else if(y<lastY-6||y<180)top.classList.remove('hide');
+ lastY=y;ticking=false;
+ const secs=['s1','s2','s3','s4','s5','s6'].map(i=>document.getElementById(i));
+ let cur=secs[0];secs.forEach(s=>{if(s.getBoundingClientRect().top<220)cur=s});
+ $$('#toc a').forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+cur.id));
+}
+addEventListener('scroll',()=>{if(!ticking){requestAnimationFrame(onScroll);ticking=true}},{passive:true});
+
+/* brèves (exemples) */
+const breves=[
+ ['09:40','outils','Exemple : un outil gratuit sort en version 2, ce qui change pour toi','blog de l\'éditeur'],
+ ['08:15','entreprises','Exemple : une entreprise annonce un chiffre, pourquoi attendre une mesure indépendante','communiqué'],
+ ['07:30','regles','Exemple : une règle européenne entre en vigueur, ce que tu dois savoir en une phrase','Journal officiel de l\'UE'],
+ ['Hier','outils','Exemple : la commande à copier pour essayer un modèle ouvert sur ton ordinateur','dépôt GitHub officiel'],
+ ['Hier','entreprises','Exemple : un rachat dans l\'IA, et pourquoi ça compte pour tes outils','communiqué'],
+];
+const lab={outils:['Outils','c-vert'],entreprises:['Entreprises','c-corail'],regles:['Règles','c-bleu']};
+$('#breves').innerHTML=breves.map(b=>`<article class="breve" data-cat="${b[1]}"><time class="mono">${b[0]}</time><h3><a href="#/article">${b[2]}</a></h3><div class="row"><span class="mono tag ${lab[b[1]][1]}">${lab[b[1]][0]}</span><a class="mono src" href="#/article">Source : ${b[3]} ↗</a></div></article>`).join('');
+const fil=breves.map(b=>`<a href="#/article">${b[2].replace('Exemple : ','')}</a>`).join('');
+$('#track').innerHTML=fil+fil;
+$$('[data-f]').forEach(c=>c.onclick=()=>{
+ $$('[data-f]').forEach(x=>x.setAttribute('aria-pressed',x===c));
+ $$('.breve').forEach(b=>b.hidden=!(c.dataset.f==='tout'||b.dataset.cat===c.dataset.f));
+});
+
+/* radio : formats, heure type, grille */
+const F={
+ journal:{n:'Journal',c:'#FFD60A',p:'p-journal',d:'Chaque heure pile, 4 minutes : les faits du jour, avec leurs sources.',w:'Toutes les heures à :00'},
+ titres:{n:'Titres',c:'#FFE878',p:'p-titres',d:'Moins d\'une minute pour faire le point.',w:':20 et :40'},
+ bases:{n:'Les bases',c:'#9FC0DA',p:'p-bases',d:'Un mot ou un mécanisme de l\'IA expliqué simplement, en 2 minutes.',w:'Plusieurs fois par heure'},
+ anecdote:{n:'Anecdote',c:'#F7A48F',p:'p-anecdote',d:'Une histoire vraie de la tech, et ce qu\'elle nous apprend.',w:'1 fois par heure'},
+ outil:{n:'L\'outil testé',c:'#8FD9B6',p:'p-outil',d:'Un outil essayé pour de vrai : à quoi il sert, ses limites, comment l\'essayer.',w:'1 fois par heure'},
+ dossier:{n:'Dossier',c:'#F7F2E4',p:'p-dossier',d:'5 à 8 minutes tirées d\'un article de fond du site.',w:'2 fois par heure'},
+ musique:{n:'Musique',c:'#C9C6BD',p:'p-musique',d:'Musique générée par IA, entre les segments.',w:'Entre les segments'},
+};
+// déroulé type d'une heure : minute de début, durée, format, titre
+const H=[[0,4,'journal','Le journal'],[4,2,'musique','Musique'],[6,2,'bases','Le mot pesé : hallucination'],[8,7,'dossier','Dossier : quand le robot engage l\'entreprise'],[15,3,'musique','Musique'],[18,2,'outil','L\'outil testé'],[20,1,'titres','Les titres'],[21,3,'anecdote','Anecdote : le chatbot d\'Air Canada'],[24,4,'musique','Musique'],[28,2,'bases','Les bases : un « modèle », c\'est quoi ?'],[30,8,'dossier','Dossier : on a pesé 4 assistants'],[38,2,'musique','Musique'],[40,1,'titres','Les titres'],[41,3,'outil','L\'outil testé'],[44,4,'musique','Musique'],[48,3,'anecdote','Anecdote'],[51,5,'bases','Les bases'],[56,4,'musique','Musique']];
+$('#heureBar').innerHTML=H.map(s=>`<span style="flex:${s[1]};background:${F[s[2]].c};${s[2]==='dossier'?'box-shadow:inset 0 0 0 2px #121316':''}" title=":${pad(s[0])} · ${F[s[2]].n}" data-m="${s[0]}"></span>`).join('');
+$('#legend').innerHTML=Object.values(F).map(f=>`<span class="pill ${f.p}">${f.n}</span>`).join('');
+$('#formats').innerHTML=['journal','bases','anecdote','outil','dossier','musique'].map((k,i)=>{const f=F[k];return `<div class="piece fmt pose" style="--k:${f.c};--r:${i%2?1:-1}deg"><span class="pill ${f.p}">${f.n}</span><h3>${f.n}</h3><p>${f.d}</p><div class="when mono">${f.w}</div></div>`}).join('');
+const per=[['Le matin',6,10],['La journée',10,14],['L\'après-midi',14,19],['Le soir',19,24]];
+const rdv=[[0,'journal'],[8,'dossier'],[21,'anecdote'],[30,'dossier'],[41,'outil'],[51,'bases']];
+const hNow=new Date().getHours();
+const pNow=Math.max(0,per.findIndex(p=>hNow>=p[1]&&hNow<p[2]));
+let gh=`<div class="periodes" role="tablist">${per.map((p,i)=>`<button role="tab" data-per="${i}" aria-selected="${i===pNow}">${p[0]} · ${p[1]} h-${p[2]%24} h</button>`).join('')}</div>`;
+per.forEach((p,pi)=>{gh+=`<div class="bloc" data-bloc="${pi}" ${pi===pNow?'':'hidden'}>`;
+ for(let h=p[1];h<p[2];h++)rdv.forEach(([m,k])=>{const s=H.find(x=>x[0]===m);
+  gh+=`<div class="slot" style="--k:${F[k].c}" data-k="${k}" data-t="${h*60+m}"><span class="mono">${pad(h)}:${pad(m)}</span><span class="pill ${F[k].p}">${F[k].n}</span><div><b>${k==='journal'?'Le journal de '+h+' h':s[3]}</b><button class="lire">Lire le texte</button><div class="script">Le texte du segment s'affiche ici : pour lire au lieu d'écouter, et pour vérifier chaque phrase contre sa source.</div></div><button class="mini" data-play aria-label="Écouter ce segment">▶</button></div>`});gh+='</div>'});
+$('#grilleJour').innerHTML=gh;
+$('#gChips').innerHTML=`<button class="chip" aria-pressed="true" data-g="tout">Tout</button>`+['journal','bases','anecdote','outil','dossier'].map(k=>`<button class="chip" aria-pressed="false" data-g="${k}">${F[k].n}</button>`).join('');
+$$('[data-g]').forEach(c=>c.onclick=()=>{$$('[data-g]').forEach(x=>x.setAttribute('aria-pressed',x===c));$$('#grilleJour .slot').forEach(s=>s.hidden=!(c.dataset.g==='tout'||s.dataset.k===c.dataset.g))});
+$('#grilleJour').addEventListener('click',e=>{const t=e.target.closest('[data-per]');if(t){$$('[data-per]').forEach(x=>x.setAttribute('aria-selected',x===t));$$('.bloc').forEach(b=>b.hidden=b.dataset.bloc!==t.dataset.per);return}const b=e.target.closest('.lire');if(b){const s=b.closest('.slot');s.classList.toggle('open');b.textContent=s.classList.contains('open')?'Masquer le texte':'Lire le texte'}});
+
+/* horloge + segment en cours, calculés sur l'heure réelle */
+function tick(){
+ const d=new Date(),h=d.getHours(),m=d.getMinutes(),sec=d.getSeconds();
+ $('#clock').textContent=`${pad(h)}:${pad(m)}:${pad(sec)}`;
+ const i=H.findIndex((s,j)=>m>=s[0]&&(j===H.length-1||m<H[j+1][0]));
+ const s=H[i],el=(m-s[0])*60+sec,dur=s[1]*60,f=F[s[2]];
+ const title=s[2]==='journal'?`Le journal de ${h} h`:s[3];
+ $$('.nowTitle').forEach(e=>e.textContent=title);
+ $$('.nowProg').forEach(e=>e.style.setProperty('--p',Math.min(100,el/dur*100)+'%'));
+ $$('.clockTxt').forEach(e=>e.textContent=`${pad(h)}:${pad(m)}`);
+ const pill=$('.nowPill');pill.className='pill nowPill '+f.p;pill.textContent=f.n;
+ const rest=Math.max(0,dur-el);$('.nowRest').textContent=`Encore ${Math.floor(rest/60)} min ${pad(rest%60)}`;
+ const li=[1,2,3].map(k=>{const n=H[(i+k)%H.length],hh=(i+k>=H.length)?(h+1)%24:h;return `<li><span class="mono">${pad(hh)}:${pad(n[0])}</span><span class="pill ${F[n[2]].p}">${F[n[2]].n}</span><span>${n[2]==='journal'?'Le journal de '+hh+' h':n[3]}</span></li>`}).join('');
+ $('#suivreHome').innerHTML=li;$('#suivreRadio').innerHTML=li;
+ $$('#heureBar span').forEach(b=>b.classList.toggle('now',+b.dataset.m===s[0]));
+ const t=h*60+m;let best=null;
+ $$('#grilleJour .slot').forEach(x=>{x.classList.remove('now');if(+x.dataset.t<=t)best=x});
+ if(best)best.classList.add('now');
+}
+tick();setInterval(tick,1000);
+
+/* écoute (maquette : pas encore de son) */
+let playing=false;
+function setPlay(on){
+ playing=on;document.body.classList.toggle('playing',on);
+ $$('.dial .core').forEach(c=>c.textContent=on?'❚❚':'▶');
+ $('#mpp').textContent=on?'❚❚':'▶';$('#mpp').setAttribute('aria-label',on?'Pause':'Lecture');
+ if(on)$('#mini').classList.add('show');
+}
+document.addEventListener('click',e=>{if(e.target.closest('[data-play]')){e.preventDefault();setPlay(!playing)}});
+$('#mpp').onclick=()=>setPlay(!playing);
+$('#mx').onclick=()=>{setPlay(false);$('#mini').classList.remove('show')};
+
+$('#copy').onclick=e=>{try{navigator.clipboard.writeText(location.href)}catch(_){}e.target.textContent='Lien copié ✓';setTimeout(()=>e.target.textContent='Copier le lien',1800)};
+$$('.terme').forEach(t=>t.onclick=()=>t.classList.toggle('open'));
+$('#today').textContent=new Date().toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
+
+route();
+})();
 </script>
 </body>
 </html>
