@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-31",
+  "heure": "07:25",
+  "rubrique": "regles",
+  "titre": "Un seul réglage dans robots.txt pour refuser l'entraînement des IA : Google et Microsoft suivront en 2027",
+  "resume": "OpenAI, Google, Microsoft et Anthropic disent vouloir respecter un signal commun pour que les sites refusent d'être utilisés pour entraîner des IA. Rien n'est encore en vigueur chez Google.",
+  "en_clair": [
+    "Jusqu'ici, un site qui ne voulait pas servir à entraîner des IA devait le dire séparément à chaque entreprise. Le 30 octobre 2026, Google annonce qu'il prévoit de reconnaître un signal commun, un « policy token » placé dans le fichier robots.txt (le fichier où un site indique aux robots ce qu'ils ont le droit de visiter). Il est issu d'un document de travail de l'IETF, l'organisme qui rédige les normes d'Internet. Ce document est un brouillon, sans statut officiel.",
+    "Google dit viser 2027 et traiter ce signal comme un refus de son robot d'entraînement, Google-Extended. Microsoft écrit qu'il appliquera ses nouvelles préférences à partir du 1er février 2027, avec un réglage à part pour « l'ancrage » (quand une IA s'appuie sur une page web pour répondre) et une date limite conseillée au 1er mars 2027. Choisir de refuser peut réduire la visibilité du site dans les réponses des IA de Microsoft. D'après The Verge, OpenAI et Anthropic en sont aussi, OpenAI dans « les prochains mois » ; je n'ai pas pu lire la page d'OpenAI elle-même.",
+    "Ce qui est annoncé n'est pas ce qui est mesuré : ce sont des engagements de calendrier, et rien ne prouve encore que les robots respecteront le signal. Chaque entreprise garde aussi ses réglages propres, qui continuent de fonctionner."
+  ],
+  "pour_toi": "Si tu as un site, un blog ou une boutique, rien à faire aujourd'hui : le nom exact du réglage est encore dans un brouillon et peut changer. Retiens deux dates (février et mars 2027 pour Microsoft) et, si tu veux refuser dès maintenant, utilise le réglage propre à chaque entreprise, comme Google-Extended pour Google. Sinon, rien à retenir pour l'instant.",
+  "termes": [
+    {
+      "mot": "robots.txt",
+      "def": "Un fichier à la racine d'un site qui indique aux robots d'exploration quelles pages ils peuvent visiter."
+    },
+    {
+      "mot": "Entraînement",
+      "def": "La phase où une IA apprend en lisant d'énormes quantités de textes, d'images ou de pages web."
+    },
+    {
+      "mot": "Ancrage (grounding)",
+      "def": "Quand une IA s'appuie sur une page web précise pour formuler sa réponse, au lieu de répondre de mémoire."
+    },
+    {
+      "mot": "IETF",
+      "def": "L'organisme ouvert qui rédige les normes techniques d'Internet."
+    }
+  ],
+  "sources": [
+    {
+      "nom": "Google Search Central — Supporting a shared AI training control for websites",
+      "url": "https://developers.google.com/search/blog/2026/10/ai-training-control",
+      "date": "2026-10-30",
+      "consulte": "2026-10-31",
+      "type": "primaire"
+    },
+    {
+      "nom": "Microsoft Bing — Your content, your choice : clearer preferences for training and grounding",
+      "url": "https://blogs.bing.com/search/2026/10/your-content-your-choice-clearer-preferences-for-training-and-grounding/",
+      "date": "2026-10-30",
+      "consulte": "2026-10-31",
+      "type": "primaire"
+    },
+    {
+      "nom": "IETF — Machine-Readable Training Preference Signal (draft-kelley-aipref-training-preference-signal-00)",
+      "url": "https://datatracker.ietf.org/doc/draft-kelley-aipref-training-preference-signal/",
+      "date": "2026-10-30",
+      "consulte": "2026-10-31",
+      "type": "primaire"
+    },
+    {
+      "nom": "The Verge — The biggest names in AI are backing a new way to opt out of scraping",
+      "url": "https://www.theverge.com/tech/1023763/openai-google-microsoft-ai-scraping-standard-opt-out",
+      "date": "2026-10-30",
+      "consulte": "2026-10-31",
+      "type": "presse"
+    }
+  ],
+  "revue": "humaine"
+}
