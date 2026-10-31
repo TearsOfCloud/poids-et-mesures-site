@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-31",
+  "heure": "07:20",
+  "rubrique": "outils",
+  "titre": "Une fausse version de l'extension Claude Code a circulé sur Cursor pendant une matinée",
+  "resume": "Le 29 octobre, une version piégée de l'extension d'Anthropic a été proposée dans le magasin d'extensions de Cursor. Voici comment vérifier si ta machine est touchée.",
+  "en_clair": [
+    "Le 29 octobre 2026, entre environ 2 h 27 et 13 h 35 (heure de la côte ouest des États-Unis), le magasin d'extensions de Cursor (l'éditeur de code assisté par IA) a proposé deux versions modifiées de l'extension « Anthropic.claude-code » : les 2.1.312 et 2.1.313, pour Windows et macOS. Cursor précise que ces versions n'ont pas été développées par Anthropic.",
+    "Le code ajouté essaie d'installer une porte dérobée : il envoie des informations sur l'ordinateur (nom de la machine, de l'utilisateur, système, adresse IP publique), ajoute une clé SSH appartenant à l'attaquant (une clé SSH sert à se connecter à distance à une machine sans mot de passe) et tente de rouvrir en boucle une connexion vers le serveur de l'attaquant. Selon Cursor, l'étape qui active l'accès à distance échoue sur la plupart des machines, faute de droits administrateur, mais la clé et les scripts de persistance ont bien été installés. Cursor a retiré les versions, coupé le serveur de l'attaquant avec son hébergeur et dit n'avoir aucune preuve que d'autres extensions ou versions soient touchées.",
+    "Ce qu'on ne sait pas : comment les attaquants ont pu publier sous le compte d'Anthropic. Ars Technica indique que ni Cursor ni Anthropic n'avaient répondu à cette question au moment de son article, et qu'Anthropic n'avait pas publié d'avis public à ses clients. Les faits ci-dessus viennent de l'avis de Cursor, pas d'une vérification indépendante."
+  ],
+  "pour_toi": "Si tu utilises Cursor sur Mac ou Windows et que tu as installé ou mis à jour l'extension Claude Code le 29 octobre, vérifie. Sur Mac, ouvre le Terminal et tape : grep -qs svc-telemetry ~/.ssh/authorized_keys && echo \"clé trouvée\" || echo \"rien trouvé\". Si « clé trouvée » s'affiche, suis la procédure de nettoyage de Cursor (lien dans les sources) : désinstaller l'extension ne suffit pas, et il faut changer les mots de passe et clés accessibles depuis cette machine. Sinon, rien à faire.",
+  "termes": [
+    {
+      "mot": "Extension",
+      "def": "Un petit programme qu'on ajoute à un éditeur de code pour lui donner de nouvelles fonctions."
+    },
+    {
+      "mot": "Porte dérobée",
+      "def": "Un accès caché qui permet à quelqu'un de prendre la main sur un ordinateur à distance, sans que son propriétaire le sache."
+    },
+    {
+      "mot": "Clé SSH",
+      "def": "Un fichier qui sert de laissez-passer pour se connecter à distance à un ordinateur, sans taper de mot de passe."
+    },
+    {
+      "mot": "Persistance",
+      "def": "Une astuce qui relance le programme malveillant automatiquement, même après un redémarrage."
+    }
+  ],
+  "sources": [
+    {
+      "nom": "Cursor — Security notice, malicious version of Anthropic.claude-code (2.1.312 and 2.1.313)",
+      "url": "https://cursor.com/blog/claude-code-extension-security-notice",
+      "date": "2026-10-29",
+      "consulte": "2026-10-31",
+      "type": "primaire"
+    },
+    {
+      "nom": "Ars Technica — Anthropic VS code extension on Cursor backdoored for nearly 12 hours",
+      "url": "https://arstechnica.com/security/2026/10/anthropic-vs-code-extension-on-cursor-backdoored-for-nearly-12-hours/",
+      "date": "2026-10-30",
+      "consulte": "2026-10-31",
+      "type": "presse"
+    }
+  ],
+  "revue": "humaine"
+}
