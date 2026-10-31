@@ -136,7 +136,7 @@ def fill(t, **kw):
 
 def social_html(root):
     items = [f'<li><a href="{esc(u)}" rel="noopener" target="_blank">{esc(n)}</a></li>' for n, u in SITE["reseaux"].items() if u]
-    return "".join(items) or '<li>@poidsetmesures</li>'
+    return "".join(items) or '<li>@poidsetmesuresia</li>'
 
 
 def breve_html(b, root):
@@ -276,7 +276,7 @@ def build():
         if a.get("video"):
             vid = (f'<a class="piece video" href="{esc(a["video"])}" rel="noopener" target="_blank" aria-label="Voir la vidéo" style="padding:16px;display:grid;margin-bottom:24px">'
                    f'<span class="phone"><span class="t">{esc(a["titre"])}</span><img src="{{{{root}}}}assets/img/laptop.png" alt=""><span class="pl">▶</span><span class="ru"></span></span>'
-                   '<span><span class="mono c-corail">Voir en vidéo</span><b style="display:block;font-size:19px;letter-spacing:-.02em;line-height:1.15;margin:6px 0">L\'histoire en 80 secondes</b><span class="mono c-gris">Reel · @poidsetmesures</span></span></a>')
+                   '<span><span class="mono c-corail">Voir en vidéo</span><b style="display:block;font-size:19px;letter-spacing:-.02em;line-height:1.15;margin:6px 0">L\'histoire en 80 secondes</b><span class="mono c-gris">Reel · @poidsetmesuresia</span></span></a>')
         ld = jsonld({"@context": "https://schema.org", "@type": "Article", "headline": a["titre"], "datePublished": a["date"], "inLanguage": "fr",
                      "description": a["description"], "publisher": {"@type": "Organization", "name": "Poids & Mesures"}})
         page(f"articles/{a['slug']}/", a["titre"] + " · Poids & Mesures", a["description"], "v-article",
