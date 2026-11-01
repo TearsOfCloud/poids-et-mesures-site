@@ -73,7 +73,7 @@ function grille(){
   const idx=(i+k)%G.plan.length,sg=seg(idx);
   if(sg.format==='musique')continue;
   const f=FMT[sg.format],st=G.plan[idx][1];
-  out.push(`<div class="slot" style="--k:${f[2]}" data-k="${sg.format}" data-i="${idx}"><span class="mono">${hm(st)}</span><span class="pill ${f[1]}">${f[0]}</span><div><b>${esc(sg.titre)}</b>${sg.texte?`<button class="lire">Lire le texte</button><div class="script">${esc(sg.texte)}</div>`:''}${sg.demo?'<span class="mono c-gris" style="display:block;margin-top:4px">Segment de démonstration</span>':''}</div><span></span></div>`);
+  out.push(`<div class="slot" style="--k:${f[2]}" data-k="${sg.format}" data-i="${idx}"><span class="mono">${hm(st)}</span><span class="pill ${f[1]}">${f[0]}</span><div><b>${esc(sg.titre)}</b>${sg.texte?`<button class="lire">Lire le texte</button><div class="script">${esc(sg.texte).replace(/\n\n/g,'<br><br>')}</div>`:''}${sg.demo?'<span class="mono c-gris" style="display:block;margin-top:4px">Segment de démonstration</span>':''}</div><span></span></div>`);
  }
  box.innerHTML=out.join('');
  const hdr=$('#grille h2');if(hdr)hdr.innerHTML='Au programme <em>maintenant</em>';
@@ -92,7 +92,7 @@ fetch(root+'assets/radio/grille.json').then(r=>r.json()).then(g=>{
  $$('.btn.y[data-play]').forEach(x=>x.textContent='Écouter en direct');
  const lab=$('.r-hero .mono');if(lab)lab.textContent='Webradio · en test';
  const dial=$('.r-now .head .mono');if(dial)dial.lastChild.textContent='À l\'antenne';
- const nm=$('.note-maq');if(nm)nm.textContent='Phase de test : les segments actuels sont des extraits de nos vidéos et une musique de démonstration. La grille, le lecteur et l\'heure de Paris, eux, sont les vrais. La voix et la musique sont générées par IA.';
+ const nm=$('.note-maq');if(nm)nm.textContent='Phase de test : trois segments seulement (journal, mot pesé, anecdote) tournent en boucle, avec une musique de démonstration. Tout ce qui est dit est déjà publié et sourcé sur le site. La voix et la musique sont générées par IA.';
  setUi(false);render();grille();setInterval(render,1000);
 }).catch(()=>{});
 })();
