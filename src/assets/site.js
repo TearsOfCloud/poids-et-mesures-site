@@ -21,14 +21,10 @@ $$('nav.main a').forEach(a=>a.dataset.route===cur?a.setAttribute('aria-current',
 // ancres internes (sommaire, grille) sans casser la navigation
 document.addEventListener('click',e=>{const a=e.target.closest('a[href^="#"]:not([href^="#/"])');if(a&&a.getAttribute('href').length>1){const t=document.getElementById(a.getAttribute('href').slice(1));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'})}}});
 
-/* la règle défile avec la page, l'indicateur suit la lecture, l'en-tête se range */
+/* la règle et l'en-tête restent fixes ; seul le sommaire suit la lecture */
 let lastY=0,ticking=false;
 function onScroll(){
  const y=scrollY,max=document.documentElement.scrollHeight-innerHeight,root=document.documentElement.style;
- root.setProperty('--shift',((y*.4)%60).toFixed(1));
- root.setProperty('--prog',max>0?Math.min(1,y/max).toFixed(3):0);
- const top=$('#top');
- if(y>lastY+6&&y>180)top.classList.add('hide');else if(y<lastY-6||y<180)top.classList.remove('hide');
  lastY=y;ticking=false;
  const secs=['s1','s2','s3','s4','s5','s6'].map(i=>document.getElementById(i));
  if(!$('#v-article').classList.contains('on'))return;
