@@ -1,0 +1,79 @@
+
+ <div class="wrap">
+  <header class="art-head">
+   <div>
+    <div class="crumb"><a class="mono" href="{{root}}">Accueil</a><span class="mono">/</span><span class="mono tag c-vert">Outil testé</span><span class="mono c-gris">· Outils · Claude</span></div>
+    <h1><mark>4 outils gratuits</mark> pour Claude, un par problème.</h1>
+    <p class="chapo">Claude peut faire bien plus que ce que tu lui demandes. Quatre outils, un par problème, et un par où commencer.</p>
+   </div>
+   <div class="art-vis" aria-hidden="true">
+    <div class="bg"></div>
+    <span class="big">4 outils</span>
+    <img class="o1 sticker" src="{{root}}assets/img/robot.png" alt="">
+   </div>
+  </header>
+
+  <div class="meta-bar">
+   <span class="mono">Publié le 31/10/2026</span>
+   <span class="mono">4 min de lecture</span>
+   <span class="badge ok" style="margin:0">Dépôts lus le 24/10/2026 · outils non installés</span>
+   <span style="flex:1"></span>
+   <button class="btn o" id="copy">Copier le lien</button>
+  </div>
+
+  <div class="art-body">
+   <nav class="toc mono" aria-label="Sommaire" id="toc">
+    <a href="#s1">En 30 secondes</a>
+    <a href="#s2">Un dépôt GitHub, c&#x27;est quoi ?</a>
+    <a href="#s3">1. superpowers : un plan avant le code</a>
+    <a href="#s4">2. Les skills d&#x27;Anthropic</a>
+    <a href="#s5">3. repomix : tout le projet en un fichier</a>
+    <a href="#s6">4. ccusage : ce que tu consommes</a>
+    <a href="#s7">Par où commencer ?</a>
+    <a href="#s8">Ton réflexe</a>
+    <a href="#s9">Sources</a>
+   </nav>
+
+   <article class="prose">
+    <div class="tldr piece torn" id="s1">
+     <span class="mono">En 30 secondes</span>
+     <ol>
+      <li>superpowers : Claude se jette sur le code sans plan. L&#x27;outil l&#x27;oblige à poser des questions, faire un plan, puis écrire.</li><li>skills d&#x27;Anthropic : des fiches de consignes que Claude lit quand il en a besoin (pdf, docx, xlsx, pptx…).</li><li>repomix : tout ton projet en un seul fichier. ccusage : ce que tu consommes. Commence par ccusage, il ne modifie rien.</li>
+     </ol>
+    </div>
+
+    <h2 id="s2">Un dépôt GitHub, c&#x27;est quoi ?</h2>
+    <p>Juste un dossier public d'un développeur. Tu le télécharges, c'est tout.</p>
+<h2 id="s3">1. superpowers : un plan avant le code</h2>
+    <p>Problème : Claude se jette sur le code sans réfléchir. Cet outil l'oblige à te poser des questions, faire un plan, puis seulement écrire, comme un architecte qui dessine avant de construire. Dépôt : github.com/obra/superpowers (licence MIT). Commande : <code>/plugin install superpowers@claude-plugins-official</code></p>
+<h2 id="s4">2. Les skills d&#x27;Anthropic</h2>
+    <p>Un skill, c'est une fiche de consignes que Claude lit tout seul quand il en a besoin. Il y en a déjà pour fabriquer un PDF, un tableur ou un diaporama : tu n'expliques plus la même chose cent fois. Dépôt officiel : github.com/anthropics/skills. Commandes : <code>/plugin marketplace add anthropics/skills</code> puis <code>/plugin install document-skills@anthropic-agent-skills</code>. Attention : la licence varie selon le skill (les skills pdf, docx, xlsx et pptx ont une licence propriétaire dans le dépôt, d'autres sont en Apache 2.0).</p>
+<h2 id="s5">3. repomix : tout le projet en un fichier</h2>
+    <p>Il rassemble tout ton projet dans un seul fichier. Tu le donnes à n'importe quelle IA, même sans Claude Code, et elle voit l'ensemble au lieu de deviner. Dépôt : github.com/yamadashy/repomix. Commande : <code>npx repomix@latest</code> (crée repomix-output.xml).</p>
+<h2 id="s6">4. ccusage : ce que tu consommes</h2>
+    <p>Il lit ce que Claude a consommé et te dit, jour par jour, combien de jetons tu as utilisés. Un jeton est un petit morceau de mot que l'IA compte, et c'est ce qu'on te facture. Dépôt : github.com/ryoppippi/ccusage (licence MIT). Commande : <code>npx ccusage@latest</code></p>
+<h2 id="s7">Par où commencer ?</h2>
+    <p>Par le quatrième : il ne modifie rien. Ouvre ton terminal, tape <code>npx ccusage</code> et regarde le résultat. Dix minutes, en lecture seule.</p>
+<h2 id="s8">Ton réflexe</h2>
+    <ul class="reflexe"><li><label><input type="checkbox"><span><b>Commence par ccusage</b> : lecture seule.</span></label></li><li><label><input type="checkbox"><span><b>Vérifie la licence</b> avant de dire d'un outil qu'il est « libre ».</span></label></li><li><label><input type="checkbox"><span><b>Revérifie les commandes</b> sur le dépôt : elles évoluent.</span></label></li></ul>
+
+    <div class="sources" id="s9">
+     <span class="mono">Sources</span>
+     <ol>
+      <li>1. Dépôts lus le 24/10/2026 : obra/superpowers, anthropics/skills, yamadashy/repomix, ryoppippi/ccusage. Commandes copiées de leurs README.</li><li>2. Étoiles non citées (non lisibles depuis notre outil de lecture). Licence de repomix non confirmée : nous ne l&#x27;affirmons pas. Nous n&#x27;avons pas installé les outils.</li>
+     </ol>
+    </div>
+    <div class="transp"><b>Comment cet article a été fait.</b> Adapté par une IA de notre post du même nom, sous la responsabilité de l'éditeur. Les commandes sont copiées des README le 24/10/2026 et peuvent avoir changé : revérifie sur le dépôt. Nous n'avons pas exécuté ces outils. Une erreur ? <a href="{{root}}correctifs/" style="text-decoration:underline">Signale-la</a>, elle sera corrigée dans la rubrique « Correctifs ».</div>
+   </article>
+
+   <aside class="aside-r">
+    {{video_html}}
+    <div class="piece torn"><span class="tape"></span>
+     <span class="mono">Le chiffre</span>
+     <div style="font:900 54px/1 Inter;letter-spacing:-.04em;margin:8px 0">4</div>
+     <p style="font-size:15px;color:var(--muted)">Outils gratuits, un par problème.</p>
+    </div>
+    {{next_html}}
+   </aside>
+  </div>
+ </div>
