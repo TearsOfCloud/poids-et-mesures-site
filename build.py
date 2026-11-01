@@ -105,9 +105,9 @@ def validate(articles, breves):
         if not b.get("sources"):
             errs.append(f"{n}: au moins une source est obligatoire")
         for s in b.get("sources", []):
-            if not str(s.get("url", "")).startswith("https://") or not s.get("nom") or not s.get("date"):
+            if not str(s.get("url", "")).startswith("https://") or not s.get("nom") or not (s.get("date") or s.get("sans_date")):
                 errs.append(f"{n}: source incomplète (nom, url https, date) : {s}")
-            elif s["date"] > b.get("date", "9999"):
+            elif s.get("date") and s["date"] > b.get("date", "9999"):
                 errs.append(f"{n}: la source est datée après la brève")
         if not any(s.get("type") == "primaire" for s in b.get("sources", [])):
             errs.append(f"{n}: aucune source primaire (type « primaire »)")
@@ -158,7 +158,7 @@ def card_html(a, root):
         f'<a class="card piece dossier" href="{root}articles/{a["slug"]}/" data-r="{a["rubrique"]}" data-v="{1 if a.get("video") else 0}" data-q="{esc(q)}">{badge}'
         f'<div class="vis {vis}"><img class="sticker" src="{root}assets/img/{a["image"]}.png" alt=""></div>'
         f'<span class="mono tag {cls}">{nom}</span><h3>{esc(a["titre"])}</h3><p>{esc(a["description"].split(". Source")[0])}</p>'
-        f'<div class="meta mono">{fr_date(a["date"])[:5]} · {a["minutes"]} min · Source primaire</div></a>'
+        f'<div class="meta mono">{fr_date(a["date"])[:5]} · {a["minutes"]} min · {({"secondaire": "Sources de presse", "explication": "Explication", "documentation": "Documentation lue"}).get(a.get("source_type"), "Source primaire")}</div></a>'
     )
 
 
@@ -244,7 +244,7 @@ def build():
             f'<a class="card piece torn pose" href="{{{{root}}}}articles/{a["slug"]}/" style="--r:{2 if i == 0 else -1.5}deg">'
             f'<img class="obj sticker" src="{{{{root}}}}assets/img/{a["image"]}.png" alt=""><span class="mono tag {cls}">{nom}</span>'
             f'<h3>{esc(a["titre"])}</h3><p>{esc(a["description"].split(". Source")[0])}</p><div class="meta mono">{a["minutes"]} min</div></a>'
-        ))(*RUBRIQUES_ARTICLES[a["rubrique"]][:2])
+        ))(*RUBRIQUES_ARTICLES[a["rubrique"]])
         for i, a in enumerate(others)
     )
     if len(others) < 2:
@@ -304,10 +304,11 @@ def build():
                 f'<dt style="font-weight:900;margin-top:8px">{esc(t["mot"])}</dt><dd>{esc(t["def"])}</dd>' for t in b["termes"]) + "</dl></div>"
         srcs = "".join(
             f'<li>{i}. <a href="{esc(s["url"])}" rel="noopener" target="_blank" style="text-decoration:underline">{esc(s["nom"])}</a>'
-            f'{" (source primaire)" if s.get("type") == "primaire" else ""}, publié le {fr_date(s["date"])}. Consultée le {fr_date(s.get("consulte", b["date"]))}.</li>'
+            f'{" (source primaire)" if s.get("type") == "primaire" else ""}{(", publié le " + fr_date(s["date"])) if s.get("date") else " (page non datée)"}. Consultée le {fr_date(s.get("consulte", b["date"]))}.</li>'
             for i, s in enumerate(b["sources"], 1))
         relu = ("Relue par l'éditeur avant publication." if b["revue"] == "humaine"
                 else "Publiée automatiquement, relue par l'éditeur après coup. Une erreur ? Signale-la.")
+        arch = f'<div class="piece torn" style="margin:22px 0"><span class="mono c-corail">Archive</span><p style="margin-top:8px">{esc(b["archive"])}</p></div>' if b.get("archive") else ""
         view = f"""
  <div class="wrap"><article class="page">
   <div class="crumb"><a class="mono" href="{{{{root}}}}">Accueil</a><span class="mono">/</span><span class="mono tag {cls}">{nom}</span><span class="mono c-gris">· {fr_date(b['date'])} · {esc(b['heure'])}</span></div>
@@ -316,6 +317,7 @@ def build():
   <div class="prose" style="margin-top:26px"><h2>En clair</h2>{paras}
    <div class="tldr piece torn" style="margin:24px 0"><span class="mono">Ce que tu peux en faire</span><p style="margin-top:8px">{esc(b['pour_toi'])}</p></div>
    {termes}
+   {arch}
    <div class="sources"><span class="mono">Sources</span><ol style="list-style:none">{srcs}</ol></div>
    <div class="transp"><b>Comment cette brève a été faite.</b> Écrite par une IA à partir des sources ci-dessus, sous la responsabilité de l'éditeur. {relu} <a href="{{{{root}}}}correctifs/" style="text-decoration:underline">Voir les correctifs</a>.</div>
   </div>
@@ -323,6 +325,41 @@ def build():
         ld = jsonld({"@context": "https://schema.org", "@type": "NewsArticle", "headline": b["titre"], "datePublished": b["date"], "inLanguage": "fr",
                      "description": b["resume"], "publisher": {"@type": "Organization", "name": "Poids & Mesures"}})
         page(f"breves/{b['slug']}/", b["titre"] + " · Poids & Mesures", b["resume"], "v-breve", view, ctx, "home", ld)
+
+
+    # pages de prompts à copier (URL courte et stable, ex. lien en bio)
+    prompt_slugs = []
+    for f in sorted((ROOT / "content/pages").glob("*.json")):
+        pg = load_json(f)
+        prompt_slugs.append(pg["slug"])
+        groups = {}
+        for it in pg["prompts"]:
+            groups.setdefault(re.match(r"\d+", it["num"]).group(), []).append(it)
+        blocs = []
+        for n, its in groups.items():
+            parts = []
+            for it in its:
+                long_ = len(it["texte"]) > 1500
+                sub = f' <span class="mono c-gris">· variante {esc(it["num"][len(n):])}</span>' if len(its) > 1 else ""
+                note = f'<p class="mono c-gris" style="font-size:12px;margin-top:6px">{esc(pg["notes"][it["num"]])}</p>' if it["num"] in pg.get("notes", {}) else ""
+                texte = esc(it["texte"])
+                body = (f'<details><summary class="mono" style="cursor:pointer;margin:8px 0">Voir le prompt complet ({len(it["texte"].split())} mots)</summary><pre class="ptxt">{texte}</pre></details>'
+                        if long_ else f'<pre class="ptxt">{texte}</pre>')
+                parts.append(f'<div style="margin-top:14px"><b>{esc(it["titre"].split(", ", 1)[-1]) if len(its) > 1 else ""}</b>{sub}{body}'
+                             f'<button class="btn o copy-p" type="button" data-t="{esc(it["texte"], quote=True)}">Copier ce prompt</button>{note}</div>')
+            blocs.append(f'<section class="piece torn" style="padding:22px;margin-top:26px" id="p{n}"><span class="mono c-corail">Prompt {n}</span>'
+                         f'<h2 style="font-size:28px;margin:6px 0 0">{esc(its[0]["titre"].split(", ")[0])}</h2>{"".join(parts)}</section>')
+        view = (f'<div class="wrap"><div class="page"><span class="mono c-gris">Outil à copier</span><h1>{esc(pg["titre"])}</h1>'
+                f'<p class="chapo">{esc(pg["description"])}</p>'
+                '<div class="piece torn" style="padding:18px;margin:22px 0"><span class="mono">Comment s\'en servir</span><ol style="margin:10px 0 0 20px;line-height:1.5">'
+                '<li>Touche « Copier ce prompt ».</li><li>Colle-le dans ton générateur d\'images. Si le prompt a des crochets, remplace-les par ton produit ou ta marque.</li>'
+                '<li>Relis chaque mot écrit sur l\'image : les IA font encore des fautes.</li><li>Change une seule chose à la fois, et mets ta marque, pas celle d\'un autre.</li></ol></div>'
+                f'<p style="font-size:15px;color:var(--muted)">Modèle utilisé : {esc(pg["modele"])}.<br>Source : {esc(pg["source"])} Les marques citées dans certains prompts appartiennent à leurs propriétaires : remplace-les par la tienne.</p>'
+                f'{"".join(blocs)}</div></div>'
+                '<style>.ptxt{white-space:pre-wrap;word-break:break-word;font:15px/1.5 "JetBrains Mono",monospace;background:#fff;border:2px solid var(--encre);padding:14px;margin:8px 0 12px}</style>'
+                '<script>document.querySelectorAll(".copy-p").forEach(function(b){b.addEventListener("click",function(){var t=b.getAttribute("data-t");var ok=function(){b.textContent="Copié !";setTimeout(function(){b.textContent="Copier ce prompt"},1800)};'
+                'if(navigator.clipboard){navigator.clipboard.writeText(t).then(ok,function(){b.textContent="Copie impossible : sélectionne le texte"})}else{b.textContent="Copie impossible : sélectionne le texte"}})})</script>')
+        page(pg["slug"] + "/", pg["titre"] + " · Poids & Mesures", pg["description"], "v-prompts", view, ctx, "")
 
     # radio, méthode, correctifs, mentions
     page("radio/", "La radio · Poids & Mesures", "La webradio de Poids & Mesures, en test : journal, bases, anecdotes, outils testés, à écouter en continu.", "v-radio", tpl("radio.html"), ctx, "radio")
@@ -354,7 +391,7 @@ def build():
     (DIST / "rss.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>Poids &amp; Mesures</title>'
         f"<link>{base}/</link><description>{esc(SITE['accroche'])}. L'actu de l'IA expliquée pour tout le monde, sources à l'appui.</description><language>fr-fr</language>{rss}</channel></rss>", encoding="utf8")
-    urls = [""] + ["articles/", "breves/", "radio/", "methode/", "correctifs/", "mentions-legales/"] + [f"articles/{a['slug']}/" for a in articles] + [f"breves/{b['slug']}/" for b in breves]
+    urls = [""] + ["articles/", "breves/", "radio/", "methode/", "correctifs/", "mentions-legales/"] + [f"articles/{a['slug']}/" for a in articles] + [f"breves/{b['slug']}/" for b in breves] + [f"{x}/" for x in prompt_slugs]
     (DIST / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + "".join(f"<url><loc>{base}/{u}</loc></url>" for u in urls) + "</urlset>", encoding="utf8")
     (DIST / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {base}/sitemap.xml\n")

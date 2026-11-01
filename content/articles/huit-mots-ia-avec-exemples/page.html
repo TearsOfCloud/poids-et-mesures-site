@@ -1,0 +1,64 @@
+
+ <div class="wrap">
+  <header class="art-head">
+   <div>
+    <div class="crumb"><a class="mono" href="{{root}}">Accueil</a><span class="mono">/</span><span class="mono tag c-bleu">Les bases</span><span class="mono c-gris">· Glossaire</span></div>
+    <h1><mark>8 mots</mark> d'IA qui reviennent partout, avec un exemple chacun.</h1>
+    <p class="chapo">Quand un mot t&#x27;échappe, tu n&#x27;es pas seul. Voici les huit qui reviennent le plus, et un exemple pour chacun.</p>
+   </div>
+   <div class="art-vis" aria-hidden="true">
+    <div class="bg"></div>
+    <span class="big">8 mots</span>
+    <img class="o1 sticker" src="{{root}}assets/img/telephone.png" alt="">
+   </div>
+  </header>
+
+  <div class="meta-bar">
+   <span class="mono">Publié le 31/10/2026</span>
+   <span class="mono">4 min de lecture</span>
+   <span class="badge ok" style="margin:0">Explication · définitions simplifiées</span>
+   <span style="flex:1"></span>
+   <button class="btn o" id="copy">Copier le lien</button>
+  </div>
+
+  <div class="art-body">
+   <nav class="toc mono" aria-label="Sommaire" id="toc">
+    <a href="#s1">En 30 secondes</a>
+    <a href="#s2">Les huit mots</a>
+    <a href="#s3">Ton réflexe</a>
+    <a href="#s4">Sources</a>
+   </nav>
+
+   <article class="prose">
+    <div class="tldr piece torn" id="s1">
+     <span class="mono">En 30 secondes</span>
+     <ol>
+      <li>Prompt, jeton, hallucination, biais, RAG, fine-tuning, agent, poids ouverts.</li><li>Un exemple concret pour chaque mot.</li><li>Le réflexe : « Explique-moi ce mot en une phrase, avec un exemple. »</li>
+     </ol>
+    </div>
+
+    <h2 id="s2">Les huit mots</h2>
+    <p><b>Prompt</b> : ce que tu écris. Exemple : « Résume ce mail en deux lignes. »<br><br><b>Jeton</b> : un morceau de mot, l'unité que l'IA lit et sur laquelle on te facture. Un long texte, ce sont beaucoup de jetons.<br><br><b>Hallucination</b> : elle invente une réponse qui a l'air vraie. Par exemple, elle peut citer une source qui n'existe pas. Réflexe : vérifie toute source citée.<br><br><b>Biais</b> : elle reproduit les déséquilibres de ses données. Si tu poses une question sur un sujet peu documenté, la réponse sera plus pauvre.<br><br><b>RAG</b> : avant de répondre, elle va chercher dans tes documents. Utile quand tu veux des réponses sur tes propres fichiers.<br><br><b>Fine-tuning</b> : on la réentraîne sur tes exemples pour qu'elle prenne ton style.<br><br><b>Agent</b> : elle enchaîne des actions seule.<br><br><b>Poids ouverts</b> : ses réglages sont téléchargeables.</p>
+<h2 id="s3">Ton réflexe</h2>
+    <ul class="reflexe"><li><label><input type="checkbox"><span><b>Copie cette phrase</b> dans ton IA : « Explique-moi ce mot en une phrase, avec un exemple. »</span></label></li><li><label><input type="checkbox"><span><b>Vérifie toute source citée</b> par une IA.</span></label></li><li><label><input type="checkbox"><span><b>Dis-nous</b> le mot que tu voudrais voir expliqué en détail.</span></label></li></ul>
+
+    <div class="sources" id="s4">
+     <span class="mono">Sources</span>
+     <ol>
+      <li>1. Définitions du post vidéo validé « 8 mots d&#x27;IA ». Relecture des définitions signalée « à vérifier » dans le script : à confirmer avant une version datée.</li>
+     </ol>
+    </div>
+    <div class="transp"><b>Comment cet article a été fait.</b> Adapté par une IA de notre post du même nom, sous la responsabilité de l'éditeur. Les définitions sont volontairement simplifiées pour un public non expert. Une erreur ? <a href="{{root}}correctifs/" style="text-decoration:underline">Signale-la</a>, elle sera corrigée dans la rubrique « Correctifs ».</div>
+   </article>
+
+   <aside class="aside-r">
+    {{video_html}}
+    <div class="piece torn"><span class="tape"></span>
+     <span class="mono">Le chiffre</span>
+     <div style="font:900 54px/1 Inter;letter-spacing:-.04em;margin:8px 0">8</div>
+     <p style="font-size:15px;color:var(--muted)">Mots d&#x27;IA qui reviennent partout.</p>
+    </div>
+    {{next_html}}
+   </aside>
+  </div>
+ </div>

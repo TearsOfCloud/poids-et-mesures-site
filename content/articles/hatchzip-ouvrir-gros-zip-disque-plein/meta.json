@@ -1,0 +1,12 @@
+{
+  "titre": "Ouvrir un gros zip quand le disque est presque plein : l'astuce d'HatchZip.",
+  "titre_html": "Ouvrir un gros zip quand le disque est <mark>presque plein</mark> : l'astuce d'HatchZip.",
+  "description": "Un extracteur normal garde le zip et son contenu en même temps. HatchZip rogne l'archive au fur et à mesure. Source : le site hatchzip.dev, lu le 24/10/2026.",
+  "rubrique": "outil",
+  "date": "2026-10-31",
+  "minutes": 4,
+  "image": "laptop",
+  "mots_cles": "hatchzip zip archive disque plein extraction outil gratuit",
+  "video": "",
+  "source_type": "documentation"
+}
