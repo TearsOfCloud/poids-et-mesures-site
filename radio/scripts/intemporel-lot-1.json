@@ -1,0 +1,665 @@
+{
+ "date": "2026-11-01",
+ "segments": [
+  {
+   "id": "mot-pese-modele",
+   "format": "bases",
+   "titre": "Le mot pesé : modèle",
+   "sources": [
+    {
+     "type": "article",
+     "slug": "glossaire-ia-35-mots-suite"
+    }
+   ],
+   "texte": "Le mot pesé : modèle.\n\nModèle : le programme entraîné qui produit les réponses. ChatGPT, Claude, Gemini et Le Chat sont des assistants construits sur des modèles.\n\nCe que ça change pour toi : quand on dit « un nouveau modèle est sorti », c'est le moteur qui change, pas forcément l'application."
+  },
+  {
+   "id": "mot-pese-entrainement",
+   "format": "bases",
+   "titre": "Le mot pesé : entraînement",
+   "sources": [
+    {
+     "type": "article",
+     "slug": "glossaire-ia-35-mots-suite"
+    }
+   ],
+   "texte": "Le mot pesé : entraînement.\n\nEntraînement : la phase où le modèle lit énormément de textes et ajuste ses réglages pour mieux prédire la suite d'une phrase.\n\nCe que ça change pour toi : il se termine avant que tu l'utilises : le modèle ne continue pas d'apprendre de ta conversation."
+  },
+  {
+   "id": "mot-pese-parametres",
+   "format": "bases",
+   "titre": "Le mot pesé : paramètres",
+   "sources": [
+    {
+     "type": "article",
+     "slug": "glossaire-ia-35-mots-suite"
+    }
+   ],
+   "texte": "Le mot pesé : paramètres.\n\nParamètres : les réglages internes du modèle, des milliards de nombres. Plus il y en a, plus il est gros, pas forcément meilleur.\n\nCe que ça change pour toi : un petit modèle bien entraîné peut battre un gros modèle mal entraîné."
+  },
+  {
+   "id": "mot-pese-fenetre-de-contexte",
+   "format": "bases",
+   "titre": "Le mot pesé : fenêtre de contexte",
+   "sources": [
+    {
+     "type": "article",
+     "slug": "glossaire-ia-35-mots-suite"
+    }
+   ],
+   "texte": "Le mot pesé : fenêtre de contexte.\n\nFenêtre de contexte : la quantité de texte que le modèle peut garder en tête en même temps : ta question, la conversation et les documents.\n\nCe que ça change pour toi : quand une longue conversation devient confuse, c'est souvent que le début est sorti de la fenêtre."
+  },
+  {
+   "id": "mot-pese-inference",
+   "format": "bases",
+   "titre": "Le mot pesé : inférence",
+   "sources": [
+    {
+     "type": "article",
+     "slug": "glossaire-ia-35-mots-suite"
+    }
+   ],
+   "texte": "Le mot pesé : inférence.\n\nInférence : le moment où le modèle répond à ta question, par opposition à l'entraînement.\n\nCe que ça change pour toi : quand une réponse est lente ou payante, c'est le coût de l'inférence."
+  },
+  {
+   "id": "mot-pese-temperature",
+   "format": "bases",
+   "titre": "Le mot pesé : température",
+   "sources": [
+    {
+     "type": "article",
+     "slug": "glossaire-ia-35-mots-suite"
+    }
+   ],
+   "texte": "Le mot pesé : température.\n\nTempérature : un réglage qui décide si le modèle reste prévisible ou prend plus de risques dans ses mots.\n\nCe que ça change pour toi : pour un résumé fiable, on la baisse. Pour des idées de noms, on la monte."
+  },
+  {
+   "id": "mot-pese-prompt-systeme",
+   "format": "bases",
+   "titre": "Le mot pesé : prompt système",
+   "sources": [
+    {
+     "type": "article",
+     "slug": "glossaire-ia-35-mots-suite"
+    }
+   ],
+   "texte": "Le mot pesé : prompt système.\n\nPrompt système : les consignes cachées données au modèle avant ta première phrase, par exemple « tu es l'assistant de telle boutique ».\n\nCe que ça change pour toi : c'est lui qui explique pourquoi deux applications basées sur le même modèle ne répondent pas pareil."
+  },
+  {
+   "id": "mot-pese-instruction",
+   "format": "bases",
+   "titre": "Le mot pesé : instruction",
+   "sources": [
+    {
+     "type": "article",
+     "slug": "glossaire-ia-35-mots-suite"
+    }
+   ],
+   "texte": "Le mot pesé : instruction.\n\nInstruction : une demande claire donnée au modèle : ce qu'il doit faire, pour qui, sous quelle forme.\n\nCe que ça change pour toi : plus l'instruction est précise, moins tu corriges après."
+  },
+  {
+   "id": "mot-pese-zero-shot",
+   "format": "bases",
+   "titre": "Le mot pesé : zéro-shot",
+   "sources": [
+    {
+     "type": "article",
+     "slug": "glossaire-ia-35-mots-suite"
+    }
+   ],
+   "texte": "Le mot pesé : zéro-shot.\n\nZéro-shot : demander sans donner d'exemple. Le modèle se débrouille avec sa seule connaissance.\n\nCe que ça change pour toi : pratique pour une question simple, risqué pour un format précis."
+  },
+  {
+   "id": "mot-pese-few-shot",
+   "format": "bases",
+   "titre": "Le mot pesé : few-shot",
+   "sources": [
+    {
+     "type": "article",
+     "slug": "glossaire-ia-35-mots-suite"
+    }
+   ],
+   "texte": "Le mot pesé : few-shot.\n\nFew-shot : donner deux ou trois exemples de ce que tu veux avant de poser ta demande.\n\nCe que ça change pour toi : montre un modèle de réponse : le résultat colle beaucoup mieux au style attendu."
+  },
+  {
+   "id": "mot-pese-chaine-de-raisonnement",
+   "format": "bases",
+   "titre": "Le mot pesé : chaîne de raisonnement",
+   "sources": [
+    {
+     "type": "article",
+     "slug": "glossaire-ia-35-mots-suite"
+    }
+   ],
+   "texte": "Le mot pesé : chaîne de raisonnement.\n\nChaîne de raisonnement : demander ou laisser le modèle détailler les étapes avant la réponse finale.\n\nCe que ça change pour toi : sur un calcul ou un problème en plusieurs étapes, c'est ce qui limite les erreurs bêtes."
+  },
+  {
+   "id": "mot-pese-modele-de-raisonnement",
+   "format": "bases",
+   "titre": "Le mot pesé : modèle de raisonnement",
+   "sources": [
+    {
+     "type": "article",
+     "slug": "glossaire-ia-35-mots-suite"
+    }
+   ],
+   "texte": "Le mot pesé : modèle de raisonnement.\n\nModèle de raisonnement : un modèle qui prend du temps pour réfléchir en plusieurs étapes avant de répondre.\n\nCe que ça change pour toi : il est plus lent et parfois plus cher : à réserver aux problèmes difficiles."
+  },
+  {
+   "id": "mot-pese-multimodal",
+   "format": "bases",
+   "titre": "Le mot pesé : multimodal",
+   "sources": [
+    {
+     "type": "article",
+     "slug": "glossaire-ia-35-mots-suite"
+    }
+   ],
+   "texte": "Le mot pesé : multimodal.\n\nMultimodal : un modèle qui comprend plusieurs types de contenus : texte, image, son, parfois vidéo.\n\nCe que ça change pour toi : tu peux lui montrer une photo de facture plutôt que de la recopier."
+  },
+  {
+   "id": "mot-pese-embedding",
+   "format": "bases",
+   "titre": "Le mot pesé : embedding",
+   "sources": [
+    {
+     "type": "article",
+     "slug": "glossaire-ia-35-mots-suite"
+    }
+   ],
+   "texte": "Le mot pesé : embedding.\n\nEmbedding : une façon de transformer un texte en liste de nombres qui représente son sens, pour comparer des textes entre eux.\n\nCe que ça change pour toi : c'est ce qui permet à un moteur de chercher « des idées proches » et pas seulement des mots identiques."
+  },
+  {
+   "id": "mot-pese-base-de-donnees-vectorielle",
+   "format": "bases",
+   "titre": "Le mot pesé : base de données vectorielle",
+   "sources": [
+    {
+     "type": "article",
+     "slug": "glossaire-ia-35-mots-suite"
+    }
+   ],
+   "texte": "Le mot pesé : base de données vectorielle.\n\nBase de données vectorielle : une base qui range des embeddings pour retrouver vite les textes les plus proches d'une question.\n\nCe que ça change pour toi : elle sert souvent de mémoire à un assistant branché sur tes documents."
+  },
+  {
+   "id": "mot-pese-recherche-augmentee",
+   "format": "bases",
+   "titre": "Le mot pesé : recherche augmentée",
+   "sources": [
+    {
+     "type": "article",
+     "slug": "glossaire-ia-35-mots-suite"
+    }
+   ],
+   "texte": "Le mot pesé : recherche augmentée.\n\nRecherche augmentée : donner au modèle des extraits trouvés au bon moment pour qu'il réponde à partir d'eux plutôt que de mémoire.\n\nCe que ça change pour toi : demande toujours quels extraits ont servi : c'est ta preuve."
+  },
+  {
+   "id": "mot-pese-ancrage",
+   "format": "bases",
+   "titre": "Le mot pesé : ancrage",
+   "sources": [
+    {
+     "type": "article",
+     "slug": "glossaire-ia-35-mots-suite"
+    }
+   ],
+   "texte": "Le mot pesé : ancrage.\n\nAncrage : obliger la réponse à s'appuyer sur des sources précises.\n\nCe que ça change pour toi : une réponse ancrée dit d'où elle vient, une réponse non ancrée peut inventer."
+  },
+  {
+   "id": "mot-pese-hallucination-en-chaine",
+   "format": "bases",
+   "titre": "Le mot pesé : hallucination en chaîne",
+   "sources": [
+    {
+     "type": "article",
+     "slug": "glossaire-ia-35-mots-suite"
+    }
+   ],
+   "texte": "Le mot pesé : hallucination en chaîne.\n\nHallucination en chaîne : une erreur qui se glisse tôt, puis que le modèle développe comme si elle était vraie.\n\nCe que ça change pour toi : corrige l'erreur dès qu'elle apparaît, ne continue pas la conversation dessus."
+  },
+  {
+   "id": "mot-pese-sycophantie",
+   "format": "bases",
+   "titre": "Le mot pesé : sycophantie",
+   "sources": [
+    {
+     "type": "article",
+     "slug": "glossaire-ia-35-mots-suite"
+    }
+   ],
+   "texte": "Le mot pesé : sycophantie.\n\nSycophantie : la tendance d'un modèle à te donner raison pour te plaire, même quand tu te trompes.\n\nCe que ça change pour toi : demande-lui explicitement les points faibles de ton idée."
+  },
+  {
+   "id": "mot-pese-jailbreak",
+   "format": "bases",
+   "titre": "Le mot pesé : jailbreak",
+   "sources": [
+    {
+     "type": "article",
+     "slug": "glossaire-ia-35-mots-suite"
+    }
+   ],
+   "texte": "Le mot pesé : jailbreak.\n\nJailbreak : un texte conçu pour contourner les règles de sécurité d'un modèle.\n\nCe que ça change pour toi : les éditeurs corrigent régulièrement, mais le jeu du chat et de la souris continue."
+  },
+  {
+   "id": "mot-pese-injection-de-prompt",
+   "format": "bases",
+   "titre": "Le mot pesé : injection de prompt",
+   "sources": [
+    {
+     "type": "article",
+     "slug": "glossaire-ia-35-mots-suite"
+    }
+   ],
+   "texte": "Le mot pesé : injection de prompt.\n\nInjection de prompt : cacher des instructions dans un texte ou une page web pour que l'IA qui la lit obéisse à quelqu'un d'autre.\n\nCe que ça change pour toi : n'accorde pas de pouvoir d'action à une IA qui lit des contenus que tu ne maîtrises pas."
+  },
+  {
+   "id": "mot-pese-garde-fous",
+   "format": "bases",
+   "titre": "Le mot pesé : garde-fous",
+   "sources": [
+    {
+     "type": "article",
+     "slug": "glossaire-ia-35-mots-suite"
+    }
+   ],
+   "texte": "Le mot pesé : garde-fous.\n\nGarde-fous : les règles et filtres ajoutés autour d'un modèle pour limiter les réponses dangereuses ou hors sujet.\n\nCe que ça change pour toi : ils réduisent les risques sans les supprimer."
+  },
+  {
+   "id": "mot-pese-alignement",
+   "format": "bases",
+   "titre": "Le mot pesé : alignement",
+   "sources": [
+    {
+     "type": "article",
+     "slug": "glossaire-ia-35-mots-suite"
+    }
+   ],
+   "texte": "Le mot pesé : alignement.\n\nAlignement : le travail qui consiste à faire en sorte que le modèle suive ce que les humains attendent de lui.\n\nCe que ça change pour toi : un modèle puissant mal aligné peut être utile en apparence et gênant en pratique."
+  },
+  {
+   "id": "mot-pese-evaluation",
+   "format": "bases",
+   "titre": "Le mot pesé : évaluation",
+   "sources": [
+    {
+     "type": "article",
+     "slug": "glossaire-ia-35-mots-suite"
+    }
+   ],
+   "texte": "Le mot pesé : évaluation.\n\nÉvaluation : une série de tests pour mesurer ce qu'un modèle sait faire.\n\nCe que ça change pour toi : un seul score ne dit pas tout : regarde ce qui a été testé, par qui et comment."
+  },
+  {
+   "id": "mot-pese-jeu-de-test-contamine",
+   "format": "bases",
+   "titre": "Le mot pesé : jeu de test contaminé",
+   "sources": [
+    {
+     "type": "article",
+     "slug": "glossaire-ia-35-mots-suite"
+    }
+   ],
+   "texte": "Le mot pesé : jeu de test contaminé.\n\nJeu de test contaminé : un test dont les questions ont fuité dans les données d'entraînement, ce qui gonfle le score.\n\nCe que ça change pour toi : méfie-toi des records annoncés sans méthode publique."
+  },
+  {
+   "id": "mot-pese-quantification",
+   "format": "bases",
+   "titre": "Le mot pesé : quantification",
+   "sources": [
+    {
+     "type": "article",
+     "slug": "glossaire-ia-35-mots-suite"
+    }
+   ],
+   "texte": "Le mot pesé : quantification.\n\nQuantification : une technique qui réduit la précision des nombres du modèle pour qu'il tienne sur un petit ordinateur.\n\nCe que ça change pour toi : tu perds un peu de qualité mais tu peux le faire tourner chez toi."
+  },
+  {
+   "id": "mot-pese-distillation",
+   "format": "bases",
+   "titre": "Le mot pesé : distillation",
+   "sources": [
+    {
+     "type": "article",
+     "slug": "glossaire-ia-35-mots-suite"
+    }
+   ],
+   "texte": "Le mot pesé : distillation.\n\nDistillation : entraîner un petit modèle à imiter un gros pour garder l'essentiel à moindre coût.\n\nCe que ça change pour toi : c'est une des raisons pour lesquelles des modèles légers progressent vite."
+  },
+  {
+   "id": "mot-pese-local",
+   "format": "bases",
+   "titre": "Le mot pesé : local",
+   "sources": [
+    {
+     "type": "article",
+     "slug": "glossaire-ia-35-mots-suite"
+    }
+   ],
+   "texte": "Le mot pesé : local.\n\nLocal : un modèle qui tourne sur ton propre ordinateur plutôt que chez un éditeur.\n\nCe que ça change pour toi : tes données ne partent pas sur Internet, mais il faut une machine assez puissante."
+  },
+  {
+   "id": "mot-pese-api",
+   "format": "bases",
+   "titre": "Le mot pesé : api",
+   "sources": [
+    {
+     "type": "article",
+     "slug": "glossaire-ia-35-mots-suite"
+    }
+   ],
+   "texte": "Le mot pesé : api.\n\nAPI : une porte d'entrée qui permet à un autre logiciel de parler à un modèle.\n\nCe que ça change pour toi : quand une application « utilise l'IA », elle passe souvent par l'API d'un éditeur."
+  },
+  {
+   "id": "mot-pese-latence",
+   "format": "bases",
+   "titre": "Le mot pesé : latence",
+   "sources": [
+    {
+     "type": "article",
+     "slug": "glossaire-ia-35-mots-suite"
+    }
+   ],
+   "texte": "Le mot pesé : latence.\n\nLatence : le temps entre ta demande et le début de la réponse.\n\nCe que ça change pour toi : un modèle précis mais lent peut être moins pratique qu'un modèle rapide."
+  },
+  {
+   "id": "mot-pese-cout-par-jeton",
+   "format": "bases",
+   "titre": "Le mot pesé : coût par jeton",
+   "sources": [
+    {
+     "type": "article",
+     "slug": "glossaire-ia-35-mots-suite"
+    }
+   ],
+   "texte": "Le mot pesé : coût par jeton.\n\nCoût par jeton : le prix facturé selon la quantité de texte lue et produite.\n\nCe que ça change pour toi : un long document envoyé à chaque question fait grimper la facture."
+  },
+  {
+   "id": "mot-pese-donnees-d-entrainement",
+   "format": "bases",
+   "titre": "Le mot pesé : données d'entraînement",
+   "sources": [
+    {
+     "type": "article",
+     "slug": "glossaire-ia-35-mots-suite"
+    }
+   ],
+   "texte": "Le mot pesé : données d'entraînement.\n\nDonnées d'entraînement : les textes, images et sons utilisés pour apprendre au modèle ce qu'il sait.\n\nCe que ça change pour toi : ce qui n'y figure pas, il ne le sait pas, ou le devine."
+  },
+  {
+   "id": "mot-pese-date-de-coupure",
+   "format": "bases",
+   "titre": "Le mot pesé : date de coupure",
+   "sources": [
+    {
+     "type": "article",
+     "slug": "glossaire-ia-35-mots-suite"
+    }
+   ],
+   "texte": "Le mot pesé : date de coupure.\n\nDate de coupure : la date après laquelle le modèle n'a rien appris.\n\nCe que ça change pour toi : sans recherche web, ne lui demande pas ce qui s'est passé hier."
+  },
+  {
+   "id": "mot-pese-droit-d-auteur-et-ia",
+   "format": "bases",
+   "titre": "Le mot pesé : droit d'auteur et ia",
+   "sources": [
+    {
+     "type": "article",
+     "slug": "glossaire-ia-35-mots-suite"
+    }
+   ],
+   "texte": "Le mot pesé : droit d'auteur et ia.\n\nDroit d'auteur et IA : le débat sur l'usage de textes et d'images protégés pour entraîner un modèle.\n\nCe que ça change pour toi : avant de publier un contenu généré, vérifie les conditions d'usage de l'outil."
+  },
+  {
+   "id": "mot-pese-filigrane",
+   "format": "bases",
+   "titre": "Le mot pesé : filigrane",
+   "sources": [
+    {
+     "type": "article",
+     "slug": "glossaire-ia-35-mots-suite"
+    }
+   ],
+   "texte": "Le mot pesé : filigrane.\n\nFiligrane : une marque, visible ou cachée, ajoutée à un contenu généré pour indiquer son origine.\n\nCe que ça change pour toi : son absence ne prouve pas qu'un contenu est humain."
+  },
+  {
+   "id": "reflexe-donne-un-role-et-un-public",
+   "format": "outil",
+   "titre": "Le réflexe : donne un rôle et un public",
+   "sources": [
+    {
+     "type": "article",
+     "slug": "vingt-reflexes-pour-mieux-utiliser-une-ia"
+    }
+   ],
+   "texte": "Le réflexe du jour : donne un rôle et un public.\n\nÉcris : « Tu es [rôle]. Tu t'adresses à [public]. » La réponse change de ton et de niveau.\n\nEssaie-le dans ta prochaine conversation avec une IA. Un seul réflexe appliqué vaut mieux que vingt lus."
+  },
+  {
+   "id": "reflexe-dis-le-format-voulu",
+   "format": "outil",
+   "titre": "Le réflexe : dis le format voulu",
+   "sources": [
+    {
+     "type": "article",
+     "slug": "vingt-reflexes-pour-mieux-utiliser-une-ia"
+    }
+   ],
+   "texte": "Le réflexe du jour : dis le format voulu.\n\nPrécise « trois puces », « un tableau » ou « moins de cent mots » avant de lancer.\n\nEssaie-le dans ta prochaine conversation avec une IA. Un seul réflexe appliqué vaut mieux que vingt lus."
+  },
+  {
+   "id": "reflexe-colle-le-texte-a-traiter",
+   "format": "outil",
+   "titre": "Le réflexe : colle le texte à traiter",
+   "sources": [
+    {
+     "type": "article",
+     "slug": "vingt-reflexes-pour-mieux-utiliser-une-ia"
+    }
+   ],
+   "texte": "Le réflexe du jour : colle le texte à traiter.\n\nPlutôt que « résume ce mail », colle le mail : l'IA ne devine pas ce qu'elle ne voit pas.\n\nEssaie-le dans ta prochaine conversation avec une IA. Un seul réflexe appliqué vaut mieux que vingt lus."
+  },
+  {
+   "id": "reflexe-demande-d-abord-les-questions",
+   "format": "outil",
+   "titre": "Le réflexe : demande d'abord les questions",
+   "sources": [
+    {
+     "type": "article",
+     "slug": "vingt-reflexes-pour-mieux-utiliser-une-ia"
+    }
+   ],
+   "texte": "Le réflexe du jour : demande d'abord les questions.\n\nTermine par : « Pose-moi les questions dont tu as besoin avant de répondre. »\n\nEssaie-le dans ta prochaine conversation avec une IA. Un seul réflexe appliqué vaut mieux que vingt lus."
+  },
+  {
+   "id": "reflexe-un-exemple-vaut-dix-consignes",
+   "format": "outil",
+   "titre": "Le réflexe : un exemple vaut dix consignes",
+   "sources": [
+    {
+     "type": "article",
+     "slug": "vingt-reflexes-pour-mieux-utiliser-une-ia"
+    }
+   ],
+   "texte": "Le réflexe du jour : un exemple vaut dix consignes.\n\nMontre une réponse que tu aimes et demande « dans ce style ».\n\nEssaie-le dans ta prochaine conversation avec une IA. Un seul réflexe appliqué vaut mieux que vingt lus."
+  },
+  {
+   "id": "reflexe-decoupe-les-grosses-taches",
+   "format": "outil",
+   "titre": "Le réflexe : découpe les grosses tâches",
+   "sources": [
+    {
+     "type": "article",
+     "slug": "vingt-reflexes-pour-mieux-utiliser-une-ia"
+    }
+   ],
+   "texte": "Le réflexe du jour : découpe les grosses tâches.\n\nUne demande, une étape. Plan d'abord, texte ensuite, relecture à la fin.\n\nEssaie-le dans ta prochaine conversation avec une IA. Un seul réflexe appliqué vaut mieux que vingt lus."
+  },
+  {
+   "id": "reflexe-demande-ses-sources",
+   "format": "outil",
+   "titre": "Le réflexe : demande ses sources",
+   "sources": [
+    {
+     "type": "article",
+     "slug": "vingt-reflexes-pour-mieux-utiliser-une-ia"
+    }
+   ],
+   "texte": "Le réflexe du jour : demande ses sources.\n\nTermine par « Cite tes sources. » Puis ouvre au moins une source pour vérifier.\n\nEssaie-le dans ta prochaine conversation avec une IA. Un seul réflexe appliqué vaut mieux que vingt lus."
+  },
+  {
+   "id": "reflexe-relis-dates-chiffres-et-noms",
+   "format": "outil",
+   "titre": "Le réflexe : relis dates, chiffres et noms",
+   "sources": [
+    {
+     "type": "article",
+     "slug": "vingt-reflexes-pour-mieux-utiliser-une-ia"
+    }
+   ],
+   "texte": "Le réflexe du jour : relis dates, chiffres et noms.\n\nCe sont les trois endroits où les erreurs se cachent le plus. Vérifie-les un par un.\n\nEssaie-le dans ta prochaine conversation avec une IA. Un seul réflexe appliqué vaut mieux que vingt lus."
+  },
+  {
+   "id": "reflexe-fais-chercher-les-failles",
+   "format": "outil",
+   "titre": "Le réflexe : fais chercher les failles",
+   "sources": [
+    {
+     "type": "article",
+     "slug": "vingt-reflexes-pour-mieux-utiliser-une-ia"
+    }
+   ],
+   "texte": "Le réflexe du jour : fais chercher les failles.\n\nDemande : « Quels sont les trois points faibles de ce que je viens d'écrire ? »\n\nEssaie-le dans ta prochaine conversation avec une IA. Un seul réflexe appliqué vaut mieux que vingt lus."
+  },
+  {
+   "id": "reflexe-teste-deux-formulations",
+   "format": "outil",
+   "titre": "Le réflexe : teste deux formulations",
+   "sources": [
+    {
+     "type": "article",
+     "slug": "vingt-reflexes-pour-mieux-utiliser-une-ia"
+    }
+   ],
+   "texte": "Le réflexe du jour : teste deux formulations.\n\nSi le résultat déçoit, reformule une fois différemment avant de conclure que l'outil est mauvais.\n\nEssaie-le dans ta prochaine conversation avec une IA. Un seul réflexe appliqué vaut mieux que vingt lus."
+  },
+  {
+   "id": "reflexe-ne-colle-jamais-de-secret",
+   "format": "outil",
+   "titre": "Le réflexe : ne colle jamais de secret",
+   "sources": [
+    {
+     "type": "article",
+     "slug": "vingt-reflexes-pour-mieux-utiliser-une-ia"
+    }
+   ],
+   "texte": "Le réflexe du jour : ne colle jamais de secret.\n\nMots de passe, contrats confidentiels, données clients : ils n'ont rien à faire dans un chatbot grand public.\n\nEssaie-le dans ta prochaine conversation avec une IA. Un seul réflexe appliqué vaut mieux que vingt lus."
+  },
+  {
+   "id": "reflexe-ouvre-une-conversation-neuve",
+   "format": "outil",
+   "titre": "Le réflexe : ouvre une conversation neuve",
+   "sources": [
+    {
+     "type": "article",
+     "slug": "vingt-reflexes-pour-mieux-utiliser-une-ia"
+    }
+   ],
+   "texte": "Le réflexe du jour : ouvre une conversation neuve.\n\nQuand la discussion s'embrouille, résume l'état de la situation et repars de zéro.\n\nEssaie-le dans ta prochaine conversation avec une IA. Un seul réflexe appliqué vaut mieux que vingt lus."
+  },
+  {
+   "id": "reflexe-garde-un-prompt-qui-marche",
+   "format": "outil",
+   "titre": "Le réflexe : garde un prompt qui marche",
+   "sources": [
+    {
+     "type": "article",
+     "slug": "vingt-reflexes-pour-mieux-utiliser-une-ia"
+    }
+   ],
+   "texte": "Le réflexe du jour : garde un prompt qui marche.\n\nQuand une consigne fonctionne bien, copie-la dans un fichier. Tu gagneras du temps à chaque fois.\n\nEssaie-le dans ta prochaine conversation avec une IA. Un seul réflexe appliqué vaut mieux que vingt lus."
+  },
+  {
+   "id": "reflexe-fais-reformuler-en-simple",
+   "format": "outil",
+   "titre": "Le réflexe : fais reformuler en simple",
+   "sources": [
+    {
+     "type": "article",
+     "slug": "vingt-reflexes-pour-mieux-utiliser-une-ia"
+    }
+   ],
+   "texte": "Le réflexe du jour : fais reformuler en simple.\n\nSi un mot t'échappe : « Explique-moi ça comme à un débutant, avec un exemple. »\n\nEssaie-le dans ta prochaine conversation avec une IA. Un seul réflexe appliqué vaut mieux que vingt lus."
+  },
+  {
+   "id": "reflexe-demande-les-limites",
+   "format": "outil",
+   "titre": "Le réflexe : demande les limites",
+   "sources": [
+    {
+     "type": "article",
+     "slug": "vingt-reflexes-pour-mieux-utiliser-une-ia"
+    }
+   ],
+   "texte": "Le réflexe du jour : demande les limites.\n\n« Dans quels cas ta réponse serait-elle fausse ? » C'est la question que l'on oublie.\n\nEssaie-le dans ta prochaine conversation avec une IA. Un seul réflexe appliqué vaut mieux que vingt lus."
+  },
+  {
+   "id": "reflexe-compare-deux-assistants",
+   "format": "outil",
+   "titre": "Le réflexe : compare deux assistants",
+   "sources": [
+    {
+     "type": "article",
+     "slug": "vingt-reflexes-pour-mieux-utiliser-une-ia"
+    }
+   ],
+   "texte": "Le réflexe du jour : compare deux assistants.\n\nPour un choix important, pose la même question à deux outils et regarde où ils divergent.\n\nEssaie-le dans ta prochaine conversation avec une IA. Un seul réflexe appliqué vaut mieux que vingt lus."
+  },
+  {
+   "id": "reflexe-precise-la-date",
+   "format": "outil",
+   "titre": "Le réflexe : précise la date",
+   "sources": [
+    {
+     "type": "article",
+     "slug": "vingt-reflexes-pour-mieux-utiliser-une-ia"
+    }
+   ],
+   "texte": "Le réflexe du jour : précise la date.\n\nDis « nous sommes en [mois, année] » ou active la recherche web : sinon le modèle parle d'avant.\n\nEssaie-le dans ta prochaine conversation avec une IA. Un seul réflexe appliqué vaut mieux que vingt lus."
+  },
+  {
+   "id": "reflexe-fais-un-brouillon-pas-un-envoi",
+   "format": "outil",
+   "titre": "Le réflexe : fais un brouillon, pas un envoi",
+   "sources": [
+    {
+     "type": "article",
+     "slug": "vingt-reflexes-pour-mieux-utiliser-une-ia"
+    }
+   ],
+   "texte": "Le réflexe du jour : fais un brouillon, pas un envoi.\n\nNe publie jamais une réponse brute. Relis à voix haute avant d'envoyer.\n\nEssaie-le dans ta prochaine conversation avec une IA. Un seul réflexe appliqué vaut mieux que vingt lus."
+  },
+  {
+   "id": "reflexe-separe-faits-et-avis",
+   "format": "outil",
+   "titre": "Le réflexe : sépare faits et avis",
+   "sources": [
+    {
+     "type": "article",
+     "slug": "vingt-reflexes-pour-mieux-utiliser-une-ia"
+    }
+   ],
+   "texte": "Le réflexe du jour : sépare faits et avis.\n\nDemande deux colonnes : ce qui est établi et ce qui est une opinion.\n\nEssaie-le dans ta prochaine conversation avec une IA. Un seul réflexe appliqué vaut mieux que vingt lus."
+  },
+  {
+   "id": "reflexe-fixe-toi-un-test-avant-de-faire-confiance",
+   "format": "outil",
+   "titre": "Le réflexe : fixe-toi un test avant de faire confiance",
+   "sources": [
+    {
+     "type": "article",
+     "slug": "vingt-reflexes-pour-mieux-utiliser-une-ia"
+    }
+   ],
+   "texte": "Le réflexe du jour : fixe-toi un test avant de faire confiance.\n\nPose une question dont tu connais déjà la réponse. Si l'outil se trompe, tu sais comment il se comporte.\n\nEssaie-le dans ta prochaine conversation avec une IA. Un seul réflexe appliqué vaut mieux que vingt lus."
+  }
+ ]
+}
