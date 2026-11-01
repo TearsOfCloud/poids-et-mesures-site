@@ -1,0 +1,12 @@
+{
+  "titre": "Comment une IA apprend ? En se trompant, beaucoup.",
+  "titre_html": "Comment une IA apprend ? En se <mark>trompant</mark>, beaucoup.",
+  "description": "On lui montre des exemples, elle devine, on compare avec la bonne réponse, elle s'ajuste. Puis on recommence des milliards de fois.",
+  "rubrique": "bases",
+  "date": "2026-10-31",
+  "minutes": 4,
+  "image": "robot",
+  "mots_cles": "entraînement apprentissage ia modèle figé exemples",
+  "video": "",
+  "source_type": "explication"
+}

@@ -1,0 +1,12 @@
+{
+  "titre": "Un agent IA qui réussit 95 % de ses étapes rate quand même la plupart des longues tâches.",
+  "titre_html": "Un agent IA qui réussit 95 % de ses étapes rate quand même la plupart des <mark>longues tâches</mark>.",
+  "description": "Ce n'est pas un bug : c'est un calcul. Chaque étape ajoute un petit risque, et ils s'additionnent. Sources : METR (mars 2025) et Toby Ord (mai 2025).",
+  "rubrique": "bases",
+  "date": "2026-10-31",
+  "minutes": 4,
+  "image": "balance",
+  "mots_cles": "agent ia tâches longues metr fiabilité étapes",
+  "video": "",
+  "source_type": "secondaire"
+}
