@@ -6,7 +6,7 @@ const s=document.currentScript,root=s.src.replace(/assets\/radio\.js.*$/,'');
 const $=q=>document.querySelector(q),$$=q=>[...document.querySelectorAll(q)];
 const pad=n=>String(n).padStart(2,'0');
 const FMT={
- journal:['Journal','p-journal','#FFD60A'],titres:['Titres','p-titres','#FFE878'],bases:['Les bases','p-bases','#9FC0DA'],
+ journal:['Journal','p-journal','#FFD60A'],breve:['Une brève','p-titres','#FFE878'],titres:['Titres','p-titres','#FFE878'],bases:['Les bases','p-bases','#9FC0DA'],
  anecdote:['Anecdote','p-anecdote','#F7A48F'],outil:['L\'outil testé','p-outil','#8FD9B6'],dossier:['Dossier','p-dossier','#F7F2E4'],musique:['Musique','p-musique','#C9C6BD']};
 const esc=t=>String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 let G=null,audio=null,playing=false,curIdx=-1;
@@ -23,6 +23,9 @@ function locate(t){
  return {i:lo,off:Math.max(0,t-pl[lo][1])};
 }
 const seg=i=>G.segments[G.plan[i%G.plan.length][0]];
+const dur=i=>{const e=G.plan[i%G.plan.length];return e[2]||G.segments[e[0]].duree};
+const rediff=i=>!!G.plan[i%G.plan.length][3];
+const titre=i=>(rediff(i)?'Rediffusion · ':'')+seg(i).titre;
 const hm=sec=>{sec=Math.floor(sec)%86400;return pad(Math.floor(sec/3600))+':'+pad(Math.floor(sec%3600/60))};
 
 /* lecture */
@@ -52,16 +55,18 @@ function toggle(){
 /* affichage */
 function render(){
  const t=nowSec(),{i,off}=locate(t),sg=seg(i),f=FMT[sg.format]||FMT.musique;
- const rest=Math.max(0,Math.round(sg.duree-off));
- $$('.nowTitle').forEach(e=>e.textContent=sg.titre);
- $$('.nowProg').forEach(e=>e.style.setProperty('--p',Math.min(100,off/sg.duree*100)+'%'));
+ const rest=Math.max(0,Math.round(dur(i)-off));
+ $$('.nowTitle').forEach(e=>e.textContent=titre(i));
+ $$('.nowProg').forEach(e=>e.style.setProperty('--p',Math.min(100,off/dur(i)*100)+'%'));
  const pill=$('.nowPill');if(pill){pill.className='pill nowPill '+f[1];pill.textContent=f[0]}
  $$('.nowRest').forEach(e=>e.textContent=`Encore ${Math.floor(rest/60)} min ${pad(rest%60)}`);
  $$('.clockTxt').forEach(e=>e.textContent=hm(t));
  const nxt=[1,2,3].map(k=>{const sg2=seg(i+k),st=G.plan[(i+k)%G.plan.length][1],f2=FMT[sg2.format]||FMT.musique;
-  return `<li><span class="mono">${hm(st)}</span><span class="pill ${f2[1]}">${f2[0]}</span><span>${esc(sg2.titre)}</span></li>`}).join('');
+  return `<li><span class="mono">${hm(st)}</span><span class="pill ${f2[1]}">${f2[0]}</span><span>${esc(titre(i+k))}</span></li>`}).join('');
  ['#suivreHome','#suivreRadio'].forEach(q=>{const e=$(q);if(e)e.innerHTML=nxt});
- const mt=$('#mini .t strong');if(mt)mt.textContent=sg.titre;
+ const mt=$('#mini .t strong');if(mt)mt.textContent=titre(i);
+ /* fin d'une entrée du plan (musique coupée pour tomber pile sur le rendez-vous suivant) : fondu puis recalage */
+ if(playing&&audio){const left=dur(i)-off;audio.volume=left<3?Math.max(0,left/3):1;if(left<=0.3&&curIdx===i)syncAndPlay().catch(()=>{})}
  /* si l'antenne a changé de segment pendant la lecture (ou la mise en veille) : on se recale */
  if(playing&&audio&&i!==curIdx&&audio.ended!==false&&audio.readyState===0)syncAndPlay().catch(()=>{});
  const rows=$$('#grilleJour .slot');rows.forEach(r=>r.classList.toggle('now',+r.dataset.i===i));
@@ -73,7 +78,7 @@ function grille(){
   const idx=(i+k)%G.plan.length,sg=seg(idx);
   if(sg.format==='musique')continue;
   const f=FMT[sg.format],st=G.plan[idx][1];
-  out.push(`<div class="slot" style="--k:${f[2]}" data-k="${sg.format}" data-i="${idx}"><span class="mono">${hm(st)}</span><span class="pill ${f[1]}">${f[0]}</span><div><b>${esc(sg.titre)}</b>${sg.texte?`<button class="lire">Lire le texte</button><div class="script">${esc(sg.texte).replace(/\n\n/g,'<br><br>')}</div>`:''}${sg.demo?'<span class="mono c-gris" style="display:block;margin-top:4px">Segment de démonstration</span>':''}</div><span></span></div>`);
+  out.push(`<div class="slot" style="--k:${f[2]}" data-k="${sg.format}" data-i="${idx}"><span class="mono">${hm(st)}</span><span class="pill ${f[1]}">${f[0]}</span><div><b>${esc(titre(idx))}</b>${sg.texte?`<button class="lire">Lire le texte</button><div class="script">${esc(sg.texte).replace(/\n\n/g,'<br><br>')}</div>`:''}${sg.demo?'<span class="mono c-gris" style="display:block;margin-top:4px">Segment de démonstration</span>':''}</div><span></span></div>`);
  }
  box.innerHTML=out.join('');
  const hdr=$('#grille h2');if(hdr)hdr.innerHTML='Au programme <em>maintenant</em>';
@@ -92,7 +97,7 @@ fetch(root+'assets/radio/grille.json').then(r=>r.json()).then(g=>{
  $$('.btn.y[data-play]').forEach(x=>x.textContent='Écouter en direct');
  const lab=$('.r-hero .mono');if(lab)lab.textContent='Webradio · en test';
  const dial=$('.r-now .head .mono');if(dial)dial.lastChild.textContent='À l\'antenne';
- const nm=$('.note-maq');if(nm)nm.textContent='Phase de test : trois segments seulement (journal, mot pesé, anecdote) tournent en boucle, avec une musique de démonstration. Tout ce qui est dit est déjà publié et sourcé sur le site. La voix et la musique sont générées par IA.';
+ const nm=$('.note-maq');if(nm)nm.textContent='Programme d\'une journée complète, calé sur l\'heure de Paris. Peu de contenu neuf par jour pour l\'instant : les passages déjà diffusés sont marqués « Rediffusion ». Tout ce qui est dit est déjà publié et sourcé sur le site. Voix et musique sont générées par IA.';
  setUi(false);render();grille();setInterval(render,1000);
 }).catch(()=>{});
 })();
