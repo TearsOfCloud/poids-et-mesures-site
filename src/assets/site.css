@@ -30,9 +30,8 @@ mark.inv{background-image:linear-gradient(transparent 8%,var(--jaune) 8%,var(--j
 .ruler{position:relative;height:26px;background-color:var(--encre);overflow:hidden}
 .ruler .ticks{position:absolute;inset:0 -120px 0 0;background:
   repeating-linear-gradient(90deg,var(--jaune) 0 3px,transparent 3px 60px) 0 0/100% 24px no-repeat,
-  repeating-linear-gradient(90deg,var(--jaune) 0 2px,transparent 2px 12px) 0 0/100% 12px no-repeat;
-  transform:translateX(calc(var(--shift,0) * -1px))}
-.ruler .pos{position:absolute;top:0;height:26px;width:12%;left:calc(var(--prog,0) * 88%);background:repeating-linear-gradient(90deg,var(--papier) 0 6px,transparent 6px 12px)}
+  repeating-linear-gradient(90deg,var(--jaune) 0 2px,transparent 2px 12px) 0 0/100% 12px no-repeat;}
+.ruler .pos{display:none;position:absolute;top:0;height:26px;width:12%;left:calc(var(--prog,0) * 88%);background:repeating-linear-gradient(90deg,var(--papier) 0 6px,transparent 6px 12px)}
 
 /* en-tête : disparaît quand on descend, revient quand on remonte (la règle reste) */
 .top{position:sticky;top:0;z-index:30;transition:transform .35s cubic-bezier(.2,.7,.2,1)}

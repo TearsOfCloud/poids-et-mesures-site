@@ -1,0 +1,125 @@
+{
+ "date": "2026-11-01",
+ "segments": [
+  {
+   "id": "breve-cursor",
+   "format": "breve",
+   "titre": "Une brève : la fausse extension Claude Code sur Cursor",
+   "sources": [
+    {
+     "type": "breve",
+     "slug": "2026-10-31-cursor-extension-claude-code-piegee"
+    }
+   ],
+   "texte": "Une brève. Une fausse extension Claude Code a circulé sur Cursor.\n\nCursor, c'est un éditeur de code assisté par IA. Jeudi vingt-neuf octobre, pendant environ onze heures, deux versions modifiées de l'extension d'Anthropic ont été proposées dans son magasin d'extensions. Cursor dit que ces versions n'ont pas été créées par Anthropic. Le code ajouté essaie d'installer une porte dérobée, c'est-à-dire un accès caché qui permet de prendre la main sur l'ordinateur à distance.\n\nCe qu'on ne sait pas : comment les attaquants ont pu publier sous le nom d'Anthropic. Et ces faits viennent de l'avis de Cursor, pas d'une vérification indépendante.\n\nTon réflexe : si tu as installé ou mis à jour cette extension dans Cursor ce jour-là, va lire la brève sur le site. La vérification à faire y est écrite, et désinstaller l'extension ne suffit pas."
+  },
+  {
+   "id": "breve-gemini-carbon",
+   "format": "breve",
+   "titre": "Une brève : Gemini quatre Carbon, annoncé mais pas ouvert",
+   "sources": [
+    {
+     "type": "breve",
+     "slug": "2026-10-31-gemini-4-carbon"
+    }
+   ],
+   "texte": "Une brève. Gemini quatre Carbon, annoncé, mais pas encore ouvert.\n\nLe vingt-huit octobre, Google DeepMind a présenté Gemini quatre Carbon. Google le décrit comme son modèle le plus puissant, surtout fort pour trouver et corriger des failles de sécurité dans des logiciels. Une faille, c'est une erreur qu'on peut exploiter pour entrer dans un programme.\n\nMais tu ne peux pas l'essayer. L'accès est d'abord réservé à un petit groupe de professionnels de la cybersécurité, puis à des partenaires de confiance, sans date pour le grand public.\n\nEt les scores, comme quatre-vingt-huit virgule deux pour cent sur un test de détection de failles, viennent de Google lui-même. Aucun organisme indépendant ne les a reproduits.\n\nTon réflexe : rien à faire aujourd'hui. Lis ces chiffres comme des annonces, pas comme des mesures."
+  },
+  {
+   "id": "breve-mistral-large",
+   "format": "breve",
+   "titre": "Une brève : Mistral Large quatre, à télécharger",
+   "sources": [
+    {
+     "type": "breve",
+     "slug": "2026-10-31-mistral-large-4-poids-ouverts"
+    }
+   ],
+   "texte": "Une brève. Mistral Large quatre : un très gros modèle à télécharger, avec une licence à lire.\n\nMistral, l'entreprise française, publie Mistral Large quatre sur la plateforme Hugging Face. Il lit le texte et les images, répond en plusieurs langues, et peut garder en tête environ un million de tokens dans une conversation. Un token, c'est un morceau de mot.\n\nSes fichiers sont téléchargeables : on parle de poids ouverts. Mais il est énorme, environ mille milliards de paramètres au total. Un paramètre, c'est un réglage interne appris pendant l'entraînement.\n\nEt la licence dérive de la licence MIT, mais elle limite la revente du modèle sous forme de service.\n\nTon réflexe : pour l'essayer sans rien installer, passe par un service qui l'héberge. Pour l'intégrer à un produit, lis d'abord la licence."
+  },
+  {
+   "id": "breve-robots-txt",
+   "format": "breve",
+   "titre": "Une brève : refuser l'entraînement des IA, un seul réglage",
+   "sources": [
+    {
+     "type": "breve",
+     "slug": "2026-10-31-opt-out-entrainement-ia-robots-txt"
+    }
+   ],
+   "texte": "Une brève. Un seul réglage pour refuser l'entraînement des IA, mais pas avant deux mille vingt-sept.\n\nJusqu'ici, un site qui ne voulait pas servir à entraîner des IA devait le dire séparément à chaque entreprise. Le trente octobre, Google a annoncé qu'il prévoit de reconnaître un signal commun, placé dans le fichier robots point T X T : le fichier où un site indique aux robots ce qu'ils ont le droit de visiter. Ce signal vient d'un brouillon, sans statut officiel.\n\nGoogle vise deux mille vingt-sept. Microsoft appliquera ses nouvelles préférences à partir du premier février deux mille vingt-sept.\n\nCe sont des engagements de calendrier : rien ne prouve encore que les robots respecteront ce signal.\n\nTon réflexe : si tu as un site, rien à faire aujourd'hui. Pour refuser dès maintenant, utilise le réglage de chaque entreprise, comme Google Extended pour Google."
+  },
+  {
+   "id": "titres-du-jour",
+   "format": "titres",
+   "titre": "Les titres : le tour du jour en une minute",
+   "sources": [
+    {
+     "type": "breve",
+     "slug": "2026-10-31-cursor-extension-claude-code-piegee"
+    },
+    {
+     "type": "breve",
+     "slug": "2026-10-31-gemini-4-carbon"
+    },
+    {
+     "type": "breve",
+     "slug": "2026-10-31-mistral-large-4-poids-ouverts"
+    },
+    {
+     "type": "breve",
+     "slug": "2026-10-31-opt-out-entrainement-ia-robots-txt"
+    }
+   ],
+   "texte": "Les titres. Le tour du jour, en une minute.\n\nUne fausse extension Claude Code a circulé sur Cursor pendant environ onze heures : va lire la vérification à faire sur le site.\n\nGoogle annonce Gemini quatre Carbon, mais seuls quelques professionnels de la cybersécurité y ont accès.\n\nMistral publie Mistral Large quatre, à télécharger, avec une licence à lire de près.\n\nEt Google, Microsoft, OpenAI et Anthropic disent vouloir respecter un réglage commun pour refuser l'entraînement des IA. Rien n'est encore en vigueur chez Google.\n\nPour le détail et les sources de chaque sujet, tout est sur le site."
+  },
+  {
+   "id": "mot-pese-benchmark",
+   "format": "bases",
+   "titre": "Le mot pesé : benchmark",
+   "sources": [
+    {
+     "type": "breve",
+     "slug": "2026-10-31-gemini-4-carbon"
+    }
+   ],
+   "texte": "Le mot pesé. Benchmark.\n\nC'est un test de référence : une série d'exercices identiques donnés à plusieurs IA, pour comparer leurs scores. Quand Google annonce quatre-vingt-huit virgule deux pour cent pour Gemini quatre Carbon sur un test de détection de failles, c'est un résultat obtenu sur un benchmark.\n\nMais si c'est l'éditeur lui-même qui fait passer le test, c'est une annonce, pas une mesure indépendante.\n\nTon réflexe : devant un score, cherche qui a fait passer le test. Si c'est l'entreprise elle-même, lis le chiffre comme une promesse, pas comme une preuve."
+  },
+  {
+   "id": "mot-pese-porte-derobee",
+   "format": "bases",
+   "titre": "Le mot pesé : porte dérobée",
+   "sources": [
+    {
+     "type": "breve",
+     "slug": "2026-10-31-cursor-extension-claude-code-piegee"
+    }
+   ],
+   "texte": "Le mot pesé. Porte dérobée.\n\nC'est un accès caché qui permet à quelqu'un de prendre la main sur un ordinateur à distance, sans que son propriétaire le sache. Dans l'histoire de la fausse extension sur Cursor, le code ajoute une clé SSH. Une clé SSH, c'est un fichier qui sert de laissez-passer pour se connecter à une machine sans taper de mot de passe.\n\nÇa explique pourquoi désinstaller l'extension ne suffit pas : la clé, elle, reste en place.\n\nTon réflexe : une extension a accès à beaucoup de choses sur ta machine. Avant d'en installer une ou de la mettre à jour, regarde qui l'a publiée."
+  },
+  {
+   "id": "mot-pese-token",
+   "format": "bases",
+   "titre": "Le mot pesé : token",
+   "sources": [
+    {
+     "type": "breve",
+     "slug": "2026-10-31-mistral-large-4-poids-ouverts"
+    }
+   ],
+   "texte": "Le mot pesé. Token.\n\nC'est un morceau de mot : l'unité avec laquelle une IA lit et écrit le texte. Un mot est souvent découpé en plusieurs tokens, et une phrase en compte donc plus que de mots.\n\nQuand Mistral dit que son modèle garde en tête environ un million de tokens dans une conversation, ça veut dire qu'il peut tenir compte d'un très long texte à la fois.\n\nTon réflexe : quand un service annonce une limite ou un prix, regarde l'unité. Un token n'est pas un mot, et la différence compte."
+  },
+  {
+   "id": "mot-pese-robots-txt",
+   "format": "bases",
+   "titre": "Le mot pesé : robots point T X T",
+   "sources": [
+    {
+     "type": "breve",
+     "slug": "2026-10-31-opt-out-entrainement-ia-robots-txt"
+    }
+   ],
+   "texte": "Le mot pesé. Robots point T X T.\n\nC'est un fichier placé à la racine d'un site, qui indique aux robots d'exploration quelles pages ils ont le droit de visiter. Et c'est là que Google et Microsoft prévoient de reconnaître un signal commun pour refuser l'entraînement des IA.\n\nTon réflexe : si tu as un site, ce fichier existe peut-être déjà. Pour le voir, ajoute slash robots point T X T à l'adresse de ton site, dans ton navigateur."
+  }
+ ]
+}

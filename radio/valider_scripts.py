@@ -9,7 +9,7 @@
 import json, pathlib, re, sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-FORMATS = {"journal", "titres", "bases", "anecdote", "outil", "dossier"}
+FORMATS = {"journal", "breve", "titres", "bases", "anecdote", "outil", "dossier"}
 
 
 def check(path):
