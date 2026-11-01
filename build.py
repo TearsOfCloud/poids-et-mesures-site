@@ -324,6 +324,41 @@ def build():
                      "description": b["resume"], "publisher": {"@type": "Organization", "name": "Poids & Mesures"}})
         page(f"breves/{b['slug']}/", b["titre"] + " · Poids & Mesures", b["resume"], "v-breve", view, ctx, "home", ld)
 
+
+    # pages de prompts à copier (URL courte et stable, ex. lien en bio)
+    prompt_slugs = []
+    for f in sorted((ROOT / "content/pages").glob("*.json")):
+        pg = load_json(f)
+        prompt_slugs.append(pg["slug"])
+        groups = {}
+        for it in pg["prompts"]:
+            groups.setdefault(re.match(r"\d+", it["num"]).group(), []).append(it)
+        blocs = []
+        for n, its in groups.items():
+            parts = []
+            for it in its:
+                long_ = len(it["texte"]) > 1500
+                sub = f' <span class="mono c-gris">· variante {esc(it["num"][len(n):])}</span>' if len(its) > 1 else ""
+                note = f'<p class="mono c-gris" style="font-size:12px;margin-top:6px">{esc(pg["notes"][it["num"]])}</p>' if it["num"] in pg.get("notes", {}) else ""
+                texte = esc(it["texte"])
+                body = (f'<details><summary class="mono" style="cursor:pointer;margin:8px 0">Voir le prompt complet ({len(it["texte"].split())} mots)</summary><pre class="ptxt">{texte}</pre></details>'
+                        if long_ else f'<pre class="ptxt">{texte}</pre>')
+                parts.append(f'<div style="margin-top:14px"><b>{esc(it["titre"].split(", ", 1)[-1]) if len(its) > 1 else ""}</b>{sub}{body}'
+                             f'<button class="btn o copy-p" type="button" data-t="{esc(it["texte"], quote=True)}">Copier ce prompt</button>{note}</div>')
+            blocs.append(f'<section class="piece torn" style="padding:22px;margin-top:26px" id="p{n}"><span class="mono c-corail">Prompt {n}</span>'
+                         f'<h2 style="font-size:28px;margin:6px 0 0">{esc(its[0]["titre"].split(", ")[0])}</h2>{"".join(parts)}</section>')
+        view = (f'<div class="wrap"><div class="page"><span class="mono c-gris">Outil à copier</span><h1>{esc(pg["titre"])}</h1>'
+                f'<p class="chapo">{esc(pg["description"])}</p>'
+                '<div class="piece torn" style="padding:18px;margin:22px 0"><span class="mono">Comment s\'en servir</span><ol style="margin:10px 0 0 20px;line-height:1.5">'
+                '<li>Touche « Copier ce prompt ».</li><li>Colle-le dans ton générateur d\'images. Si le prompt a des crochets, remplace-les par ton produit ou ta marque.</li>'
+                '<li>Relis chaque mot écrit sur l\'image : les IA font encore des fautes.</li><li>Change une seule chose à la fois, et mets ta marque, pas celle d\'un autre.</li></ol></div>'
+                f'<p style="font-size:15px;color:var(--muted)">Modèle utilisé : {esc(pg["modele"])}.<br>Source : {esc(pg["source"])} Les marques citées dans certains prompts appartiennent à leurs propriétaires : remplace-les par la tienne.</p>'
+                f'{"".join(blocs)}</div></div>'
+                '<style>.ptxt{white-space:pre-wrap;word-break:break-word;font:15px/1.5 "JetBrains Mono",monospace;background:#fff;border:2px solid var(--encre);padding:14px;margin:8px 0 12px}</style>'
+                '<script>document.querySelectorAll(".copy-p").forEach(function(b){b.addEventListener("click",function(){var t=b.getAttribute("data-t");var ok=function(){b.textContent="Copié !";setTimeout(function(){b.textContent="Copier ce prompt"},1800)};'
+                'if(navigator.clipboard){navigator.clipboard.writeText(t).then(ok,function(){b.textContent="Copie impossible : sélectionne le texte"})}else{b.textContent="Copie impossible : sélectionne le texte"}})})</script>')
+        page(pg["slug"] + "/", pg["titre"] + " · Poids & Mesures", pg["description"], "v-prompts", view, ctx, "")
+
     # radio, méthode, correctifs, mentions
     page("radio/", "La radio · Poids & Mesures", "La webradio de Poids & Mesures, en test : journal, bases, anecdotes, outils testés, à écouter en continu.", "v-radio", tpl("radio.html"), ctx, "radio")
     page("methode/", "Comment on travaille · Poids & Mesures", "De la veille à ton oreille : sources, vérification, correctifs.", "v-methode", tpl("methode.html"), ctx, "")
@@ -354,7 +389,7 @@ def build():
     (DIST / "rss.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>Poids &amp; Mesures</title>'
         f"<link>{base}/</link><description>{esc(SITE['accroche'])}. L'actu de l'IA expliquée pour tout le monde, sources à l'appui.</description><language>fr-fr</language>{rss}</channel></rss>", encoding="utf8")
-    urls = [""] + ["articles/", "breves/", "radio/", "methode/", "correctifs/", "mentions-legales/"] + [f"articles/{a['slug']}/" for a in articles] + [f"breves/{b['slug']}/" for b in breves]
+    urls = [""] + ["articles/", "breves/", "radio/", "methode/", "correctifs/", "mentions-legales/"] + [f"articles/{a['slug']}/" for a in articles] + [f"breves/{b['slug']}/" for b in breves] + [f"{x}/" for x in prompt_slugs]
     (DIST / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + "".join(f"<url><loc>{base}/{u}</loc></url>" for u in urls) + "</urlset>", encoding="utf8")
     (DIST / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {base}/sitemap.xml\n")
