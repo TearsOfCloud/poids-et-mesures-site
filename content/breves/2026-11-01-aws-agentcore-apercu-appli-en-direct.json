@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-01", "heure": "07:30",
+  "rubrique": "outils",
+  "titre": "AWS permet de voir en direct le site qu'un agent de code est en train de construire",
+  "resume": "Amazon Bedrock AgentCore propose des « Session endpoints » : une adresse protégée pour ouvrir dans son navigateur l'appli que l'agent modifie, sans la déployer à chaque changement.",
+  "en_clair": [
+    "Quand un agent de code (une IA qui écrit et modifie un programme à ta place) construit un site, il faut le tester. Si chaque modification oblige à copier le site ailleurs puis à le déployer, la relecture ralentit. AWS décrit, dans un article technique du 30 octobre, une fonction d'Amazon Bedrock AgentCore pour éviter ça.",
+    "Chaque session de l'agent tourne dans sa propre mini-machine isolée. La fonction « Session endpoints » lui donne une adresse web protégée : tu ouvres le site qui tourne dans cette session et tu le vois changer dès que l'agent enregistre un fichier. Dans l'exemple d'AWS, on demande un thème sombre et la page se met à jour sans rafraîchir. Le développeur choisit les ports autorisés (1 à 5, entre 8000 et 12000) et chaque requête doit être authentifiée.",
+    "Limites écrites par AWS : l'adresse ne dure que le temps de la session et sert à construire et relire, pas à servir le site à des utilisateurs (AWS conseille un hébergeur comme Amplify pour ça). Il s'agit d'un guide avec un exemple, pas d'une mesure de gain de temps."
+  ],
+  "pour_toi": "Si tu n'utilises pas AWS, rien à faire. Si tu bâtis des agents de code sur AWS, l'exemple complet est dans le dossier 14-remote-access du dépôt agentcore-samples cité par l'article ; pense à relire les changements de l'agent avant de publier.",
+  "termes": [
+    {"mot": "Agent de code", "def": "Une IA qui lit, écrit et modifie des fichiers de programme à partir de tes consignes."},
+    {"mot": "Session endpoint", "def": "Une adresse web protégée qui mène à l'appli tournant dans une session précise de l'agent."},
+    {"mot": "Déployer", "def": "Mettre un programme en ligne sur un serveur pour qu'on puisse l'utiliser."}
+  ],
+  "sources": [
+    {"nom": "AWS Machine Learning Blog — Preview web apps live as your coding agent builds them with Amazon Bedrock AgentCore runtime", "url": "https://aws.amazon.com/blogs/machine-learning/preview-web-apps-live-as-your-coding-agent-builds-them-with-amazon-bedrock-agentcore-runtime/", "date": "2026-10-30", "consulte": "2026-11-01", "type": "primaire"}
+  ],
+  "revue": "humaine"
+}
