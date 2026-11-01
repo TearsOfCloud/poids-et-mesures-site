@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-01", "heure": "07:30",
+  "rubrique": "recherche",
+  "titre": "Google a fait répondre une IA depuis un satellite en orbite",
+  "resume": "Le satellite d'essai de Google, lancé le 1er octobre, a exécuté une IA sur ses puces et renvoyé un haïku. C'est un premier test, pas encore un centre de données spatial.",
+  "en_clair": [
+    "Google a lancé le 1er octobre un satellite de démonstration pour son projet Suncatcher, qui explore l'idée d'alimenter des calculs d'IA depuis l'espace. Après quelques semaines de vérifications, Google annonce le 30 octobre la première réponse d'IA produite par une puce de centre de données (un TPU, la puce d'IA de Google) en orbite.",
+    "Concrètement, Google a envoyé depuis le sol une consigne à Gemma 4, un de ses modèles d'IA ouverts installé à bord : écrire un haïku sur l'espace. Le poème est revenu pendant le passage du satellite au-dessus de Svalbard, en Norvège. Google dit avoir aussi testé des limericks (petits poèmes humoristiques) et des messages d'état technique du satellite.",
+    "Ce qui est annoncé : la puce fonctionne en orbite. Ce qui reste à prouver : la tenue de ces puces à la chaleur et aux radiations, que Google doit tester ensuite, puis deux satellites reliés entre eux, prévus en 2027. Aucune donnée indépendante ni chiffre de performance n'est donné dans cette annonce."
+  ],
+  "pour_toi": "Rien à faire : c'est une expérience de recherche, sans service à essayer. Retiens que le test porte sur la fiabilité des puces dans l'espace, pas encore sur l'intérêt économique d'un centre de données en orbite, que Google ne chiffre pas ici.",
+  "termes": [
+    {"mot": "TPU", "def": "Une puce conçue par Google pour faire tourner des modèles d'IA, utilisée dans ses centres de données."},
+    {"mot": "Gemma 4", "def": "Un modèle d'IA « ouvert » de Google, dont les fichiers peuvent être téléchargés et utilisés par d'autres."},
+    {"mot": "Centre de données", "def": "Un grand bâtiment rempli d'ordinateurs qui font tourner les services en ligne, dont l'IA."}
+  ],
+  "sources": [
+    {"nom": "Google — Google receives response from Project Suncatcher prototype satellite in space", "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/project-suncatcher-satellite-response/", "date": "2026-10-30", "consulte": "2026-11-01", "type": "primaire"},
+    {"nom": "The Verge — Google's satellite AI server transmits its first response to Earth", "url": "https://www.theverge.com/tech/1023528/google-project-suncatcher-ai-satellite-transmission", "date": "2026-10-30", "consulte": "2026-11-01", "type": "presse"}
+  ],
+  "revue": "humaine"
+}
