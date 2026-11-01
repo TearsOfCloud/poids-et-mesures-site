@@ -105,9 +105,9 @@ def validate(articles, breves):
         if not b.get("sources"):
             errs.append(f"{n}: au moins une source est obligatoire")
         for s in b.get("sources", []):
-            if not str(s.get("url", "")).startswith("https://") or not s.get("nom") or not s.get("date"):
+            if not str(s.get("url", "")).startswith("https://") or not s.get("nom") or not (s.get("date") or s.get("sans_date")):
                 errs.append(f"{n}: source incomplète (nom, url https, date) : {s}")
-            elif s["date"] > b.get("date", "9999"):
+            elif s.get("date") and s["date"] > b.get("date", "9999"):
                 errs.append(f"{n}: la source est datée après la brève")
         if not any(s.get("type") == "primaire" for s in b.get("sources", [])):
             errs.append(f"{n}: aucune source primaire (type « primaire »)")
@@ -158,7 +158,7 @@ def card_html(a, root):
         f'<a class="card piece dossier" href="{root}articles/{a["slug"]}/" data-r="{a["rubrique"]}" data-v="{1 if a.get("video") else 0}" data-q="{esc(q)}">{badge}'
         f'<div class="vis {vis}"><img class="sticker" src="{root}assets/img/{a["image"]}.png" alt=""></div>'
         f'<span class="mono tag {cls}">{nom}</span><h3>{esc(a["titre"])}</h3><p>{esc(a["description"].split(". Source")[0])}</p>'
-        f'<div class="meta mono">{fr_date(a["date"])[:5]} · {a["minutes"]} min · {({"secondaire": "Sources de presse", "explication": "Explication"}).get(a.get("source_type"), "Source primaire")}</div></a>'
+        f'<div class="meta mono">{fr_date(a["date"])[:5]} · {a["minutes"]} min · {({"secondaire": "Sources de presse", "explication": "Explication", "documentation": "Documentation lue"}).get(a.get("source_type"), "Source primaire")}</div></a>'
     )
 
 
@@ -304,10 +304,11 @@ def build():
                 f'<dt style="font-weight:900;margin-top:8px">{esc(t["mot"])}</dt><dd>{esc(t["def"])}</dd>' for t in b["termes"]) + "</dl></div>"
         srcs = "".join(
             f'<li>{i}. <a href="{esc(s["url"])}" rel="noopener" target="_blank" style="text-decoration:underline">{esc(s["nom"])}</a>'
-            f'{" (source primaire)" if s.get("type") == "primaire" else ""}, publié le {fr_date(s["date"])}. Consultée le {fr_date(s.get("consulte", b["date"]))}.</li>'
+            f'{" (source primaire)" if s.get("type") == "primaire" else ""}{(", publié le " + fr_date(s["date"])) if s.get("date") else " (page non datée)"}. Consultée le {fr_date(s.get("consulte", b["date"]))}.</li>'
             for i, s in enumerate(b["sources"], 1))
         relu = ("Relue par l'éditeur avant publication." if b["revue"] == "humaine"
                 else "Publiée automatiquement, relue par l'éditeur après coup. Une erreur ? Signale-la.")
+        arch = f'<div class="piece torn" style="margin:22px 0"><span class="mono c-corail">Archive</span><p style="margin-top:8px">{esc(b["archive"])}</p></div>' if b.get("archive") else ""
         view = f"""
  <div class="wrap"><article class="page">
   <div class="crumb"><a class="mono" href="{{{{root}}}}">Accueil</a><span class="mono">/</span><span class="mono tag {cls}">{nom}</span><span class="mono c-gris">· {fr_date(b['date'])} · {esc(b['heure'])}</span></div>
@@ -316,6 +317,7 @@ def build():
   <div class="prose" style="margin-top:26px"><h2>En clair</h2>{paras}
    <div class="tldr piece torn" style="margin:24px 0"><span class="mono">Ce que tu peux en faire</span><p style="margin-top:8px">{esc(b['pour_toi'])}</p></div>
    {termes}
+   {arch}
    <div class="sources"><span class="mono">Sources</span><ol style="list-style:none">{srcs}</ol></div>
    <div class="transp"><b>Comment cette brève a été faite.</b> Écrite par une IA à partir des sources ci-dessus, sous la responsabilité de l'éditeur. {relu} <a href="{{{{root}}}}correctifs/" style="text-decoration:underline">Voir les correctifs</a>.</div>
   </div>

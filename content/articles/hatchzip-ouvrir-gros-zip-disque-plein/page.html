@@ -1,0 +1,73 @@
+
+ <div class="wrap">
+  <header class="art-head">
+   <div>
+    <div class="crumb"><a class="mono" href="{{root}}">Accueil</a><span class="mono">/</span><span class="mono tag c-vert">Outil testé</span><span class="mono c-gris">· Outil · Archives</span></div>
+    <h1>Ouvrir un gros zip quand le disque est <mark>presque plein</mark> : l'astuce d'HatchZip.</h1>
+    <p class="chapo">Un zip, c&#x27;est une valise : pour l&#x27;ouvrir, ton ordinateur garde la valise et pose tout son contenu à côté. HatchZip la rogne pendant qu&#x27;il la vide.</p>
+   </div>
+   <div class="art-vis" aria-hidden="true">
+    <div class="bg"></div>
+    <span class="big">Disque plein</span>
+    <img class="o1 sticker" src="{{root}}assets/img/laptop.png" alt="">
+   </div>
+  </header>
+
+  <div class="meta-bar">
+   <span class="mono">Publié le 31/10/2026</span>
+   <span class="mono">4 min de lecture</span>
+   <span class="badge ok" style="margin:0">Documentation de l&#x27;outil lue · code non audité</span>
+   <span style="flex:1"></span>
+   <button class="btn o" id="copy">Copier le lien</button>
+  </div>
+
+  <div class="art-body">
+   <nav class="toc mono" aria-label="Sommaire" id="toc">
+    <a href="#s1">En 30 secondes</a>
+    <a href="#s2">Le problème</a>
+    <a href="#s3">L&#x27;astuce</a>
+    <a href="#s4">La vérification avant</a>
+    <a href="#s5">Le risque, dit en clair</a>
+    <a href="#s6">Ton réflexe</a>
+    <a href="#s7">Sources</a>
+   </nav>
+
+   <article class="prose">
+    <div class="tldr piece torn" id="s1">
+     <span class="mono">En 30 secondes</span>
+     <ol>
+      <li>Un extracteur classique demande presque le double de la taille de l&#x27;archive en place libre.</li><li>HatchZip, gratuit et open source, rogne l&#x27;archive par la fin à mesure qu&#x27;il sort les fichiers.</li><li>Prix à connaître : si ton téléchargement est abîmé, l&#x27;archive est déjà grignotée. Utilise l&#x27;option --verify-first.</li>
+     </ol>
+    </div>
+
+    <h2 id="s2">Le problème</h2>
+    <p>Pour ouvrir un zip, ton ordinateur garde la valise (l'archive) et pose tout son contenu à côté. Valise de 100 Go, contenu de 100 Go : il te faut 200 Go libres, même si tu jetteras la valise à la fin. Exemple du site de l'outil : une archive de 180 Go qui donne 200 Go demande 380 Go avec un extracteur classique, et un peu plus de 200 Go avec HatchZip. Ce sont des chiffres du site, pas une garantie.</p>
+<h2 id="s3">L&#x27;astuce</h2>
+    <p>HatchZip vide la valise par le fond et la rogne au fur et à mesure. Chaque morceau sorti, la place est rendue : il te faut à peine la taille du contenu. Il est gratuit et open source, sous licence « MIT OR Apache-2.0 » d'après son site. Formats gérés : ZIP (y compris ZIP64), 7z, tar, tar.gz et archives découpées. Pas RAR, ni les archives à mot de passe pour l'instant.</p>
+<h2 id="s4">La vérification avant</h2>
+    <p>Avant de toucher à quoi que ce soit, la commande <b>hatchzip check</b> simule et dit si ça tient. L'outil ne remplace aucun fichier existant, garde 2 Go libres par défaut, vérifie chaque fichier et reprend si on l'arrête.</p>
+<h2 id="s5">Le risque, dit en clair</h2>
+    <p>Pendant l'opération, ton zip est grignoté. Si le téléchargement était abîmé, tu ne peux plus le refaire à partir de cette copie. Au moindre doute, ajoute l'option <b>--verify-first</b>, qui contrôle d'abord, ou garde une copie ailleurs. Autre limite : une archive 7z créée avec les réglages par défaut de 7-Zip peut former un seul bloc, et rien n'est alors libéré avant la fin ; <b>hatchzip check</b> le signale.</p>
+<h2 id="s6">Ton réflexe</h2>
+    <ul class="reflexe"><li><label><input type="checkbox"><span><b>Télécharge uniquement</b> sur hatchzip.dev ou github.com/xevrion/hatchzip (le site prévient que hatchzip.com n'a aucun rapport).</span></label></li><li><label><input type="checkbox"><span><b>Lance d'abord</b> <code>hatchzip check</code> pour savoir si ça tient.</span></label></li><li><label><input type="checkbox"><span><b>Garde une copie</b> ou utilise --verify-first si le fichier peut être abîmé.</span></label></li></ul>
+
+    <div class="sources" id="s7">
+     <span class="mono">Sources</span>
+     <ol>
+      <li>1. Site hatchzip.dev, lu en entier le 24/10/2026, et page docs/how-it-works.md du dépôt github.com/xevrion/hatchzip.</li><li>2. Limites : le code n&#x27;a pas été audité, seule la documentation a été lue. Étoiles et nombre de téléchargements non vérifiés, donc non cités. Les installateurs Windows et applis macOS ne sont pas signés d&#x27;après le site : l&#x27;avertissement de ton système est normal.</li>
+     </ol>
+    </div>
+    <div class="transp"><b>Comment cet article a été fait.</b> Adapté par une IA de notre post du même nom, sous la responsabilité de l'éditeur. Nous n'avons pas testé l'outil nous-mêmes : tout vient de sa documentation, lue le 24/10/2026. Dis « open source, tu peux vérifier », pas « sûr ». Une erreur ? <a href="{{root}}correctifs/" style="text-decoration:underline">Signale-la</a>, elle sera corrigée dans la rubrique « Correctifs ».</div>
+   </article>
+
+   <aside class="aside-r">
+    {{video_html}}
+    <div class="piece torn"><span class="tape"></span>
+     <span class="mono">Le chiffre</span>
+     <div style="font:900 54px/1 Inter;letter-spacing:-.04em;margin:8px 0">2 Go</div>
+     <p style="font-size:15px;color:var(--muted)">Marge libre gardée par défaut par l&#x27;outil.</p>
+    </div>
+    {{next_html}}
+   </aside>
+  </div>
+ </div>

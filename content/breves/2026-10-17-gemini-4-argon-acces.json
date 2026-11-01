@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-17",
+  "heure": "18:00",
+  "rubrique": "entreprises",
+  "titre": "Gemini 4 Argon est sorti : à qui Google le propose-t-il ?",
+  "resume": "Annoncé par Google le 30 septembre 2026, Gemini 4 Argon est arrivé dans l'appli Gemini le 13 octobre, pour les abonnés Google AI Pro et Ultra.",
+  "en_clair": [
+    "Le 30 septembre 2026, Google DeepMind a annoncé Gemini 4 Argon. Il l'a d'abord confié à un groupe de défenseurs en cybersécurité de confiance, avant une ouverture plus large aux développeurs et aux entreprises.",
+    "Le 13 octobre 2026, selon Google, les abonnés Google AI Pro et Ultra ont pu l'utiliser dans l'application Gemini. Pour les développeurs, Google annonce un tarif d'introduction de 2 $ par million de mots d'entrée et 10 $ par million de mots de sortie, puis 4 $ et 20 $ après la période d'introduction.",
+    "Les scores cités (par exemple 77,9 % sur DeepSWE v1.1) viennent de Google lui-même. Ce n'est pas une mesure indépendante."
+  ],
+  "pour_toi": "Si tu as un abonnement Google AI Pro ou Ultra, regarde si Argon apparaît dans ton application Gemini. Sinon, rien à faire : lis les scores comme des annonces, pas comme des mesures indépendantes.",
+  "termes": [
+    {
+      "mot": "Test de référence (benchmark)",
+      "def": "Une série d'exercices identiques donnés à plusieurs IA pour comparer leurs scores."
+    },
+    {
+      "mot": "Token (jeton)",
+      "def": "Un petit morceau de mot que l'IA lit et sur lequel on te facture."
+    }
+  ],
+  "sources": [
+    {
+      "nom": "Google — Gemini 4 Argon (annonce)",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+      "date": "2026-09-30",
+      "consulte": "2026-11-01",
+      "type": "primaire"
+    },
+    {
+      "nom": "Google — Gemini 4 Argon dans l'appli Gemini",
+      "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-4-argon-availability/",
+      "date": "2026-10-13",
+      "consulte": "2026-11-01",
+      "type": "primaire"
+    }
+  ],
+  "revue": "humaine",
+  "archive": "Brève rédigée le 01/11/2026 à partir de notre carrousel du 17/10/2026. Les deux pages de Google ont été relues le 01/11/2026. Mise à jour : notre carrousel disait Argon n° 1 d'un test indépendant (Vals AI). Le 01/11/2026, la page Vals AI le place 4e sur 32 : ce classement a changé et n'est donc plus repris ici. L'accès peut aussi avoir évolué depuis le 13/10."
+}
