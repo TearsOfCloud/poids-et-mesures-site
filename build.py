@@ -158,7 +158,7 @@ def card_html(a, root):
         f'<a class="card piece dossier" href="{root}articles/{a["slug"]}/" data-r="{a["rubrique"]}" data-v="{1 if a.get("video") else 0}" data-q="{esc(q)}">{badge}'
         f'<div class="vis {vis}"><img class="sticker" src="{root}assets/img/{a["image"]}.png" alt=""></div>'
         f'<span class="mono tag {cls}">{nom}</span><h3>{esc(a["titre"])}</h3><p>{esc(a["description"].split(". Source")[0])}</p>'
-        f'<div class="meta mono">{fr_date(a["date"])[:5]} · {a["minutes"]} min · Source primaire</div></a>'
+        f'<div class="meta mono">{fr_date(a["date"])[:5]} · {a["minutes"]} min · {"Sources de presse" if a.get("source_type") == "secondaire" else "Source primaire"}</div></a>'
     )
 
 
@@ -244,7 +244,7 @@ def build():
             f'<a class="card piece torn pose" href="{{{{root}}}}articles/{a["slug"]}/" style="--r:{2 if i == 0 else -1.5}deg">'
             f'<img class="obj sticker" src="{{{{root}}}}assets/img/{a["image"]}.png" alt=""><span class="mono tag {cls}">{nom}</span>'
             f'<h3>{esc(a["titre"])}</h3><p>{esc(a["description"].split(". Source")[0])}</p><div class="meta mono">{a["minutes"]} min</div></a>'
-        ))(*RUBRIQUES_ARTICLES[a["rubrique"]][:2])
+        ))(*RUBRIQUES_ARTICLES[a["rubrique"]])
         for i, a in enumerate(others)
     )
     if len(others) < 2:
