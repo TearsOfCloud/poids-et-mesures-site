@@ -1,0 +1,73 @@
+{
+ "date": "2026-11-02",
+ "segments": [
+  {
+   "id": "journal-2026-11-02",
+   "format": "journal",
+   "titre": "Le journal du 2 novembre",
+   "sources": [
+    {
+     "type": "breve",
+     "slug": "2026-11-01-aws-agentcore-apercu-appli-en-direct"
+    },
+    {
+     "type": "breve",
+     "slug": "2026-11-01-google-satellite-tpu-premiere-reponse"
+    }
+   ],
+   "texte": "Bonjour, c'est le journal de Poids et Mesures, lundi deux novembre. Deux sujets. Et pour chacun, on sépare ce qui est annoncé de ce qui est vraiment prouvé.\n\nPremier sujet. Google a fait répondre une IA depuis un satellite en orbite. Le premier octobre, Google a lancé un satellite de démonstration pour son projet Suncatcher, qui explore l'idée de faire des calculs d'IA depuis l'espace. Le trente octobre, Google annonce la première réponse d'IA produite par une puce de centre de données en orbite. Cette puce s'appelle un TPU : c'est la puce d'IA de Google. Concrètement, Google a envoyé depuis le sol une consigne à Gemma quatre, un de ses modèles d'IA ouverts installé à bord : écrire un haïku sur l'espace. Le poème est revenu pendant que le satellite passait au-dessus de Svalbard, en Norvège. Ce qui est annoncé : la puce fonctionne en orbite. Ce qui reste à prouver : sa tenue à la chaleur et aux radiations, que Google doit tester ensuite. Et aucune donnée indépendante ni chiffre de performance n'est donné. Ton réflexe : rien à faire, c'est une expérience de recherche. Retiens que le test porte sur la fiabilité des puces, pas encore sur l'intérêt économique d'un centre de données en orbite.\n\nDeuxième sujet. AWS permet de voir en direct le site qu'un agent de code est en train de construire. Un agent de code, c'est une IA qui écrit et modifie un programme à ta place. Quand il construit un site, il faut le tester, et si chaque modification oblige à copier le site ailleurs, la relecture ralentit. AWS décrit, dans un article technique du trente octobre, une fonction pour éviter ça. Chaque session de l'agent tourne dans sa propre mini-machine isolée, et la fonction lui donne une adresse web protégée : tu ouvres le site et tu le vois changer dès que l'agent enregistre un fichier. Limites écrites par AWS : l'adresse ne dure que le temps de la session, et elle sert à construire et relire, pas à servir le site à des utilisateurs. C'est un guide avec un exemple, pas une mesure de gain de temps. Ton réflexe : si tu n'utilises pas AWS, rien à faire. Sinon, relis les changements de l'agent avant de publier.\n\nPour le détail et les sources de chaque sujet, va lire les brèves sur le site."
+  },
+  {
+   "id": "breve-satellite-tpu",
+   "format": "breve",
+   "titre": "Une brève : une IA répond depuis un satellite",
+   "sources": [
+    {
+     "type": "breve",
+     "slug": "2026-11-01-google-satellite-tpu-premiere-reponse"
+    }
+   ],
+   "texte": "Une brève. Google a fait répondre une IA depuis un satellite en orbite.\n\nLe trente octobre, Google annonce la première réponse d'IA produite par une puce de centre de données en orbite. Cette puce, un TPU, est la puce d'IA de Google. Depuis le sol, Google a demandé à Gemma quatre, un modèle d'IA ouvert installé à bord, d'écrire un haïku sur l'espace. Le poème est revenu pendant que le satellite passait au-dessus de Svalbard, en Norvège.\n\nCe qui est annoncé : la puce fonctionne en orbite. Ce qui reste à prouver : sa tenue à la chaleur et aux radiations. Google ne donne aucune donnée indépendante ni chiffre de performance.\n\nTon réflexe : rien à faire, c'est une expérience de recherche, sans service à essayer."
+  },
+  {
+   "id": "breve-aws-session-endpoints",
+   "format": "breve",
+   "titre": "Une brève : voir en direct le site d'un agent de code",
+   "sources": [
+    {
+     "type": "breve",
+     "slug": "2026-11-01-aws-agentcore-apercu-appli-en-direct"
+    }
+   ],
+   "texte": "Une brève. AWS permet de voir en direct le site qu'un agent de code construit.\n\nUn agent de code, c'est une IA qui écrit et modifie un programme à ta place. Dans un article technique du trente octobre, AWS décrit une fonction qui donne une adresse web protégée à chaque session de l'agent : tu ouvres le site et tu le vois changer dès que l'agent enregistre un fichier.\n\nLimites écrites par AWS : l'adresse ne dure que le temps de la session, et elle sert à construire et relire, pas à servir le site à des utilisateurs. C'est un guide avec un exemple, pas une mesure de gain de temps.\n\nTon réflexe : si tu n'utilises pas AWS, rien à faire. Sinon, relis les changements de l'agent avant de publier."
+  },
+  {
+   "id": "titres-2026-11-02",
+   "format": "titres",
+   "titre": "Les titres du 2 novembre",
+   "sources": [
+    {
+     "type": "breve",
+     "slug": "2026-11-01-aws-agentcore-apercu-appli-en-direct"
+    },
+    {
+     "type": "breve",
+     "slug": "2026-11-01-google-satellite-tpu-premiere-reponse"
+    }
+   ],
+   "texte": "Les titres. Le tour du jour, en quelques secondes.\n\nGoogle annonce la première réponse d'IA produite par une puce en orbite : un haïku, écrit depuis un satellite. C'est une annonce, pas encore une preuve de tenue dans l'espace.\n\nEt AWS permet de voir en direct le site qu'un agent de code est en train de construire.\n\nPour le détail et les sources, tout est sur le site."
+  },
+  {
+   "id": "mot-pese-tpu",
+   "format": "bases",
+   "titre": "Le mot pesé : TPU",
+   "sources": [
+    {
+     "type": "breve",
+     "slug": "2026-11-01-google-satellite-tpu-premiere-reponse"
+    }
+   ],
+   "texte": "Le mot pesé. TPU.\n\nC'est la puce d'IA de Google, conçue pour faire les calculs des modèles d'IA. Un TPU est une puce de centre de données : celle qui a répondu depuis un satellite en orbite, dans l'expérience annoncée par Google.\n\nTon réflexe : quand une entreprise parle de sa puce, demande ce qui est mesuré. Ici, Google annonce qu'elle fonctionne en orbite, mais ne donne aucun chiffre de performance."
+  }
+ ]
+}
