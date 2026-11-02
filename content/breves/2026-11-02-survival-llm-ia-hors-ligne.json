@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-02", "heure": "07:30",
+  "rubrique": "outils",
+  "titre": "Survival LLM : une IA gratuite qui répond aux urgences sans connexion Internet",
+  "resume": "Ce logiciel libre fait tourner une IA et une bibliothèque de guides d'urgence sur ton ordinateur. Son auteur annonce 14 à 21 réponses justes sur 22 selon la machine.",
+  "en_clair": [
+    "Survival LLM est une application gratuite et libre pour Mac et Windows. Une fois installée, l'IA et sa bibliothèque (environ 930 000 articles Wikipédia, des guides de la FEMA, l'agence américaine de gestion des crises, des CDC, des manuels de survie, des tutoriels de réparation) vivent sur ton ordinateur. Tu poses une question comme « comment garder la nourriture en cas de coupure de courant ? » et l'IA répond depuis ces documents, sans rien envoyer sur Internet, en listant les articles lus.",
+    "L'installation se fait avant la panne, avec Internet, et prend de 20 minutes à 2 h 30 selon ta connexion. Le téléchargement est lourd : de 6 à 80 Go pour l'IA selon la mémoire de l'ordinateur, plus la bibliothèque (1,3 Go en version réduite, 8,7 Go complète). Sur un Mac ou un PC avec 16 à 31 Go de mémoire, l'IA proposée est Granite 4.2 8B (6 Go).",
+    "Ce qui est annoncé, pas vérifié par un tiers : l'auteur du projet a posé 22 questions de panne et de premiers secours à chaque modèle, puis fait noter les réponses par d'autres IA, sans qu'elles connaissent le modèle. Résultat selon lui : jusqu’à 21 réponses sur 22 justes pour les plus gros modèles, 14 sur 22 pour le plus petit proposé. Il précise que ces tests portent sur une version antérieure de la bibliothèque et que les petits modèles se trompent plus souvent. Il a aussi mesuré que des modèles citent parfois des sources qu'ils n'ont pas lues, d'où une vérification faite par l'application."
+  ],
+  "pour_toi": "Si tu as un ordinateur récent avec assez de place (compte au moins 10 à 30 Go libres), tu peux l'installer maintenant, pendant que tu as Internet. Pour toute question de santé, ouvre l'article cité et vérifie : avec le petit modèle, 8 réponses sur 22 ont raté l’essentiel dans les tests de l’auteur, et en cas de vraie urgence, appelle les secours (15 ou 112 en France).",
+  "termes": [
+    {"mot": "IA hors ligne", "def": "Une IA dont le modèle est installé sur ton ordinateur, si bien qu'elle fonctionne sans envoyer tes questions sur Internet."},
+    {"mot": "Logiciel libre", "def": "Un programme dont le code est public et que chacun peut lire, copier et améliorer."},
+    {"mot": "Modèle", "def": "Le programme d'IA qui rédige les réponses ; plus l'ordinateur a de mémoire, plus le modèle choisi est gros et, en général, plus fiable."}
+  ],
+  "sources": [
+    {"nom": "Survival LLM (Brangus) — page du projet, résultats des tests et notes de version", "url": "https://www.brangus.io/survival-llm", "date": "2026-10-29", "consulte": "2026-11-02", "type": "primaire"},
+    {"nom": "Survival LLM — README du dépôt GitHub (comment ça marche, méthode de test)", "url": "https://github.com/anonnerdfrenzy/survival-llm", "date": "2026-10-29", "consulte": "2026-11-02", "type": "primaire"},
+    {"nom": "Numerama — Conçu pour les situations d'urgence : cette IA hors ligne…", "url": "https://www.numerama.com/tech/2364545-concu-pour-les-situations-durgence-cette-ia-hors-ligne-veut-vous-aider-a-survivre-a-la-fin-du-monde-ou-au-moins-a-une-panne-de-courant.html", "date": "2026-11-01", "consulte": "2026-11-02", "type": "presse"}
+  ],
+  "revue": "humaine"
+}
