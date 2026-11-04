@@ -1,0 +1,44 @@
+{
+  "date": "2026-11-04",
+  "heure": "07:32",
+  "rubrique": "regles",
+  "titre": "Google : l'IA sera désactivée par défaut sur les comptes d'élèves, et Guided Learning arrive",
+  "resume": "Google dit que Gemini et les fonctions IA de Search seront coupées pour les élèves de primaire et secondaire tant que l'école ne les active pas. Détails annoncés dans les mois à venir.",
+  "en_clair": [
+    "Le 3 novembre, Google a annoncé deux choses pour les écoles. D'abord Guided Learning, un mode « tuteur » qui pose des questions et décompose un problème au lieu de donner la réponse. Il est disponible dans Google Classroom dans le monde entier dès maintenant, et un test (« pilote ») dans Google Search démarre ce mois-ci dans certaines écoles américaines.",
+    "Ensuite, les contrôles. Google écrit que l'accès à Gemini, Gemini Notebook, Gemini dans Classroom et Google Search sera entièrement désactivé pour les comptes d'élèves (« K-12 », de la maternelle à la terminale aux États-Unis) tant que les administrateurs de l'école ne l'activent pas explicitement. Google promet des précisions « dans les mois à venir », sans date.",
+    "Le détail le plus parlant vient de la presse : TechCrunch, citant le New York Times, rapporte que Google a dit qu'une école qui coupe l'IA perd aussi l'accès à Search, car les deux sont liés. Cette phrase n'est pas dans l'annonce de Google que nous avons lue : elle vient d'un entretien relayé par la presse, et le calendrier n'est pas précis."
+  ],
+  "pour_toi": "Rien à faire tout de suite. Si tu es parent ou enseignant, demande à l'établissement quels outils IA seront activés pour les comptes élèves et à partir de quand : l'annonce parle des États-Unis et ne donne pas de date pour la France.",
+  "termes": [
+    {
+      "mot": "Guided Learning",
+      "def": "Un mode de Gemini qui aide à comprendre en posant des questions et en détaillant les étapes, au lieu de donner directement la solution."
+    },
+    {
+      "mot": "K-12",
+      "def": "Le terme américain pour toute la scolarité avant l'université."
+    },
+    {
+      "mot": "Administrateur",
+      "def": "La personne qui gère les comptes Google d'une école et choisit quels services sont ouverts aux élèves."
+    }
+  ],
+  "sources": [
+    {
+      "nom": "Google — Responsible AI for schools with Guided Learning",
+      "url": "https://blog.google/products-and-platforms/products/education/ai-learning-era-updates-2026/",
+      "date": "2026-11-03",
+      "consulte": "2026-11-04",
+      "type": "primaire"
+    },
+    {
+      "nom": "TechCrunch — Google will let schools disable its AI tools, but not without sacrificing Search",
+      "url": "https://techcrunch.com/2026/11/03/google-will-let-schools-disable-its-ai-tools-but-not-without-sacrificing-search/",
+      "date": "2026-11-03",
+      "consulte": "2026-11-04",
+      "type": "presse"
+    }
+  ],
+  "revue": "humaine"
+}

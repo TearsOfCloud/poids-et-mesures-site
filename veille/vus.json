@@ -1,6 +1,7 @@
 [
  "https://arstechnica.com/ai/2026/10/doordash-says-outside-ai-agents-have-only-led-to-hundreds-of-orders-so-far/",
  "https://arstechnica.com/ai/2026/10/google-announces-gemini-4-carbon-its-latest-frontier-ai-model-that-you-cant-use/",
+ "https://arstechnica.com/ai/2026/11/google-will-let-schools-skip-ai-tools-but-they-have-to-give-up-search-too/",
  "https://arstechnica.com/gadgets/2026/10/fujifilm-to-boost-tape-production-5x-as-ai-fuels-archiving-demand/",
  "https://arstechnica.com/gadgets/2026/10/google-admits-ai-search-makes-less-money-but-its-fixing-that-with-more-ads/",
  "https://arstechnica.com/gadgets/2026/10/trump-declares-robot-imports-a-national-security-threat/",
@@ -21,6 +22,7 @@
  "https://blogs.nvidia.com/blog/ai-joins-the-search-for-extraterrestrial-signals/",
  "https://blogs.nvidia.com/blog/developers-simulation-frontier-ai-agents/",
  "https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model/",
+ "https://developer.apple.com/news/?id=yxkh08us",
  "https://digital-strategy.ec.europa.eu/en/events/local-digital-twins-citiverse-edic-joins-smart-city-expo-world-congress-2026",
  "https://huggingface.co/blog/ibm-granite/granite-switch-4-1-1",
  "https://huggingface.co/blog/mistral-large4",
@@ -53,6 +55,10 @@
  "https://techcrunch.com/2026/10/31/openai-reportedly-lowers-funding-target-for-new-round/",
  "https://techcrunch.com/2026/11/01/ai-can-make-tech-ceos-lives-easier-what-about-everyone-else/",
  "https://techcrunch.com/2026/11/01/openai-might-rebrand-its-data-centers-as-ai-compute-campuses/",
+ "https://techcrunch.com/2026/11/02/anthropic-warns-that-its-very-close-to-rsi-capability-aka-self-building-ai/",
+ "https://techcrunch.com/2026/11/03/anthropic-is-working-on-a-system-to-prove-ai-models-identity/",
+ "https://techcrunch.com/2026/11/03/apple-restricts-dating-apps-and-ai-companions-to-users-18-and-up/",
+ "https://techcrunch.com/2026/11/03/google-will-let-schools-disable-its-ai-tools-but-not-without-sacrificing-search/",
  "https://www.lemonde.fr/economie/article/2026/10/30/apres-google-amazon-pris-entre-la-progression-de-l-ia-et-la-deception-sur-ses-metiers-traditionnels_6802592_3234.html",
  "https://www.lemonde.fr/economie/article/2026/10/30/le-royaume-uni-ouvre-une-enquete-sur-les-nouvelles-conditions-commerciales-de-meta-pour-l-utilisation-des-contenus-de-medias-qui-pourraient-etre-deloyales_6803098_3234.html",
  "https://www.lemonde.fr/idees/article/2026/10/29/maintenir-la-lisibilite-du-raisonnement-des-ia-devient-un-nouvel-enjeu-dans-le-secteur_6802352_3232.html",
@@ -71,6 +77,7 @@
  "https://www.numerama.com/tech/2365065-google-envoie-un-prompt-a-ses-puces-dia-dans-lespace-elles-ont-repondu.html",
  "https://www.numerama.com/tech/2365133-sam-altman-openai-prefererait-que-la-ram-de-votre-pc-aille-dans-ses-datacenters.html",
  "https://www.numerama.com/tech/2365135-mischief-1-un-modele-video-derive-de-neurones-vivants-pardon.html",
+ "https://www.numerama.com/tech/2366829-openai-offre-50-e-de-credits-chatgpt-aux-etudiants-francais.html",
  "https://www.numerama.com/vroom/2364433-lusine-de-lid-polo-sarrete-le-tesla-model-y-est-le-ve-le-moins-polluant-et-une-limite-de-80-km-h-sur-autoroute-le-recap-vroom-de-la-semaine.html",
  "https://www.technologyreview.com/2026/10/29/1147824/monitor-ai-agents-actions-real-time/",
  "https://www.theverge.com/ai-artificial-intelligence/1021080/maine-senate-race-susan-collins-ai-data-centers",
@@ -79,8 +86,11 @@
  "https://www.theverge.com/ai-artificial-intelligence/1023188/pope-leo-disarm-ai",
  "https://www.theverge.com/ai-artificial-intelligence/1023440/starbucks-ai-personalized-menu-drive-thru",
  "https://www.theverge.com/ai-artificial-intelligence/1023820/sam-altman-ram-shortage-cloud-servers",
+ "https://www.theverge.com/ai-artificial-intelligence/1025482/openai-says-chatgpt-is-catching-up-to-google-in-search",
  "https://www.theverge.com/gadgets/1013375/muse-charm-gadgets-preview-waveshare-esp32-claude-vibe-code",
  "https://www.theverge.com/tech/1023528/google-project-suncatcher-ai-satellite-transmission",
  "https://www.theverge.com/tech/1023763/openai-google-microsoft-ai-scraping-standard-opt-out",
- "https://www.theverge.com/tech/1023974/apple-intelligence-china-ios-27-3"
+ "https://www.theverge.com/tech/1023974/apple-intelligence-china-ios-27-3",
+ "https://www.theverge.com/tech/1025411/google-turn-off-search-ai-features",
+ "https://www.theverge.com/tech/1025694/apple-siri-ai-third-party-apps"
 ]

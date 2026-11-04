@@ -1,0 +1,44 @@
+{
+  "date": "2026-11-04",
+  "heure": "07:30",
+  "rubrique": "recherche",
+  "titre": "Anthropic publie un prototype pour prouver quelle IA a écrit une réponse",
+  "resume": "FlashProve est un outil de recherche libre : il joint à une réponse une preuve que c'est bien le modèle annoncé qui l'a produite. Anthropic précise que c'est un prototype lent.",
+  "en_clair": [
+    "Aujourd'hui, quand tu poses une question à une IA, rien ne prouve que la réponse vient du modèle annoncé. Selon Anthropic, un service intermédiaire pourrait, pour économiser, en glisser un moins cher, ou un pirate pourrait modifier la réponse en route. Le 2 novembre, l'équipe a publié FlashProve : le fournisseur de l'IA joint à chaque réponse une courte preuve mathématique que tu peux vérifier sans connaître les paramètres internes du modèle, qui restent secrets.",
+    "Les chiffres sont ceux d'Anthropic, pas d'un tiers. Sur un très gros modèle ouvert (Llama 4 Maverick, de Meta, 400 milliards de paramètres), une seule carte graphique H100 produit environ 110 mots-morceaux (« tokens ») de preuve par seconde. Chaque preuve pèse environ 19 Mo pour une requête de 1 024 tokens, et coûte de 70 à 95 fois le temps de calcul de la réponse elle-même.",
+    "Il s'agit d'un prototype de recherche. Anthropic indique que la preuve ne couvre que des contextes de 1 024 tokens (très court pour une vraie conversation), un mode de génération précis (le choix du mot le plus probable à chaque fois) et un type de modèle précis. Elle écrit qu'il n'y a pas de déploiement prévu pour l'instant : le but est que d'autres reprennent et améliorent le code, publié sous licence libre."
+  ],
+  "pour_toi": "Rien à faire aujourd'hui : tu ne verras pas de bouton « vérifier » dans ton chatbot. À retenir : quand un service te promet « le modèle X » sans que tu puisses le contrôler, c'est une promesse, pas une preuve. Cette recherche vise à changer ça, mais pas avant des années au mieux.",
+  "termes": [
+    {
+      "mot": "Preuve cryptographique",
+      "def": "Un petit message calculé par maths qui permet de vérifier un fait sans avoir à refaire tout le calcul ni à connaître les secrets."
+    },
+    {
+      "mot": "Paramètres (ou poids)",
+      "def": "Les milliards de nombres qui définissent le comportement d'un modèle d'IA ; les entreprises les gardent secrets."
+    },
+    {
+      "mot": "Token",
+      "def": "Un morceau de mot, l'unité avec laquelle une IA lit et écrit le texte."
+    }
+  ],
+  "sources": [
+    {
+      "nom": "Anthropic — Progress on provable inference for large language models",
+      "url": "https://www.anthropic.com/research/provable-inference",
+      "date": "2026-11-02",
+      "consulte": "2026-11-04",
+      "type": "primaire"
+    },
+    {
+      "nom": "TechCrunch — Anthropic is working on a system to prove AI models' identity",
+      "url": "https://techcrunch.com/2026/11/03/anthropic-is-working-on-a-system-to-prove-ai-models-identity/",
+      "date": "2026-11-03",
+      "consulte": "2026-11-04",
+      "type": "presse"
+    }
+  ],
+  "revue": "humaine"
+}

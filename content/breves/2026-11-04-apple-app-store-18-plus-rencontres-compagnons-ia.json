@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-04",
+  "heure": "07:31",
+  "rubrique": "regles",
+  "titre": "App Store : les applis de rencontre ou de compagnon amoureux IA seront classées 18+",
+  "resume": "Apple impose dès le 16 novembre de nouvelles déclarations aux développeurs. Une appli avec rencontres ou compagnon virtuel romantique recevra au minimum la note 18+.",
+  "en_clair": [
+    "Apple a prévenu les développeurs le 2 novembre : à partir du 16 novembre 2026, le questionnaire de classification par âge d'App Store Connect comprendra deux nouvelles déclarations. L'une concerne le partage de position géographique réelle avec une autre personne ou un groupe. L'autre concerne « rencontres et relations » : des fonctions qui mettent en contact des personnes réelles, ou un compagnon virtuel qui engage l'utilisateur dans du contenu sexuel ou romantique.",
+    "Les applis qui déclarent « rencontres et relations » reçoivent au minimum la note 18+. Pour le partage de position, la note minimale ne change pas forcément selon les pays. Apple cite le Brésil, où la loi impose 16+ pour le partage de position et 18+ pour les rencontres. Toutes les applis devront avoir rempli ces déclarations avant le 12 janvier 2027.",
+    "Ce qu'Apple écrit : un compagnon IA romantique est couvert par la règle. Ce qu'elle ne dit pas : quelles applis précises sont concernées. C'est le travail des développeurs de déclarer honnêtement leurs fonctions, et le texte ne précise pas comment Apple le vérifiera."
+  ],
+  "pour_toi": "Rien à faire de ton côté : la règle s'adresse aux développeurs. À retenir si tu as un enfant ou un adolescent : la note d'âge d'une appli est déclarée par son éditeur, donc vérifie ce que fait vraiment une appli de « compagnon » avant de l'installer, la note n'est pas une garantie.",
+  "termes": [
+    {
+      "mot": "Compagnon IA",
+      "def": "Une application où tu discutes avec un personnage virtuel (ami, partenaire…) animé par une IA."
+    },
+    {
+      "mot": "App Store Connect",
+      "def": "Le site où les développeurs envoient leurs applis à Apple et remplissent les informations demandées, dont la note d'âge."
+    }
+  ],
+  "sources": [
+    {
+      "nom": "Apple Developer — Upcoming: New age rating content descriptors in App Store Connect",
+      "url": "https://developer.apple.com/news/?id=yxkh08us",
+      "date": "2026-11-02",
+      "consulte": "2026-11-04",
+      "type": "primaire"
+    },
+    {
+      "nom": "TechCrunch — Apple restricts dating apps and AI companions to users 18 and up",
+      "url": "https://techcrunch.com/2026/11/03/apple-restricts-dating-apps-and-ai-companions-to-users-18-and-up/",
+      "date": "2026-11-03",
+      "consulte": "2026-11-04",
+      "type": "presse"
+    }
+  ],
+  "revue": "humaine"
+}
