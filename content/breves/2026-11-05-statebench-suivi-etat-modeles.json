@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-05", "heure": "07:35",
+  "rubrique": "recherche",
+  "titre": "StateBench : les IA les plus avancées perdent le fil quand les choses changent beaucoup dans un long texte",
+  "resume": "L'institut Ai2 publie un test montrant que quatre IA de pointe échouent quand il faut suivre de nombreux changements dans un long texte. Résultats annoncés par ses auteurs.",
+  "en_clair": [
+    "L'institut de recherche Ai2 présente StateBench, un test qui mesure si une IA suit bien l'état des choses quand elles changent au fil d'un long texte : qui détient le couteau dans un roman, ou la valeur d'une variable dans un programme. Il y a quatre niveaux, du plus simple (une valeur qui ne change jamais) au plus dur (une valeur qui en copie une autre, comme les échanges de gobelets d'un tour de magie où il faut retrouver la balle).",
+    "Selon Ai2, quatre IA de pointe (Gemini 3.8 Flash, Claude Opus 5.5, GPT-6 Sol et GPT-6 Luna) réussissent bien les deux niveaux faciles. Sur les deux niveaux difficiles, leur précision chute quand le texte s'allonge, jusqu'à 13 % ou moins sur les plus longs cas du dernier niveau. Ai2 a aussi entraîné de petits modèles directement sur ce test : ceux de type « récurrent » ou hybride ont bien généralisé à des suites bien plus longues, alors que les transformeurs (l'architecture de la plupart des chatbots actuels) n'ont jamais appris le niveau le plus dur.",
+    "Ce sont des mesures faites par les auteurs eux-mêmes, sur des tâches artificielles de laboratoire, pas sur des usages réels. Ai2 reconnaît des limites : le test suppose un nombre fixe de variables, alors que dans une vraie conversation de nouveaux éléments apparaissent."
+  ],
+  "pour_toi": "Quand tu demandes à une IA de suivre un long enchaînement (un budget avec beaucoup de modifications, un planning qui change), ne lui fais pas confiance pour le résultat final : demande-lui d'écrire l'état après chaque étape, et vérifie les deux ou trois derniers calculs toi-même.",
+  "termes": [
+    {"mot": "Benchmark", "def": "Un test standardisé qui permet de comparer plusieurs IA sur la même tâche."},
+    {"mot": "Transformeur", "def": "L'architecture de la plupart des chatbots actuels, qui relit tout le texte à chaque étape."},
+    {"mot": "Modèle récurrent ou hybride", "def": "Une architecture qui garde une sorte de mémoire courante mise à jour au fil du texte, parfois mélangée au transformeur."}
+  ],
+  "sources": [
+    {"nom": "Ai2 (Hugging Face) — StateBench: Testing how language models track state changes over long documents", "url": "https://huggingface.co/blog/allenai/statebench", "date": "2026-11-03", "consulte": "2026-11-05", "type": "primaire"}
+  ],
+  "revue": "humaine"
+}
