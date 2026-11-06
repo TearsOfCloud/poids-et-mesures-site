@@ -5,7 +5,7 @@
     python3 build.py --check    # valide seulement
 """
 import html
-import json
+import json, os
 import re
 import shutil
 import sys
@@ -17,6 +17,10 @@ ROOT = Path(__file__).parent
 SRC = ROOT / "src"
 DIST = ROOT / "dist"
 SITE = json.loads((ROOT / "site.json").read_text(encoding="utf8"))
+# Cloudflare Pages (ou autre hébergeur) : SITE_URL remplace l'adresse de site.json
+if os.environ.get("SITE_URL"):
+    SITE["url"] = os.environ["SITE_URL"].rstrip("/")
+    SITE["hebergeur"] = os.environ.get("SITE_HEBERGEUR", SITE["hebergeur"])
 
 RUBRIQUES_BREVES = {
     "outils": ("Outils", "c-vert"),
