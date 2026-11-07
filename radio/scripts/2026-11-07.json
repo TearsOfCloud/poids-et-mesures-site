@@ -1,0 +1,73 @@
+{
+ "date": "2026-11-07",
+ "segments": [
+  {
+   "id": "journal-2026-11-07",
+   "format": "journal",
+   "titre": "Le journal du 7 novembre",
+   "sources": [
+    {
+     "type": "breve",
+     "slug": "2026-11-06-gemini-omni-1-2-flash-video-15-secondes"
+    },
+    {
+     "type": "breve",
+     "slug": "2026-11-06-phonon-voix-ia-sur-appareil"
+    }
+   ],
+   "texte": "Bonjour, c'est le journal de Poids et Mesures, samedi sept novembre. Deux sujets. Et pour chacun, on sépare ce qui est annoncé de ce qui est vraiment mesuré.\n\nPremier sujet. Des vidéos IA de quinze secondes, et moins chères selon Google. Google déploie Gemini Omni un point deux Flash, son modèle qui crée des vidéos à partir d'un texte ou d'images. Les clips peuvent maintenant durer jusqu'à quinze secondes, contre dix avant. Deux nouveautés comptent. D'abord, l'édition par conversation : tu demandes de changer le fond ou la lumière sur un clip déjà généré, au lieu de tout refaire. Ensuite, Google dit que visages, vêtements et couleurs de marque restent stables d'un plan à l'autre. Le prix baisse de trente pour cent, soit sept centimes de dollar la seconde en basse définition. Mais tout vient de Google : exemples et baisse de prix sont ses propres chiffres, sans test indépendant. Et Google reconnaît des points faibles : le sport rapide, les changements de scène rapides et la physique complexe. Ton réflexe : génère d'abord en basse définition pour valider l'idée, corrige par une demande de retouche plutôt que de tout relancer, et ne monte en haute définition que pour le clip retenu. Les essais inutiles s'additionnent vite.\n\nDeuxième sujet. Une voix IA qui parle français sans connexion, selon ses créateurs. Phonon est un modèle qui transforme du texte en voix, et qui tourne directement sur ton appareil : le texte ne part pas vers un serveur, et ça marche sans réseau. Il pèse environ soixante-cinq mégaoctets, parle notamment français, et propose plus de cent voix intégrées. Côté licence, attention : seule la version en anglais est libre, même pour un usage commercial. La version qui couvre cinq langues est gratuite uniquement pour des projets non commerciaux. Les classements et les chiffres de téléchargements viennent de l'équipe de Phonon elle-même, et la qualité du français n'est pas détaillée à part. Ton réflexe : teste-le toi-même avec un texte non sensible avant de t'y fier, et si tu comptes l'utiliser dans un produit payant, lis d'abord la licence.\n\nPour le détail et les sources de chaque sujet, va lire les brèves sur le site."
+  },
+  {
+   "id": "breve-gemini-omni-flash",
+   "format": "breve",
+   "titre": "Une brève : vidéos IA de quinze secondes",
+   "sources": [
+    {
+     "type": "breve",
+     "slug": "2026-11-06-gemini-omni-1-2-flash-video-15-secondes"
+    }
+   ],
+   "texte": "Une brève. Des vidéos IA de quinze secondes, et trente pour cent moins chères selon Google.\n\nGoogle déploie Gemini Omni un point deux Flash, son modèle qui crée des vidéos à partir d'un texte ou d'images. Les clips peuvent maintenant durer jusqu'à quinze secondes, contre dix avant. Deux nouveautés comptent. D'abord, l'édition par conversation : tu demandes de changer le fond ou la lumière sur un clip déjà généré, au lieu de tout refaire. Ensuite, Google dit que visages, vêtements et couleurs de marque restent stables d'un plan à l'autre. Le prix baisse de trente pour cent, soit sept centimes de dollar la seconde en basse définition. Mais tout vient de Google : exemples et baisse de prix sont ses propres chiffres, sans test indépendant. Et Google reconnaît des points faibles : le sport rapide, les changements de scène rapides et la physique complexe. Ton réflexe : génère d'abord en basse définition pour valider l'idée, corrige par une demande de retouche plutôt que de tout relancer, et ne monte en haute définition que pour le clip retenu. Les essais inutiles s'additionnent vite."
+  },
+  {
+   "id": "breve-phonon-voix-locale",
+   "format": "breve",
+   "titre": "Une brève : une voix IA qui parle français sans connexion",
+   "sources": [
+    {
+     "type": "breve",
+     "slug": "2026-11-06-phonon-voix-ia-sur-appareil"
+    }
+   ],
+   "texte": "Une brève. Une voix IA qui parle français sans connexion, selon ses créateurs.\n\nPhonon est un modèle qui transforme du texte en voix, et qui tourne directement sur ton appareil : le texte ne part pas vers un serveur, et ça marche sans réseau. Il pèse environ soixante-cinq mégaoctets, parle notamment français, et propose plus de cent voix intégrées. Côté licence, attention : seule la version en anglais est libre, même pour un usage commercial. La version qui couvre cinq langues est gratuite uniquement pour des projets non commerciaux. Les classements et les chiffres de téléchargements viennent de l'équipe de Phonon elle-même, et la qualité du français n'est pas détaillée à part. Ton réflexe : teste-le toi-même avec un texte non sensible avant de t'y fier, et si tu comptes l'utiliser dans un produit payant, lis d'abord la licence."
+  },
+  {
+   "id": "titres-2026-11-07",
+   "format": "titres",
+   "titre": "Les titres du 7 novembre",
+   "sources": [
+    {
+     "type": "breve",
+     "slug": "2026-11-06-gemini-omni-1-2-flash-video-15-secondes"
+    },
+    {
+     "type": "breve",
+     "slug": "2026-11-06-phonon-voix-ia-sur-appareil"
+    }
+   ],
+   "texte": "Les titres. Le tour du jour, en quelques secondes.\n\nGoogle déploie Gemini Omni un point deux Flash : des vidéos IA jusqu'à quinze secondes, et un prix en baisse selon Google.\n\nEt Phonon, une voix IA qui tourne sur ton appareil, sans connexion, avec une licence à lire de près.\n\nPour le détail et les sources, tout est sur le site."
+  },
+  {
+   "id": "mot-pese-synthese-vocale",
+   "format": "bases",
+   "titre": "Le mot pesé : synthèse vocale",
+   "sources": [
+    {
+     "type": "breve",
+     "slug": "2026-11-06-phonon-voix-ia-sur-appareil"
+    }
+   ],
+   "texte": "Le mot pesé. Synthèse vocale.\n\nC'est une technique qui transforme un texte écrit en voix parlée. Phonon en est un exemple qui tourne directement sur ton appareil : ton texte ne part pas vers un serveur.\n\nTon réflexe : quand un outil lit ton texte à voix haute, demande-toi où le texte est envoyé. Un modèle sur ton appareil garde tes textes chez toi, mais lis toujours la licence avant un usage payant."
+  }
+ ]
+}
