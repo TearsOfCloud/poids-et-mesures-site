@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-07", "heure": "08:40",
+  "rubrique": "outils",
+  "titre": "Claude lance « Personal Finance » : poser des questions sur ses comptes bancaires, en lecture seule",
+  "resume": "Anthropic ouvre en bêta, aux États-Unis, un espace où Claude lit les comptes bancaires que tu connectes pour expliquer tes dépenses. Il ne peut pas bouger l'argent.",
+  "en_clair": [
+    "Anthropic annonce « Personal Finance » dans Claude. Tu connectes tes comptes bancaires et cartes, puis tu poses tes questions en langage courant, par exemple « Où est parti mon argent ce mois-ci ? ». Claude additionne les dépenses de tous les comptes connectés et les range par catégorie (loyer, courses, etc.). Il peut aussi signaler ce qui passe facilement inaperçu : un prélèvement passé deux fois, des frais inattendus, une facture qui augmente depuis des mois, et expliquer un terme comme le TAEG (le coût annuel d'un crédit, en pourcentage).",
+    "La connexion passe par Plaid, un service qui relie les applications aux banques : tu te connectes toi-même à ta banque, donc Claude ne voit pas ton mot de passe. Selon Anthropic, l'accès est en lecture seule, et pour les comptes que tu choisis Claude voit le nom de la banque, le nom, le type et les quatre derniers chiffres du compte, les soldes, les plafonds de crédit et jusqu'à deux ans de transactions. Les conversations tenues dans cet espace ne servent pas à entraîner les modèles, d'après Anthropic. Tu peux détacher un compte à tout moment.",
+    "Le lancement est une bêta, déployée cette semaine pour les offres Pro, Max et Ultra, aux États-Unis seulement : rien n'indique une date en France. Tout ce qui est décrit vient d'Anthropic, qui précise elle-même que Claude peut se tromper et que l'outil n'est pas conçu pour donner des conseils d'investissement. Aucune mesure indépendante n'est citée."
+  ],
+  "pour_toi": "Rien à faire pour l'instant si tu es en France : l'outil n'est pas annoncé hors des États-Unis. Si tu testes un jour ce genre d'outil, connecte un seul compte au départ, demande « quelles transactions expliquent ce chiffre ? » et vérifie les montants importants auprès de ta banque, comme le conseille Anthropic.",
+  "termes": [
+    {"mot": "Lecture seule", "def": "L'outil peut consulter tes comptes, mais il ne peut ni faire de virement ni placer de l'argent."},
+    {"mot": "Plaid", "def": "Un service intermédiaire qui permet à une application de lire des données bancaires après que tu t'es connecté toi-même à ta banque."},
+    {"mot": "Bêta", "def": "Une version de lancement encore en test, proposée d'abord à une partie des utilisateurs."},
+    {"mot": "TAEG (APR en anglais)", "def": "Le coût annuel total d'un crédit exprimé en pourcentage."}
+  ],
+  "sources": [
+    {"nom": "Anthropic (Claude) — Introducing Personal Finance in Claude", "url": "https://claude.com/resources/articles/introducing-personal-finance-in-claude", "date": "2026-11-05", "consulte": "2026-11-07", "type": "primaire"},
+    {"nom": "TechCrunch — Claude can now analyze your spending with its new Personal Finance tool", "url": "https://techcrunch.com/2026/11/05/claude-can-now-analyze-your-spending-with-its-new-personal-finance-tool/", "date": "2026-11-05", "consulte": "2026-11-07", "type": "presse"}
+  ],
+  "revue": "humaine"
+}
