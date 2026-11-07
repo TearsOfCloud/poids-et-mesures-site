@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-06", "heure": "07:40",
+  "rubrique": "outils",
+  "titre": "Gemini Omni 1.2 Flash : des vidéos IA de 15 secondes, et 30 % moins cher selon Google",
+  "resume": "Google annonce une nouvelle version de son générateur de vidéo : clips jusqu'à 15 s, retouches par conversation et tarif baissé de 30 %. Chiffres donnés par Google.",
+  "en_clair": [
+    "Google déploie Gemini Omni 1.2 Flash, son modèle qui crée des vidéos à partir d'un texte, d'images ou de courts extraits. Les clips peuvent maintenant durer jusqu'à 15 secondes (contre 10 avec la version 1.1), à choisir par pas d'une seconde entre 3 et 15. Le modèle est désormais « généralement disponible » : il sort de la phase d'essai et peut servir en production, via l'API de Gemini et Google Cloud.",
+    "Deux nouveautés comptent surtout. D'abord l'édition par conversation : on demande de changer le fond, la lumière ou le produit sur un clip déjà généré, au lieu de tout refaire. Ensuite la cohérence : Google dit que visages, vêtements, emballages et couleurs de marque restent stables d'un plan à l'autre. Le prix baisse de 30 % par rapport à la 1.1, soit 0,07 $ la seconde en 720p. Google propose aussi de brouillonner en 360p ou 720p, puis de monter les meilleurs clips en 1080p ou 4K.",
+    "Tout cela vient de Google : les exemples et la baisse de prix sont ses propres chiffres, sans test indépendant. Google reconnaît lui-même des points faibles encore en travail : sport rapide, changements de scénario rapides et physique complexe. Les vidéos portent un filigrane invisible, SynthID, qui permet de repérer qu'elles sont générées par IA."
+  ],
+  "pour_toi": "Si tu testes la vidéo IA, fais comme Google le suggère : génère d'abord en basse définition pour valider l'idée, corrige par une demande de retouche plutôt que de tout relancer, et ne monte en 1080p que pour le clip retenu. À 0,07 $ la seconde en 720p, un clip de 15 s coûte environ 1,05 $ : le brouillon coûte peu, les essais inutiles s'additionnent vite.",
+  "termes": [
+    {"mot": "API", "def": "Une porte d'entrée qui permet à un programme d'utiliser le modèle directement, sans passer par le site."},
+    {"mot": "Disponibilité générale", "def": "Le modèle n'est plus en essai : il est proposé à tous, avec un cadre prévu pour un usage professionnel."},
+    {"mot": "SynthID", "def": "Un filigrane invisible ajouté par Google aux contenus générés par son IA, pour pouvoir les reconnaître ensuite."},
+    {"mot": "Cohérence", "def": "Le fait qu'un personnage ou un objet garde le même aspect d'un plan à l'autre, sans se déformer."}
+  ],
+  "sources": [
+    {"nom": "Google — Gemini Omni 1.2 Flash: Fast and cost-effective with longer clips", "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/", "date": "2026-11-05", "consulte": "2026-11-06", "type": "primaire"}
+  ],
+  "revue": "humaine"
+}

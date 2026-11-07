@@ -1,0 +1,3 @@
+# Cloudflare Pages : build = `python3 build.py`, dossier publié = dist
+name = "poids-et-mesures-site"
+pages_build_output_dir = "dist"

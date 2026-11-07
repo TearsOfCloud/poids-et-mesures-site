@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-05", "heure": "07:30",
+  "rubrique": "recherche",
+  "titre": "Anthropic teste une preuve mathématique qu'une réponse vient bien du modèle annoncé",
+  "resume": "Anthropic publie FlashProve, un prototype libre qui joint à une réponse d'IA une preuve cryptographique du modèle utilisé. C'est de la recherche : aucun déploiement n'est prévu.",
+  "en_clair": [
+    "Aujourd'hui, quand tu poses une question à une IA, tu ne peux pas vérifier que la réponse vient du modèle annoncé. Un service intermédiaire pourrait en glisser un moins cher pour économiser, ou un pirate pourrait modifier le texte en route. Anthropic publie FlashProve, un prototype qui ajoute à chaque réponse une « preuve », un petit fichier que n'importe qui peut contrôler pour vérifier que la réponse a bien été produite par un modèle précis, dont les poids restent secrets (les poids sont les milliards de nombres qui définissent le comportement du modèle).",
+    "Le principe : le fournisseur publie d'abord une empreinte du modèle. Ensuite, pour chaque réponse, il fournit une preuve que cette réponse correspond à cette empreinte. Le contrôle se fait sur un simple processeur, sans accéder au modèle. Anthropic imagine des usages variés : vérifier qu'un test d'évaluation porte sur le bon modèle, ou prouver qu'une entreprise a bien fait analyser son code par un modèle précis.",
+    "Ce qu'Anthropic annonce, à partir de ses propres mesures : sur un modèle de 400 milliards de paramètres (Llama 4 Maverick, version compressée en 4 bits), une carte graphique H100 produit des preuves à environ 110 tokens par seconde, soit 70 à 95 fois plus de temps de calcul que de faire tourner le modèle seul. Chaque preuve pèse environ 19 Mo et se vérifie en 17 secondes sur un processeur de 24 cœurs. Limites écrites par Anthropic : c'est un prototype de recherche, il vaut pour un type précis de modèle (à « experts ») et pour un mode de génération sans hasard, et aucun déploiement n'est prévu chez Anthropic ni ailleurs. Aucun tiers n'a encore mesuré ces chiffres."
+  ],
+  "pour_toi": "Rien à faire aujourd'hui : tu ne peux pas encore vérifier le modèle derrière une réponse. À retenir : le nom du modèle affiché dans une application n'est pas une preuve, et c'est ce que ce genre de recherche voudrait changer. Si tu évalues un outil d'IA pour un usage sérieux, demande au fournisseur quel modèle précis est utilisé.",
+  "termes": [
+    {"mot": "Preuve cryptographique", "def": "Un petit fichier qui permet de vérifier qu'un calcul a été fait correctement, sans refaire le calcul."},
+    {"mot": "Poids du modèle", "def": "Les milliards de nombres appris pendant l'entraînement, qui déterminent comment l'IA répond ; les grandes entreprises les gardent secrets."},
+    {"mot": "Token", "def": "Un petit morceau de texte (un mot ou un bout de mot) que l'IA lit ou écrit à chaque étape."},
+    {"mot": "Open source", "def": "Un code publié que chacun peut lire, utiliser et améliorer ; ici, sous licence Apache 2.0."}
+  ],
+  "sources": [
+    {"nom": "Anthropic — Progress on provable inference for large language models", "url": "https://www.anthropic.com/research/provable-inference", "date": "2026-11-03", "consulte": "2026-11-05", "type": "primaire"},
+    {"nom": "TechCrunch — Anthropic is working on a system to prove AI models' identity", "url": "https://techcrunch.com/2026/11/03/anthropic-is-working-on-a-system-to-prove-ai-models-identity/", "date": "2026-11-03", "consulte": "2026-11-05", "type": "presse"}
+  ],
+  "revue": "humaine"
+}
