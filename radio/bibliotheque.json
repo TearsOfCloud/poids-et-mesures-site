@@ -368,6 +368,51 @@
    "duree": 24.2,
    "texte": "Le mot pesé. TPU.\n\nC'est la puce d'IA de Google, conçue pour faire les calculs des modèles d'IA. Un TPU est une puce de centre de données : celle qui a répondu depuis un satellite en orbite, dans l'expérience annoncée par Google.\n\nTon réflexe : quand une entreprise parle de sa puce, demande ce qui est mesuré. Ici, Google annonce qu'elle fonctionne en orbite, mais ne donne aucun chiffre de performance.",
    "date": "2026-11-02"
+  },
+  {
+   "id": "journal-2026-11-06",
+   "format": "journal",
+   "titre": "Le journal du 6 novembre",
+   "fichier": "journal-2026-11-06.mp3",
+   "duree": 126.3,
+   "texte": "Bonjour, c'est le journal de Poids et Mesures, vendredi six novembre. Deux sujets. Et pour chacun, on sépare ce qui est annoncé de ce qui est vraiment mesuré.\n\nPremier sujet. Anthropic teste une preuve mathématique qu'une réponse vient bien du modèle annoncé. Aujourd'hui, quand tu poses une question à une IA, tu ne peux pas vérifier que la réponse vient du modèle annoncé. Un service intermédiaire pourrait en glisser un moins cher pour économiser, ou un pirate pourrait modifier le texte en route. Anthropic publie FlashProve, un prototype qui ajoute à chaque réponse une preuve : un petit fichier que n'importe qui peut contrôler pour vérifier que la réponse vient bien d'un modèle précis, dont les poids restent secrets. Les poids, ce sont les milliards de nombres qui définissent le comportement du modèle. Ce qu'Anthropic annonce, à partir de ses propres mesures : produire ces preuves demande entre soixante-dix et quatre-vingt-quinze fois plus de temps de calcul que faire tourner le modèle seul. C'est un prototype de recherche, sans déploiement prévu, et aucun tiers n'a encore mesuré ces chiffres. Ton réflexe : le nom du modèle affiché dans une application n'est pas une preuve. Si tu évalues un outil d'IA pour un usage sérieux, demande au fournisseur quel modèle précis est utilisé.\n\nDeuxième sujet. Les IA les plus avancées perdent le fil quand les choses changent beaucoup dans un long texte. L'institut de recherche A I deux présente StateBench, un test qui mesure si une IA suit bien l'état des choses quand elles changent au fil d'un long texte : qui détient le couteau dans un roman, ou la valeur d'une variable dans un programme. Selon A I deux, quatre IA de pointe réussissent bien les deux niveaux faciles. Sur les deux niveaux difficiles, leur précision chute quand le texte s'allonge, jusqu'à treize pour cent ou moins sur les cas les plus longs du dernier niveau. Mais ce sont des mesures faites par les auteurs eux-mêmes, sur des tâches artificielles de laboratoire, pas sur des usages réels. Ton réflexe : quand tu demandes à une IA de suivre un long enchaînement, comme un budget avec beaucoup de modifications ou un planning qui change, ne lui fais pas confiance pour le résultat final. Demande-lui d'écrire l'état après chaque étape, et vérifie toi-même les derniers calculs.\n\nPour le détail et les sources de chaque sujet, va lire les brèves sur le site.",
+   "date": "2026-11-06"
+  },
+  {
+   "id": "breve-flashprove",
+   "format": "breve",
+   "titre": "Une brève : prouver quel modèle a répondu",
+   "fichier": "breve-flashprove.mp3",
+   "duree": 59.8,
+   "texte": "Une brève. Anthropic teste une preuve qu'une réponse vient bien du modèle annoncé.\n\nAujourd'hui, quand tu poses une question à une IA, tu ne peux pas vérifier que la réponse vient du modèle annoncé. Un service intermédiaire pourrait en glisser un moins cher pour économiser, ou un pirate pourrait modifier le texte en route. Anthropic publie FlashProve, un prototype qui ajoute à chaque réponse une preuve : un petit fichier que n'importe qui peut contrôler pour vérifier que la réponse vient bien d'un modèle précis, dont les poids restent secrets. Les poids, ce sont les milliards de nombres qui définissent le comportement du modèle. Ce qu'Anthropic annonce, à partir de ses propres mesures : produire ces preuves demande entre soixante-dix et quatre-vingt-quinze fois plus de temps de calcul que faire tourner le modèle seul. C'est un prototype de recherche, sans déploiement prévu, et aucun tiers n'a encore mesuré ces chiffres. Ton réflexe : le nom du modèle affiché dans une application n'est pas une preuve. Si tu évalues un outil d'IA pour un usage sérieux, demande au fournisseur quel modèle précis est utilisé.",
+   "date": "2026-11-06"
+  },
+  {
+   "id": "breve-statebench",
+   "format": "breve",
+   "titre": "Une brève : StateBench, les IA perdent le fil",
+   "fichier": "breve-statebench.mp3",
+   "duree": 51.6,
+   "texte": "Une brève. Les IA les plus avancées perdent le fil quand les choses changent beaucoup dans un long texte.\n\nL'institut de recherche A I deux présente StateBench, un test qui mesure si une IA suit bien l'état des choses quand elles changent au fil d'un long texte : qui détient le couteau dans un roman, ou la valeur d'une variable dans un programme. Selon A I deux, quatre IA de pointe réussissent bien les deux niveaux faciles. Sur les deux niveaux difficiles, leur précision chute quand le texte s'allonge, jusqu'à treize pour cent ou moins sur les cas les plus longs du dernier niveau. Mais ce sont des mesures faites par les auteurs eux-mêmes, sur des tâches artificielles de laboratoire, pas sur des usages réels. Ton réflexe : quand tu demandes à une IA de suivre un long enchaînement, comme un budget avec beaucoup de modifications ou un planning qui change, ne lui fais pas confiance pour le résultat final. Demande-lui d'écrire l'état après chaque étape, et vérifie toi-même les derniers calculs.",
+   "date": "2026-11-06"
+  },
+  {
+   "id": "titres-2026-11-06",
+   "format": "titres",
+   "titre": "Les titres du 6 novembre",
+   "fichier": "titres-2026-11-06.mp3",
+   "duree": 24.9,
+   "texte": "Les titres. Le tour du jour, en quelques secondes.\n\nAnthropic teste FlashProve, une preuve qu'une réponse vient bien du modèle annoncé. C'est un prototype de recherche, sans déploiement prévu.\n\nEt un nouveau test, StateBench, montre que des IA de pointe perdent le fil quand un long texte change beaucoup d'état. Ce sont des mesures faites par ses auteurs, en laboratoire.\n\nPour le détail et les sources, tout est sur le site.",
+   "date": "2026-11-06"
+  },
+  {
+   "id": "mot-pese-poids-du-modele",
+   "format": "bases",
+   "titre": "Le mot pesé : les poids d'un modèle",
+   "fichier": "mot-pese-poids-du-modele.mp3",
+   "duree": 27.4,
+   "texte": "Le mot pesé. Les poids d'un modèle.\n\nCe sont les milliards de nombres appris pendant l'entraînement, qui déterminent comment l'IA répond. Les grandes entreprises les gardent secrets. C'est ce que FlashProve veut protéger : prouver qu'une réponse vient d'un modèle précis, sans jamais révéler ses poids.\n\nTon réflexe : quand une entreprise dit « nos poids sont secrets », ça veut dire que personne ne peut vérifier de l'extérieur quel modèle tourne vraiment. À toi de demander lequel est utilisé.",
+   "date": "2026-11-06"
   }
  ]
 }
