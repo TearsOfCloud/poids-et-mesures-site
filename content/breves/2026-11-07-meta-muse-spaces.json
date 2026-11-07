@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-07", "heure": "08:41",
+  "rubrique": "outils",
+  "titre": "Meta ajoute les « spaces » à Muse : de petites applis perso créées en décrivant son idée",
+  "resume": "Meta annonce que son assistant Muse peut construire des « spaces », des pages interactives sur mesure qui se mettent à jour depuis tes applications connectées.",
+  "en_clair": [
+    "Meta présente les « spaces » dans l'application Muse, son assistant IA. Un space est une page personnalisée que tu crées en décrivant ton idée : un suivi de cadeaux, un jeu de quiz, un planning de voyage, un tableau de commandes pour une petite entreprise… Muse la construit, et tu peux ensuite lui demander de la modifier. Tu choisis où elle apparaît (menu latéral, onglets principaux) et tu peux programmer ses horaires, par exemple le planning de semaine en semaine et celui du week-end le samedi.",
+    "Si tu connectes des applications à Muse, Meta explique que tes spaces se mettent à jour en arrière-plan : nouvelles dates de concerts, changements de prix, avancée d'une épargne. La presse (The Verge) cite parmi les applications compatibles Gmail, Google Agenda, OpenTable et Notion. Tu peux aussi cocher des éléments, ajouter des notes et modifier le contenu directement dans le space.",
+    "C'est une annonce de Meta : aucun test indépendant n'est cité, et la qualité réelle des spaces reste à voir. Meta dit déployer la fonction partout où Muse est disponible, sans détailler les pays, et étudie le partage de spaces avec d'autres personnes, pas encore disponible."
+  ],
+  "pour_toi": "Si tu utilises Muse, essaie un space simple, sans donnée sensible, par exemple un suivi de lectures ou de cadeaux. Avant de connecter ta messagerie ou ton agenda, regarde quelles informations ce space va aller lire.",
+  "termes": [
+    {"mot": "Muse", "def": "L'assistant IA de Meta, disponible dans sa propre application."},
+    {"mot": "Space", "def": "Une page interactive sur mesure, créée par l'assistant à partir d'une description, qui reste enregistrée dans l'application."},
+    {"mot": "Application connectée", "def": "Un service (messagerie, agenda, notes) auquel tu autorises l'assistant à accéder pour lire ou mettre à jour des informations."}
+  ],
+  "sources": [
+    {"nom": "Meta — Introducing Spaces: Customize the Muse App", "url": "https://about.fb.com/news/2026/11/introducing-spaces-customize-muse-app/", "date": "2026-11-06", "consulte": "2026-11-07", "type": "primaire"},
+    {"nom": "The Verge — Meta's Muse AI can create custom 'spaces'", "url": "https://www.theverge.com/tech/1028871/meta-muse-ai-spaces", "date": "2026-11-06", "consulte": "2026-11-07", "type": "presse"}
+  ],
+  "revue": "humaine"
+}
