@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-06", "heure": "07:42",
+  "rubrique": "outils",
+  "titre": "Phonon : une voix IA de 65 Mo qui parle français sans connexion, selon ses créateurs",
+  "resume": "Phonon, un petit modèle de synthèse vocale en poids ouverts, tourne sur téléphone, ordinateur ou navigateur, sans réseau. Résultats annoncés par ses auteurs.",
+  "en_clair": [
+    "Phonon est un modèle qui transforme du texte en voix (synthèse vocale) et qui tourne directement sur ton appareil : le texte ne part pas vers un serveur et ça marche sans réseau. Ses créateurs publient un bilan des deux premières semaines. Il existe en deux tailles, environ 65 et 75 Mo, et parle anglais, français, allemand, espagnol et portugais, avec plus de 100 voix intégrées. On peut aussi créer sa propre voix, à partir d'un court enregistrement avec le consentement de la personne ou à partir d'une description.",
+    "Côté licence, la version 31m, anglais seulement, est en Apache 2.0 : usage libre, même commercial. La version 40m, qui couvre les cinq langues, est en CC BY-NC : gratuite pour des projets non commerciaux, avec un tarif pour les usages commerciaux. Les auteurs affirment avoir dépassé 200 000 téléchargements en deux semaines, et un bon classement sur le Open TTS Leaderboard de Hugging Face : premier en allemand et en espagnol pour l'intelligibilité, dans les trois premiers dans toutes les langues testées, et en tête du test de rapidité sur processeur.",
+    "Ces classements et chiffres sont présentés par l'équipe de Phonon elle-même, dans un article de bilan. La qualité du français n'est pas détaillée à part, et le résultat dépend de l'appareil utilisé. À tester toi-même avant de t'y fier."
+  ],
+  "pour_toi": "Si tu veux une voix qui lit des textes sans envoyer ce que tu écris à un service en ligne, essaie la démo dans le navigateur citée par les auteurs, avec un texte non sensible. Si tu comptes l'utiliser dans un produit payant, vérifie d'abord la licence : seule la version 31m (anglais) est libre pour l'usage commercial.",
+  "termes": [
+    {"mot": "Synthèse vocale (TTS)", "def": "Une technique qui transforme un texte écrit en voix parlée."},
+    {"mot": "Poids ouverts", "def": "Les fichiers du modèle sont téléchargeables, on peut les faire tourner chez soi."},
+    {"mot": "Apache 2.0", "def": "Une licence libre qui autorise l'usage, y compris commercial."},
+    {"mot": "CC BY-NC", "def": "Une licence qui autorise l'usage gratuit à condition qu'il ne soit pas commercial, avec mention de l'auteur."},
+    {"mot": "Clonage de voix", "def": "Reproduire la voix d'une personne à partir d'un court enregistrement."}
+  ],
+  "sources": [
+    {"nom": "Hugging Face (billet de l'équipe Phonon) — A Closer Look at Phonon TTS", "url": "https://huggingface.co/blog/phonon-tts", "date": "2026-11-05", "consulte": "2026-11-06", "type": "primaire"}
+  ],
+  "revue": "humaine"
+}
