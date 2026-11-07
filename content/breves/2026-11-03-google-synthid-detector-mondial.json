@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-03", "heure": "07:30",
+  "rubrique": "outils",
+  "titre": "Google ouvre au monde son détecteur d'images, vidéos et sons faits par IA",
+  "resume": "Le SynthID Detector de Google, qui vérifie si un contenu porte la marque invisible d'une IA, est étendu à tous les pays, en anglais. Il ne couvre que les contenus marqués.",
+  "en_clair": [
+    "Google a publié le 2 novembre son bilan des annonces d'octobre. On y apprend que le SynthID Detector, un outil pour vérifier si une image, une vidéo ou un son a été produit par une IA, est étendu « globalement », en anglais. Des outils de vérification intégrés existent aussi dans la recherche Google, Chrome et l'application Gemini.",
+    "Le principe : SynthID est un filigrane invisible que Google glisse dans les contenus générés par ses IA, et le détecteur sert à le retrouver. Google dit en avoir déjà posé sur plus de 180 milliards d'images et de vidéos et sur 240 000 années d'audio. Le détecteur reconnaît aussi, selon Google, les contenus de partenaires comme OpenAI, NVIDIA, Kakao et Apple.",
+    "Ce qui est annoncé : une couverture mondiale. Ce que la page ne dit pas : comment l'outil se comporte face à un contenu qui n'a aucun filigrane, ni son taux d'erreur. Aucune mesure indépendante n'est citée. Un résultat « rien trouvé » ne prouve donc pas qu'un contenu est authentique."
+  ],
+  "pour_toi": "Un doute sur une image ou un son ? Passe-le au détecteur, mais lis le résultat comme un indice : « marque trouvée » est fiable pour dire que c'est de l'IA, « rien trouvé » ne prouve rien. Recoupe toujours avec la source d'origine du contenu.",
+  "termes": [
+    {"mot": "SynthID", "def": "Un filigrane invisible, ajouté par Google aux contenus créés par ses IA, qui permet de les reconnaître ensuite."},
+    {"mot": "Filigrane", "def": "Une marque cachée dans un fichier, invisible à l'œil, qu'un outil peut retrouver."}
+  ],
+  "sources": [
+    {"nom": "Google — The latest AI news we announced in October 2026", "url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-october-2026/", "date": "2026-11-02", "consulte": "2026-11-03", "type": "primaire"}
+  ],
+  "revue": "humaine"
+}

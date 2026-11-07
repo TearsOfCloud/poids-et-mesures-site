@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-03", "heure": "07:30",
+  "rubrique": "outils",
+  "titre": "Android : un mode « protection renforcée » contre les arnaques par message",
+  "resume": "Google ajoute à Google Messages une option, à activer soi-même, qui utilise des modèles Gemini pour repérer les arnaques qui s'installent au fil d'une conversation.",
+  "en_clair": [
+    "Dans son bilan d'octobre publié le 2 novembre, Google présente un nouveau mode « Enhanced protection » dans Google Messages. Il est optionnel : il faut l'activer. Il s'appuie sur « Private AI Compute » et sur les derniers modèles Gemini hébergés dans le cloud de Google.",
+    "L'idée est de repérer des arnaques « conversationnelles », c'est-à-dire qui se construisent sur plusieurs messages, plutôt qu'un seul SMS suspect. Google ajoute des alertes dans les discussions et des protections renforcées contre le transfert d'appel et le partage d'écran, deux ruses courantes pour prendre la main sur un téléphone. Google dit que sa détection actuelle signale déjà plus de 5 millions d'appels et messages suspects par mois.",
+    "Ce qui est annoncé : le mode et ses alertes. Ce qui manque : aucun chiffre sur son efficacité réelle ni sur le nombre de fausses alertes, et la page ne précise ni les pays ni les téléphones concernés, ni la date de déploiement."
+  ],
+  "pour_toi": "Sur Android, regarde dans les réglages de Google Messages si ce mode apparaît chez toi et lis ce qu'il transmet avant de l'activer. Dans tous les cas, retiens le réflexe : personne de sérieux ne te demande de transférer un appel ou de partager ton écran.",
+  "termes": [
+    {"mot": "Private AI Compute", "def": "Le nom donné par Google à un traitement d'IA dans son cloud, présenté comme protégeant les données de l'utilisateur."},
+    {"mot": "Arnaque conversationnelle", "def": "Une arnaque qui se déroule sur plusieurs messages, en gagnant la confiance de la victime avant de lui demander quelque chose."}
+  ],
+  "sources": [
+    {"nom": "Google — The latest AI news we announced in October 2026", "url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-october-2026/", "date": "2026-11-02", "consulte": "2026-11-03", "type": "primaire"}
+  ],
+  "revue": "humaine"
+}

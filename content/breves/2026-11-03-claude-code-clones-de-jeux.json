@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-03", "heure": "07:30",
+  "rubrique": "regles",
+  "titre": "Claude Code ne doit plus recréer un jeu vidéo existant, mais garde les jeux originaux",
+  "resume": "Anthropic a ajouté deux phrases aux consignes internes de Claude Code pour qu'il refuse de copier un jeu précis. Jeux originaux et jeux « dans le style de » restent permis.",
+  "en_clair": [
+    "Selon The Verge, Anthropic a modifié le « prompt système » de Claude Code (version Opus 5.5), c'est-à-dire les consignes cachées qui orientent le comportement de l'outil. Un internaute avait publié une capture avec deux nouvelles phrases : construire des jeux originaux, des jeux d'un genre ou issus de ses propres créations est bon ; recréer un jeu existant précis ne l'est pas, même si on l'appelle « original ».",
+    "Anthropic n'a pas confirmé ce texte exact. Un de ses salariés, Addy Osmani, a écrit en réponse que deux phrases avaient bien été ajoutées pour éviter que Claude recrée le jeu de quelqu'un d'autre, parce que violer la propriété intellectuelle est contraire à sa politique d'usage. Cette politique interdit en effet d'enfreindre les droits de propriété intellectuelle d'un tiers.",
+    "Ce qui est confirmé : le principe et la modification. Ce qui est incertain : la formulation exacte, et la fermeté de ce filtre, qu'Anthropic dit vouloir ajuster. Le contexte est une vague de copies de vieux jeux faites avec l'IA (décompilations, portages)."
+  ],
+  "pour_toi": "Si tu fabriques un jeu avec Claude, pars de ton propre concept et de tes propres images ou sons : cela reste permis. Si l'outil refuse une demande qui t'appartient, tu peux le signaler, Anthropic invite à le faire.",
+  "termes": [
+    {"mot": "Prompt système", "def": "Des consignes écrites en amont par l'éditeur d'une IA, que l'utilisateur ne voit pas, et qui guident ses réponses."},
+    {"mot": "Propriété intellectuelle", "def": "Les droits d'un auteur ou d'une entreprise sur ses créations, comme un jeu, un texte ou une image."},
+    {"mot": "Décompilation", "def": "Reconstituer le code source d'un logiciel à partir de sa version finale déjà compilée."}
+  ],
+  "sources": [
+    {"nom": "Anthropic — Usage Policy", "url": "https://www.anthropic.com/legal/aup", "date": "2026-11-03", "consulte": "2026-11-03", "type": "primaire"},
+    {"nom": "The Verge — Anthropic clamps down on Claude's AI video game clones", "url": "https://www.theverge.com/ai-artificial-intelligence/1024632/anthropic-claude-ai-video-game-clones", "date": "2026-11-02", "consulte": "2026-11-03", "type": "presse"}
+  ],
+  "revue": "humaine"
+}
