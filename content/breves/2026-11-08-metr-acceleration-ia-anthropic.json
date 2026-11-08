@@ -1,0 +1,41 @@
+{
+  "date": "2026-11-08",
+  "heure": "08:10",
+  "rubrique": "recherche",
+  "titre": "METR : Anthropic progresserait environ deux fois plus vite qu'avant, grâce à l'IA",
+  "resume": "L'organisme indépendant METR estime qu'Anthropic améliore ses modèles environ deux fois plus vite qu'entre 2024 et 2025, surtout grâce à l'IA. Estimation très incertaine, avec des preuves caviardées.",
+  "en_clair": [
+    "METR, une organisation indépendante qui évalue les risques des IA, a passé du 12 août au 29 octobre 2026 chez Anthropic, avec un accès à des données internes, pour mesurer si l'IA accélère la recherche sur l'IA elle-même. Sa conclusion : sur les tâches bien définies, Anthropic améliore ses modèles à environ deux fois le rythme de mars 2024 à octobre 2025. METR précise que la vraie valeur pourrait aller de 1,3 fois à 3 fois.",
+    "Sur les scores de tests (l'indice maison AECI, version Anthropic d'un indice public de capacités), la croissance depuis octobre 2025 serait de 1,9 fois l'ancien rythme (intervalle de confiance : de 1,5 à 2,8). METR dit être certain que cela ne vient pas d'une accélération de la puissance de calcul. Selon son estimation, la majorité de l'accélération viendrait de l'usage de l'IA par les chercheurs d'Anthropic. Les équipes décrivent surtout une IA qui assiste, pas qui travaille seule, avec des signes que cela pourrait changer.",
+    "À lire avec prudence : Anthropic avait le droit de caviarder les informations non publiques et a retiré la majorité des preuves que METR juge les plus informatives, donc le public doit largement se fier au jugement de METR. Le test AECI ne couvre que des tâches vérifiables, et METR reconnaît qu'il peut surestimer comme sous-estimer. Rien ne dit que ce rythme vaut pour les autres laboratoires."
+  ],
+  "pour_toi": "Rien à faire. À retenir : quand on lit « l'IA accélère l'IA », regarder qui a mesuré, avec quelles données, et ce qui a été caché. Ici, c'est un tiers indépendant, mais il dit lui-même que l'essentiel de ses preuves n'est pas publiable.",
+  "termes": [
+    {
+      "mot": "METR",
+      "def": "Une organisation à but non lucratif qui teste les capacités et les risques des modèles d'IA de pointe."
+    },
+    {
+      "mot": "Caviarder",
+      "def": "Retirer d'un document des passages jugés confidentiels avant publication."
+    },
+    {
+      "mot": "Intervalle de confiance",
+      "def": "La fourchette dans laquelle la vraie valeur se trouve probablement, d'après les données."
+    },
+    {
+      "mot": "Recherche et développement en IA (R&D)",
+      "def": "Le travail de ceux qui conçoivent et entraînent les futurs modèles."
+    }
+  ],
+  "sources": [
+    {
+      "nom": "METR — Independent Assessment of AI R&D Acceleration at Anthropic in October 2026",
+      "url": "https://metr.org/blog/2026-11-05-anthropic-ai-rd-acceleration-assessment/",
+      "date": "2026-11-05",
+      "consulte": "2026-11-08",
+      "type": "primaire"
+    }
+  ],
+  "revue": "humaine"
+}
