@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-09", "heure": "08:43",
+  "rubrique": "recherche",
+  "titre": "Un audit indépendant estime qu'Anthropic progresse deux fois plus vite, en partie grâce à l'IA",
+  "resume": "METR, un organisme d'évaluation indépendant, estime qu'Anthropic améliore ses modèles environ deux fois plus vite qu'avant, surtout parce qu'elle utilise l'IA pour sa propre recherche.",
+  "en_clair": [
+    "METR, une organisation qui évalue les risques de l'IA, a passé près de trois mois (du 12 août au 29 octobre 2026) à examiner l'intérieur d'Anthropic, l'entreprise qui développe Claude. Son estimation : depuis octobre 2025, les scores aux tests de capacités de ses modèles progressent à environ 1,9 fois leur rythme historique, avec une marge d'erreur large (de 1,5 à 2,8 fois). Autrement dit, environ deux ans de progrès historique en un an.",
+    "METR juge que la cause n'est pas une simple augmentation de la puissance de calcul. Selon ses estimations, environ 80 % de cette accélération viendrait de l'usage de l'IA par les chercheurs eux-mêmes, avec beaucoup d'incertitude. Pour l'instant, c'est surtout de l'aide aux humains, pas de l'IA qui travaille seule, même si METR voit des signes que cela pourrait changer. Les salariés déclarent être jusqu'à 12 fois plus productifs, mais METR précise que ce sont des réponses à des sondages rapides, à interpréter avec prudence.",
+    "Point à garder en tête : Anthropic avait le droit de masquer des informations, et METR écrit que la majorité des preuves qu'il jugeait les plus utiles ont été retirées de la version publique. Le public doit donc faire confiance au jugement de METR, ce que l'organisme présente lui-même comme loin de l'idéal. Ce sont des estimations, pas des mesures définitives."
+  ],
+  "pour_toi": "Rien à faire concrètement. À retenir : quand tu lis qu'une entreprise d'IA va « deux fois plus vite », demande qui l'a mesuré et ce qui a été caché. Ici, l'évaluateur est indépendant mais a lui-même signalé les limites de son accès.",
+  "termes": [
+    {"mot": "METR", "def": "Une organisation indépendante qui évalue les capacités et les risques des modèles d'IA."},
+    {"mot": "Accélération (2x)", "def": "Un rythme de progrès doublé : on fait en un an ce qui prenait deux ans auparavant."},
+    {"mot": "Intervalle de confiance", "def": "La fourchette dans laquelle le vrai chiffre a de bonnes chances de se trouver ; plus elle est large, plus l'estimation est incertaine."}
+  ],
+  "sources": [
+    {"nom": "METR — Independent Assessment of AI R&D Acceleration at Anthropic in October 2026", "url": "https://metr.org/blog/2026-11-05-anthropic-ai-rd-acceleration-assessment/", "date": "2026-11-05", "consulte": "2026-11-09", "type": "primaire"},
+    {"nom": "The Verge — Why a new report on Anthropic automating AI development is alarming researchers", "url": "https://www.theverge.com/ai-artificial-intelligence/1029126/anthropic-metr-report-accelerating-ai-development", "date": "2026-11-08", "consulte": "2026-11-09", "type": "presse"}
+  ],
+  "revue": "humaine"
+}
