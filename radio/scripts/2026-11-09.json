@@ -1,0 +1,53 @@
+{
+ "date": "2026-11-09",
+ "segments": [
+  {
+   "id": "journal-2026-11-09",
+   "format": "journal",
+   "titre": "Le journal du 9 novembre",
+   "sources": [
+    {
+     "type": "breve",
+     "slug": "2026-11-09-postgresql-19-retard-bugs-ia"
+    }
+   ],
+   "texte": "Bonjour, c'est le journal de Poids et Mesures, lundi neuf novembre. Un seul sujet neuf aujourd'hui, et on sépare ce qui est confirmé de ce qui est une analyse.\n\nUne base de données qui sort en retard, et l'IA serait en cause, selon un développeur du projet. PostgreSQL est un logiciel libre qui stocke et organise les données de très nombreuses applications et sites. Son équipe a annoncé que la version dix-neuf sortirait le dix-neuf novembre, plus tard que la fenêtre habituelle, qui va de la mi-septembre à la mi-octobre. Raison officielle : le grand nombre de correctifs ajoutés aux anciennes versions, qu'elle veut intégrer dans une seconde version candidate, c'est-à-dire une version presque finale publiée pour être testée, prévue le douze novembre. Un développeur du projet va plus loin dans un article sur le blog de Neon : selon lui, les IA qui lisent et écrivent du texte font découvrir bien plus de bugs qu'avant, et les humains doivent relire chaque correctif. Attention à ce qui est établi : le calendrier est confirmé par le projet. Le lien avec l'IA, lui, est l'analyse d'un participant, pas une conclusion officielle. Il note lui-même que les correctifs écrits par IA ne sont pas toujours corrects. Ton réflexe : si tu utilises PostgreSQL, rien d'urgent. Évite de mettre la version dix-neuf en production avant sa sortie officielle.\n\nPour le détail et les sources, va lire la brève sur le site."
+  },
+  {
+   "id": "breve-postgresql-19-retard",
+   "format": "breve",
+   "titre": "Une brève : PostgreSQL dix-neuf sort plus tard que d'habitude",
+   "sources": [
+    {
+     "type": "breve",
+     "slug": "2026-11-09-postgresql-19-retard-bugs-ia"
+    }
+   ],
+   "texte": "Une brève. PostgreSQL dix-neuf sort plus tard que d'habitude, et l'IA serait en cause selon un développeur du projet.\n\nPostgreSQL est un logiciel libre qui stocke et organise les données de très nombreuses applications et sites. Son équipe a annoncé que la version dix-neuf sortirait le dix-neuf novembre, plus tard que la fenêtre habituelle, qui va de la mi-septembre à la mi-octobre. Raison officielle : le grand nombre de correctifs ajoutés aux anciennes versions, qu'elle veut intégrer dans une seconde version candidate, c'est-à-dire une version presque finale publiée pour être testée, prévue le douze novembre. Un développeur du projet va plus loin dans un article sur le blog de Neon : selon lui, les IA qui lisent et écrivent du texte font découvrir bien plus de bugs qu'avant, et les humains doivent relire chaque correctif. Attention à ce qui est établi : le calendrier est confirmé par le projet. Le lien avec l'IA, lui, est l'analyse d'un participant, pas une conclusion officielle. Il note lui-même que les correctifs écrits par IA ne sont pas toujours corrects. Ton réflexe : si tu utilises PostgreSQL, rien d'urgent. Évite de mettre la version dix-neuf en production avant sa sortie officielle."
+  },
+  {
+   "id": "titres-2026-11-09",
+   "format": "titres",
+   "titre": "Les titres du 9 novembre",
+   "sources": [
+    {
+     "type": "breve",
+     "slug": "2026-11-09-postgresql-19-retard-bugs-ia"
+    }
+   ],
+   "texte": "Les titres. Le tour du jour, en quelques secondes.\n\nLa base de données PostgreSQL repousse sa version dix-neuf au dix-neuf novembre : un développeur du projet y voit l'effet des bugs que l'IA fait découvrir, une analyse qui n'est pas la position officielle.\n\nPour le détail et les sources, tout est sur le site."
+  },
+  {
+   "id": "mot-pese-version-candidate",
+   "format": "bases",
+   "titre": "Le mot pesé : version candidate",
+   "sources": [
+    {
+     "type": "breve",
+     "slug": "2026-11-09-postgresql-19-retard-bugs-ia"
+    }
+   ],
+   "texte": "Le mot pesé. Version candidate.\n\nC'est une version presque finale d'un logiciel, publiée pour être testée avant la sortie officielle. Pour PostgreSQL dix-neuf, l'équipe prévoit une seconde version candidate le douze novembre.\n\nTon réflexe : une version candidate sert à tester, pas à travailler. Garde la version stable pour tes vrais projets, et attends la sortie officielle."
+  }
+ ]
+}

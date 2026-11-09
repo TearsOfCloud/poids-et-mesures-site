@@ -1,0 +1,93 @@
+{
+ "date": "2026-11-08",
+ "segments": [
+  {
+   "id": "journal-2026-11-08",
+   "format": "journal",
+   "titre": "Le journal du 8 novembre",
+   "sources": [
+    {
+     "type": "breve",
+     "slug": "2026-11-07-claude-personal-finance-comptes-bancaires"
+    },
+    {
+     "type": "breve",
+     "slug": "2026-11-07-meta-muse-spaces"
+    },
+    {
+     "type": "breve",
+     "slug": "2026-11-08-metr-acceleration-ia-anthropic"
+    }
+   ],
+   "texte": "Bonjour, c'est le journal de Poids et Mesures, dimanche huit novembre. Trois sujets. Et pour chacun, on sépare ce qui est annoncé de ce qui est vraiment mesuré.\n\nPremier sujet. Anthropic ouvre en bêta, aux États-Unis seulement, un espace appelé Personal Finance dans Claude. Tu connectes tes comptes bancaires et tes cartes, puis tu poses tes questions en langage courant, par exemple : où est parti mon argent ce mois-ci ? Claude additionne les dépenses et les range par catégorie. Il peut aussi signaler un prélèvement passé deux fois, des frais inattendus ou une facture qui grimpe depuis des mois. La connexion passe par Plaid, un service intermédiaire : tu te connectes toi-même à ta banque, donc Claude ne voit pas ton mot de passe. Selon Anthropic, l'accès est en lecture seule : Claude peut consulter, mais ne peut pas bouger ton argent. Tout cela vient d'Anthropic, qui précise elle-même que Claude peut se tromper et que l'outil ne donne pas de conseils d'investissement. Rien n'indique une date en France. Ton réflexe si tu testes un jour ce genre d'outil : connecte un seul compte au départ, et vérifie les montants importants auprès de ta banque.\n\nDeuxième sujet. Meta ajoute les spaces à Muse, son assistant IA. Un space est une page sur mesure que tu crées en décrivant ton idée : un suivi de cadeaux, un jeu de quiz, un planning de voyage. Muse la construit, et tu peux ensuite lui demander de la modifier. Si tu connectes des applications, comme ton agenda ou ta messagerie, Meta explique que tes spaces se mettent à jour en arrière-plan. C'est une annonce de Meta : aucun test indépendant n'est cité, et la qualité réelle reste à voir. Ton réflexe : essaie un space simple, sans donnée sensible, et avant de connecter ta messagerie ou ton agenda, regarde ce que ce space va aller lire.\n\nTroisième sujet. METR, une organisation indépendante qui évalue les risques des IA, a passé plusieurs semaines chez Anthropic, avec un accès à des données internes. Sa question : l'IA accélère-t-elle la recherche sur l'IA elle-même ? Sa conclusion : sur les tâches bien définies, Anthropic améliorerait ses modèles environ deux fois plus vite qu'entre deux mille vingt-quatre et deux mille vingt-cinq. Mais METR dit que la vraie valeur pourrait être plus basse ou plus haute : c'est une estimation très incertaine. Selon METR, la majorité de l'accélération viendrait de l'usage de l'IA par les chercheurs eux-mêmes, surtout comme assistant. Point de prudence : Anthropic avait le droit de caviarder, c'est-à-dire de retirer des passages confidentiels, et a retiré la majorité des preuves que METR juge les plus utiles. Le public doit donc largement se fier au jugement de METR. Et rien ne dit que ce rythme vaut pour les autres laboratoires. Ton réflexe : quand tu lis que l'IA accélère l'IA, demande-toi qui a mesuré, avec quelles données, et ce qui a été caché.\n\nPour le détail et les sources de chaque sujet, va lire les brèves sur le site."
+  },
+  {
+   "id": "breve-claude-personal-finance",
+   "format": "breve",
+   "titre": "Une brève : claude lit tes comptes bancaires, en lecture seule",
+   "sources": [
+    {
+     "type": "breve",
+     "slug": "2026-11-07-claude-personal-finance-comptes-bancaires"
+    }
+   ],
+   "texte": "Une brève. Claude lit tes comptes bancaires, en lecture seule.\n\nAnthropic ouvre en bêta, aux États-Unis seulement, un espace appelé Personal Finance dans Claude. Tu connectes tes comptes bancaires et tes cartes, puis tu poses tes questions en langage courant, par exemple : où est parti mon argent ce mois-ci ? Claude additionne les dépenses et les range par catégorie. Il peut aussi signaler un prélèvement passé deux fois, des frais inattendus ou une facture qui grimpe depuis des mois. La connexion passe par Plaid, un service intermédiaire : tu te connectes toi-même à ta banque, donc Claude ne voit pas ton mot de passe. Selon Anthropic, l'accès est en lecture seule : Claude peut consulter, mais ne peut pas bouger ton argent. Tout cela vient d'Anthropic, qui précise elle-même que Claude peut se tromper et que l'outil ne donne pas de conseils d'investissement. Rien n'indique une date en France. Ton réflexe si tu testes un jour ce genre d'outil : connecte un seul compte au départ, et vérifie les montants importants auprès de ta banque."
+  },
+  {
+   "id": "breve-meta-muse-spaces",
+   "format": "breve",
+   "titre": "Une brève : meta Muse crée de petites applis perso, les spaces",
+   "sources": [
+    {
+     "type": "breve",
+     "slug": "2026-11-07-meta-muse-spaces"
+    }
+   ],
+   "texte": "Une brève. Meta Muse crée de petites applis perso, les spaces.\n\nMeta ajoute les spaces à Muse, son assistant IA. Un space est une page sur mesure que tu crées en décrivant ton idée : un suivi de cadeaux, un jeu de quiz, un planning de voyage. Muse la construit, et tu peux ensuite lui demander de la modifier. Si tu connectes des applications, comme ton agenda ou ta messagerie, Meta explique que tes spaces se mettent à jour en arrière-plan. C'est une annonce de Meta : aucun test indépendant n'est cité, et la qualité réelle reste à voir. Ton réflexe : essaie un space simple, sans donnée sensible, et avant de connecter ta messagerie ou ton agenda, regarde ce que ce space va aller lire."
+  },
+  {
+   "id": "breve-metr-acceleration-ia",
+   "format": "breve",
+   "titre": "Une brève : mETR : l'IA accélérerait la recherche chez Anthropic",
+   "sources": [
+    {
+     "type": "breve",
+     "slug": "2026-11-08-metr-acceleration-ia-anthropic"
+    }
+   ],
+   "texte": "Une brève. METR : l'IA accélérerait la recherche chez Anthropic.\n\nMETR, une organisation indépendante qui évalue les risques des IA, a passé plusieurs semaines chez Anthropic, avec un accès à des données internes. Sa question : l'IA accélère-t-elle la recherche sur l'IA elle-même ? Sa conclusion : sur les tâches bien définies, Anthropic améliorerait ses modèles environ deux fois plus vite qu'entre deux mille vingt-quatre et deux mille vingt-cinq. Mais METR dit que la vraie valeur pourrait être plus basse ou plus haute : c'est une estimation très incertaine. Selon METR, la majorité de l'accélération viendrait de l'usage de l'IA par les chercheurs eux-mêmes, surtout comme assistant. Point de prudence : Anthropic avait le droit de caviarder, c'est-à-dire de retirer des passages confidentiels, et a retiré la majorité des preuves que METR juge les plus utiles. Le public doit donc largement se fier au jugement de METR. Et rien ne dit que ce rythme vaut pour les autres laboratoires. Ton réflexe : quand tu lis que l'IA accélère l'IA, demande-toi qui a mesuré, avec quelles données, et ce qui a été caché."
+  },
+  {
+   "id": "titres-2026-11-08",
+   "format": "titres",
+   "titre": "Les titres du 8 novembre",
+   "sources": [
+    {
+     "type": "breve",
+     "slug": "2026-11-07-claude-personal-finance-comptes-bancaires"
+    },
+    {
+     "type": "breve",
+     "slug": "2026-11-07-meta-muse-spaces"
+    },
+    {
+     "type": "breve",
+     "slug": "2026-11-08-metr-acceleration-ia-anthropic"
+    }
+   ],
+   "texte": "Les titres. Le tour du jour, en quelques secondes.\n\nClaude lance Personal Finance : lire tes comptes bancaires pour expliquer tes dépenses, en lecture seule, aux États-Unis pour l'instant.\n\nMeta ajoute les spaces à Muse : de petites applis perso créées en décrivant ton idée.\n\nEt METR estime qu'Anthropic progresse environ deux fois plus vite grâce à l'IA, avec des preuves en partie caviardées.\n\nPour le détail et les sources, tout est sur le site."
+  },
+  {
+   "id": "mot-pese-lecture-seule",
+   "format": "bases",
+   "titre": "Le mot pesé : lecture seule",
+   "sources": [
+    {
+     "type": "breve",
+     "slug": "2026-11-07-claude-personal-finance-comptes-bancaires"
+    }
+   ],
+   "texte": "Le mot pesé. Lecture seule.\n\nC'est un accès qui permet à un outil de consulter tes données, sans pouvoir les modifier. Dans le cas de Personal Finance, selon Anthropic, Claude peut lire tes comptes, mais ne peut ni faire de virement ni placer de l'argent.\n\nTon réflexe : quand une application demande l'accès à un compte, regarde d'abord si c'est de la lecture seule ou si elle peut aussi agir à ta place. Et choisis toujours le plus petit accès qui suffit."
+  }
+ ]
+}
