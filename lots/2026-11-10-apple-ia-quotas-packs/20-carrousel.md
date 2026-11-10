@@ -9,6 +9,6 @@
 | 5 | Le pack : ce que tu achètes | Achat unique (49,99 $ dans Logic Pro, selon The Verge). Ne sert qu'après le plafond du mois. Le reste se reporte mais expire 12 mois après l'achat. Pas de partage familial, pas de remboursement sauf obligation légale. |
 | 6 | Qui peut l'acheter | Abonnés actifs, dans huit pays : Brésil, Canada, France, Allemagne, Inde, Mexique, Royaume-Uni, États-Unis (selon Apple). Aucun prix en euros dans les pages lues. |
 | 7 | Ce qu'Apple dit de tes données | Selon Apple : tes demandes vont au fournisseur, sans lien avec ton compte Apple, ton adresse IP n'est pas partagée, et le fournisseur ne peut pas s'en servir pour entraîner ses modèles. C'est une déclaration d'Apple, non vérifiée par un tiers. |
-| 8 | Ton réflexe avant de t'abonner | 1. Cherche la page « limites d'usage ». 2. Note ce qui est chiffré et ce qui ne l'est pas. 3. Dans l'app Apple : Fonctions Intelligence > Afficher l'utilisation. Et pour la suite : Apple prévoit des limites sur Siri AI et d'autres fonctions avec les versions 2027, sans chiffre pour l'instant. |
+| 8 | Ton réflexe avant de t'abonner | 1. Cherche la page « limites d'usage ». 2. Note ce qui est chiffré et ce qui ne l'est pas. 3. Dans l'app Apple : Intelligence Features > Show Usage (noms anglais ; traduction française non vérifiée). Et pour la suite : Apple prévoit des limites sur Siri AI et d'autres fonctions avec les versions 2027, sans chiffre pour l'instant. |
 
 Légende de contrôle : dire « selon Apple » sur les slides 3 à 7. Ne pas ajouter de chiffre absent des sources.
