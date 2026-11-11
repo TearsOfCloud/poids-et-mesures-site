@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-11", "heure": "08:20",
+  "rubrique": "recherche",
+  "titre": "Des milliers d'applis créées avec Grok restent ouvertes à quiconque connaît leur adresse",
+  "resume": "Selon la société de sécurité Claroc, 35 578 applis publiées avec Grok Build s'ouvrent sans connexion. SpaceXSI a retiré 24 de ses propres applis internes.",
+  "en_clair": [
+    "Grok Build permet de décrire une appli dans une conversation et de la publier en un clic. Claroc, une société de sécurité, a testé 43 551 adresses d'applis Grok : 37 571 étaient en ligne et, selon elle, 35 578 (94,7 %) s'ouvraient sans aucune connexion. Claroc estime qu'environ 650 à 800 contenaient des données privées. Parmi elles, 24 applis internes de SpaceXSI (la société issue de la fusion de SpaceX et xAI), dont un plan d'accueil marqué confidentiel et des propositions publicitaires.",
+    "Le mécanisme est simple. Chaque appli publiée reçoit sa propre adresse, avec des mots tirés au hasard à gauche du domaine. Or, dès que quelqu'un l'ouvre, le nom de cette adresse est enregistré dans des bases publiques de requêtes DNS (le « carnet d'adresses » d'internet), qu'on peut fouiller. Claroc dit aussi que, dans son compte payant, l'option « Quiconque a le lien » était cochée par défaut au moment de publier, et que le contrôle d'accès d'une appli d'équipe générée par Grok laissait entrer un compte non invité (test fait uniquement sur ses propres applis).",
+    "SpaceXSI répond que les applis sont privées tant que leur auteur ne choisit pas de les partager, et que publier demande plusieurs étapes. L'entreprise a retiré les 24 applis internes après le signalement ; Claroc dit que les autres applis restent en ligne. Ce sont les chiffres de Claroc, pas une mesure indépendante."
+  ],
+  "pour_toi": "Si tu publies une appli faite avec une IA (Grok, Lovable, Replit…), choisis « Moi seul » ou « Utilisateurs invités » avant de publier, ouvre ensuite l'adresse en navigation privée pour vérifier qu'un inconnu reçoit une erreur, et ne mets jamais de mot de passe ni de données de clients dans l'appli.",
+  "termes": [
+    {"mot": "DNS", "def": "Le carnet d'adresses d'internet : il traduit un nom de site en adresse que l'ordinateur sait joindre."},
+    {"mot": "DNS passif", "def": "Une base qui enregistre les noms de sites déjà demandés par des internautes et que n'importe qui peut interroger."},
+    {"mot": "Appli « vibe coding »", "def": "Une appli décrite en langage courant à une IA qui écrit le code à ta place."}
+  ],
+  "sources": [
+    {"nom": "Claroc — GhostShares 2: Grok Apps Exposed xAI's Business Secrets and People's Private Data", "url": "https://blog.claroc.io/ghostshares-grok-build-apps/", "date": "2026-11-10", "consulte": "2026-11-11", "type": "primaire"},
+    {"nom": "Ars Technica — Grok Build coding agent leaks oodles of confidential info, some belonging to SpaceXSI", "url": "https://arstechnica.com/security/2026/11/grok-build-coding-agent-leaks-oodles-of-confidential-info-some-belonging-to-spacexsi/", "date": "2026-11-10", "consulte": "2026-11-11", "type": "presse"}
+  ],
+  "revue": "humaine"
+}
