@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-11", "heure": "08:12",
+  "rubrique": "outils",
+  "titre": "Claude lance Whiteboards et Sheets : tableau blanc et tableur que l'IA remplit avec toi",
+  "resume": "Anthropic ajoute à Claude un tableau blanc partagé, un tableur et l'outil de données « Claude Data ». Whiteboards et Sheets sont en bêta sur les offres payantes.",
+  "en_clair": [
+    "Anthropic annonce trois nouveautés dans Claude. Whiteboards est un tableau blanc partagé : tu racontes un projet un peu brouillon à voix haute, et Claude le range en planning avec des responsables et des dates, ou regroupe par thèmes les notes d'une réunion. Sheets est un tableur que Claude construit et modifie avec toi (onglets, formules, listes déroulantes), à partir d'une simple demande comme « un suivi de campagne ». Claude Data est le nouveau nom des « Dashboards », désormais disponible pour tous : des tableaux de bord reliés aux données d'une entreprise.",
+    "Concrètement, tes documents, tableaux et feuilles restent dans Claude au lieu d'être copiés ailleurs, et ton équipe peut les modifier en même temps. Anthropic précise que Sheets n'a pour l'instant que des fonctions de tableur simples : pour le complet, on exporte en .xlsx ou CSV. Whiteboards et Sheets sont en bêta sur toutes les offres payantes ; l'entreprise indique que Claude affiche chaque modification faite dans les cellules pour qu'on puisse la suivre.",
+    "Tout vient d'Anthropic : les témoignages d'entreprises cités (gains de temps) sont les leurs, sans mesure indépendante. Claude Meetings, qui ajoute Claude à un appel vidéo, est présenté par Anthropic comme « bientôt disponible », alors que TechCrunch le décrit comme lancé en bêta pour les offres Team et Enterprise : les deux sources ne concordent pas, on attend de voir."
+  ],
+  "pour_toi": "Si tu as une offre payante de Claude, teste Sheets sur un tableau simple sans donnée sensible (un budget, un suivi de contenus) et relis chaque cellule modifiée avant de t'y fier : c'est une bêta. Pour des formules complexes, exporte vers Excel.",
+  "termes": [
+    {"mot": "Bêta", "def": "Version encore en test : elle fonctionne, mais peut changer ou comporter des défauts."},
+    {"mot": "Tableau de bord", "def": "Une page qui affiche des chiffres et des graphiques tirés de données, mise à jour automatiquement."},
+    {"mot": "Connecteur", "def": "Un lien que tu autorises entre l'assistant et un autre service (agenda, messagerie, base de données) pour qu'il y lise des informations."}
+  ],
+  "sources": [
+    {"nom": "Anthropic (Claude) — Introducing Claude Whiteboards, Claude Sheets, and Claude Data", "url": "https://claude.com/resources/articles/sheets-whiteboards-data", "date": "2026-11-10", "consulte": "2026-11-11", "type": "primaire"},
+    {"nom": "Anthropic (Claude) — More ways to work with Claude: Sheets, Whiteboards, and Interactive Connectors", "url": "https://claude.com/resources/articles/more-ways-to-work-with-claude-sheets-whiteboards-and-interactive-connectors", "date": "2026-11-10", "consulte": "2026-11-11", "type": "primaire"},
+    {"nom": "TechCrunch — Anthropic launches Claude Meetings to turn workplace discussions into plans and tasks", "url": "https://techcrunch.com/2026/11/10/anthropic-launches-claude-meetings-to-turn-workplace-discussions-into-plans-and-tasks/", "date": "2026-11-10", "consulte": "2026-11-11", "type": "presse"}
+  ],
+  "revue": "humaine"
+}
