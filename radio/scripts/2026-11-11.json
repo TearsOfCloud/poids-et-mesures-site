@@ -1,0 +1,73 @@
+{
+ "date": "2026-11-11",
+ "segments": [
+  {
+   "id": "journal-2026-11-11",
+   "format": "journal",
+   "titre": "Le journal du 11 novembre",
+   "sources": [
+    {
+     "type": "breve",
+     "slug": "2026-11-11-claude-whiteboards-sheets-data"
+    },
+    {
+     "type": "breve",
+     "slug": "2026-11-11-grok-build-apps-ouvertes-a-tous"
+    }
+   ],
+   "texte": "Bonjour, c'est le journal de Poids et Mesures, mercredi onze novembre. Deux sujets. Et pour chacun, on sépare ce qui est annoncé de ce qui est vraiment mesuré.\n\nPremier sujet. Claude lance un tableau blanc et un tableur que l'IA remplit avec toi. Anthropic ajoute trois nouveautés à Claude. Whiteboards est un tableau blanc partagé : tu racontes un projet un peu brouillon à voix haute, et Claude le range en planning avec des responsables et des dates. Sheets est un tableur que Claude construit et modifie avec toi, avec des onglets, des formules et des listes déroulantes, à partir d'une simple demande comme : un suivi de campagne. Et Claude Data est le nouveau nom des tableaux de bord, un tableau de bord étant une page qui affiche des chiffres tirés de tes données. Whiteboards et Sheets sont en bêta, c'est-à-dire en test, sur les offres payantes. Anthropic précise que Sheets n'a pour l'instant que des fonctions de tableur simples : pour aller plus loin, on exporte vers Excel. Tout vient d'Anthropic, y compris les témoignages d'entreprises sur les gains de temps, sans mesure indépendante. Ton réflexe : si tu as une offre payante, teste Sheets sur un tableau simple, sans donnée sensible, et relis chaque cellule modifiée avant de t'y fier.\n\nDeuxième sujet. Des applis créées avec Grok restent ouvertes à quiconque connaît leur adresse, selon une société de sécurité. Grok Build permet de décrire une appli dans une conversation et de la publier en un clic. Selon Claroc, une société de sécurité, plus de trente-cinq mille de ces applis s'ouvrent sans aucune connexion, soit quatre-vingt-quatorze virgule sept pour cent de celles qui étaient en ligne lors de son test. Claroc estime que plusieurs centaines contenaient des données privées, dont vingt-quatre applis internes de SpaceXSI, la société issue de la fusion de SpaceX et xAI. Le mécanisme est simple : chaque appli publiée reçoit sa propre adresse. Dès que quelqu'un l'ouvre, cette adresse est enregistrée dans des bases publiques de requêtes, une sorte de carnet d'adresses d'internet que n'importe qui peut fouiller. Claroc dit aussi que l'option : quiconque a le lien, était cochée par défaut au moment de publier. SpaceXSI répond que les applis sont privées tant que leur auteur ne choisit pas de les partager. L'entreprise a retiré les vingt-quatre applis internes. Ce sont les chiffres de Claroc, pas une mesure indépendante. Ton réflexe : avant de publier une appli faite avec une IA, choisis : moi seul, ou : utilisateurs invités. Puis ouvre l'adresse en navigation privée, pour vérifier qu'un inconnu reçoit une erreur. Et ne mets jamais de mot de passe ni de données de clients dedans.\n\nPour le détail et les sources de chaque sujet, va lire les brèves sur le site."
+  },
+  {
+   "id": "breve-claude-whiteboards-sheets",
+   "format": "breve",
+   "titre": "Une brève : Claude lance un tableau blanc et un tableur",
+   "sources": [
+    {
+     "type": "breve",
+     "slug": "2026-11-11-claude-whiteboards-sheets-data"
+    }
+   ],
+   "texte": "Une brève. Claude lance un tableau blanc et un tableur que l'IA remplit avec toi.\n\nAnthropic ajoute trois nouveautés à Claude. Whiteboards est un tableau blanc partagé : tu racontes un projet un peu brouillon à voix haute, et Claude le range en planning avec des responsables et des dates. Sheets est un tableur que Claude construit et modifie avec toi, avec des onglets, des formules et des listes déroulantes, à partir d'une simple demande comme : un suivi de campagne. Et Claude Data est le nouveau nom des tableaux de bord, un tableau de bord étant une page qui affiche des chiffres tirés de tes données. Whiteboards et Sheets sont en bêta, c'est-à-dire en test, sur les offres payantes. Anthropic précise que Sheets n'a pour l'instant que des fonctions de tableur simples : pour aller plus loin, on exporte vers Excel. Tout vient d'Anthropic, y compris les témoignages d'entreprises sur les gains de temps, sans mesure indépendante. Ton réflexe : si tu as une offre payante, teste Sheets sur un tableau simple, sans donnée sensible, et relis chaque cellule modifiée avant de t'y fier."
+  },
+  {
+   "id": "breve-grok-build-apps-ouvertes",
+   "format": "breve",
+   "titre": "Une brève : des applis Grok ouvertes à tous",
+   "sources": [
+    {
+     "type": "breve",
+     "slug": "2026-11-11-grok-build-apps-ouvertes-a-tous"
+    }
+   ],
+   "texte": "Une brève. Des applis créées avec Grok restent ouvertes à quiconque connaît leur adresse, selon une société de sécurité.\n\nGrok Build permet de décrire une appli dans une conversation et de la publier en un clic. Selon Claroc, une société de sécurité, plus de trente-cinq mille de ces applis s'ouvrent sans aucune connexion, soit quatre-vingt-quatorze virgule sept pour cent de celles qui étaient en ligne lors de son test. Claroc estime que plusieurs centaines contenaient des données privées, dont vingt-quatre applis internes de SpaceXSI, la société issue de la fusion de SpaceX et xAI. Le mécanisme est simple : chaque appli publiée reçoit sa propre adresse. Dès que quelqu'un l'ouvre, cette adresse est enregistrée dans des bases publiques de requêtes, une sorte de carnet d'adresses d'internet que n'importe qui peut fouiller. Claroc dit aussi que l'option : quiconque a le lien, était cochée par défaut au moment de publier. SpaceXSI répond que les applis sont privées tant que leur auteur ne choisit pas de les partager. L'entreprise a retiré les vingt-quatre applis internes. Ce sont les chiffres de Claroc, pas une mesure indépendante. Ton réflexe : avant de publier une appli faite avec une IA, choisis : moi seul, ou : utilisateurs invités. Puis ouvre l'adresse en navigation privée, pour vérifier qu'un inconnu reçoit une erreur. Et ne mets jamais de mot de passe ni de données de clients dedans."
+  },
+  {
+   "id": "titres-2026-11-11",
+   "format": "titres",
+   "titre": "Les titres du 11 novembre",
+   "sources": [
+    {
+     "type": "breve",
+     "slug": "2026-11-11-claude-whiteboards-sheets-data"
+    },
+    {
+     "type": "breve",
+     "slug": "2026-11-11-grok-build-apps-ouvertes-a-tous"
+    }
+   ],
+   "texte": "Les titres. Le tour du jour, en quelques secondes.\n\nClaude lance Whiteboards et Sheets : un tableau blanc et un tableur que l'IA remplit avec toi, en bêta sur les offres payantes.\n\nEt des milliers d'applis créées avec Grok s'ouvrent sans connexion, selon la société de sécurité Claroc. Ses chiffres, pas une mesure indépendante.\n\nPour le détail et les sources, tout est sur le site."
+  },
+  {
+   "id": "mot-pese-appli-privee-par-defaut",
+   "format": "bases",
+   "titre": "Le mot pesé : accès par défaut",
+   "sources": [
+    {
+     "type": "breve",
+     "slug": "2026-11-11-grok-build-apps-ouvertes-a-tous"
+    }
+   ],
+   "texte": "Le mot pesé. Accès par défaut.\n\nC'est le réglage qu'un outil applique tant que tu n'as rien choisi. Dans le cas des applis Grok, Claroc dit que l'option : quiconque a le lien, était cochée au moment de publier.\n\nTon réflexe : avant de publier quoi que ce soit en ligne, regarde le réglage d'accès choisi pour toi, et prends le plus restreint qui suffit."
+  }
+ ]
+}
