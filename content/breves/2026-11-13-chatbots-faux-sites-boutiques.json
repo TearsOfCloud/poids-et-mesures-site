@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-13", "heure": "08:40",
+  "rubrique": "recherche",
+  "titre": "Étude : ChatGPT, Gemini et Perplexity recommandent parfois de faux sites de boutiques",
+  "resume": "Une société de protection de marques a testé 151 marques : environ 9 % des réponses citaient un site risqué (faux, copie ou abandonné). Étude d'un acteur intéressé, à lire avec recul.",
+  "en_clair": [
+    "L'entreprise Podqi, qui vend de la protection de marques, a posé les mêmes cinq questions du type « où acheter [marque] ? » à ChatGPT, Gemini et Perplexity, pour 151 marques, en septembre. Sur 6 795 réponses, environ 9 % montraient un site « risqué » : site qui imite une vraie marque, vendeur de contrefaçons présumées, ou site mort (adresse abandonnée que n'importe qui peut racheter).",
+    "Selon Podqi, Perplexity en montre le plus (15 % de ses réponses), puis ChatGPT (8 %) et Gemini (4 %). Quand un site risqué apparaît, il est recommandé comme lieu d'achat dans 57 % des cas, cité sans commentaire dans 34 % et accompagné d'un avertissement dans 9 %. La question la plus risquée est « quels sont les sites régionaux de la marque ? ». Les prompts ont été écrits par Podqi, pas tirés de vraies conversations, et Podqi tire un intérêt commercial du sujet. Google, OpenAI et Perplexity ont répondu à The Verge : Google et OpenAI disent améliorer leurs protections, Perplexity défend sa précision.",
+    "Ce n'est donc pas une mesure indépendante de ce que vivent les acheteurs, mais l'ordre de grandeur est un bon rappel : une IA peut présenter avec assurance une adresse qui n'est pas la bonne, surtout pour un site étranger ou une petite marque."
+  ],
+  "pour_toi": "Avant de saisir une carte bancaire sur une adresse donnée par une IA, ouvre le site officiel de la marque par ton moteur de recherche habituel ou son compte officiel, et compare l'adresse exacte. Méfie-toi d'un « site officiel pour l'étranger » donné par un chatbot : passe plutôt par la page d'accueil de la marque pour changer de pays.",
+  "termes": [
+    {"mot": "Site risqué (au sens de l'étude)", "def": "Un site qui semble imiter une marque, vendre des contrefaçons, ou une adresse devenue inactive qui pourrait être rachetée et réutilisée."},
+    {"mot": "Contrefaçon", "def": "Une copie illégale d'un produit de marque vendue comme si elle était authentique."},
+    {"mot": "Nom de domaine", "def": "L'adresse d'un site (par exemple marque.com). Quand une marque l'abandonne, quelqu'un d'autre peut l'acheter."}
+  ],
+  "sources": [
+    {"nom": "Podqi — AI search is recommending fake retail websites", "url": "https://podqi.com/research/ai-search-brand-risk", "date": "2026-11-12", "consulte": "2026-11-13", "type": "primaire"},
+    {"nom": "The Verge — AI chatbots are recommending fake retail websites, study finds", "url": "https://www.theverge.com/ai-artificial-intelligence/1032020/gemini-chatgpt-perplexity-shopping-test-risky-fake-websites-citations", "date": "2026-11-12", "consulte": "2026-11-13", "type": "presse"}
+  ],
+  "revue": "humaine"
+}
