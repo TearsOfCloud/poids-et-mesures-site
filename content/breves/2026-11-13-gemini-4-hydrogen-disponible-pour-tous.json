@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-13", "heure": "08:40",
+  "rubrique": "outils",
+  "titre": "Google lance Gemini 4 Hydrogen, un modèle rapide, dans l'appli Gemini et la Recherche",
+  "resume": "Google déploie Gemini 4 Hydrogen, modèle « rapide » de la famille Gemini 4, pour tous : l'appli, la Recherche et l'API. Les chiffres de performance viennent de Google.",
+  "en_clair": [
+    "Le 12 novembre, Google a présenté Gemini 4 Hydrogen. C'est le modèle conçu pour aller vite sur les tâches de tous les jours (écrire, chercher, coder), à côté de Gemini 4 Carbon et Argon, réservés au raisonnement long et difficile. Il remplace Gemini 3.8 Flash. Google dit qu'il termine ses tâches 2,5 fois plus vite que 3.8 Flash et qu'il réduit de plus de 5 fois les affirmations inventées, sans préciser ici comment c'est mesuré.",
+    "Pour toi, le changement le plus visible est dans la Recherche Google : Google annonce qu'elle comprend mieux une question posée comme tu la penses (plusieurs parties, fautes de frappe, demande très précise), avec des réponses plus visuelles et un plus large choix de liens. Dans l'appli Gemini, Hydrogen est dans le menu des modèles. Les utilisateurs gratuits y accèdent via la sélection automatique, quand Google juge que c'est le bon modèle pour la question. Côté développeurs, le prix annoncé est de 1,50 $ par million de jetons en entrée et 7,50 $ en sortie.",
+    "Tous les résultats chiffrés viennent de Google et de benchmarks (séries de tests) choisis par Google. Par exemple, Hydrogen dépasse Argon sur l'Artificial Analysis Intelligence Index (51 contre 50), un indice tenu par un tiers, mais Google ne publie pas ici de test indépendant sur l'usage réel. À vérifier sur tes propres questions."
+  ],
+  "pour_toi": "Rien à installer. Si tu utilises la Recherche Google ou l'appli Gemini, tu peux poser une question compliquée en une seule phrase, avec tes mots à toi, et regarder si la réponse cite des liens que tu peux vérifier. Sur un chiffre ou un conseil important, clique sur la source avant d'agir.",
+  "termes": [
+    {"mot": "Modèle", "def": "Le programme d'IA qui produit les réponses. Une même application peut en utiliser plusieurs, plus ou moins rapides ou puissants."},
+    {"mot": "Benchmark", "def": "Une série de tests chiffrés qui sert à comparer des modèles. Les résultats dépendent des tests choisis et de qui les fait passer."},
+    {"mot": "Jeton (token)", "def": "Un petit morceau de texte (un mot ou une partie de mot) : c'est l'unité dans laquelle l'IA lit et écrit, et dans laquelle son usage est facturé."},
+    {"mot": "API", "def": "Une porte d'accès qui permet à d'autres programmes d'utiliser le modèle directement, sans passer par l'appli."}
+  ],
+  "sources": [
+    {"nom": "Google DeepMind — Introducing Gemini 4 Hydrogen", "url": "https://deepmind.google/blog/introducing-gemini-4-hydrogen/", "date": "2026-11-12", "consulte": "2026-11-13", "type": "primaire"},
+    {"nom": "The Verge — Google's new Gemini model is better at understanding complicated questions", "url": "https://www.theverge.com/ai-artificial-intelligence/1032505/google-search-ai-mode-gemini-4-hydrogen", "date": "2026-11-12", "consulte": "2026-11-13", "type": "presse"}
+  ],
+  "revue": "humaine"
+}
