@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-09", "heure": "08:44",
+  "rubrique": "outils",
+  "titre": "PostgreSQL 19 sortira plus tard que d'habitude : l'IA trouve trop de bugs d'un coup",
+  "resume": "La base de données PostgreSQL repousse sa version 19 au 19 novembre. Un développeur du projet attribue le retard aux nombreux bugs que des outils d'IA permettent de découvrir.",
+  "en_clair": [
+    "PostgreSQL est un logiciel libre de gestion de bases de données, très utilisé pour stocker les données d'applications et de sites. Son équipe de publication a annoncé le 10 octobre que la version 19 sortirait le 19 novembre, au lieu de la fenêtre habituelle de mi-septembre à mi-octobre. Raison officielle : le grand nombre de correctifs ajoutés aux anciennes versions, qu'elle veut intégrer dans une seconde version candidate (RC 2), prévue le 12 novembre.",
+    "Un article publié le 21 octobre sur le blog de Neon, une entreprise qui propose PostgreSQL en ligne, par un développeur du projet, va plus loin : selon lui, les modèles de langage (les IA qui comprennent et écrivent du texte) font découvrir bien plus de bugs qu'avant, et les humains doivent relire chaque correctif. Il cite 433 modifications appliquées à la version 18 entre avril et septembre 2026, contre 248 un an plus tôt. Trois fonctions ont aussi été retirées tard de la version 19.",
+    "Attention à ce qui est établi : le calendrier est confirmé par le projet lui-même. Le lien avec l'IA est l'analyse d'un participant, pas une conclusion officielle de l'équipe de publication. Il note lui-même que les correctifs rédigés par IA ne sont pas toujours corrects et demandent une relecture humaine."
+  ],
+  "pour_toi": "Si tu utilises PostgreSQL pour un projet, rien d'urgent : la version actuelle reste suivie, et la 19 n'est pas encore sortie. Évite simplement de la mettre en production avant sa sortie officielle, et applique les mises à jour de sécurité de ta version actuelle quand elles arrivent, notamment celle prévue le 12 novembre.",
+  "termes": [
+    {"mot": "PostgreSQL", "def": "Un logiciel libre qui stocke et organise les données d'applications, sous forme de tables."},
+    {"mot": "Version candidate (RC)", "def": "Une version presque finale, publiée pour être testée avant la sortie officielle."},
+    {"mot": "Correctif rétroporté", "def": "Une correction d'un bug appliquée aussi aux versions plus anciennes encore maintenues."}
+  ],
+  "sources": [
+    {"nom": "PostgreSQL — Updated PostgreSQL RC / GA dates (liste pgsql-hackers)", "url": "https://www.postgresql.org/message-id/f161fbb7-e193-42eb-bec7-4cfc1af74a50@postgresql.org", "date": "2026-10-10", "consulte": "2026-11-09", "type": "primaire"},
+    {"nom": "PostgreSQL — PostgreSQL 19 RC 1 Released!", "url": "https://www.postgresql.org/about/news/postgresql-19-rc-1-released-3409/", "date": "2026-10-15", "consulte": "2026-11-09", "type": "primaire"},
+    {"nom": "Neon — Postgres 19 is late, and it's AI's fault", "url": "https://neon.com/blog/postgres-19-is-late-and-its-ais-fault", "date": "2026-10-21", "consulte": "2026-11-09", "type": "presse"}
+  ],
+  "revue": "humaine"
+}
