@@ -16,7 +16,6 @@
   ],
   "sources": [
     {"nom": "Survival LLM (Brangus) — page du projet, résultats des tests et notes de version", "url": "https://www.brangus.io/survival-llm", "date": "2026-10-29", "consulte": "2026-11-02", "type": "primaire"},
-    {"nom": "Survival LLM — README du dépôt GitHub (comment ça marche, méthode de test)", "url": "https://github.com/anonnerdfrenzy/survival-llm", "date": "2026-10-29", "consulte": "2026-11-02", "type": "primaire"},
     {"nom": "Numerama — Conçu pour les situations d'urgence : cette IA hors ligne…", "url": "https://www.numerama.com/tech/2364545-concu-pour-les-situations-durgence-cette-ia-hors-ligne-veut-vous-aider-a-survivre-a-la-fin-du-monde-ou-au-moins-a-une-panne-de-courant.html", "date": "2026-11-01", "consulte": "2026-11-02", "type": "presse"}
   ],
   "revue": "humaine"
