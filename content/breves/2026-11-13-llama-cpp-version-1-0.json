@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-13", "heure": "08:40",
+  "rubrique": "outils",
+  "titre": "llama.cpp, le moteur de l'IA en local, passe en version 1.0.0",
+  "resume": "Le projet qui permet de faire tourner des modèles d'IA sur son propre ordinateur publie sa version 1.0.0 et promet de signaler clairement tout changement qui casse les applications.",
+  "en_clair": [
+    "llama.cpp est un logiciel libre qui fait tourner des modèles d'IA directement sur un ordinateur ou un téléphone, sans envoyer tes textes à un serveur distant. Beaucoup d'applications d'IA locale s'appuient dessus. Le 13 novembre, l'équipe (hébergée chez Hugging Face) publie la version 1.0.0 de llama.cpp et de ggml, la bibliothèque de calcul qui le fait fonctionner.",
+    "Ce numéro 1.0.0 ne marque pas une grosse nouveauté pour l'utilisateur : c'est un engagement. D'après l'annonce, un changement qui casse la compatibilité avec les programmes existants entraînera désormais un changement du premier numéro de version, ce qui prévient les développeurs qui s'en servent. L'annonce indique aussi que llama.cpp gère plus de 150 variantes d'architectures de modèles, et précise de nouveaux canaux de distribution (Docker, Homebrew, Winget, etc.).",
+    "Il n'y a ici aucune mesure de performance : c'est une annonce du projet lui-même, sur son organisation et sa stabilité."
+  ],
+  "pour_toi": "Rien à faire si tu utilises l'IA via un site ou une appli. Retiens que l'IA « en local » existe et que ses briques deviennent plus stables : si un jour tu veux tester un modèle sans envoyer tes données en ligne, l'annonce indique des applications de bureau pour Mac et Windows, mais choisis un outil connu et lis ce qu'il fait de tes fichiers.",
+  "termes": [
+    {"mot": "IA en local", "def": "Un modèle qui tourne sur ton propre appareil : tes textes n'ont pas besoin de partir sur Internet."},
+    {"mot": "Bibliothèque (logiciel)", "def": "Un morceau de code que d'autres programmes réutilisent au lieu de le réécrire."},
+    {"mot": "Version majeure", "def": "Le premier numéro d'une version (le « 1 » de 1.0.0). Quand il change, des programmes existants peuvent ne plus fonctionner sans adaptation."}
+  ],
+  "sources": [
+    {"nom": "Hugging Face (ggml-org) — llama.cpp v1.0.0 : A stronger foundation for the local AI ecosystem", "url": "https://huggingface.co/blog/ggml-org/llama-cpp-v1", "date": "2026-11-13", "consulte": "2026-11-13", "type": "primaire"}
+  ],
+  "revue": "humaine"
+}
