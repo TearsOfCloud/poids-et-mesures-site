@@ -1,0 +1,37 @@
+{
+  "date": "2026-11-14",
+  "heure": "08:40",
+  "rubrique": "regles",
+  "titre": "Les autorités européennes de données contrôleront le tri de CV par IA en 2027",
+  "resume": "Le CEPD a choisi la décision automatisée, dont le recrutement assisté par IA, comme thème de sa prochaine action coordonnée de contrôle, lancée en 2027.",
+  "en_clair": [
+    "Le 10 novembre, le Comité européen de la protection des données (CEPD), qui réunit les autorités nationales comme la CNIL, a choisi le thème de sa sixième action coordonnée : la prise de décision automatisée, notamment les systèmes de recrutement assistés par l'IA. La CNIL relaie l'information le 12 novembre.",
+    "Concrètement, les autorités vérifieront comment est respecté le droit de ne pas faire l'objet d'une décision fondée uniquement sur un traitement automatisé, et le droit d'accès correspondant, pour les outils automatisés de sélection de candidats, y compris ceux qui reposent sur l'IA. Les autorités participeront sur une base volontaire dans les semaines à venir, et l'action sera lancée en 2027.",
+    "Ce n'est ni une sanction ni une nouvelle règle : c'est l'annonce d'un thème de contrôle. La page de la CNIL signale être une traduction automatique d'un texte du CEPD, qui peut contenir des erreurs."
+  ],
+  "pour_toi": "Si tu postules, tu as en droit européen le droit de ne pas être jugé uniquement par une machine et de demander l'accès à tes données : tu peux demander par écrit à l'entreprise si un tri automatique a été utilisé. Si tu recrutes, garde une personne dans la décision finale.",
+  "termes": [
+    {
+      "mot": "Action coordonnée",
+      "def": "Un contrôle mené en même temps par plusieurs autorités de protection des données sur un même sujet."
+    },
+    {
+      "mot": "Décision automatisée",
+      "def": "Une décision prise par un logiciel sans qu'une personne intervienne."
+    },
+    {
+      "mot": "Droit d'accès",
+      "def": "Le droit de demander à un organisme quelles données il détient sur toi."
+    }
+  ],
+  "sources": [
+    {
+      "nom": "CNIL — Actualité du CEPD : adéquation de la Corée du Sud, versions finales des BCR-ST, et action coordonnée sur le recrutement via IA",
+      "url": "https://www.cnil.fr/fr/actualite-du-cepd-adequation-de-la-coree-du-sud-versions-finales-des-bcr-st-et-action-coordonnee-sur",
+      "date": "2026-11-12",
+      "consulte": "2026-11-14",
+      "type": "primaire"
+    }
+  ],
+  "revue": "humaine"
+}
