@@ -1,0 +1,93 @@
+{
+ "date": "2026-11-14",
+ "segments": [
+  {
+   "id": "journal-2026-11-14",
+   "format": "journal",
+   "titre": "Le journal du 14 novembre",
+   "sources": [
+    {
+     "type": "breve",
+     "slug": "2026-11-14-gemini-decisions-api-reponses-fermees"
+    },
+    {
+     "type": "breve",
+     "slug": "2026-11-14-united-restreint-agents-ia-tiers"
+    },
+    {
+     "type": "breve",
+     "slug": "2026-11-14-cepd-controle-recrutement-par-ia-2027"
+    }
+   ],
+   "texte": "Bonjour, c'est le journal de Poids et Mesures, samedi quatorze novembre. Trois sujets. Et pour chacun, on sépare ce qui est annoncé de ce qui est vraiment mesuré.\n\nPremier sujet. Une API de Google qui note des options au lieu d'écrire une réponse. Google DeepMind présente la Gemini Decisions API, un service pour développeurs. Au lieu d'écrire une réponse mot par mot, comme un chatbot, il reçoit un texte, une image, un son ou un document, et jusqu'à mille questions fermées : oui ou non, un choix parmi des options, ou une note. Pour chaque question, il renvoie des probabilités et un score de confiance entre zéro et un. À quoi ça sert : trier, orienter ou contrôler très vite, par exemple choisir quel modèle traitera une demande. Quand la confiance est basse, le programme peut envoyer le cas à une personne. Les chiffres de vitesse et de prix sont ceux de Google : entre cent cinquante et deux cent cinquante millisecondes, et dix centimes de dollar par million de jetons en entrée, soit près de cinq fois moins cher qu'un autre modèle Gemini, toujours selon Google. Aucune mesure indépendante n'est citée. Ton réflexe : rien à faire si tu utilises un chatbot. Retiens simplement qu'une partie des décisions prises en coulisses par les applis peut se faire sans écrire de texte, donc plus vite et à moindre coût.\n\nDeuxième sujet. United Airlines veut bloquer les assistants IA tiers qui gèrent tes vols. United Airlines annonce qu'elle va restreindre l'accès, sur ses plateformes, aux assistants IA personnels tiers non autorisés. Ce sont les outils auxquels on confie sa connexion pour qu'ils réservent, modifient ou gèrent un voyage à sa place. Raisons données par United : partager ses identifiants avec un assistant peut exposer des informations sensibles, et ses actions peuvent entraîner des achats, des changements de compte ou une utilisation des miles non voulus. La compagnie ajoute que certaines actions automatiques pourraient enfreindre des règles de l'aviation américaine, par exemple l'enregistrement d'un vol, où une personne doit confirmer le contenu de ses bagages. Attention : c'est une annonce d'intention, aucune date d'application n'est précisée. Ton réflexe : ne donne jamais ton mot de passe à un assistant IA pour qu'il se connecte à ta place, que ce soit pour un voyage ou pour ta banque. Passe plutôt par l'appli officielle du service.\n\nTroisième sujet. L'Europe contrôlera le tri de CV par IA en deux mille vingt-sept. Le Comité européen de la protection des données, qui réunit les autorités nationales comme la CNIL, a choisi le thème de sa prochaine action coordonnée : la prise de décision automatisée, notamment les systèmes de recrutement assistés par l'IA. Une action coordonnée, c'est un contrôle mené en même temps par plusieurs autorités sur un même sujet. Elles vérifieront comment est respecté le droit de ne pas faire l'objet d'une décision fondée uniquement sur un traitement automatisé, et le droit d'accès correspondant. L'action sera lancée en deux mille vingt-sept. Attention : ce n'est ni une sanction ni une nouvelle règle, c'est l'annonce d'un thème de contrôle. Ton réflexe : si tu postules, tu peux demander par écrit à l'entreprise si un tri automatique a été utilisé. Et si tu recrutes, garde une personne dans la décision finale.\n\nPour le détail et les sources de chaque sujet, va lire les brèves sur le site."
+  },
+  {
+   "id": "breve-gemini-decisions-api",
+   "format": "breve",
+   "titre": "Une brève : une API Google qui note des options",
+   "sources": [
+    {
+     "type": "breve",
+     "slug": "2026-11-14-gemini-decisions-api-reponses-fermees"
+    }
+   ],
+   "texte": "Une brève. Une API de Google qui note des options au lieu d'écrire une réponse.\n\nGoogle DeepMind présente la Gemini Decisions API, un service pour développeurs. Au lieu d'écrire une réponse mot par mot, comme un chatbot, il reçoit un texte, une image, un son ou un document, et jusqu'à mille questions fermées : oui ou non, un choix parmi des options, ou une note. Pour chaque question, il renvoie des probabilités et un score de confiance entre zéro et un. À quoi ça sert : trier, orienter ou contrôler très vite, par exemple choisir quel modèle traitera une demande. Quand la confiance est basse, le programme peut envoyer le cas à une personne. Les chiffres de vitesse et de prix sont ceux de Google : entre cent cinquante et deux cent cinquante millisecondes, et dix centimes de dollar par million de jetons en entrée, soit près de cinq fois moins cher qu'un autre modèle Gemini, toujours selon Google. Aucune mesure indépendante n'est citée. Ton réflexe : rien à faire si tu utilises un chatbot. Retiens simplement qu'une partie des décisions prises en coulisses par les applis peut se faire sans écrire de texte, donc plus vite et à moindre coût."
+  },
+  {
+   "id": "breve-united-agents-ia",
+   "format": "breve",
+   "titre": "Une brève : United bloque les assistants IA tiers",
+   "sources": [
+    {
+     "type": "breve",
+     "slug": "2026-11-14-united-restreint-agents-ia-tiers"
+    }
+   ],
+   "texte": "Une brève. United Airlines veut bloquer les assistants IA tiers qui gèrent tes vols.\n\nUnited Airlines annonce qu'elle va restreindre l'accès, sur ses plateformes, aux assistants IA personnels tiers non autorisés. Ce sont les outils auxquels on confie sa connexion pour qu'ils réservent, modifient ou gèrent un voyage à sa place. Raisons données par United : partager ses identifiants avec un assistant peut exposer des informations sensibles, et ses actions peuvent entraîner des achats, des changements de compte ou une utilisation des miles non voulus. La compagnie ajoute que certaines actions automatiques pourraient enfreindre des règles de l'aviation américaine, par exemple l'enregistrement d'un vol, où une personne doit confirmer le contenu de ses bagages. Attention : c'est une annonce d'intention, aucune date d'application n'est précisée. Ton réflexe : ne donne jamais ton mot de passe à un assistant IA pour qu'il se connecte à ta place, que ce soit pour un voyage ou pour ta banque. Passe plutôt par l'appli officielle du service."
+  },
+  {
+   "id": "breve-cepd-recrutement-ia",
+   "format": "breve",
+   "titre": "Une brève : l'Europe contrôlera le tri de CV par IA",
+   "sources": [
+    {
+     "type": "breve",
+     "slug": "2026-11-14-cepd-controle-recrutement-par-ia-2027"
+    }
+   ],
+   "texte": "Une brève. Les autorités européennes de données contrôleront le tri de CV par IA en deux mille vingt-sept.\n\nLe Comité européen de la protection des données, qui réunit les autorités nationales comme la CNIL, a choisi le thème de sa prochaine action coordonnée : la prise de décision automatisée, notamment les systèmes de recrutement assistés par l'IA. Une action coordonnée, c'est un contrôle mené en même temps par plusieurs autorités sur un même sujet. Elles vérifieront comment est respecté le droit de ne pas faire l'objet d'une décision fondée uniquement sur un traitement automatisé, et le droit d'accès correspondant. L'action sera lancée en deux mille vingt-sept. Attention : ce n'est ni une sanction ni une nouvelle règle, c'est l'annonce d'un thème de contrôle. Ton réflexe : si tu postules, tu peux demander par écrit à l'entreprise si un tri automatique a été utilisé. Et si tu recrutes, garde une personne dans la décision finale."
+  },
+  {
+   "id": "titres-2026-11-14",
+   "format": "titres",
+   "titre": "Les titres du 14 novembre",
+   "sources": [
+    {
+     "type": "breve",
+     "slug": "2026-11-14-gemini-decisions-api-reponses-fermees"
+    },
+    {
+     "type": "breve",
+     "slug": "2026-11-14-united-restreint-agents-ia-tiers"
+    },
+    {
+     "type": "breve",
+     "slug": "2026-11-14-cepd-controle-recrutement-par-ia-2027"
+    }
+   ],
+   "texte": "Les titres. Le tour du jour, en quelques secondes.\n\nGoogle lance la Gemini Decisions API : un modèle qui note des options au lieu d'écrire un texte, avec des chiffres de vitesse et de prix qui viennent de Google.\n\nUnited Airlines annonce vouloir bloquer les assistants IA tiers qui gèrent tes vols, sans date précisée.\n\nEt les autorités européennes de données contrôleront le tri de CV par IA en deux mille vingt-sept.\n\nPour le détail et les sources, tout est sur le site."
+  },
+  {
+   "id": "mot-pese-score-de-confiance",
+   "format": "bases",
+   "titre": "Le mot pesé : score de confiance",
+   "sources": [
+    {
+     "type": "breve",
+     "slug": "2026-11-14-gemini-decisions-api-reponses-fermees"
+    }
+   ],
+   "texte": "Le mot pesé. Score de confiance.\n\nC'est un nombre entre zéro et un qui indique à quel point un modèle est sûr de sa réponse. Dans la Gemini Decisions API, il permet d'envoyer à une personne les cas où la confiance est basse.\n\nTon réflexe : un score élevé n'est pas une garantie. Regarde surtout ce qui se passe quand il est bas : qui reprend la main, et à quel moment."
+  }
+ ]
+}
