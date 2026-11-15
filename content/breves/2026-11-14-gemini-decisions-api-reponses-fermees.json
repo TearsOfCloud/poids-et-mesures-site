@@ -1,0 +1,41 @@
+{
+  "date": "2026-11-14",
+  "heure": "08:40",
+  "rubrique": "outils",
+  "titre": "Google lance une API qui note des options au lieu d'écrire une réponse",
+  "resume": "La Gemini Decisions API, ouverte aux développeurs, répond à des questions fermées (oui/non, choix, note) avec un score de confiance, sans générer de texte.",
+  "en_clair": [
+    "Le 11 novembre, Google DeepMind présente la Gemini Decisions API, un service pour développeurs reposant sur un nouveau modèle, Gemini Decision 1. Au lieu d'écrire une réponse mot par mot, comme un chatbot, il reçoit une entrée (texte, image, son, vidéo ou PDF) et jusqu'à 1 000 questions fermées : oui/non, choix parmi des options, ou note sur une grille. Pour chaque question, il renvoie des probabilités et un score de confiance entre 0 et 1.",
+    "À quoi ça sert : trier, router ou contrôler très vite. Google cite des usages en interne, par exemple choisir quel modèle traitera une question dans Gemini Notebook, ou choisir un emoji parmi plus de 200. L'idée est que le programme du développeur envoie les cas incertains à une personne ou à un autre outil quand la confiance est basse.",
+    "Les chiffres de vitesse et de prix sont ceux de Google : 150 à 250 millisecondes de bout en bout, 0,10 dollar par million de jetons en entrée et aucun jeton de sortie facturé, soit « près de 5 fois moins cher » qu'un autre modèle Gemini d'après Google. L'article ne renvoie à aucune mesure indépendante."
+  ],
+  "pour_toi": "Rien à faire si tu utilises l'IA via un chatbot. Retiens qu'une partie des « décisions » prises en coulisses par les applis (trier un message, choisir quel modèle répond) peut se faire sans générer de texte, donc plus vite et à moindre coût. Si tu développes, un accès gratuit pour tester existe dans Google AI Studio, d'après l'annonce.",
+  "termes": [
+    {
+      "mot": "API",
+      "def": "Une porte d'entrée qui permet à un programme d'utiliser un service, ici un modèle d'IA, sans passer par une page web."
+    },
+    {
+      "mot": "Score de confiance",
+      "def": "Un nombre entre 0 et 1 qui indique à quel point le modèle est sûr de sa réponse."
+    },
+    {
+      "mot": "Jeton (token)",
+      "def": "Un petit morceau de texte (un mot ou une partie de mot) servant d'unité de comptage et de facturation."
+    },
+    {
+      "mot": "Routage de modèle",
+      "def": "Choisir automatiquement quel modèle d'IA traite une demande, selon sa difficulté."
+    }
+  ],
+  "sources": [
+    {
+      "nom": "Google (blog IA) — Gemini Decisions API: Fast, calibrated multimodal decisions",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
+      "date": "2026-11-11",
+      "consulte": "2026-11-14",
+      "type": "primaire"
+    }
+  ],
+  "revue": "humaine"
+}

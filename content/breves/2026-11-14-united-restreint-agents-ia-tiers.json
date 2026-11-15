@@ -1,0 +1,44 @@
+{
+  "date": "2026-11-14",
+  "heure": "08:40",
+  "rubrique": "entreprises",
+  "titre": "United Airlines va bloquer les assistants IA tiers qui gèrent tes vols",
+  "resume": "La compagnie annonce restreindre l'accès aux agents IA personnels extérieurs, en invoquant la sécurité des comptes et la réglementation aérienne américaine.",
+  "en_clair": [
+    "Le 11 novembre, United Airlines publie un communiqué : elle va restreindre l'accès, sur ses plateformes et via les agences et agrégateurs de voyages, aux « agents ou assistants IA personnels » tiers non autorisés. Il s'agit des outils auxquels on confie sa connexion pour qu'ils réservent, modifient ou gèrent un voyage à sa place.",
+    "Raisons données par United : partager ses identifiants avec un assistant peut exposer des informations sensibles, et ses actions peuvent entraîner des achats, des changements de compte ou une utilisation des miles non voulus. La compagnie ajoute que ces actions automatiques pourraient enfreindre des règles de la FAA et du DOT, par exemple l'enregistrement d'un vol qui exige qu'une personne confirme que ses bagages ne contiennent pas de produits interdits.",
+    "United dit que d'autres secteurs, banque et commerce, ont pris des mesures similaires, et qu'elle va mettre à jour son Digital Trust Center pour expliquer les restrictions. Aucune date d'application n'est précisée dans le communiqué : c'est une annonce d'intention, pas une mesure déjà constatée."
+  ],
+  "pour_toi": "Ne donne jamais ton mot de passe à un assistant IA pour qu'il se connecte à ta place à un compte (voyage, banque). Passe plutôt par l'appli officielle du service. Si tu utilises un agent IA pour réserver, vérifie dans les conditions du service qu'il est autorisé.",
+  "termes": [
+    {
+      "mot": "Agent IA",
+      "def": "Un assistant qui n'écrit pas seulement du texte mais agit à ta place : cliquer, réserver, acheter."
+    },
+    {
+      "mot": "Identifiants",
+      "def": "Ton nom d'utilisateur et ton mot de passe, qui donnent accès à ton compte."
+    },
+    {
+      "mot": "Agrégateur de voyages",
+      "def": "Un site qui rassemble les offres de plusieurs compagnies pour les comparer ou les vendre."
+    }
+  ],
+  "sources": [
+    {
+      "nom": "United — United Restricts Access for Third-Party AI Agents",
+      "url": "https://united.mediaroom.com/news-releases?item=125496",
+      "date": "2026-11-11",
+      "consulte": "2026-11-14",
+      "type": "primaire"
+    },
+    {
+      "nom": "TechCrunch — United Airlines blocks AI agents from booking flights, citing cybersecurity risks",
+      "url": "https://techcrunch.com/2026/11/12/united-airlines-blocks-ai-agents-from-booking-flights-citing-cybersecurity-risks/",
+      "date": "2026-11-12",
+      "consulte": "2026-11-14",
+      "type": "presse"
+    }
+  ],
+  "revue": "humaine"
+}
