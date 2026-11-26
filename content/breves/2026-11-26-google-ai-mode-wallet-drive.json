@@ -1,0 +1,37 @@
+{
+  "date": "2026-11-26",
+  "heure": "08:10",
+  "rubrique": "outils",
+  "titre": "Google relie Wallet et Drive à son mode IA de recherche, si tu l'acceptes",
+  "resume": "Google ajoute Wallet, puis Drive et l'appli Gemini, aux apps que son mode IA peut lire pour personnaliser ses réponses. Rien n'est actif sans ton accord.",
+  "en_clair": [
+    "Le 23 novembre, Google annonce que le « mode IA » de sa recherche (AI Mode) peut, si tu l'autorises, s'appuyer sur davantage de tes données perso, via une fonction appelée Personal Intelligence. Gmail, Agenda et Photos y étaient déjà reliés. Google Wallet arrive dès maintenant ; Drive et l'appli Gemini suivent « dans les prochaines semaines ».",
+    "Concrètement, avec Wallet connecté, le mode IA peut regarder tes dépenses et les cartes enregistrées pour suggérer où économiser ou quelle carte utiliser pour les points et le cash-back. Avec Drive, il tient compte de tes documents, tableurs et PDF, par exemple pour préparer la saison des impôts. Google précise que, pour Wallet, l'IA ne peut que lire : elle ne peut pas déplacer, gérer ni investir ton argent.",
+    "Ce qui est annoncé : le contrôle. Tu choisis les apps à connecter et tu peux les couper à tout moment. Google dit aussi qu'une icône « Personnalisation » permettra bientôt de voir le contexte utilisé pour une réponse. Cette fonction n'est pas encore là, et rien n'indique ici la disponibilité par pays : l'annonce est en anglais, sans précision pour la France."
+  ],
+  "pour_toi": "Rien n'est activé tout seul. Si tu veux voir ce que Google peut lire, ouvre « Personnalisation de la recherche » puis « Applications connectées » : tu y vois ce qui est relié et tu peux tout désactiver. Avant de connecter un compte qui contient des données financières ou des documents sensibles, demande-toi si le gain vaut le partage.",
+  "termes": [
+    {
+      "mot": "Mode IA (AI Mode)",
+      "def": "Le mode de Google où un assistant répond à ta recherche avec une réponse rédigée plutôt qu'une liste de liens."
+    },
+    {
+      "mot": "Personal Intelligence",
+      "def": "Le nom que Google donne à la personnalisation des réponses à partir de tes propres apps, comme Gmail ou Photos."
+    },
+    {
+      "mot": "Opt-in",
+      "def": "Une fonction qui reste éteinte tant que tu ne l'as pas activée toi-même."
+    }
+  ],
+  "sources": [
+    {
+      "nom": "Google — A more tailored Google Search that's uniquely yours",
+      "url": "https://blog.google/products-and-platforms/products/search/google-search-personal-intelligence-apps/",
+      "date": "2026-11-23",
+      "consulte": "2026-11-26",
+      "type": "primaire"
+    }
+  ],
+  "revue": "humaine"
+}
