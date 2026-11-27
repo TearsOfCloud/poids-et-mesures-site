@@ -1,0 +1,73 @@
+{
+ "date": "2026-11-26",
+ "segments": [
+  {
+   "id": "journal-2026-11-26",
+   "format": "journal",
+   "titre": "Le journal du 26 novembre",
+   "sources": [
+    {
+     "type": "breve",
+     "slug": "2026-11-26-google-ai-mode-wallet-drive"
+    },
+    {
+     "type": "breve",
+     "slug": "2026-11-26-openai-cisco-shirudo"
+    }
+   ],
+   "texte": "Bonjour, c'est le journal de Poids et Mesures, jeudi vingt-six novembre. Deux sujets. Et pour chacun, on sépare ce qui est annoncé de ce qui est vraiment mesuré.\n\nPremier sujet. Google relie Wallet et Drive à son mode IA de recherche, si tu l'acceptes. Google annonce que le mode IA de sa recherche peut, si tu l'autorises, s'appuyer sur davantage de tes données personnelles, grâce à une fonction appelée Personal Intelligence. Gmail, Agenda et Photos y étaient déjà reliés. Google Wallet arrive dès maintenant, et Drive ainsi que l'appli Gemini suivent dans les prochaines semaines. Concrètement, avec Wallet connecté, le mode IA peut regarder tes dépenses et tes cartes enregistrées pour suggérer où économiser. Avec Drive, il tient compte de tes documents et de tes tableurs. Google précise que, pour Wallet, l'IA ne peut que lire : elle ne peut pas déplacer ni gérer ton argent. Ce qui est annoncé, c'est le contrôle : tu choisis les applis à connecter et tu peux tout couper à tout moment. En revanche, aucune précision sur la disponibilité en France. Ton réflexe : rien n'est activé tout seul. Va voir dans les réglages de personnalisation de la recherche ce qui est relié, et avant de connecter des données financières ou des documents sensibles, demande-toi si le gain vaut le partage.\n\nDeuxième sujet. OpenAI et Cisco publient Shirudo, un bouclier libre pour protéger un serveur avant le correctif. OpenAI et Cisco lancent Shirudo, un logiciel libre pour les équipes qui gèrent des serveurs Linux. Le problème visé : tester et déployer un correctif de sécurité peut prendre des jours ou des semaines, et pendant ce temps le service reste exposé. Shirudo permet d'installer une protection temporaire, appelée shield, qui bloque le comportement exploité par l'attaque, tout en laissant passer les requêtes normales, sans redémarrer le service. Chaque protection est signée, et un responsable doit l'approuver avant son déploiement. Côté preuve, OpenAI cite un test contrôlé : un shield écrit avec Codex a bloqué une tentative d'exploitation d'une faille sur un service en marche. C'est un exemple fourni par les auteurs, pas une mesure indépendante, et le texte ne donne aucun résultat à grande échelle. Ton réflexe : si tu n'administres pas de serveurs, retiens que l'IA sert aussi à écrire des protections provisoires, validées par un humain. Et si tu en administres, teste d'abord sur une machine de test.\n\nPour le détail et les sources de chaque sujet, va lire les brèves sur le site."
+  },
+  {
+   "id": "breve-google-mode-ia-wallet-drive",
+   "format": "breve",
+   "titre": "Une brève : Google relie Wallet et Drive à son mode IA",
+   "sources": [
+    {
+     "type": "breve",
+     "slug": "2026-11-26-google-ai-mode-wallet-drive"
+    }
+   ],
+   "texte": "Une brève. Google relie Wallet et Drive à son mode IA de recherche, si tu l'acceptes.\n\nGoogle annonce que le mode IA de sa recherche peut, si tu l'autorises, s'appuyer sur davantage de tes données personnelles, grâce à une fonction appelée Personal Intelligence. Gmail, Agenda et Photos y étaient déjà reliés. Google Wallet arrive dès maintenant, et Drive ainsi que l'appli Gemini suivent dans les prochaines semaines. Concrètement, avec Wallet connecté, le mode IA peut regarder tes dépenses et tes cartes enregistrées pour suggérer où économiser. Avec Drive, il tient compte de tes documents et de tes tableurs. Google précise que, pour Wallet, l'IA ne peut que lire : elle ne peut pas déplacer ni gérer ton argent. Ce qui est annoncé, c'est le contrôle : tu choisis les applis à connecter et tu peux tout couper à tout moment. En revanche, aucune précision sur la disponibilité en France. Ton réflexe : rien n'est activé tout seul. Va voir dans les réglages de personnalisation de la recherche ce qui est relié, et avant de connecter des données financières ou des documents sensibles, demande-toi si le gain vaut le partage."
+  },
+  {
+   "id": "breve-openai-cisco-shirudo",
+   "format": "breve",
+   "titre": "Une brève : Shirudo, un bouclier libre pour les serveurs",
+   "sources": [
+    {
+     "type": "breve",
+     "slug": "2026-11-26-openai-cisco-shirudo"
+    }
+   ],
+   "texte": "Une brève. OpenAI et Cisco publient Shirudo, un bouclier libre pour protéger un serveur avant le correctif.\n\nOpenAI et Cisco lancent Shirudo, un logiciel libre pour les équipes qui gèrent des serveurs Linux. Le problème visé : tester et déployer un correctif de sécurité peut prendre des jours ou des semaines, et pendant ce temps le service reste exposé. Shirudo permet d'installer une protection temporaire, appelée shield, qui bloque le comportement exploité par l'attaque, tout en laissant passer les requêtes normales, sans redémarrer le service. Chaque protection est signée, et un responsable doit l'approuver avant son déploiement. Côté preuve, OpenAI cite un test contrôlé : un shield écrit avec Codex a bloqué une tentative d'exploitation d'une faille sur un service en marche. C'est un exemple fourni par les auteurs, pas une mesure indépendante, et le texte ne donne aucun résultat à grande échelle. Ton réflexe : si tu n'administres pas de serveurs, retiens que l'IA sert aussi à écrire des protections provisoires, validées par un humain. Et si tu en administres, teste d'abord sur une machine de test."
+  },
+  {
+   "id": "titres-2026-11-26",
+   "format": "titres",
+   "titre": "Les titres du 26 novembre",
+   "sources": [
+    {
+     "type": "breve",
+     "slug": "2026-11-26-google-ai-mode-wallet-drive"
+    },
+    {
+     "type": "breve",
+     "slug": "2026-11-26-openai-cisco-shirudo"
+    }
+   ],
+   "texte": "Les titres. Le tour du jour, en quelques secondes.\n\nGoogle relie Wallet, puis Drive, à son mode IA de recherche : rien n'est actif sans ton accord.\n\nEt OpenAI et Cisco publient Shirudo, un logiciel libre qui protège un serveur le temps que le correctif soit prêt, avec une preuve fournie par les auteurs.\n\nPour le détail et les sources, tout est sur le site."
+  },
+  {
+   "id": "mot-pese-opt-in",
+   "format": "bases",
+   "titre": "Le mot pesé : opt-in",
+   "sources": [
+    {
+     "type": "breve",
+     "slug": "2026-11-26-google-ai-mode-wallet-drive"
+    }
+   ],
+   "texte": "Le mot pesé. Opt-in.\n\nC'est une fonction qui reste éteinte tant que tu ne l'as pas activée toi-même. Pour le mode IA de Google, selon l'annonce, rien n'est actif sans ton accord.\n\nTon réflexe : un opt-in te laisse le choix, mais seulement si tu regardes. Ouvre de temps en temps les réglages pour voir ce qui est connecté, et coupe ce qui ne te sert plus."
+  }
+ ]
+}
