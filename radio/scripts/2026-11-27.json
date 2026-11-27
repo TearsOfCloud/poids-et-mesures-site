@@ -1,0 +1,93 @@
+{
+ "date": "2026-11-27",
+ "segments": [
+  {
+   "id": "journal-2026-11-27",
+   "format": "journal",
+   "titre": "Le journal du 27 novembre",
+   "sources": [
+    {
+     "type": "breve",
+     "slug": "2026-11-27-amazon-cairn-agents-ia-faille-inconnue"
+    },
+    {
+     "type": "breve",
+     "slug": "2026-11-27-openai-quota-commun-chatgpt-codex"
+    },
+    {
+     "type": "breve",
+     "slug": "2026-11-27-tidal-interdit-musique-100-pour-cent-ia"
+    }
+   ],
+   "texte": "Bonjour, c'est le journal de Poids et Mesures, vendredi vingt-sept novembre. Trois sujets. Et pour chacun, on sépare ce qui est annoncé de ce qui est vraiment mesuré.\n\nPremier sujet. Amazon raconte que des agents IA de piratage ont trouvé seuls une faille inconnue en onze minutes. L'équipe de renseignement sur les menaces d'Amazon a publié une enquête. Elle a trouvé en ligne, sans mot de passe, un serveur qui faisait tourner Cairn, un logiciel libre conçu pour que des défenseurs testent la sécurité de leurs systèmes avec des agents IA, c'est-à-dire des programmes pilotés par une IA qui enchaînent des actions seuls. Un attaquant s'en servait contre des universités. Le résultat est contrasté. Sur deux serveurs, les agents ont enchaîné des heures d'attaques sans rien obtenir. Mais sur une application libre d'imagerie médicale, ils ont trouvé en environ onze minutes un défaut qui permet d'écrire des fichiers sur le serveur, puis pris le contrôle complet. Amazon estime, avec un haut niveau de confiance, qu'il s'agissait d'une faille encore inconnue de l'éditeur, ce qu'on appelle un zero-day. Les responsables du logiciel ont publié un correctif. Attention : c'est le compte rendu d'Amazon, sans contrôle indépendant, et on ne sait ni combien de cibles ont été touchées, ni quel modèle d'IA pilotait les agents. Ton réflexe : si tu héberges un service sur internet, ne laisse jamais un outil d'administration ou de test accessible sans mot de passe, et mets à jour tes logiciels libres dès qu'un correctif sort.\n\nDeuxième sujet. OpenAI prépare un quota commun pour ChatGPT et Codex dès décembre. D'après la page d'aide d'OpenAI, à partir de décembre, le quota d'utilisation des forfaits Plus, Pro et Business sera partagé entre ChatGPT et Codex, l'outil de programmation d'OpenAI. Il sera mesuré en tokens, les petits morceaux de texte qu'un modèle lit et écrit : plus le modèle est avancé et la tâche complexe, plus la part consommée est grande. Les conversations en mode Instantané ne seront pas décomptées. Autre point, rapporté par la presse : une remise appliquée par erreur au lancement de G P T six point deux a été retirée, et selon Numerama, on atteint ses limites jusqu'à quarante pour cent plus vite avec l'un des modèles. Ces chiffres viennent de la presse, pas d'OpenAI. Ce qui manque : OpenAI n'indique pas la taille du quota commun pour chaque forfait, donc impossible de dire si un gros utilisateur y perdra vraiment. Ton réflexe : ouvre les réglages, puis la page d'utilisation de ChatGPT, pour voir ton quota restant. Et si tu utilises beaucoup Codex, repère ta consommation avant décembre.\n\nTroisième sujet. Tidal va refuser la musique cent pour cent générée par IA. Tidal annonce qu'à partir du neuf décembre, tout morceau entièrement généré par IA envoyé à la plateforme sera refusé, et ceux déjà présents seront retirés. Jusqu'ici, Tidal les repérait, les étiquetait et les excluait du partage des revenus. Les chiffres sont ceux de Tidal : quarante-trois pour cent des morceaux livrés en quatre-vingt-dix jours ont été détectés comme entièrement générés par IA, environ vingt-sept millions de titres du catalogue portent cette étiquette, et quatre-vingt-seize pour cent d'entre eux n'ont eu aucune écoute en trois mois. La détection repose sur l'outil d'un partenaire de Tidal et sur les informations fournies par les distributeurs. Limites : ces chiffres ne sont pas vérifiés par un tiers, on ne sait rien des erreurs de l'outil de détection, et la frontière entre musique assistée par IA, qui reste permise, et musique entièrement générée est laissée à Tidal. Ton réflexe : si tu publies de la musique, utilise l'IA comme aide plutôt que comme seule source du morceau, et renseigne honnêtement les informations chez ton distributeur.\n\nPour le détail et les sources de chaque sujet, va lire les brèves sur le site."
+  },
+  {
+   "id": "breve-amazon-cairn-zero-day",
+   "format": "breve",
+   "titre": "Une brève : des agents IA ont trouvé seuls une faille inconnue",
+   "sources": [
+    {
+     "type": "breve",
+     "slug": "2026-11-27-amazon-cairn-agents-ia-faille-inconnue"
+    }
+   ],
+   "texte": "Une brève. Amazon raconte que des agents IA de piratage ont trouvé seuls une faille inconnue en onze minutes.\n\nL'équipe de renseignement sur les menaces d'Amazon a publié une enquête. Elle a trouvé en ligne, sans mot de passe, un serveur qui faisait tourner Cairn, un logiciel libre conçu pour que des défenseurs testent la sécurité de leurs systèmes avec des agents IA, c'est-à-dire des programmes pilotés par une IA qui enchaînent des actions seuls. Un attaquant s'en servait contre des universités. Le résultat est contrasté. Sur deux serveurs, les agents ont enchaîné des heures d'attaques sans rien obtenir. Mais sur une application libre d'imagerie médicale, ils ont trouvé en environ onze minutes un défaut qui permet d'écrire des fichiers sur le serveur, puis pris le contrôle complet. Amazon estime, avec un haut niveau de confiance, qu'il s'agissait d'une faille encore inconnue de l'éditeur, ce qu'on appelle un zero-day. Les responsables du logiciel ont publié un correctif. Attention : c'est le compte rendu d'Amazon, sans contrôle indépendant, et on ne sait ni combien de cibles ont été touchées, ni quel modèle d'IA pilotait les agents. Ton réflexe : si tu héberges un service sur internet, ne laisse jamais un outil d'administration ou de test accessible sans mot de passe, et mets à jour tes logiciels libres dès qu'un correctif sort."
+  },
+  {
+   "id": "breve-openai-quota-commun",
+   "format": "breve",
+   "titre": "Une brève : un quota commun pour ChatGPT et Codex",
+   "sources": [
+    {
+     "type": "breve",
+     "slug": "2026-11-27-openai-quota-commun-chatgpt-codex"
+    }
+   ],
+   "texte": "Une brève. OpenAI prépare un quota commun pour ChatGPT et Codex dès décembre.\n\nD'après la page d'aide d'OpenAI, à partir de décembre, le quota d'utilisation des forfaits Plus, Pro et Business sera partagé entre ChatGPT et Codex, l'outil de programmation d'OpenAI. Il sera mesuré en tokens, les petits morceaux de texte qu'un modèle lit et écrit : plus le modèle est avancé et la tâche complexe, plus la part consommée est grande. Les conversations en mode Instantané ne seront pas décomptées. Autre point, rapporté par la presse : une remise appliquée par erreur au lancement de G P T six point deux a été retirée, et selon Numerama, on atteint ses limites jusqu'à quarante pour cent plus vite avec l'un des modèles. Ces chiffres viennent de la presse, pas d'OpenAI. Ce qui manque : OpenAI n'indique pas la taille du quota commun pour chaque forfait, donc impossible de dire si un gros utilisateur y perdra vraiment. Ton réflexe : ouvre les réglages, puis la page d'utilisation de ChatGPT, pour voir ton quota restant. Et si tu utilises beaucoup Codex, repère ta consommation avant décembre."
+  },
+  {
+   "id": "breve-tidal-musique-ia",
+   "format": "breve",
+   "titre": "Une brève : Tidal refuse la musique entièrement générée par IA",
+   "sources": [
+    {
+     "type": "breve",
+     "slug": "2026-11-27-tidal-interdit-musique-100-pour-cent-ia"
+    }
+   ],
+   "texte": "Une brève. Tidal va refuser la musique entièrement générée par IA à partir du neuf décembre.\n\nTidal annonce qu'à partir du neuf décembre, tout morceau entièrement généré par IA envoyé à la plateforme sera refusé, et ceux déjà présents seront retirés. Jusqu'ici, Tidal les repérait, les étiquetait et les excluait du partage des revenus. Les chiffres sont ceux de Tidal : quarante-trois pour cent des morceaux livrés en quatre-vingt-dix jours ont été détectés comme entièrement générés par IA, environ vingt-sept millions de titres du catalogue portent cette étiquette, et quatre-vingt-seize pour cent d'entre eux n'ont eu aucune écoute en trois mois. La détection repose sur l'outil d'un partenaire de Tidal et sur les informations fournies par les distributeurs. Limites : ces chiffres ne sont pas vérifiés par un tiers, on ne sait rien des erreurs de l'outil de détection, et la frontière entre musique assistée par IA, qui reste permise, et musique entièrement générée est laissée à Tidal. Ton réflexe : si tu publies de la musique, utilise l'IA comme aide plutôt que comme seule source du morceau, et renseigne honnêtement les informations chez ton distributeur."
+  },
+  {
+   "id": "titres-2026-11-27",
+   "format": "titres",
+   "titre": "Les titres du 27 novembre",
+   "sources": [
+    {
+     "type": "breve",
+     "slug": "2026-11-27-amazon-cairn-agents-ia-faille-inconnue"
+    },
+    {
+     "type": "breve",
+     "slug": "2026-11-27-openai-quota-commun-chatgpt-codex"
+    },
+    {
+     "type": "breve",
+     "slug": "2026-11-27-tidal-interdit-musique-100-pour-cent-ia"
+    }
+   ],
+   "texte": "Les titres. Le tour du jour, en quelques secondes.\n\nAmazon décrit des agents IA de piratage qui ont trouvé seuls une faille inconnue en environ onze minutes, selon son propre compte rendu.\n\nOpenAI prépare un quota commun pour ChatGPT et Codex dès décembre.\n\nEt Tidal annonce qu'il refusera la musique entièrement générée par IA à partir du neuf décembre, avec des chiffres qui viennent de Tidal.\n\nPour le détail et les sources, tout est sur le site."
+  },
+  {
+   "id": "mot-pese-zero-day",
+   "format": "bases",
+   "titre": "Le mot pesé : zero-day",
+   "sources": [
+    {
+     "type": "breve",
+     "slug": "2026-11-27-amazon-cairn-agents-ia-faille-inconnue"
+    }
+   ],
+   "texte": "Le mot pesé. Zero-day.\n\nC'est une faille de sécurité que l'éditeur ne connaît pas encore : aucun correctif n'existe au moment de l'attaque. Selon Amazon, des agents IA en ont trouvé une seuls.\n\nTon réflexe : tu ne peux pas te protéger d'une faille inconnue, mais tu peux réduire les dégâts. Mets à jour dès qu'un correctif sort, et ne laisse aucun outil d'administration ouvert sans mot de passe."
+  }
+ ]
+}
