@@ -1,0 +1,44 @@
+{
+  "date": "2026-11-27",
+  "heure": "08:10",
+  "rubrique": "outils",
+  "titre": "OpenAI : un quota commun ChatGPT et Codex dès décembre, et des limites resserrées sur GPT-6.2",
+  "resume": "Dès décembre, ChatGPT et Codex partageront un seul quota pour les forfaits Plus, Pro et Business. Selon la presse, une remise appliquée par erreur à GPT-6.2 a aussi été retirée.",
+  "en_clair": [
+    "D'après la page d'aide d'OpenAI, à partir de décembre le quota d'utilisation des forfaits Plus, Pro et Business sera partagé entre ChatGPT et Codex (l'outil de programmation d'OpenAI). Il sera mesuré en tokens, les morceaux de texte qu'un modèle lit et écrit : plus le modèle est avancé et la tâche complexe, plus la part consommée est grande. Les conversations en mode Instantané ne seront pas décomptées. OpenAI estime que la plupart des utilisateurs n'attendront pas la remise à zéro plus souvent qu'aujourd'hui, et précise que le changement peut toucher un petit groupe avant décembre.",
+    "Autre point, rapporté par Numerama d'après un message de Thibault Sottiaux (OpenAI) : une remise appliquée par erreur au lancement de GPT-6.2, le 17 novembre, a été retirée. Selon ces propos, on atteint ses limites 40 % plus vite avec Astra et 25 % plus vite avec Sol. Je n'ai pas pu lire ce message d'origine : ces chiffres viennent de la presse. OpenAI ne facturerait pas la différence sur l'usage passé, et offrirait aux abonnés Go, Plus, Pro et Business une remise à zéro du quota à déclencher quand ils le veulent.",
+    "Ce qui manque : OpenAI n'indique pas, sur sa page d'aide, la taille du quota commun pour chaque forfait. Impossible donc de dire si un gros utilisateur perdra en pratique, seulement que les usages lourds avec des agents risquent de vider le compteur plus vite."
+  ],
+  "pour_toi": "Ouvre Réglages puis Utilisation dans ChatGPT : la page d'aide indique que tu y verras ton quota restant et ses heures de remise à zéro. Si tu utilises beaucoup Codex ou les modèles avancés, repère ta consommation avant décembre ; pour les tâches simples, le mode Instantané ne consomme pas de quota.",
+  "termes": [
+    {
+      "mot": "Quota",
+      "def": "La quantité d'usage autorisée par ton abonnement avant d'être bloqué jusqu'à la prochaine remise à zéro."
+    },
+    {
+      "mot": "Token",
+      "def": "Un petit morceau de texte (un mot ou un bout de mot) que le modèle lit ou écrit ; c'est l'unité qui sert à mesurer l'usage."
+    },
+    {
+      "mot": "Codex",
+      "def": "L'agent de programmation d'OpenAI, qui écrit et modifie du code à ta place."
+    }
+  ],
+  "sources": [
+    {
+      "nom": "OpenAI — Comprendre les limites d'utilisation de ChatGPT et de Codex (centre d'aide)",
+      "url": "https://help.openai.com/fr-fr/articles/20001625-understanding-chatgpt-and-codex-usage-limits",
+      "date": "2026-11-27",
+      "consulte": "2026-11-27",
+      "type": "primaire"
+    },
+    {
+      "nom": "Numerama — « On a fait une erreur de facturation » : OpenAI corrige le tir…",
+      "url": "https://www.numerama.com/tech/2385489-on-a-fait-une-erreur-de-facturation-openai-corrige-le-tir-et-vos-quotas-gpt-6-2-vont-fondre-jusqua-40-plus-vite.html",
+      "date": "2026-11-26",
+      "consulte": "2026-11-27",
+      "type": "presse"
+    }
+  ],
+  "revue": "humaine"
+}

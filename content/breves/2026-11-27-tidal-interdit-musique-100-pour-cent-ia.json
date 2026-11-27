@@ -1,0 +1,44 @@
+{
+  "date": "2026-11-27",
+  "heure": "08:20",
+  "rubrique": "entreprises",
+  "titre": "Tidal supprimera et refusera la musique 100 % générée par IA à partir du 9 décembre",
+  "resume": "Tidal dit que 43 % des morceaux livrés en 90 jours étaient entièrement générés par IA, et que 96 % n'ont reçu aucune écoute. Les titres seulement assistés par IA restent permis.",
+  "en_clair": [
+    "Dans un texte publié le 24 novembre, Tidal annonce qu'à partir du 9 décembre, tout morceau entièrement généré par IA envoyé à la plateforme sera refusé, et ceux déjà présents seront retirés. Jusqu'ici, Tidal les repérait, les étiquetait et les excluait de la répartition des revenus ; l'entreprise juge cela insuffisant.",
+    "Chiffres donnés par Tidal lui-même : 43 % des morceaux livrés sur 90 jours ont été détectés comme entièrement générés par IA (plus de 60 % le 6 novembre). Environ 27 millions de titres du catalogue portent cette étiquette, soit 6,3 % de la musique disponible, et 96 % d'entre eux n'ont eu aucune écoute en trois mois. Tidal dit aussi avoir retiré plus de 65 000 titres soupçonnés d'usurper le nom d'artistes. The Verge reprend le chiffre de 29 millions de morceaux supprimés, un écart avec les 27 millions de Tidal que je n'explique pas.",
+    "La détection repose sur l'outil d'Ircam Amplify, partenaire de Tidal, et sur les métadonnées fournies par les distributeurs, à qui Tidal interdit d'envoyer ces titres. Limite à garder en tête : ce sont des chiffres de Tidal, non vérifiés par un tiers, et aucune donnée n'est donnée sur les erreurs de l'outil de détection. Les morceaux simplement assistés par IA restent autorisés ; la frontière entre « assisté » et « 100 % IA » est laissée à l'appréciation de Tidal."
+  ],
+  "pour_toi": "Si tu publies de la musique : utilise l'IA comme aide (idées, arrangements) plutôt que comme seule source du morceau, et renseigne honnêtement les métadonnées chez ton distributeur, sinon la livraison peut être rejetée. Si tu écoutes : rien à faire, c'est un tri fait en amont.",
+  "termes": [
+    {
+      "mot": "Distributeur",
+      "def": "Le service qui envoie la musique d'un artiste aux plateformes d'écoute."
+    },
+    {
+      "mot": "Métadonnées",
+      "def": "Les informations qui accompagnent un morceau : titre, artiste, et ici la façon dont il a été fabriqué."
+    },
+    {
+      "mot": "Royalties",
+      "def": "L'argent reversé aux artistes en fonction des écoutes."
+    }
+  ],
+  "sources": [
+    {
+      "nom": "Tidal (compte X) — Tidal Is Deleting, Rejecting, and Banning Fully AI-Generated Music",
+      "url": "https://x.com/TIDAL/status/2125233598714487170",
+      "date": "2026-11-24",
+      "consulte": "2026-11-27",
+      "type": "primaire"
+    },
+    {
+      "nom": "The Verge — Tidal will start banning AI-generated music next month",
+      "url": "https://www.theverge.com/entertainment/1041362/tidal-ai-music-ban",
+      "date": "2026-11-24",
+      "consulte": "2026-11-27",
+      "type": "presse"
+    }
+  ],
+  "revue": "humaine"
+}

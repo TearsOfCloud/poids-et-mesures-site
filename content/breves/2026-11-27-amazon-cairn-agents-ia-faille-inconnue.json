@@ -1,0 +1,44 @@
+{
+  "date": "2026-11-27",
+  "heure": "08:30",
+  "rubrique": "recherche",
+  "titre": "Amazon : des agents IA de piratage ont trouvé seuls une faille inconnue en 11 minutes",
+  "resume": "Amazon décrit une campagne où des agents IA, lancés avec l'ordre « obtenir un accès », ont découvert et exploité une faille non corrigée. Le logiciel visé a depuis été réparé.",
+  "en_clair": [
+    "Le 20 novembre, l'équipe de renseignement sur les menaces d'Amazon a publié une enquête. En septembre, elle a trouvé en ligne, sans mot de passe, un serveur qui faisait tourner Cairn, un logiciel libre conçu pour que des défenseurs testent la sécurité de leurs systèmes avec des agents IA. Un attaquant s'en servait contre des universités d'Asie de l'Est : on y voyait ses consignes en chinois simplifié.",
+    "Le résultat est contrasté. Sur un serveur Redis (une base de données) et sur un serveur de calcul, les agents ont enchaîné des heures d'attaques, 16 heures pour le premier, sans rien obtenir. Sur une application libre d'imagerie médicale, en revanche, ils ont trouvé en environ 11 minutes un défaut permettant d'écrire des fichiers sur le serveur, puis pris le contrôle complet. Amazon estime « avec un haut niveau de confiance » qu'il s'agissait d'une faille encore inconnue (« zero-day »). L'attribution à un acteur lié à la Chine est jugée « moyennement » fiable par Amazon.",
+    "Les mainteneurs du logiciel ont été prévenus et ont publié un correctif. Ce que le texte ne dit pas : combien de cibles ont été touchées au total, ni quel modèle d'IA pilotait les agents. C'est le compte rendu d'Amazon, sans contrôle indépendant, mais il montre que ces attaques automatisées existent déjà et que les défenseurs devront réagir plus vite."
+  ],
+  "pour_toi": "Si tu héberges un service sur internet : ne laisse jamais un outil d'administration ou de test accessible sans mot de passe, c'est précisément comme ça que cette campagne a été découverte, et mets à jour tes logiciels libres dès qu'un correctif sort.",
+  "termes": [
+    {
+      "mot": "Zero-day",
+      "def": "Une faille de sécurité que l'éditeur ne connaît pas encore : aucun correctif n'existe au moment de l'attaque."
+    },
+    {
+      "mot": "Agent IA",
+      "def": "Un programme piloté par une IA qui enchaîne des actions seul pour atteindre un but donné."
+    },
+    {
+      "mot": "Test d'intrusion",
+      "def": "Une attaque simulée, faite avec autorisation, pour trouver les failles d'un système avant les vrais pirates."
+    }
+  ],
+  "sources": [
+    {
+      "nom": "Amazon (AWS Security Blog) — Chinese-nexus actor's Cairn AI agents found a zero-day on their own",
+      "url": "https://aws.amazon.com/blogs/security/chinese-nexus-actors-cairn-ai-agents-found-a-zero-day-on-their-own/",
+      "date": "2026-11-20",
+      "consulte": "2026-11-27",
+      "type": "primaire"
+    },
+    {
+      "nom": "Ars Technica — Amazon says hackers' AI agents found and exploited 0-day with little human input",
+      "url": "https://arstechnica.com/security/2026/11/amazon-says-hackers-ai-agents-found-and-exploited-0-day-with-little-human-input/",
+      "date": "2026-11-24",
+      "consulte": "2026-11-27",
+      "type": "presse"
+    }
+  ],
+  "revue": "humaine"
+}
