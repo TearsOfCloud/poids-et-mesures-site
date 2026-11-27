@@ -1,0 +1,37 @@
+{
+  "date": "2026-11-26",
+  "heure": "08:20",
+  "rubrique": "outils",
+  "titre": "OpenAI et Cisco publient Shirudo, un bouclier libre pour protéger un serveur avant le correctif",
+  "resume": "Le projet open source permet de bloquer une attaque sur un serveur Linux en marche, sans le redémarrer, le temps qu'un correctif soit prêt.",
+  "en_clair": [
+    "Le 23 novembre, OpenAI et Cisco lancent Shirudo (« bouclier » en japonais), un logiciel libre pour les équipes qui gèrent des serveurs Linux. Problème visé : tester et déployer un correctif de sécurité peut prendre des jours ou des semaines, et pendant ce temps le service reste exposé.",
+    "Shirudo permet d'installer une protection temporaire, appelée « shield », qui bloque le comportement exploité par l'attaque tout en laissant passer les requêtes normales, sans redémarrer le service. Il s'appuie sur eBPF, une technologie de Linux qui fait tourner de petits programmes surveillés à l'intérieur du système. Les shields sont signés cryptographiquement, et un responsable approuve chacun avant son déploiement.",
+    "Chiffre annoncé par OpenAI, dans un test contrôlé : un shield écrit avec Codex a bloqué une tentative d'exploitation de la faille « Java4Shell » sur un service Elasticsearch en marche. C'est un exemple fourni par les auteurs, pas une mesure indépendante, et le texte ne donne pas de résultat à grande échelle. Le projet est publié sous licence BSD 2 clauses."
+  ],
+  "pour_toi": "Rien à faire si tu n'administres pas de serveurs : retiens que l'IA sert aussi à écrire des protections provisoires, validées par un humain. Si tu en administres, un guide de démarrage en machine virtuelle et un webinaire technique le 15 décembre sont indiqués par OpenAI ; teste sur une machine de test d'abord.",
+  "termes": [
+    {
+      "mot": "Correctif (patch)",
+      "def": "Une mise à jour qui répare une faille de sécurité."
+    },
+    {
+      "mot": "eBPF",
+      "def": "Une technologie de Linux qui permet d'exécuter de petits programmes de contrôle à l'intérieur du système, sans le modifier ni le redémarrer."
+    },
+    {
+      "mot": "Open source",
+      "def": "Un logiciel dont le code est public : chacun peut le lire, l'essayer et proposer des améliorations."
+    }
+  ],
+  "sources": [
+    {
+      "nom": "OpenAI — OpenAI and Cisco introduce Shirudo",
+      "url": "https://openai.com/index/introducing-shirudo",
+      "date": "2026-11-23",
+      "consulte": "2026-11-26",
+      "type": "primaire"
+    }
+  ],
+  "revue": "humaine"
+}
