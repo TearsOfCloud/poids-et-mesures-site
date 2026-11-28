@@ -1,0 +1,18 @@
+TITRE : 5 outils gratuits sur GitHub : lesquels tu peux lancer sans coder ?
+
+LÉGENDE (Instagram / TikTok / YouTube Shorts) :
+GitHub, c'est un grand classeur public de projets. Voici 5 outils gratuits, notés selon notre jugement de difficulté (pas celui des projets) :
+VERT (sans code) : HatchZip (ouvre un gros zip sur un disque presque plein), Upscayl (agrandit une image, mais devine les détails), public-apis (liste de sources de vraies données pour ton assistant, colonne Auth = No : pas de clé).
+JAUNE : Whisper (voix en texte, en ligne de commande : relis toujours, il peut inventer une phrase).
+CORAIL (technique) : Cua Driver (une IA clique à ta place : un texte piégé peut lui donner des ordres, pas sur ta banque).
+Ce soir, prends un vert. Télécharge toujours depuis la page officielle du dépôt.
+Rien n'a été installé ni testé par nous : infos tirées des README officiels, lus le 28/11/2026.
+
+LIENS (description) :
+github.com/xevrion/hatchzip (site officiel : hatchzip.dev)
+github.com/upscayl/upscayl
+github.com/public-apis/public-apis
+github.com/openai/whisper
+github.com/trycua/cua
+
+HASHTAGS : #IA #GitHub #OpenSource #Outils #PoidsEtMesures
