@@ -1,0 +1,51 @@
+{
+  "date": "2026-11-28",
+  "heure": "08:10",
+  "rubrique": "regles",
+  "titre": "Character.AI : des procureurs américains veulent bloquer la vente des conversations de ses utilisateurs",
+  "resume": "Dans la faillite de Character.AI, une enchère du 1er décembre doit vendre aussi les historiques de chats de 21 millions de comptes. Plus de quarante procureurs généraux s'y opposent.",
+  "en_clair": [
+    "Character.AI, une appli où l'on discute avec des personnages animés par IA, est en faillite aux États-Unis (procédure dite du chapitre 11). Selon les procureurs généraux de plusieurs États, une enchère prévue le 1er décembre 2026 doit vendre sa plateforme et les historiques de conversation de plus de 21 millions de comptes américains, dont plus de 2,1 millions déclarés comme appartenant à des mineurs, avec les adresses IP et d'autres métadonnées.",
+    "Les procureurs, une coalition de plus de quarante États et du district de Columbia, demandent au tribunal de refuser cette vente. Leurs arguments : l'acheteur n'aurait aucune obligation de respecter la politique de confidentialité de Character.AI ni de supprimer les données à la demande des utilisateurs, et il pourrait les revendre ensuite. Ils rappellent que cette politique affirmait « we do not sell personal information for monetary consideration ». Le seul candidat connu à ce jour est une société créée le 13 novembre 2026, sans parent ni investisseurs nommés dans le contrat.",
+    "Ce sont des accusations et des demandes déposées devant un tribunal, pas une décision : le juge n'a pas encore tranché dans les sources que j'ai lues, et le détail des chiffres (nombre exact d'États, 42 ou 45 selon les communiqués) varie un peu. Ce qu'il faut retenir : ce que tu écris à un chatbot est stocké chez l'entreprise, et son sort dépend de ce qui arrive à cette entreprise."
+  ],
+  "pour_toi": "Si tu as un compte Character.AI, ouvre les paramètres et cherche l'option de suppression du compte et des données. Plus généralement, ne confie à un chatbot rien que tu ne voudrais pas voir lu par un inconnu : une appli peut être rachetée, ou faire faillite, avec tes conversations.",
+  "termes": [
+    {
+      "mot": "Faillite (chapitre 11)",
+      "def": "Procédure américaine où une entreprise en difficulté est protégée de ses créanciers pendant qu'elle se réorganise ou vend ses actifs."
+    },
+    {
+      "mot": "Procureur général",
+      "def": "Responsable aux États-Unis, dans chaque État, de défendre l'intérêt public et de faire appliquer les lois, notamment de protection des consommateurs."
+    },
+    {
+      "mot": "Métadonnées",
+      "def": "Les informations autour d'un message, comme l'adresse IP ou la localisation approximative, distinctes du texte lui-même."
+    }
+  ],
+  "sources": [
+    {
+      "nom": "Procureur général de Californie — Attorney General Bonta Opposes Asset Sale of Character.AI Amid Child Safety Concerns",
+      "url": "https://oag.ca.gov/news/press-releases/attorney-general-bonta-opposes-asset-sale-characterai-amid-child-safety-concerns",
+      "date": "2026-11-24",
+      "consulte": "2026-11-28",
+      "type": "primaire"
+    },
+    {
+      "nom": "Procureur général du Minnesota — Attorney General Ellison challenges plan to auction off Character.AI users' private chats",
+      "url": "https://www.ag.state.mn.us/Office/Communications/2026/11/23_CharacterAI.asp",
+      "date": "2026-11-23",
+      "consulte": "2026-11-28",
+      "type": "primaire"
+    },
+    {
+      "nom": "The Verge — 42 state AGs are trying to stop Character.AI from selling users' chats",
+      "url": "https://www.theverge.com/policy/1042620/character-ai-sale-state-ags-block-selling-users-chats",
+      "date": "2026-11-26",
+      "consulte": "2026-11-28",
+      "type": "presse"
+    }
+  ],
+  "revue": "humaine"
+}
