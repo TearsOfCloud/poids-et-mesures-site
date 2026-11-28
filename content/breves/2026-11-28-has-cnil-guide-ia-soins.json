@@ -1,0 +1,37 @@
+{
+  "date": "2026-11-28",
+  "heure": "08:20",
+  "rubrique": "regles",
+  "titre": "IA à l'hôpital et en cabinet : la HAS et la CNIL publient un guide commun",
+  "resume": "La Haute Autorité de santé et la CNIL publient un guide en onze fiches pour aider les soignants et établissements à utiliser l'IA dans le respect du droit et des patients.",
+  "en_clair": [
+    "Le 27 novembre 2026, la CNIL (qui veille à la protection des données personnelles) annonce, avec la Haute Autorité de santé (HAS), un guide intitulé « IA en contexte de soins : accompagner le bon usage ». Il s'adresse aux professionnels et organisations de santé qui déploient ou utilisent des systèmes d'IA.",
+    "Le guide compte onze fiches qui suivent la vie d'un outil d'IA : gouvernance, achat et contrats, formation, information des patients, consentement et droits, organisation des soins, supervision humaine, traçabilité des usages, qualité et vigilances, fin de vie de l'outil. Chaque fiche contient une synthèse, le cadre légal et des principes à appliquer, dont certains sont signalés comme prioritaires. Il sert aussi aux établissements qui préparent leur certification.",
+    "Ce que le texte annonce : un cadre pratique, fruit d'une consultation publique et d'un partenariat CNIL-HAS signé en mars 2026. Ce que je n'ai pas lu : le contenu détaillé des fiches (je n'ai lu que la page de présentation, pas le PDF), donc pas d'avis ici sur les règles précises."
+  ],
+  "pour_toi": "Rien à faire si tu n'es pas soignant. Si tu es patient, retiens que l'information sur l'usage d'une IA dans ton parcours de soins et le respect de tes droits sur tes données font partie des thèmes du guide : tu peux poser la question à ton établissement. Les soignants peuvent télécharger le guide et sa synthèse de 255 Ko sur la page de la CNIL.",
+  "termes": [
+    {
+      "mot": "CNIL",
+      "def": "L'autorité française qui contrôle l'usage des données personnelles."
+    },
+    {
+      "mot": "HAS",
+      "def": "La Haute Autorité de santé, qui évalue et recommande les pratiques et la qualité des soins en France."
+    },
+    {
+      "mot": "Supervision humaine",
+      "def": "Le principe qu'une personne reste responsable de vérifier et de décider, au lieu de laisser l'IA trancher seule."
+    }
+  ],
+  "sources": [
+    {
+      "nom": "CNIL — IA en contexte de soins : accompagner le bon usage avec le guide CNIL et HAS",
+      "url": "https://www.cnil.fr/fr/ia-en-soins-guide-has-cnil",
+      "date": "2026-11-27",
+      "consulte": "2026-11-28",
+      "type": "primaire"
+    }
+  ],
+  "revue": "humaine"
+}
